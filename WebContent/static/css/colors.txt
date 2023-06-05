@@ -1,0 +1,10 @@
+
+
+
+/* Color Theme Swatches in Hex */
+@black-blue-orange-1-hex: #000000;
+@black-blue-orange-2-hex: #035E69;
+@black-blue-orange-3-hex: #0393A3;
+@black-blue-orange-4-hex: #F2EFDC;
+@black-blue-orange-5-hex: #F24C27;
+

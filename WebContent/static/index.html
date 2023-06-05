@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Java Mud</title>
+	<link href='static/font/DejaVu.css' rel='stylesheet' type='text/css'/>
+	<link href='static/font/icons3.css' rel='stylesheet' type='text/css'/>
+	<script type="text/javascript" src="static/js/jquery-3.5.1.js"></script> <!-- jquery -->
+	<script type="text/javascript" src="static/js/server.js"></script> <!-- communication -->
+	<script type="text/javascript" src="static/js/ansi_up.js"></script> <!-- ansi -->
+	<script type="text/javascript" src="static/js/drager.js"></script> <!-- slider -->
+	<script type="text/javascript" src="static/js/jquery.Tooltip.js"></script> <!-- tooltip -->
+	
+	
+	<script type="text/javascript" src="static/js/roomDescription.js"></script> <!-- room description -->
+	<script type="text/javascript" src="static/js/inventory.js"></script> <!-- player inventory -->
+	<script type="text/javascript" src="static/js/map.js"></script> <!-- map -->
+	
+	
+
+	<link href='static/css/ansi.css' rel='stylesheet' type='text/css'/> <!--  ansi szinek -->
+	<link href='static/css/main.css' rel='stylesheet' type='text/css'/> <!--  main -->
+	<link href='static/css/terkepsvg.css' rel='stylesheet' type='text/css'/> <!--  terkep -->
+	
+	<script>
+		var selectedTab = "";
+		
+		function handleTab(id){
+			$("#tabs .label").each(function( index ) {
+					if($( this ).attr("id")==id){
+						$(this).addClass("selected");
+						$("#"+id+"c").removeClass("hidden");
+					}
+					else{
+						$(this).removeClass("selected");
+						var locid = $(this).attr("id");
+						$("#"+locid+"c").addClass("hidden");
+					}
+			});
+		}
+
+		function selectTab(){
+			selectedTab.removeClass("selected");
+			var id = selectedTab.attr("id");
+			content = $("#"+id+"t").addClass("hidden");
+			selectedTab = $(this).addClass("selected");
+			id = selectedTab.attr("id");
+			content = $("#"+id+"t").removeClass("hidden");
+		}
+	
+		
+		var ansi_up = new AnsiUp();
+		ansi_up.use_classes = true;
+		
+		function handleEvent(event){
+			//console.debug(event)
+			if(event.event){
+				if(event.event.text){
+					let parent = $("#out");
+					$.each(event.event.text, function( index, value ) {
+						var node= $("<div></div>");
+						if((value==null)||(value=="")){
+							html = "&nbsp;";
+						}
+						else{
+							html = ansi_up.ansi_to_html(value);
+						}
+						node.html(html);
+						node.appendTo(parent)
+					});
+					parent.scrollTop(parent[0].scrollHeight);
+				}
+			}
+			if(event.status){
+				let st = event.status;
+				console.debug(st);
+				let hp = st.actHP/st.maxHP;
+				let mp = 0;
+				if(st.maxMP!=0){
+					mp =st.actMP/st.maxMP;
+				}
+				let sp = st.actSP/st.maxSP;
+				console.debug([hp,mp,sp]);
+				setBar("HP",hp,st.actHP,st.maxHP);
+				setBar("SP",sp,st.actSP,st.maxSP);
+				setBar("MP",mp,st.actMP,st.maxMP);
+				
+			}
+			if(event.room){
+				putRoomDescription(event.room);
+			}
+			if(event.map){
+				putMap(event.map);
+			}
+			if(event.inventory){
+				putInventory(event.inventory);
+			}
+		}
+		
+		function sendField(){
+	        var txt = $("#in").val();
+	        $("#in").val('');
+	        if(txt!=""){
+	        	send(txt);
+	        }
+			
+		}
+		function toHex(n) {
+		    var h = (~~n).toString(16);
+		    if (h.length < 2)
+		        h = "0" + h;
+		    return h;
+		}
+		
+		function setBar(type, percent,act,max){
+			var color = "#8BC34A";
+			if(percent>0.5){ // green-> yellow
+				//	#8BC34A; -> #FFEB3B;
+				// 139, 195, 74  -> 255, 235, 59
+				var p = (percent-0.5) * 2;
+				var r = ((139 - 255) * p ) + 255;
+				var g = ((195 - 235) * p ) + 235;
+				var b = ((74 - 59) * p ) + 59;
+				color = "#" + toHex(r) + toHex(g) + toHex(b);
+			}
+			else{ // yellow - > red
+				// #FFEB3B -> #EF5350
+				// 255, 235, 59 -> 239, 83, 80
+			
+				var p = (percent) * 2;
+				var r = ((255 - 239) * p ) + 239;
+				var g = ((235 - 83) * p ) + 83;
+				var b = ((59 - 80) * p ) + 80;
+				color = "#" + toHex(r) + toHex(g) + toHex(b);
+			}
+			var parent = $("#" + type + "Bar");
+			var node = parent.find('.inner');
+			node.css({"height":(percent*100) + "%","background-color":color});
+			node.attr("data-tooltip",node.data("orig")+"<br/>"+act + "/" + max);
+			let tooltip = $("#Tooltip");
+			if(tooltip.data("parent")==node){
+				tooltip.html(node.attr("data-tooltip"));
+			}
+		}
+		function loadMap(){
+			$.ajax(
+				{
+				    url: "static/img/terkep.svg" ,
+				    dataType: 'html',
+				    type: 'GET',
+				    success: function(data) 
+				    {         
+				        $("#terkepWrapper").prepend(data);
+				    }
+					
+				});
+		}
+		
+		$(document).ready(function () {
+		    $("#bt").on("click", sendField);
+		    $('#in').keypress(function (e) {
+		    	  if (e.which == 13) {
+		    		sendField()
+		    	    return false; 
+		    	  }
+		    	});
+			$('#HPBar').slider({cssClass: 'dragger tooltiph',tooltip:"Bátorság: "});
+			
+			$("#tabs .label").click(selectTab);
+			handleTab("room");
+			
+			$(".tooltiph").each(function(){
+				let node =$(this);
+				node.data("orig",node.attr("data-tooltip"));
+			})
+			$(".tooltiph").addTooltip();
+			
+			selectedTab = $("#room");
+			loadMap();
+			
+			//$(".scrollable").mCustomScrollbar();
+		});
+	</script>
+</head>
+<body>
+	<div id="tooltip" class="tooltip"></div>
+
+	<div id="page">
+		<div id="header">
+			<div id="logoText">The Ethereal Nexus</div>
+		</div>
+		<div id="content">
+
+
+			<div id="points">
+				<div class="pointBar" id="MPBar">
+					<div class="inner tooltiph" data-tooltip="Manna pont:"></div>
+				</div>
+				<div class="pointBar" id="SPBar">
+					<div class="inner tooltiph" data-tooltip="Kitartás pont:"></div>
+				</div>
+				<div class="pointBar" id="HPBar">
+					<div class="inner tooltiph" data-tooltip="Életerő pont:"></div>
+				</div>
+			</div>
+
+
+			<div id="output">
+				<div id="out" class="terminal  scrollable"></div>
+				<div id="input">
+					<input id="in" type="text"></input><input type="button"
+						value="Send" id="bt"></input>
+				</div>
+			</div>
+
+
+
+			<div id="side">
+				<div id="tabs">
+					<div id="room" class="label selected">Helyszín</div>
+					<div id="terkep" class="label">Térkép</div>
+					<div id="stat" class="label">Karakter</div>
+					<div id="inventory" class="label">Leltár</div>
+					<div id="skill" class="label">Képzetségek</div>
+				</div>
+				<div id="contents">
+					<div id="roomt" class="tab_content">
+						<div class="descriptions scrollable bgHolder">
+							<div class="bg icons-descr"></div>
+
+							<div class="descr" id="latas" style="display: none;">
+								<div class="inicial icons-see"></div>
+								<div class="wrapper"></div>
+							</div>
+							<div class="descr" id="hallas" style="display: none;">
+								<div class="inicial icons-hear"></div>
+								<div class="wrapper"></div>
+							</div>
+							<div class="descr" id="szaglas" style="display: none;">
+								<div class="inicial icons-smell"></div>
+								<div class="wrapper"></div>
+							</div>
+							<div class="descr" id="magia" style="display: none;">
+								<div class="inicial icons-magic"></div>
+								<div class="wrapper"></div>
+							</div>
+						</div>
+						<div id="livings" class="livings scrollable bgHolder">
+							<div class="bg icons-livings"></div>
+							<div class= "wrapper"></div>
+							
+						</div>
+
+						<div id="objects" class="objects scrollable bgHolder">
+							<div class="bg icons-items"></div>
+							<div class= "wrapper"></div>
+							
+						</div>
+						<div class="exits scrollable bgHolder">
+							<div class="bg icons-exits"></div>
+							<div class="svgWrapper">
+								<svg version="1.1" id="windrose"
+									xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 150 150"> <a class="direction tooltiph"
+									data-tooltip="Észak" id="wr_eszak"><polygon
+										points="75,50.1 87.4,45 75,15 62.6,45 " /></a> <a
+									class="direction tooltiph" data-tooltip="Északkelet"
+									id="wr_eszakkelet"><polygon
+										points="92.6,57.4 105,62.6 117.4,32.6 87.4,45 " /></a> <a
+									class="direction tooltiph" data-tooltip="Kelet" id="wr_kelet"><polygon
+										points="99.9,75 105,87.4 135,75 105,62.6 " /></a> <a
+									class="direction tooltiph" data-tooltip="Délkelet"
+									id="wr_delkelet"><polygon
+										points="92.6,92.6 87.4,105 117.4,117.4 105,87.4 " /></a> <a
+									class="direction tooltiph" data-tooltip="Dél" id="wr_del"><polygon
+										points="75,99.9 87.4,105 75,135 62.6,105 " /></a> <a
+									class="direction tooltiph" data-tooltip="Délnyugat"
+									id="wr_delnyugat"><polygon
+										points="45,87.4 57.4,92.6 62.6,105 32.6,117.4 " /></a> <a
+									class="direction tooltiph" data-tooltip="Nyugat" id="wr_nyugat"><polygon
+										points="45,87.4 15,75 45,62.6 50.1,75 " /></a> <a
+									class="direction tooltiph" data-tooltip="Északnyugat"
+									id="wr_eszaknyugat"><polygon
+										points="62.6,45 32.6,32.6 45,62.6 57.4,57.4 " /></a> </svg>
+							</div>
+							<div id="exits" class="otherWarapper"></div>
+						</div>
+					</div>
+
+					<div id="terkept" class="tab_content hidden">
+						<div id="terkepWrapper">
+						</div>
+					</div>
+					<div id="statt" class="tab_content hidden" ></div>
+					<div id="inventoryt" class="tab_content hidden">
+						<div id="inventoryWrapper">
+						</div>
+					</div>
+					<div id="skillt" class="tab_content hidden">
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+
+Szinte minden a JavaMudban XML-ben van letárolva.
+Az XML-ek felépítése követi az osztálystruktúrát. 

@@ -1,0 +1,1 @@
+call xalan.bat "%1" graphml2map.xsl "%~n1.map.xml" -PARAM reqlevel "%2"

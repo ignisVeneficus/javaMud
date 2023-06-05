@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 150 150">
+	<polygon id="wr_eszak"			points="75,50.1 87.4,45 75,15 62.6,45 "/>
+	<polygon id="wr_eszakkelet"		points="92.6,57.4 105,62.6 117.4,32.6 87.4,45 "/>
+	<polygon id="wr_kelet"			points="99.9,75 105,87.4 135,75 105,62.6 "/>
+	<polygon id="wr_delkelet"		points="92.6,92.6 87.4,105 117.4,117.4 105,87.4 "/>
+	<polygon id="wr_del"			points="75,99.9 87.4,105 75,135 62.6,105 "/>
+	<polygon id="wr_delnyugat"		points="45,87.4 57.4,92.6 62.6,105 32.6,117.4 "/>
+	<polygon id="wr_nyugat"			points="45,87.4 15,75 45,62.6 50.1,75 "/>
+	<polygon id="wr_eszaknyugat"	points="62.6,45 32.6,32.6 45,62.6 57.4,57.4 "/>
+</svg>

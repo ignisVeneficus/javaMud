@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room open="true" mapfile="@Tunderfalu1/map_0">
+	<stimulus type="latas" shortDescr="Egy erdei ösvényen állsz." >
+		<descr>Egy erdei ösvényen állsz. Körben magas fák, és sűrű aljnövényzet melyen csak egy keskeny ösvény vezet át. Délre mintha ritkulna az erdő.</descr>
+	</stimulus>
+	<stimulus type="hallas" intensity="50" shortDescr="Szélsussogást hallasz" condition="nappal" >
+		<descr>A szél susog, játszik a lombok között.</descr>
+	</stimulus>
+	<stimulus type="latas" source="40" shortDescr="Dél felöl fényeket látsz." condition="este">
+		<descr>Dél felöl fények szűrődnek át a fák között</descr>
+	</stimulus>
+	<stimulus type="hallas" intensity="50" shortDescr="Csend van." condition="este" >
+		<descr>Csend van. Néha egy bogáz zümmög.</descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="50" shortDescr="Friss levegőt érzel." >
+		<descr>A friss levegőt es a nedves föld szagat érzed.</descr>
+	</stimulus>
+	
+	<item>
+		<name targy="az aljnövényzetet">aljnövényzet</name>
+		<descr>Sűrű bokroknak tünnek, de lehet, hogy csak az út miatt.</descr>
+	</item>
+	<item>
+		<name targy="a fákat">fák</name>
+		<name targy="a fát">fa</name>
+		<descr>Hatalmas fák. A legkissebbnek a törzsének átmerője is meghaladja a 10 métert.</descr>
+	</item>
+	<item>
+		<name targy="az ösvényt">ösvény</name>
+		<descr>Egy jól kitaposott ösvény. Északról dél felé halad.</descr>
+	</item>
+	<item condition="este">
+		<name targy="a fényt">fény</name>
+		<name targy="a fényeket">fények</name>
+		<descr>A fáktól nem látod honnét jön.</descr>
+	</item>
+	
+	<exit direction="délkelet"
+		destination="@Tunderfalu1/falu1_0_4" />
+	<exit direction="észak"
+		destination="@Tunderfalu1/falu1_0_2" />
+		
+	<objRef qty="1" name="@items/olajlampa"></objRef>
+
+</Room>

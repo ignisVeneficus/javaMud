@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Weapon>
+	<stimulus type="latas" >
+		<descr>Mívesen kidolgozott, levél alakú tőr.</descr>
+	</stimulus>
+	<stimulus type="magia" intensity="50" >
+		<descr>A tőr át van itatava mágival, így sohasem csorbul ki az éle.</descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="30">
+		<descr>Fegyverolajat érzel.</descr>
+	</stimulus>
+	<price>0</price>
+	<weight>2d10</weight>
+	<id>tőr</id>
+	<shortName>tőr</shortName>
+	<ac>10</ac>
+	<damage>2D20</damage>
+	<nrLimbs>1</nrLimbs>
+
+</Weapon>

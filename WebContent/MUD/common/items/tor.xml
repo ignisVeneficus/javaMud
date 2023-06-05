@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Weapon>
+	<id>tőr</id>
+	<stimulus type="latas" >
+		<descr>Mívesen kidolgozott, levél alakú tőr</descr>
+	</stimulus>
+	<stimulus type="magia" intensity="50" >
+		<descr>A tőr át van itatava mágival, így sohasem csorbul ki az éle.</descr>
+	</stimulus>
+	<shortName>tőr</shortName>
+</Weapon>

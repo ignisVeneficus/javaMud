@@ -1,0 +1,19 @@
+Stimulus, érzékszervi benyomás. Tárgyak, élőlények leírására szolgál. Egy-egy érékszervi leírás adható meg vele, erőséggel, felételekekkel.
+[{TableOfContents title='Tartalom'}]
+!!!Root
+%%information
+Nem lehet XML gyökéreleme
+%%
+
+!!!Attributumok
+||név||XML Tipus[1]||számosság[2]||típus||leírás||
+|condition|Attr|1|Szöveg|Feltétel. Ha a könyezet szolgáltaja ezt, mint Státuszszöveget, akkor jelenik meg a szöveg
+|descr|Attr|1|Szöveg|Hosszú leírás, lehet [StringFunction]okat használni
+|intensity|Attr|?|Egész|a benyomás intenzítása: 0-100-ig tart, ha nincs, akkor 100
+|short|Attr|1|Szöveg|Rövid leírás, lehet [StringFunction]okat használni
+|source|Attr|?|Egész|Forrás erőssége, csak "Látás" esetén van értelmezve, akkor ennyi fényt bocsájt ki.
+|type|Attr|1|Szöveg|Érzékszerv típusa: látás, szaglás, stb..
+
+----
+[#1] Elem, vagy attribútum, aszerint, hogy az adott változót hogyan kell létrehozni\\
+[#2] 1, ha kötelező és egyszer; ? ha opcionális, * ha tetszőleges számban; 1+ ha legalább egyszer elő kell fordulnia. 

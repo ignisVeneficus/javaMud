@@ -1,0 +1,409 @@
+@import "def.less";
+
+a:visited,
+a:hover,
+a{
+	color: inherit;
+	text-decoration: none;
+}
+html {
+    height: 100%;
+}
+body{
+	font-family: 'DejavuSanf', 'sanf';
+	background-color: @colorDark;
+	margin:0px;
+	position:relative;
+	font-size:12pt;
+	font-weight:400;
+	color:@colorText;
+    height:100%;
+}
+#page{
+	height:100%;
+	display:flex;
+	flex-flow:column;
+}
+#header{
+	background-color: @colorDark;
+	flex: 0 0 70px;
+	height:90px;
+}
+
+#logoText{
+	font-size:62px;
+	font-weight:500;
+	color:@colorLight2;
+	text-align:center;
+	padding:24px;
+}
+
+#content{
+	padding: 16px;
+	display:flex;
+	flex: 1 1 auto;
+	height: 10px; // hack
+}
+
+#side{
+	flex: 1 1 auto;
+	display: flex;
+	flex-flow:column;
+}
+
+#tabs{
+	display: flex;
+	flex: 0 0 auto;
+}
+  
+
+#tabs .label{
+	background-color: @colorLight2;
+	margin: 0;
+	margin-right: 1px;
+	padding: 8px;
+	display: inline-block;
+	.TopBorderRadius;
+	float:left;
+	flex:1;
+	border-bottom:solid 1px @colorDark;
+	height:32px;
+	vertical-align:middle;
+	text-align: center;
+	cursor: pointer;
+	line-height:32px;
+}
+#tabs .label:last-child{
+	margin-right: 0px;
+}
+#tabs .selected{
+	background-color: @colorLight;
+	border:none;
+}
+
+.tab_content{
+	background-color: @colorLight;
+	padding:8px;
+	flex: 1 1 auto;
+}
+.hidden{
+	display:none !important;
+}
+#contents{
+	flex: 1 1 auto;
+	flex-flow:column;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display:flex;
+	
+}
+#output{
+	display:flex;
+	//height:100%;
+	flex-direction:column;
+	flex: 0 0 80ex;
+	.BorderRadius;
+	margin-left:24px;
+	margin-right:24px;
+	
+}
+
+.terminal{
+	font-size: 12px;
+	font-family: 'DejaVuSansMono', Courier, monospace;
+	background-color: @color_ansi_black;
+	//height:	100%;
+//	overflow-y: scroll;
+	overflow-x: hidden;
+	color:	@color_ansi_white;
+	white-space: pre-wrap;
+	font-weight:bold;
+	padding:1em;
+	flex: 1 1 auto;
+}
+#input{
+    //height:@innerMargin;
+    flex: 0 0 32px;
+    /*
+    bottom:0;
+    left:0;
+	*/
+}
+#points{
+	height:100%;
+	display:flex;
+	flex: 0 0 80px;
+	justify-content: space-between;
+	
+}
+.pointBar {
+    width: 20px;
+    height: 100%;
+    border: 1px solid @colorLight2;
+    
+    position: relative;
+    
+	.BorderRadius;
+	flex: 0 0 20;
+}
+
+.pointBar .inner {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+
+    //border: 2px solid #999;
+    //border-top-width: 0;
+    //background-color: #999;
+    
+    bottom: 0;
+    height: 0%;
+	.BorderRadius;
+}
+.dragger{
+	  width: 26px;
+	  height: 26px;
+	  border-radius: 13px;
+	  border: 2px solid  @color_ansi_i_red;
+}
+
+
+#roomt{
+	display:flex;
+	flex-flow:column;
+	.descriptions{
+		.wrapper{
+			padding-left:40px;
+			z-index:2;
+		}
+	}
+	.descriptions,
+	.objects,
+	.livings{
+		overflow-x: hidden;
+		flex: 1 0 100px;
+		padding: 8px;
+		}
+	.livings{
+		.livingItem{
+			flex: 0 0 208px;
+			width:208px;
+			margin:8px;
+			display: inline-block;
+			height:48px;
+			.name{
+				display: inline-block;
+				vertical-align:middle;
+				line-height:48px;
+			}
+			.iconButton{
+				float:right;
+			}
+		}
+	}
+	.objects{
+		.item{
+			flex: 0 0 208px;
+			width:208px;
+			margin:8px;
+			display: inline-block;
+			height:48px;
+			.name{
+				display: inline-block;
+				vertical-align:middle;
+				line-height:48px;
+			}
+			.iconButton{
+				float:right;
+			}
+		}
+	}
+	.exits{
+		overflow-x: hidden;
+		flex: 0 0 208px;
+		display:flex;
+		padding: 8px;
+		.svgWrapper{
+			flex:0 0 208px;
+			margin:8px;
+		}
+		.otherWrapper{
+			flex: 1 1 auto;
+			display: flex;
+			justify-content: space-between;
+			
+		}
+	}
+	.descr{
+		min-height:40px;
+	}
+	/*
+	.description{
+		overflow:hidden;
+	}
+	*/
+	.icons-see{
+		//color:mix(@colorTabBackground,@colorSee,20%);
+		color:@colorSee;
+	}
+	.icons-hear{
+		//color:mix(@colorTabBackground,@colorHear,20%);
+		color:@colorHear;
+	}
+	.icons-smell{
+		//color:mix(@colorTabBackground,@colorSmell,20%);
+		color:@colorSmell;
+	}
+	.icons-magic{
+		//color:mix(@colorTabBackground,@colorSmell,20%);
+		color:@colorMagic;
+	}
+	.bgHolder{
+		position:relative;
+	}
+}
+#inventoryt{
+	display:flex;
+	.item{
+		flex: 0 0 208px;
+		width:208px;
+		margin:8px;
+		display: inline-block;
+		height:48px;
+		.name{
+			display: inline-block;
+			vertical-align:middle;
+			line-height:48px;
+		}
+		.iconButton{
+			float:right;
+		}
+		}
+}
+
+.inicial{
+	font-family:'icons3';
+//	position:relative;
+//	top:-5px;
+//	left:6px;
+	font-size:36px;
+//	color:mix(@colorBoxMFont,@colorBoxBg,20%);
+	z-index:1;
+	display:inline-block;
+	float:left;
+//	margin-right:5px;
+}
+
+.bg{
+	font-family:'icons3';
+	position:absolute;
+	top:0px;
+	right:0px;
+	font-size:90px;
+	color:mix(@colorTabBackground,@colorLight2,20%);
+	z-index:1;
+	display:inline-block;
+}
+
+.wrapper{
+	position:relative;
+	z-index:2;
+}
+
+
+#windrose{
+	display:block;
+	margin:auto;
+	a.enabled:hover polygon{
+		stroke:@colorSelectedIcon;
+		fill:@colorSelectedIcon;
+		cursor: pointer;
+	}
+	a.enabled polygon{
+		fill:@colorIcon;
+	}
+	a polygon{
+		stroke-width: 1px;
+		stroke: @colorIcon;
+		fill:none;	
+	}
+}
+
+.button{
+//	display:table-cell;
+	width:100px;
+	min-height:48px;
+	height:48px;
+	color:@colorLight;
+	background-color:@colorIcon;
+	border:none;
+	font-size:12pt;
+	.BorderRadius;
+	padding:8px;
+	vertical-align:middle;
+	text-align: center;
+	cursor: pointer;
+	flex: 0 0 auto;
+	margin:8px;
+	line-height:48px;
+	display:inline-block;
+}
+.button:hover{
+	background-color:@colorSelectedIcon;
+	color:@colorLight;
+}
+#tooltip{
+	display: none;
+	position: absolute;
+	border: 1px solid @colorLight2;
+	background-color: @colorLight;
+	.BorderRadius;
+	padding:8px;
+	color: @colorDark;
+	max-width:250px;
+	line-break:auto;
+	word-break:normal;
+	word-spacing:0px;
+	white-space:normal;
+	text-align:center;
+	overflow-wrap:normal;
+	z-index:20;
+}
+
+
+.iconButton{
+	display:inline-block;
+	width:48px;
+	min-height:48px;
+	height:48px;
+//	padding-top:6px;
+//	padding-bottom:6px;
+	vertical-align:middle;
+	text-align:center;
+	overflow:hidden;	
+	font-family:'icons3';
+	.BorderRadius;
+	color:@colorLight;
+	background-color:@colorIcon;
+//	border:solid 1px @colorIcon;
+	//line-height:0px;
+	font-size:36px;
+	line-height:48px;
+	margin-left:8px;
+}
+.iconButton:hover{
+	background-color:@colorSelectedIcon;
+	color:@colorLight;
+//	border-color:@colorButtonHlBorder;
+}
+#terkept{
+	display:flex;
+	flex-flow:column;
+	#terkepWrapper{
+		overflow: hidden;
+		flex: 1 1 auto;
+		padding: 8px;
+		height: 100%;
+		}
+
+}

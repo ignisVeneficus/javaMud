@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><Room>
+<stimulus shortDescr="0_11" type="latas">
+<descr>DUMMY szoveg - földszint - </descr>
+</stimulus>
+<exit notice="50" direction="kelet" destination="@Tunderfalu1/falu1_0_12"/>
+<exit notice="50" direction="északkelet" destination="@Tunderfalu1/falu1_0_9"/>
+<exit notice="50" direction="észak" destination="@Tunderfalu1/falu1_0_10"/>
+</Room>

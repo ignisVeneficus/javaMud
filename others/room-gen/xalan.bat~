@@ -1,0 +1,1 @@
+java -cp "i:\program\lib\xalan-j_2_7_1\serializer.jar;i:\program\lib\xalan-j_2_7_1\xalan.jar;i:\program\lib\xalan-j_2_7_1\xercesImpl.jar;i:\program\lib\xalan-j_2_7_1\xml-apis.jar;i:\program\lib\xalan-j_2_7_1\xsltc.jar" org.apache.xalan.xslt.Process -IN %1 -XSL %2 -OUT "%~dpn1.%3"

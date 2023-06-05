@@ -1,0 +1,41 @@
+Ez az őse minden, a játékban előforduló osztálynak. Legfőbbképpen a játék belső mechanizmusát kiszolgáló függvények, változók, attributumok vannak benne.
+
+[{TableOfContents title='Tartalom'}]
+!!!Root
+%%information
+Nem lehet XMLben definiálni
+%%
+
+!!!Attributumok
+||név||XML Tipus[1]||számosság[2]||típus||leírás||
+|js|Elem|?|[Javascript|JavascriptXML]|Javascript függvény gyűjtemény|
+|jsfile|Elem|?|Szöveg|Javascript függvénygyűjtményt tartalmazó file|
+|stimulus|Elem|*|[Érzékek|Stimulus]|Érzékszervi benyomások|
+
+!!!JS callback függvények
+!!init
+%%prettify-nonum
+{{{
+void init();
+}}}
+/%
+Se paramétere, se visszatérési értéke nincs.
+Az objektum inicializálása után fut le, miután az összes többi feladatot elvégezte.
+
+!!getObjectStatus
+%%prettify-nonum
+{{{
+string getObjectStatus(_OBJ);
+}}}
+/%
+*___OBJ__: az objektum amin meghívtak
+Visszatérése:\\
+Olyan string tömb, ahol az értékek egymástól space-el vannak elválasztva pl:
+{{{
+reggel szilveszter
+}}}
+A függvénnyel státusz szövegeket lehet visszaadni az objektum állapotától függően. A státuszszövegeknek az [Érzékelés]nél van szerepe.
+
+----
+[#1] Elem, vagy attribútum, aszerint, hogy az adott változót hogyan kell létrehozni\\
+[#2] 1, ha kötelező és egyszer; ? ha opcionális, * ha tetszőleges számban; 1+ ha legalább egyszer elő kell fordulnia. 

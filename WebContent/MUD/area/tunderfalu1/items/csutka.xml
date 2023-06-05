@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Item  HP="3d10+3">
+	<stimulus type="latas" intensity="100" shortDescr="">
+		<descr>Egy nagy alma csutkája. Minden ehetőt lerágtak róla. Még a fognyomokat is ki lehet venni.</descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="50">
+		<descr>Finom, érett gyümölcsszagot áraszt.</descr>
+	</stimulus>
+	<price>0</price>
+	<weight>1d10</weight>
+	<id>csutka</id>
+	<id>almacsutka</id>
+	<shortName>almacsutka</shortName>
+	
+<action>
+	<item name="eldob" fn="eldob"/>
+</action>
+<js><![CDATA[
+function eldob(_OBJ,_PLA,_PARAM){
+	list = _OBJ.getAllPerceptibility();
+	evn = _OBJ.createSimpleSourceEvent(list, _PLA, "%S egy elegáns mozdulattal eldobja az almacsutkáját.", null, "Egy elegáns mozdulattal megszabadulsz az almacsutkádtól.");
+	if(evn!=null){
+		evn.fire();
+	}
+	_OBJ.destr();
+	return true;
+}
+]]></js>
+
+
+
+</Item>

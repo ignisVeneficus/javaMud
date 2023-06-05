@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'icons2';
+    src: url('./icons2.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icons2-see:before{content:'\0041';}
+.icons2-hear:before{content:'\0042';}
+.icons2-smell:before{content:'\0043';}
+.icons2-see2:before{content:'\0048';}
+.icons2-hear2:before{content:'\0049';}
+.icons2-smell2:before{content:'\004a';}
+.icons2-magic:before{content:'\004f';}

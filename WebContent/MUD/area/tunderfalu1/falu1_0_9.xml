@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room open="true" mapfile="@Tunderfalu1/map_0">
+	<stimulus shortDescr="Egy gyümölcsösben állsz." intensity="0" type="latas">
+		<descr>Egy gyümölcsösben állsz. Körben különböző gyümölcsfákat látsz. Éppen érik a gyümölcs. Észak felé sűrű bozotos hatarolja a ligetet.</descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="50" shortDescr="Édeskés gyümolcsszagot érzel" >
+		<descr>A levegőben édeskés gyümölcsszag terjeng.</descr>
+	</stimulus>
+
+<exit notice="50" direction="dél" destination="@Tunderfalu1/falu1_0_12"/>
+<exit notice="50" direction="nyugat" destination="@Tunderfalu1/falu1_0_10"/>
+<exit notice="50" direction="kelet" destination="@Tunderfalu1/falu1_0_8"/>
+<exit notice="50" direction="délnyugat" destination="@Tunderfalu1/falu1_0_11"/>
+
+
+	<item>
+		<name targy="a fákat">fák</name>
+		<name targy="a fát">fa</name>
+		<name targy="a gyümölcsfákat">gyümölcsfák</name>
+		<name targy="a gyümölcsfát">gyümölcsfa</name>
+		<descr>Öreg gyümölcsfák, de azért még teremnek. Mindegyik fa tele van érő gyümölcsökkel.</descr>
+	</item>
+	<item>
+		<name targy="a gyümölcsöst">gyümölcsös</name>
+		<descr>A tündérek gyümölcsöse. Esetleg szedhetsz belőle pár szép gyümölcsöt.</descr>
+	</item>
+<action>
+	<item name="szed" fn="szed"/>
+	<item name="leszed" fn="szed"/>
+</action>
+<TODO>A gyumolcsbol mas fajtakat is csinalni, es randommal megoldani</TODO>
+<js><![CDATA[
+function szed(_ROOM,_OBJ,_PARAM){
+	if(_PARAM.length==0){
+		_OBJ.tell("Mit akarsz szedni?");
+		return true;
+	}
+	if(!_ROOM.equalsString(_PARAM[0],"gyümölcs")){
+		_OBJ.tell("Nincs itt olyan!");
+		return true;
+	}
+	almak = _ROOM.getProperty("alma");
+	if(typeof almak === 'string'){
+		almak = parseInt(almak);
+	}
+	else{
+		//_OBJ.tell(typeof almak);
+	 	return false;
+ 	}
+	if(almak<=0){
+		_OBJ.tell("A fákról már leszedték az összes gyümölcsöt");
+		return true;
+	}
+	almak = almak-1;
+	_ROOM.setProperty("alma",""+almak);
+	// csinalni belole 2-3 -at es randommal megoldani
+	item = _ROOM.getObject("@Tunderfalu1/items/gyumolcs");
+	if(item!=null){
+		list = ["latas","hallas"];
+		testList = _OBJ.getPerceptibility(list);
+		evn = _OBJ.createSimpleSourceEvent(testList, _OBJ, "%S leszakít egy gyümölcsöt", null, "Leszakítasz egy gyümölcsöt");
+		if(evn!=null){
+			evn.fire();
+		}
+		item.moveObject(_OBJ);
+	}
+	return true;
+}
+function reset(_ROOM){
+	_ROOM.setProperty("alma","5");
+}
+]]></js>
+
+</Room>

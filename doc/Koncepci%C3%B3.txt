@@ -1,0 +1,35 @@
+A JavaMud koncepciója
+[{TableOfContents title='Tartalom'}]
+
+A Mudban lévő elemek két nagy csoportba lehet sorolni:
+* Entitások, mint játékosok, szörnyek, NJK-k, tárgyak stb.
+* Szobák, vagyis olyan elemek amiben a másik csoport előfordulhat.
+Közös tulajdonságuk, hogy az XML path alapján lehet rájuk hivatkozni.
+
+!!!Szobák
+A szobák olyan dobozok, amik egyrészt összekötésben állnak egymással, másrészt entitásokat tartalmazhatnak. Minden szoba csak egy példányba létezhet. Szoba csak memoriakezelés miatt semmisül meg (ha a betöltött szobák száma elér egy korlátot, akkor a legrégebben meglátogatott szoba megsemmisül)
+
+A szobák speciális mechanizmusa az un. "Reset", amikor a szoba visszaálla alapállapotba: megjelennek a szobához tartozó szörnyek, tárgyak. Bezárodnak az alapesetben zárva lévő ajtók.
+Ez a mechanizmus biztosítja, hogy egy egy hely tetszőleges számba újra játszható legyen.
+
+!!Részek
+A szobák részei:
+* Kijáratok: kapcsolatok a szobák között. A szobában van egy irány, ami másik szobába vezet. A másik szobából nem kell visszafelé kijárat.
+* Érzékszervi leírások: a különböző érzékszervekhez tartozó benyomások leírása erősséggel. Ezek jelennek meg a játékosnak (ha észreveszi), mikor belép egy szobába.
+* Tárgyak: nem entitások. Olyan leírások amit valamit megvizsgálva kap meg a játékos. Tipikusan a szoba leírásában megjelenő elemek.
+* Akciók: A szobához tartozó speciális parancsok
+* Entitások 
+
+!!Outlands
+A szobáknak van egy speciális típusa az outlands, vagy külterület. Ez olyan téglalap alapú terület, amiben a szobák különböző fileokból (képek, XML) generálodnak, szemben a normál szobákkal, ahol minden  egyes szoba külön file.
+
+!!!Entitások
+Minden ami mozog, mozgatható: Élőlények (játékosok, szörnyek), és tárgyak. Közös tulajdonságuk, hogy valamiben lenniük kell: szobában, előlény leltárjában, vagy másik tárgyban (dobozok).
+Mozgathatóak, illetve mozognak (változik, hogy miben vannak).
+Minden esetben szobával, vagy egy élőlénnyel együtt jönnek létre. Több példány lehet belőlük (kivétel a játékos). Amennyiben megsemmisül egy szoba, akkor a benne lévő összes entitás is megsemmisül (megint kivétel a játékos)
+!!Élőlények
+Két nagy csoport játékosok és "szörnyek"
+!Játékosok
+Olyan élőlények, akiket felhasználók irányítanak. Csak egy létezhet belőle, speciális szabályok érvényesek rájuk, ha meghalnak szellemek lesznek.
+!Szörnyek
+Minden olyan élőlény aki nem játékos, NJK-k, állatok, szörnyek. Szobákban jönnek létre a "reset" alatt, mozoghatnak, ha meghalnak eltünnek.

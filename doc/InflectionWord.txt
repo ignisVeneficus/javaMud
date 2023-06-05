@@ -1,0 +1,15 @@
+Ragozott szöveg.
+[{TableOfContents title='Tartalom'}]
+!!!Root
+%%information
+Nem lehet XML gyökéreleme
+%%
+
+!!!Attributumok
+||név||XML Tipus[1]||számosság[2]||típus||leírás||
+|targy|Attr|?|Szöveg|A szöveg tárgyas (névelővel)|
+A szöveg a XML elem tartalma
+
+----
+[#1] Elem, vagy attribútum, aszerint, hogy az adott változót hogyan kell létrehozni\\
+[#2] 1, ha kötelező és egyszer; ? ha opcionális, * ha tetszőleges számban; 1+ ha legalább egyszer elő kell fordulnia. 

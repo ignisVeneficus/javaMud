@@ -1,0 +1,24 @@
+[{TableOfContents title='Tartalom'}]
+
+!!! Alaposztályok
+A játékban közvetlenül előforduló osztályok, amikből maga a játék felépül, és a játékos találkozhat.
+Ezen osztályok példányai különálló XML fileokban vannak letárolva.
+%%collapse
+*[Object] - Alap osztály, minden őse
+**[Entity] - Minden ami szobákban előfordulhat
+***[Living] - Élőlények
+****[Player] - Játékos
+****[Monster] - Szörnyek/NJK-k, minden ami mozog, és nem játékos
+***[Item] - Tárgyak (amiket össze lehet szedni)
+****[Armor] - Páncélok (amit viselni lehet)
+****[Container] - Tároló dobozok (tárgyakat lehet benne tárolni)
+****[Food] - Ételek (meg lehet enni)
+****[Weapon] - Fegyverek (amiket kézbe lehet fogni)
+**[Room] - Szobák
+/%
+!!! Kiegészítő osztályok
+Ezen olyan osztályok/típusok amik az XML fileokban megjelennek mint adat
+!! Típusok
+Típusok, adattároló osztályok
+* [DiceInteger]: Kockadobások leírása
+

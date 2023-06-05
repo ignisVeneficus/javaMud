@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room open="true" mapfile="@Tunderfalu1/map_0">
+	<stimulus type="latas" shortDescr="Egy erdei ösvényen állsz." >
+		<descr>Egy erdei ösvényen állsz. Körben magas fák. Itt már elég ritka az erdő, és egy-két házat is észreveszel olyan öt méter magasan a fejed felett.</descr>
+	</stimulus>
+	<stimulus type="hallas" intensity="50" shortDescr="A faluból mindeféle zajokat hallasz">
+		<descr>A zajok egyértelműen fentről a különös faluból jönnek.</descr>
+	</stimulus>
+	<stimulus type="latas" source="50" shortDescr="Fényeket látsz a házak felöl" condition="este">
+		<descr>Barátságos fények világítanak a házakban.</descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="50" shortDescr="Az erdő és a civilizáció szagát érzed." >
+		<descr>Az erdő illatával lassan összekeveredik a civilizació szaga is.</descr>
+	</stimulus>
+	<item>
+		<name targy="a fákat">fák</name>
+		<name targy="a fát">fa</name>
+		<descr>Hatalmas fák. A legkissebbnek a törzsének átmerője is meghaladja a 10 métert. Még a legerősebb szélben sem mozdulnak meg.</descr>
+	</item>
+	<item>
+		<name targy="az ösvényt">ösvény</name>
+		<descr>Egy jól kitaposott ösvény, nyugatról délkeletre tart.</descr>
+	</item>
+	<item condition="este">
+		<name targy="a fényt">fény</name>
+		<name targy="a fényeket">fények</name>
+		<descr>A fákon lévő házakban villágítanak.</descr>
+	</item>
+	<item condition="este">
+		<name targy="a házat">ház</name>
+		<name targy="a házakat">házak</name>
+		<descr>Fábol épültek. Van amely vastagabb ágvillán ül, és vannak amelyek körbeölelik a vastag törzset. Közöttük függőhidak feszülnek. Ablakaik barátságos fénnyel villágítanak.</descr>
+	</item>
+	<item condition="nappal">
+		<name targy="a házat">ház</name>
+		<name targy="a házakat">házak</name>
+		<descr>Fából épültek. Van amely vastagabb ágvillán ül, és vannak amelyek körbeölelik a vastag törzset. Közöttük függőhidak feszülnek.</descr>
+	</item>
+	
+
+	<exit notice="50" direction="délkelet"
+		destination="@Tunderfalu1/falu1_0_6" />
+	<exit notice="50" direction="nyugat"
+		destination="@Tunderfalu1/falu1_0_4" />
+</Room>

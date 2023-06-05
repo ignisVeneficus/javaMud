@@ -1,0 +1,8 @@
+https://spring.io/guides/gs/messaging-stomp-websocket/
+https://www.baeldung.com/java-websockets
+
+javascript scripting -> ezt hasznalni a XML-ben:
+objektum atadas:
+	https://kodejava.org/how-do-i-access-java-object-from-a-script/
+eloforditas:
+	https://stackoverflow.com/questions/30140103/should-i-use-a-separate-scriptengine-and-compiledscript-instances-per-each-threa

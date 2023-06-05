@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RottableContainer>
+	<id>hulla</id>
+	<timeline needInit="true">
+		<time time="0">
+			<property field="shortNameString">{map:owner} hullája</property>
+			<property field="shortNameTargy">{map:owner} hulláját</property>
+		</time>
+		<time time="10">
+			<event type="latas,Szaglas" intensity="50">
+				<descr>%S megroggyant.</descr>
+			</event>
+			<property field="shortNameString">{map:owner} kissé rohadt hullája</property>
+			<property field="shortNameTargy">{map:owner} kissé rohadt hulláját</property>
+		</time>
+		<time time="20">
+			<event type="latas,Szaglas" intensity="50">
+				<descr>%S megroggyant.</descr>
+			</event>
+			<property field="shortNameString">{map:owner} rohadó hullája</property>
+			<property field="shortNameTargy">{map:owner} rohadó hulláját</property>
+		</time>
+		<time time="30">
+			<event type="latas,Szaglas" intensity="50">
+				<descr>%S megroggyant.</descr>
+			</event>
+			<property field="shortNameString">{map:owner} szétrohadt hullája</property>
+			<property field="shortNameTargy">{map:owner} szétrohadt hulláját</property>
+		</time>
+		<time time="40">
+			<event type="latas,Szaglas" intensity="50">
+				<descr>%S teljesen szétesett.</descr>
+			</event>
+		</time>
+	</timeline>	
+
+</RottableContainer>

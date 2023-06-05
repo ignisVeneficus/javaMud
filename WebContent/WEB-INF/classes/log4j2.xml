@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+
+<Properties>
+    <property name="javamud">${sys:catalina.base}/logs/javamud.log</property>
+    <property name="io">${sys:catalina.base}/logs/io.log</property>
+
+</Properties>
+
+<Appenders>
+
+	<File name="javamud-all" fileName="${javamud}" immediateFlush="true">
+		<PatternLayout pattern="%d %x [%-6p] %c{2}.%M() – %m%n" />
+     </File>
+	<File name="io-all" fileName="${io}" immediateFlush="true">
+		<PatternLayout pattern="%d %x [%-6p] %c{2}.%M() – %m%n" />
+       <!-- 
+        <Policies>
+            <SizeBasedTriggeringPolicy size="10000KB" />
+        </Policies>
+        <DefaultRolloverStrategy max="10"/>
+        -->
+    </File>
+	<!-- 
+	<RollingFile name="multiplan-all" fileName="${multiplan}"
+    filePattern="${multiplan}.%i" bufferedIO="false" bufferSize="8192">
+        <PatternLayout>
+            <pattern>%d{dd MMM HH:mm:ss:SSS} %p [%t] - %m - - - - %c%n</pattern>
+        </PatternLayout>
+        <Policies>
+            <SizeBasedTriggeringPolicy size="10000KB" />
+        </Policies>
+        <DefaultRolloverStrategy max="20"/>
+    </RollingFile>      
+
+    <RollingFile name="webservice-all" fileName="${webservice}" filePattern="${webservice}.%i" bufferedIO="false" bufferSize="8192">
+       <PatternLayout>
+            <pattern>%d{dd MMM HH:mm:ss:SSS} %p [%t] - %m %n</pattern>
+        </PatternLayout>
+        <Policies>
+            <SizeBasedTriggeringPolicy size="10000KB" />
+        </Policies>
+        <DefaultRolloverStrategy max="5"/>
+
+    </RollingFile>
+
+     <RollingFile name="sql-all" fileName="${sql}" filePattern="${sql}.%i" bufferedIO="true" bufferSize="8192">
+        <PatternLayout pattern="%d [%t] %-5p %c - %m%n" />
+        <Policies>
+            <SizeBasedTriggeringPolicy size="1000KB" />
+        </Policies>
+        <DefaultRolloverStrategy max="1"/>
+    </RollingFile>   
+    --> 
+	<Console name="ConsoleAppender" target="SYSTEM_OUT">
+		<PatternLayout pattern="%d %x [%-6p] %c{2}.%M() – %m%n" />
+		<!-- 
+		<PatternLayout pattern="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+		-->
+	</Console>
+
+    
+</Appenders>
+<Loggers>
+    <Root level="info" additivity="false">
+        <AppenderRef ref="javamud-all"/>
+    </Root>
+    <Logger name="TODO" additivity="false" level="info">
+           <appender-ref ref="javamud-all"/>
+            <appender-ref ref="ConsoleAppender" />
+    </Logger>
+    
+    <Logger name="org.springframework" additivity="false" level="info">
+            <appender-ref ref="javamud-all"/>
+            <appender-ref ref="ConsoleAppender" />
+    </Logger>
+    <Logger name="org.ignis"  level="trace" additivity="false">
+        <appender-ref ref="javamud-all" />
+        <appender-ref ref="ConsoleAppender" />
+    </Logger>
+    
+    <Logger name="org.ignis.javaMud.Mud.dataholder.outlands"  level="debug" additivity="false">
+        <appender-ref ref="javamud-all" />
+        <appender-ref ref="ConsoleAppender" />
+    </Logger>
+    <Logger name="org.ignis.javaMud.Mud.cartografia.Outlands"  level="info" additivity="false">
+        <appender-ref ref="javamud-all" />
+        <appender-ref ref="ConsoleAppender" />
+    </Logger>
+    
+     <Logger name="org.ignis.javaMud.Mud.deamon.Astronomy"  level="INFO" additivity="false">
+        <appender-ref ref="javamud-all" />
+        <appender-ref ref="ConsoleAppender" />
+    </Logger>
+     <Logger name="org.ignis.javaMud.Mud.deamon.HeartBeat"  level="INFO" additivity="false">
+        <appender-ref ref="javamud-all" />
+        <appender-ref ref="ConsoleAppender" />
+    </Logger>
+     <Logger name="org.ignis.javaMud.Mud.Core.Room"  level="TRACE" additivity="false">
+        <appender-ref ref="javamud-all" />
+        <appender-ref ref="ConsoleAppender" />
+    </Logger>
+     <Logger name="org.ignis.javaMud.Mud.Core.Monster"  level="DEBUG" additivity="false">
+        <appender-ref ref="javamud-all" />
+        <appender-ref ref="ConsoleAppender" />
+    </Logger>
+    
+</Loggers>
+</Configuration>

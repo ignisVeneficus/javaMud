@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Java Mud</title>
+	<link href="font/DejaVu.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery-3.5.1.js"></script> <!-- jquery -->
+	<script type="text/javascript" src="js/ansi_up.js"></script> <!-- ansi -->
+	<script type="text/javascript" src="js/jquery.scrollbar.js"></script> <!-- ansi -->
+	
+	<link href="css/ansi.css" rel="stylesheet" type="text/css"> <!--  ansi szinek -->
+	<link href="css/main.css" rel="stylesheet" type="text/css"> <!--  main -->
+	<link href="css/scrollbar.css" rel="stylesheet" type="text/css"> <!--  scollbar -->
+	
+	<script>
+		var ansi_up = new AnsiUp();
+		ansi_up.use_classes = true;
+		
+		function handleEvent(event){
+			console.debug(event)
+			if(event.event){
+				if(event.event.text){
+					var parent = $("#out");
+					$.each(event.event.text, function( index, value ) {
+						var node= $("<div></div>");
+						if((value==null)||(value=="")){
+							html = "&nbsp;";
+						}
+						else{
+							html = ansi_up.ansi_to_html(value);
+						}
+						node.html(html);
+						node.appendTo(parent)
+					});
+					parent.scrollTop(parent[0].scrollHeight);
+					
+				}
+			}
+		}
+		function sendField(){
+	        var txt = $("#in").val();
+	        $("#in").val('');
+	        if(txt!=""){
+	        	send(txt);
+	        }
+			
+		}
+		$(document).ready(function () {
+		    $("#bt").on("click", sendField);
+		    $('#in').keypress(function (e) {
+		    	  if (e.which == 13) {
+		    		sendField()
+		    	    return false; 
+		    	  }
+		    	});
+		   // $('#out').scrollbar();
+		});
+	</script>
+</head>
+<body>
+<div id="page" style="height:100%">
+<div id="header">
+	<div id="logoText">The Ethereal Nexus</div>
+</div>
+<div id="content">
+
+<div id="output" style="background-color:red;">
+<div id="out" class="terminal">
+	<div>   ▄▄▄▄▀ ▄  █ ▄███▄       ▄███▄     ▄▄▄▄▀ ▄  █ ▄███▄   █▄▄▄▄ ▄███▄   ██   █     </div>
+	<div>▀▀▀ █   █   █ █▀   ▀      █▀   ▀ ▀▀▀ █   █   █ █▀   ▀  █  ▄▀ █▀   ▀  █ █  █     </div>
+	<div>    █   ██▀▀█ ██▄▄        ██▄▄       █   ██▀▀█ ██▄▄    █▀▀▌  ██▄▄    █▄▄█ █     </div>
+	<div>   █    █   █ █▄   ▄▀     █▄   ▄▀   █    █   █ █▄   ▄▀ █  █  █▄   ▄▀ █  █ ███▄  </div>
+	<div>  ▀        █  ▀███▀       ▀███▀    ▀        █  ▀███▀     █   ▀███▀      █     ▀ </div>
+	<div>          ▀                                ▀            ▀              █        </div>
+	<div>                           ▄   ▄███▄      ▄    ▄      ▄▄▄▄▄           ▀         </div>
+	<div>                            █  █▀   ▀ ▀▄   █    █    █     ▀▄                   </div>
+	<div>                        ██   █ ██▄▄     █ ▀  █   █ ▄  ▀▀▀▀▄                     </div>
+	<div>                        █ █  █ █▄   ▄▀ ▄ █   █   █  ▀▄▄▄▄▀                      </div>
+	<div>                        █  █ █ ▀███▀  █   ▀▄ █▄ ▄█                              </div>
+	<div>                        █   ██         ▀      ▀▀▀                               </div>
+	<div>&nbsp;</div>
+	<div>                             (The Ethereal Nexus)</div>
+	<div>&nbsp;</div>
+	<div><span class="ansi-green-fg-bold">Túl sötét van, hogy bármit is lássál.</span></div>
+	<div></div>
+	<div><span class="ansi-cyan-fg">A hullámok hangját hallod.</span></div>
+	<div><span class="ansi-magenta-fg">Sós permetet hoz feléd a szél.</span></div>
+	<div><span class="ansi-blue-fg-bold">[]</span></div>
+	<div>&nbsp;</div>
+	<div>&nbsp;</div>
+	<div>Kapálodzol, hogy fentmaradj de nem sikerül. Fuldoklasz.</div>
+	<div> <span class="ansi-red-fg-bold">HP:</span> <span class="ansi-green-fg-bold">   85</span> [<span class="ansi-green-fg-bold">████████▌ </span>] | <span class="ansi-green-fg-bold">SP:</span> <span class="ansi-green-fg-bold">  100</span> [<span class="ansi-green-fg-bold">██████████</span>] </div>
+	<div>Kapálodzol, hogy fentmaradj de nem sikerül. Fuldoklasz.</div>
+	<div> <span class="ansi-red-fg-bold">HP:</span> <span class="ansi-yellow-fg-bold">   70</span> [<span class="ansi-yellow-fg-bold">███████   </span>] | <span class="ansi-green-fg-bold">SP:</span> <span class="ansi-green-fg-bold">  100</span> [<span class="ansi-green-fg-bold">██████████</span>] </div>
+	<div>Kapálodzol, hogy fentmaradj de nem sikerül. Fuldoklasz.</div>
+	<div> <span class="ansi-red-fg-bold">HP:</span> <span class="ansi-yellow-fg-bold">   55</span> [<span class="ansi-yellow-fg-bold">█████▌    </span>] | <span class="ansi-green-fg-bold">SP:</span> <span class="ansi-green-fg-bold">  100</span> [<span class="ansi-green-fg-bold">██████████</span>] </div>
+	<div>Kapálodzol, hogy fentmaradj de nem sikerül. Fuldoklasz.</div>
+	<div> <span class="ansi-red-fg-bold">HP:</span> <span class="ansi-yellow-fg-bold">   40</span> [<span class="ansi-yellow-fg-bold">████      </span>] | <span class="ansi-green-fg-bold">SP:</span> <span class="ansi-green-fg-bold">  100</span> [<span class="ansi-green-fg-bold">██████████</span>] </div>
+	<div>Kapálodzol, hogy fentmaradj de nem sikerül. Fuldoklasz.</div>
+	<div> <span class="ansi-red-fg-bold">HP:</span> <span class="ansi-red-fg-bold">   25</span> [<span class="ansi-red-fg-bold">██▌       </span>] | <span class="ansi-green-fg-bold">SP:</span> <span class="ansi-green-fg-bold">  100</span> [<span class="ansi-green-fg-bold">██████████</span>] </div>
+	<div>Kapálodzol, hogy fentmaradj de nem sikerül. Fuldoklasz.</div>
+	<div> <span class="ansi-red-fg-bold">HP:</span> <span class="ansi-red-fg-bold">   10</span> [<span class="ansi-red-fg-bold">█         </span>] | <span class="ansi-green-fg-bold">SP:</span> <span class="ansi-green-fg-bold">  100</span> [<span class="ansi-green-fg-bold">██████████</span>] </div>
+	<div>Kapálodzol, hogy fentmaradj de nem sikerül. Fuldoklasz.</div>
+	<div> <span class="ansi-red-fg-bold">HP:</span> <span class="ansi-red-fg-bold">   -5</span> [<span class="ansi-red-fg-bold">          </span>] | <span class="ansi-green-fg-bold">SP:</span> <span class="ansi-green-fg-bold">  100</span> [<span class="ansi-green-fg-bold">██████████</span>] </div>
+	<div>Fulladás miatt meghaltál!</div>
+	<div>Kapálodzol, hogy fentmaradj de nem sikerül. Fuldoklasz.</div>
+	<div> <span class="ansi-red-fg-bold">HP:</span> <span class="ansi-red-fg-bold">  -20</span> [<span class="ansi-red-fg-bold">          </span>] | <span class="ansi-green-fg-bold">SP:</span> <span class="ansi-green-fg-bold">  100</span> [<span class="ansi-green-fg-bold">██████████</span>] </div>
+	<div>Fulladás miatt meghaltál!</div>
+	<div>Kelet felé távoztál.</div>
+	<div>&nbsp;</div>
+	<div><span class="ansi-green-fg-bold">Túl sötét van, hogy bármit is lássál.</span></div>
+	<div></div>
+	<div><span class="ansi-cyan-fg">A hullámok hangját hallod.</span></div>
+	<div><span class="ansi-magenta-fg">Sós permetet hoz feléd a szél.</span></div>
+	<div><span class="ansi-blue-fg-bold">[]</span></div>
+	<div>&nbsp;</div>
+	<div>&nbsp;</div>
+	<div>Kapálodzol, hogy fentmaradj de nem sikerül. Fuldoklasz.</div>
+	<div> <span class="ansi-red-fg-bold">HP:</span> <span class="ansi-red-fg-bold">  -35</span> [<span class="ansi-red-fg-bold">          </span>] | <span class="ansi-green-fg-bold">SP:</span> <span class="ansi-green-fg-bold">   95</span> [<span class="ansi-green-fg-bold">█████████▌</span>] </div>
+	<div>Fulladás miatt meghaltál!</div>
+	<div>Kapálodzol, hogy fentmaradj de nem sikerül. Fuldoklasz.</div>
+	<div> <span class="ansi-red-fg-bold">HP:</span> <span class="ansi-red-fg-bold">  -50</span> [<span class="ansi-red-fg-bold">          </span>] | <span class="ansi-green-fg-bold">SP:</span> <span class="ansi-green-fg-bold">   95</span> [<span class="ansi-green-fg-bold">█████████▌</span>] </div>
+	<div>Fulladás miatt meghaltál!</div>
+	<div>Kapálodzol, hogy fentmaradj de nem sikerül. Fuldoklasz.</div>
+	<div> <span class="ansi-red-fg-bold">HP:</span> <span class="ansi-red-fg-bold">  -65</span> [<span class="ansi-red-fg-bold">          </span>] | <span class="ansi-green-fg-bold">SP:</span> <span class="ansi-green-fg-bold">   95</span> [<span class="ansi-green-fg-bold">█████████▌</span>] </div>
+	<div>Fulladás miatt meghaltál!</div>
+</div>
+<div id="input" style="
+    display: flex;
+">
+<input id="in" type="text"><input type="button" value="Send" id="bt">
+
+</div>
+    <div class="pointBar" id="HPBar">
+        <div class="inner" data-progress="92%">
+        </div>
+    </div>
+    <div class="pointBar" id="SPBar">
+        <div class="inner" data-progress="92%">
+        </div>
+    </div>
+    <div class="pointBar" id="MPBar">
+        <div class="inner" data-progress="92%">
+         </div>
+    </div>
+
+</div>
+
+<div id="side" style="background-color:blue;">
+<div id="tabs">
+	<div id="terkep" class="label selected">Helyszín</div>
+	<div id="stat" class="label">Karakter</div>
+	<div id="inventory" class="label">Leltár</div>	
+	<div id="skill" class="label">Képzetségek</div>	
+</div>
+<div id="contents">
+<div id="terkept" class="tab_content">
+</div>
+<div id="statt" class="tab_content">
+</div>
+<div id="inventoryt" class="tab_content">
+</div>
+<div id="skillt" class="tab_content">
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</body></html>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Plane planeId="1">
+	<!--  
+		nevek:
+		Churg
+		Klita
+		Blagos
+		Oniogow
+		Ulmery
+		Vedo
+		Oseka
+		Zey
+		Amwell
+	 -->
+
+
+	<map mapType="terrain" file="domborzat.png"/>
+	<map mapType="biomes" file="outland.png">
+		<!--  tenger -->
+		<mapColor rgb="000381" type="room" mapType="tenger" SPLost="0" isWater = "true">
+			<stimulus type="latas" intensity="0" shortDescr="Tengerben vagy." >
+				<descr>A tengerben áztatod magad. Körben a víz összefolyik az éggel. Szárazföldet semmerre sem látsz. Taposod a kristálytiszta vizet, amelyben 20 méterig is le lehet látni, de a tenger fenekét a talpad alatt a mélybe vész. Szép lehet innen a naplemente és a napkelte, de a helyedben nem várnam meg. A fekete mélységben bármi lehet...</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Tengerzugást hallasz." >
+				<descr>A tengerzúgást és néha egy egy sirály hangját hallod.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Sós vízpárát érzel." >
+				<descr>A tenger sós illatát érzed.</descr>
+			</stimulus>
+		</mapColor>
+		<mapColor rgb="010482" type="room" mapType="tenger" SPLost="0" isWater = "true">
+			<stimulus type="latas" intensity="0" shortDescr="Tengerben vagy." >
+				<descr>A hullámok között uszkálsz. A lábad folyamatosan stabil pontot keres, de néhány halon kívül semmit nem talál... Néha átcsap fölötted egy-egy nagyobb hullám. Csak nehogy egy még nagyobb hullám a vesztedet okozza!</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Hullámokat hallasz." >
+				<descr>A hullámok hangját hallod.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Sós vízpárát érzel." >
+				<descr>Sós permetet hoz feléd a szél.</descr>
+			</stimulus>
+		</mapColor>
+		<mapColor rgb="020583" type="room" mapType="tenger" SPLost="0" isWater = "true">
+			<stimulus type="latas" intensity="0" shortDescr="Tengerben vagy." >
+				<descr>Bármerre nézel, mindenütt csak víz, víz, egészen a látóhatárig. Az igaz, hogy jó dolog a fürdés, de azert ez már kezd unalmas lenni!</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Hullámokat hallasz." >
+				<descr>A hullámok hangját hallod.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Sós vízpárát érzel." >
+				<descr>Sós permetet hoz feléd a szél.</descr>
+			</stimulus>
+		</mapColor>
+		<mapColor rgb="030684" type="room" mapType="tenger" SPLost="0" isWater = "true">
+			<stimulus type="latas" intensity="0" shortDescr="Tengerben vagy." >
+				<descr>A mélyben uszkálsz. Idelenn eléggé hűvös a viz. Talán jobb lenne a szárazföldön sétálni... Egyre fáradtabb vagy a sok úszástól.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Tengerzugást hallasz." >
+				<descr>A tengerzúgást és néha egy egy sirály hangját hallod.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Sós vízpárát érzel." >
+				<descr>A tenger sós illatát érzed.</descr>
+			</stimulus>
+		</mapColor>
+		<!--  tengerpart -->
+		<mapColor rgb="fffc00" type="room" mapType="tengerpart" SPLost="1" isWater = "false">
+		</mapColor>
+		<mapColor rgb="fffd01" type="room" mapType="tengerpart" SPLost="1" isWater = "false">
+		</mapColor>
+		<mapColor rgb="fffe02" type="room" mapType="tengerpart" SPLost="1" isWater = "false">
+		</mapColor>
+		<mapColor rgb="ffff03" type="room" mapType="tengerpart" SPLost="1" isWater = "false">
+		</mapColor>
+		<!--  mezo -->
+		<mapColor rgb="7de403" type="room" mapType="mezo" SPLost="1" isWater = "false">
+		</mapColor>
+		<mapColor rgb="7ee504" type="room" mapType="mezo" SPLost="1" isWater = "false">
+		</mapColor>
+		<mapColor rgb="7fe605" type="room" mapType="mezo" SPLost="1" isWater = "false">
+		</mapColor>
+		<mapColor rgb="80e706" type="room" mapType="mezo" SPLost="1" isWater = "false">
+		</mapColor>
+		<!--  mocsar -->
+		<mapColor rgb="026226" type="room" mapType="mocsar" SPLost="3" isWater = "false">
+			<stimulus type="latas" intensity="0" shortDescr="Mocsárban vagy." condition="nappal">
+				<descr>Egy büdös mocsárban rohasztod a lábad. Körülötted mérges gázok és kipárolgások gomolyognak. A talaj mindenhol süppedős, inkább ne nézelődj sokáig. Iszonyú lehet itt megfelelo felszerelés nélkül menni.</descr>
+			</stimulus>
+			<stimulus type="latas" source="10" intensity="0" shortDescr="Mocsárban vagy." condition="este">
+				<descr>Egy büdös mocsárban rohasztod a lábad. Körülötted mérges gázok és kipárolgások gomolyognak. Néhány helyen kékes fények vannak. A talaj mindenhol süppedős, alig látod, hogy mire lépsz rá. Iszonyú lehet itt megfelelo felszerelés nélkül menni.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Szúnyogokat hallasz." >
+				<descr>Távol és közel ezernyi szúnyogot hallasz, ahogy prédát keresnek.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Rothadó növényzetet érzel." >
+				<descr>A rothadó növenyzet kábító szagot ereszt magából.</descr>
+			</stimulus>
+			<item>
+				<name targy="a fényt">fény</name>
+				<name targy="a fényeket">fények</name>
+				<descr>Kékesen villodzó fények. Lidércek? vagy csak a büdős gázok égnek?</descr>
+			</item>
+			<item>
+				<name targy="a talajt">talaj</name>
+				<descr>Süppedős, hol szilárd, hol folyik. Nem tudod milyen mély a sár.</descr>
+			</item>
+		</mapColor>
+		<mapColor rgb="036327" type="room" mapType="mocsar" SPLost="3" isWater = "false">
+		</mapColor>
+		<mapColor rgb="046428" type="room" mapType="mocsar" SPLost="3" isWater = "false">
+		</mapColor>
+		<mapColor rgb="056529" type="room" mapType="mocsar" SPLost="3" isWater = "false">
+		</mapColor>
+		<!--  erdo -->
+		<mapColor rgb="019323" type="room" mapType="erdo" SPLost="2" isWater = "false">
+		</mapColor>
+		<mapColor rgb="029424" type="room" mapType="erdo" SPLost="2" isWater = "false">
+		</mapColor>
+		<mapColor rgb="039525" type="room" mapType="erdo" SPLost="2" isWater = "false">
+		</mapColor>
+		<mapColor rgb="049626" type="room" mapType="erdo" SPLost="2" isWater = "false">
+		</mapColor>
+		<!--  fenyves -->
+		<mapColor rgb="315d41" type="room" mapType="fenyves" SPLost="1" isWater = "false">
+		</mapColor>
+		<mapColor rgb="325e42" type="room" mapType="fenyves" SPLost="1" isWater = "false">
+		</mapColor>
+		<mapColor rgb="335f43" type="room" mapType="fenyves" SPLost="1" isWater = "false">
+		</mapColor>
+		<mapColor rgb="346044" type="room" mapType="fenyves" SPLost="1" isWater = "false">
+		</mapColor>
+		<!--  sziklak -->
+		<mapColor rgb="8a8a8a" type="room" mapType="sziklak" SPLost="4" isWater = "false">
+		</mapColor>
+		<mapColor rgb="8b8b8b" type="room" mapType="sziklak" SPLost="4" isWater = "false">
+		</mapColor>
+		<mapColor rgb="8c8c8c" type="room" mapType="sziklak" SPLost="4" isWater = "false">
+		</mapColor>
+		<mapColor rgb="8d8d8d" type="room" mapType="sziklak" SPLost="4" isWater = "false">
+		</mapColor>
+		<!--  torpefenyves -->
+		<mapColor rgb="08ffb1" type="room" mapType="torpefenyves" SPLost="4" isWater = "false">
+		</mapColor>
+		<mapColor rgb="09ffb2" type="room" mapType="torpefenyves" SPLost="4" isWater = "false">
+		</mapColor>
+		<mapColor rgb="0affb3" type="room" mapType="torpefenyves" SPLost="4" isWater = "false">
+		</mapColor>
+		<mapColor rgb="0bffb4" type="room" mapType="torpefenyves" SPLost="4" isWater = "false">
+		</mapColor>
+		<!--  ho -->
+		<mapColor rgb="fafafa" type="room" mapType="ho" SPLost="3" isWater = "false">
+		</mapColor>
+		<mapColor rgb="fbfbfb" type="room" mapType="ho" SPLost="3" isWater = "false">
+		</mapColor>
+		<mapColor rgb="fcfcfc" type="room" mapType="ho" SPLost="3" isWater = "false">
+		</mapColor>
+		<mapColor rgb="fdfdfd" type="room" mapType="ho" SPLost="3" isWater = "false">
+		</mapColor>
+		<!--  meredek sziklak -->
+		<mapColor rgb="646464" type="room" mapType="sziklafal" SPLost="4" isWater = "false">
+		</mapColor>
+		<mapColor rgb="656565" type="room" mapType="sziklafal" SPLost="4" isWater = "false">
+		</mapColor>
+		<mapColor rgb="666666" type="room" mapType="sziklafal" SPLost="4" isWater = "false">
+		</mapColor>
+		<mapColor rgb="676767" type="room" mapType="sziklafal" SPLost="4" isWater = "false">
+		</mapColor>
+		
+	</map>
+	<map mapType="rivers" file="river.png">
+		<!--  er -->
+		<mapColor rgb="14c8b9" type="overlay" mapType="folyo" mapSubType="er"/>
+		<mapColor rgb="1b81c8" type="overlay" mapType="folyo" mapSubType="patak"/>
+		<mapColor rgb="001cf2" type="overlay" mapType="folyo" mapSubType="folyo"/>
+		<mapColor rgb="000063" type="overlay" mapType="folyo" mapSubType="folyam"/>
+	</map>
+	 
+	<mapAddon x="300" y="250" displayType="osveny">
+		<exit direction="ösvény" destination="@Tunderfalu1/falu1_0_2" notice="50"/>
+		<stimulus type="latas" intensity="0" shortDescr="Egy ösvényen állsz." condition="nappal">
+			<descr>Egy ösvény tünik el a fák között</descr>
+		</stimulus>
+		<stimulus type="latas" source="20" intensity="0" shortDescr="Egy ösvényen állsz." condition="este">
+			<descr>Fények szűrődnek ki a fák közül. Egy ösvény rajzolódik ki elötted.</descr>
+		</stimulus>
+	</mapAddon>
+	<!-- 
+	fovaros, 252|118
+	-->
+	<city x="252" y="118" eszak="@Fovaros/fovaros_3_1" eszakkelet="@Fovaros/fovaros_2_116" kelet="@Fovaros/fovaros_4_59" delkelet="@Fovaros/fovaros_4_47" del="@Fovaros/fovaros_4_16" delnyugat="@Fovaros/fovaros_1_72" nyugat="@Fovaros/fovaros_3_146" eszaknyugat="@Fovaros/fovaros_3_151"/> 
+
+</Plane>

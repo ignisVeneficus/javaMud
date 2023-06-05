@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><Room>
+<stimulus shortDescr="2_63" intensity="0" type="latas">
+<descr>DUMMY szoveg - 2.emelet - </descr>
+</stimulus>
+<exit notice="50" direction="délkelet" destination="@Tunderfalu1/falu1_2_64"/>
+<exit notice="50" direction="északkelet" destination="@Tunderfalu1/falu1_2_82"/>
+</Room>

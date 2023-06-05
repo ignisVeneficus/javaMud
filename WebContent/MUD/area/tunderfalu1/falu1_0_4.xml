@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room open="true" mapfile="@Tunderfalu1/map_0">
+	<stimulus type="latas" shortDescr="Egy erdei ösvényen állsz." >
+		<descr>Egy erdei ösvényen állsz. Körben magas fák. Az erdő és az aljnövényzet itt már megritkult es több fény is lejut már hozzád. Talán apró, gondos kezek tisztítottak meg az utat.</descr>
+	</stimulus>
+	<stimulus type="hallas" intensity="50" shortDescr="Szélsussogást hallasz">
+		<descr>A szél játszik az ágakkal, de dél, délkelet felöl, egyéb hangokat is hallasz. A labad alatt kavicsok csikorognak.</descr>
+	</stimulus>
+	<stimulus type="latas" source="50" shortDescr="Dél felöl fényeket látsz." condition="este">
+		<descr>Dél, délkelt felöl fények szűrődnek át a fák között</descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="50" shortDescr="Virágillatot érzel." >
+		<descr>Egy-két különös virag illatát érzed.</descr>
+	</stimulus>
+	
+	<item>
+		<name targy="az aljnövényzetet">aljnövényzet</name>
+		<descr>Megritkultak a bokrok, egy-kettő növekszik a fák tövében</descr>
+	</item>
+	<item>
+		<name targy="a fákat">fák</name>
+		<name targy="a fát">fa</name>
+		<descr>Hatalmas fák. A legkissebbnek a törzsének átmerője is meghaladja a 10 métert. Mintha az égig érnének</descr>
+	</item>
+	<item>
+		<name targy="az ösvényt">ösvény</name>
+		<descr>Egy jól kitaposott ösvény, amit valaki fehér zuzott kővel szort fel.</descr>
+	</item>
+	<item>
+		<name targy="a virágot">virág</name>
+		<name targy="a virágokat">virágok</name>
+		<descr>Szépek, illatosak, de a körülötte lévő nyomokbol itélve veszélyesek lehetnek...</descr>
+	</item>
+	<item condition="este">
+		<name targy="a fényt">fény</name>
+		<name targy="a fényeket">fények</name>
+		<descr>A fáktól nem látod honnét jön.</descr>
+	</item>
+
+	<exit notice="50" direction="kelet"
+		destination="@Tunderfalu1/falu1_0_5" />
+	<exit notice="50" direction="északnyugat"
+		destination="@Tunderfalu1/falu1_0_3" />
+</Room>

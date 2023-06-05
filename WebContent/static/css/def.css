@@ -1,0 +1,22 @@
+/* Color Theme Swatches in Hex 
+@colorDark: #000000;
+@colorLight: #035E69;
+@colorLight2: #0393A3;
+@colorText: @colorDark;
+
+@colorHighlight: #F24C27;
+@colorWhite: #F2EFDC;
+*/
+.BorderRadius {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.TopBorderRadius {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-top-left-radius: 3px;
+  -moz-border-top-right-radius: 3px;
+}

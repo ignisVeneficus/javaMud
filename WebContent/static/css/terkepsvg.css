@@ -1,0 +1,148 @@
+/* Color Theme Swatches in Hex 
+@colorDark: #000000;
+@colorLight: #035E69;
+@colorLight2: #0393A3;
+@colorText: @colorDark;
+
+@colorHighlight: #F24C27;
+@colorWhite: #F2EFDC;
+*/
+.BorderRadius {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.TopBorderRadius {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-top-left-radius: 3px;
+  -moz-border-top-right-radius: 3px;
+}
+svg#terkep {
+  display: block;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+svg#terkep .line {
+  stroke: #000000;
+  stroke-width: 0.25;
+}
+svg#terkep .white {
+  fill: #FFFFFF !important;
+}
+svg#terkep .empty {
+  fill: none !important;
+}
+svg#terkep .erdo rect {
+  fill: #9FD1A2;
+}
+svg#terkep .erdo .color {
+  fill: #39B54A;
+}
+svg#terkep .fenyves rect {
+  fill: #E2F8F4;
+}
+svg#terkep .fenyves .color {
+  fill: #377C7C;
+}
+svg#terkep .ho rect {
+  fill: #FFFFFF;
+}
+svg#terkep .ho .color {
+  fill: #DDDDDD;
+}
+svg#terkep .mezo rect {
+  fill: #95DD6F;
+}
+svg#terkep .mocsar rect {
+  fill: #7CA5A4;
+}
+svg#terkep .mocsar .color {
+  fill: #0D4E50;
+}
+svg#terkep .sziklak rect {
+  fill: #C6C6C6;
+}
+svg#terkep .sziklak .color {
+  fill: #A5A5A5;
+}
+svg#terkep .tenger rect {
+  fill: #2797AA;
+}
+svg#terkep .tengerpart rect {
+  fill: #F9F5C0;
+}
+svg#terkep .tengerpart .color {
+  fill: #FCF23D;
+}
+svg#terkep .torpefenyves rect {
+  fill: #B4DBC4;
+}
+svg#terkep .torpefenyves .color {
+  fill: #52C590;
+}
+svg#terkep .varos rect {
+  fill: #BEDAC4;
+}
+svg#terkep .o_varos .color {
+  fill: #FECB86;
+}
+svg#terkep .o_osveny {
+  fill: #000000;
+  stroke: #000000;
+  stroke-width: 1;
+}
+svg#terkep .room rect {
+  stroke: #000000;
+  stroke-width: 2;
+}
+svg#terkep .o_letra {
+  fill: #000000;
+  stroke: none;
+}
+svg#terkep .o_kocsma {
+  fill: #000000;
+  stroke: none;
+}
+svg#terkep .roomConnection {
+  stroke: #000000;
+  stroke-width: 2;
+}
+svg#terkep .outlandOverlay rect {
+  stroke: none;
+  fill: #EF5350;
+  opacity: 50%;
+}
+svg#terkep .roomOverlay {
+  overflow: visible;
+}
+svg#terkep .roomOverlay circle {
+  stroke: #EF5350;
+  stroke-width: 3;
+  fill: none;
+}
+svg#terkep .folyo {
+  stroke: #2797AA;
+  stroke-width: 3;
+}
+svg#terkep use.grp_0 {
+  fill: #cfdaec;
+}
+svg#terkep .grp_1 {
+  fill: #d1dfd2;
+}
+svg#terkep .grp_2 {
+  fill: #ffe9cc;
+}
+svg#terkep .grp_3 {
+  fill: #f1d2d2;
+}
+svg#terkep .grp_4 {
+  fill: #d1ffff;
+}
+svg#terkep .grp_5 {
+  fill: #dcd5ee;
+}

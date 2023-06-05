@@ -1,0 +1,113 @@
+#include "colors.inc"
+
+#declare tex = texture {
+  pigment {
+    granite
+    turbulence 0.6
+    color_map {
+      [0.000, 0.316 color rgbf <0.910, 0.788, 0.788, 0.000>
+      color rgbf <0.922, 0.914, 0.871, 0.000>]
+      [0.316, 0.453 color rgbf <0.922, 0.914, 0.871, 0.000>
+      color rgbf <0.894, 0.867, 0.780, 0.000>]
+      [0.453, 0.624 color rgbf <0.894, 0.867, 0.780, 0.000>
+      color rgbf <0.784, 0.788, 0.788, 0.000>]
+      [0.624, 0.726 color rgbf <0.784, 0.788, 0.788, 0.000>
+      color rgbf <0.851, 0.812, 0.741, 0.000>]
+      [0.726, 0.863 color rgbf <0.851, 0.812, 0.741, 0.000>
+      color rgbf <0.647, 0.655, 0.655, 0.000>]
+      [0.863, 1.001 color rgbf <0.647, 0.655, 0.655, 0.000>
+      color rgbf <0.910, 0.788, 0.788, 0.000>]
+    }
+  }
+}
+
+
+light_source{
+   <20,50,100>
+   color White
+}
+
+light_source{
+   <-20,100,-100>
+   color White
+}
+
+//#declare q=1;
+
+#ifndef (q)
+camera{
+   location <.45,1.50,-1.35>
+   look_at <0.5,0,0.5>
+   angle 30
+//   angle 70
+//   angle 90
+//   angle 100
+//   angle 130
+}
+#else
+
+camera{
+  location <0,50,-10>
+  look_at <0,0,0>
+  angle 90
+}   
+#end
+
+background{
+//  color Blue
+	color White
+}
+
+height_field{
+	png "domborzat.png"
+	scale <1,0.1,1>
+	texture{
+     pigment {
+//     color Gray
+     
+		image_map{png "outland-pov.png" interpolate 2}
+		rotate 90*x
+		
+     }
+     /*
+     pigment {
+//     color Gray
+     
+		image_map{png "river-pov.png" interpolate 2}
+		rotate 90*x
+		
+     } 
+     */
+     finish {
+       ambient < 0.300, 0.300, 0.300 >
+       diffuse .50
+       reflection < 0.000, 0.000, 0.000 >
+       specular .10
+       roughness 0.002
+//       phong .40
+//       phong_size 16
+     }   
+     }
+	texture{
+     pigment {
+		image_map{png "river-pov.png" interpolate 2}
+		rotate 90*x
+		
+     } 
+     finish {
+       ambient < 0.300, 0.300, 0.300 >
+       diffuse .50
+       reflection < 0.000, 0.000, 0.000 >
+       specular .10
+       roughness 0.002
+//       phong .40
+//       phong_size 16
+     }
+
+   }
+	translate -0.001*y
+}
+
+plane{y,0
+	texture{ pigment{ color Blue } }
+}

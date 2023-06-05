@@ -1,0 +1,191 @@
+@import "def.less";
+
+svg#terkep {
+	display:block;
+	margin:auto;
+	height:100%;
+	width:100%;
+//	position:fixed; top:0; left:0; height:100%; width:100%;
+		
+	.line {
+		stroke: #000000;
+		stroke-width: 0.25;
+		//stroke-miterlimit: 10;
+	}
+
+	.white {
+		fill: #FFFFFF !important;
+	}
+
+	.empty {
+		fill: none !important;
+	}
+
+	.erdo {
+		rect {
+			fill: #9FD1A2;
+		}
+
+		.color {
+			fill: #39B54A;
+		}
+	}
+
+	.fenyves {
+		rect {
+			fill: #E2F8F4;
+		}
+
+		.color {
+			fill: #377C7C;
+		}
+	}
+
+	.ho {
+		rect {
+			fill: #FFFFFF;
+		}
+
+		.color {
+			fill: #DDDDDD;
+		}
+	}
+
+	.mezo {
+		rect {
+			fill: #95DD6F;
+		}
+	}
+
+	.mocsar {
+		rect {
+			fill: #7CA5A4;
+		}
+
+		.color {
+			fill: #0D4E50;
+		}
+	}
+
+	.sziklak {
+		rect {
+			fill: #C6C6C6;
+		}
+
+		.color {
+			fill: #A5A5A5;
+		}
+	}
+
+	.tenger {
+		rect {
+			fill: #2797AA;
+		}
+	}
+
+	.tengerpart {
+		rect {
+			fill: #F9F5C0;
+		}
+
+		.color {
+			fill: #FCF23D;
+		}
+	}
+
+	.torpefenyves {
+		rect {
+			fill: #B4DBC4;
+		}
+
+		.color {
+			fill: #52C590;
+		}
+	}
+	.varos{
+		rect{
+			fill:#BEDAC4;
+		}
+	}
+	
+	.o_varos{
+		.color{
+			fill:#FECB86;
+		}
+	}
+	.o_osveny{
+		//fill:@color_ansi_orange;
+		fill:#000000;
+		stroke: #000000;
+		stroke-width: 1;
+	}
+	
+	.room{
+		rect{
+			//fill: #FFFFFF;
+			stroke: #000000;
+			stroke-width: 2;
+		}
+	}
+	
+	.o_letra{
+			fill: #000000;
+			stroke: none;
+	}
+	.o_kocsma{
+			fill: #000000;
+			stroke: none;
+	}
+	
+	.roomConnection{
+			stroke: #000000;
+			stroke-width: 2;
+	}
+	
+	.outlandOverlay{
+		rect{
+			stroke: none;
+			fill: #EF5350;
+			opacity: 50%;
+		}
+	}
+	.roomOverlay{
+		overflow:visible;
+		circle{
+			stroke: #EF5350;
+			stroke-width: 3;
+			fill:none;
+		}
+	}
+	.folyo{
+		stroke: #2797AA;
+		stroke-width: 3;
+	}
+	
+	
+	use.grp_0{
+		fill: mix(white,@color_ansi_blue,80%);
+		
+	}
+	.grp_1{
+		fill: mix(white,@color_ansi_green,80%);
+		
+	}
+	.grp_2{
+		fill: mix(white,@color_ansi_orange,80%);
+		
+	}
+	.grp_3{
+		fill: mix(white,@color_ansi_red,80%);
+		
+	}
+	.grp_4{
+		fill: mix(white,@color_ansi_cyan,80%);
+		
+	}
+	.grp_5{
+		fill: mix(white,@color_ansi_magenta,80%);
+		
+	}
+}
+

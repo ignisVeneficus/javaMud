@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room open="true" mapfile="@Tunderfalu1/map_0">
+	<stimulus shortDescr="0_7" type="latas">
+		<descr>DUMMY szoveg - földszint - </descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="50" shortDescr="Friss levegőt érzel." >
+		<descr>A friss levegőt es a nedves föld szagat érzed.</descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="10" shortDescr="Délkelet felöl gyümölcsszagot érzel" >
+		<descr>Délkelet felől édeskés gyümölcssagot hoz a szél.</descr>
+	</stimulus>
+	<exit notice="50" direction="délkelet" destination="@Tunderfalu1/falu1_0_13" />
+	<exit notice="50" direction="délnyugat" destination="@Tunderfalu1/falu1_0_8" />
+	<exit notice="50" direction="észak" destination="@Tunderfalu1/falu1_0_6" />
+	<exit notice="50" direction="fel" destination="@Tunderfalu1/falu1_1_34" onlyPlayer="true"/>
+</Room>

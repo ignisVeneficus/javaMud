@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room mapfile="@Fovaros/map">
+<stimulus shortDescr="1_99" intensity="0" type="latas">
+<descr>DUMMY szoveg - Óváros - Bárdok</descr>
+</stimulus>
+<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_88"/>
+</Room>

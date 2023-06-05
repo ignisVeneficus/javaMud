@@ -1,0 +1,56 @@
+Nem játékos élőlények/szörnyek. A [Living] leszármazottja.
+
+[{TableOfContents title='Tartalom'}]
+!!!Root
+Az XML-ben ''Living''-el kell rá hivatkozni
+!!!Attributumok
+||név||XML Tipus[[1]||számosság[[2]||típus||leírás||
+|hasMaterialForm|Attr|?|Logikai|''false'' esetén nincs anyagi formája (sok minden nem hat rá)\\Alapételmezetten ''true''|
+|emotions|Elem|?|[Emotion]|Az élőlény által véletlenszerűen művelt tevékenységek. Hangulatelem.
+|listen|Elem|?|Szöveg|A "''xy mondja: zz''" eseményre lefutó JS függvény neve|
+|max|Attr|?|Egész|Megadása esetén összesen ennyi szörny lehet a játékban. Nem csak az adott területen
+|profession|Elem|*|[Profession]|"Szakma", ezzel lehet egy előlényt felokosítani előre elkészített viselkedéssel, pl.: pap - fel tud támasztani; képzettségtanár - képzettséget fejleszt; boltos - árul stb|
+
+!!!Példák
+!!Szarvas
+Szarvas a tündérfaluból
+
+%%prettify
+{{{
+<?xml version="1.0" encoding="UTF-8"?>
+<Living moving="true" race="szarvas" maxSP="1000" maxHP="10d10+3" qty="1">
+	<stimulus type="latas" intensity="50" >
+		<descr>Egy nagy szarvasbika. Az agancsa alapján olyan {r:2-3:4-5:6-7} évesnek becsülöd.</descr>
+	</stimulus>
+	<id>szarvas</id>
+	<id>szarvasbika</id>
+	<id>állat</id>
+	<id>bika</id>
+	<gender>hímnemű</gender>
+	<shortName targy="a szarvast">szarvas</shortName>
+	<!-- <emotions intervall="5" probality="10"> -->
+	<emotions intervall="1" probality="3">
+		<emotion>
+			<sense name="latas" difficulty="75"/>
+			<sense name="hallas" difficulty="50"/>
+			<descr>%S majszol egy kis füvet.</descr>
+		</emotion>
+		<emotion >
+			<sense name="latas" difficulty="75"/>
+			<descr>%S meredő szemekkel kémleli a veszélyeket</descr>
+		</emotion>
+		<emotion>
+			<sense name="latas" difficulty="75"/>
+			<sense name="hallas" difficulty="25"/>
+			<descr>%S körbesétál füvet keresve.</descr>
+		</emotion>
+
+	</emotions>
+</Living>
+}}}
+/%
+
+
+
+[[#1] Elem, vagy attribútum, aszerint, hogy az adott változót hogyan kell létrehozni\\
+[[#2] 1, ha kötelező és egyszer; ? ha opcionális, * ha tetszőleges számban; 1+ ha legalább egyszer elő kell fordulnia. 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>Mud properties</comment>
+	<entry key="Cache.MaxSize">1000</entry>
+	
+	<entry key="Mud.Ref">/MUD/ref.xml</entry>
+	<entry key="Mud.Logo">/MUD/logo.txt</entry>
+	
+	<entry key="Mud.database.skill">@db/skills.xml</entry>
+	<entry key="Mud.database.race">@db/races.xml</entry>
+	
+	
+	<entry key="Outlands.path">@OutlandsMaps/</entry>
+	
+	<entry key="Player.db.path">@Mud/derby</entry>
+</properties>

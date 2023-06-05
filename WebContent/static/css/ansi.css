@@ -1,0 +1,94 @@
+/* Color Theme Swatches in Hex 
+@colorDark: #000000;
+@colorLight: #035E69;
+@colorLight2: #0393A3;
+@colorText: @colorDark;
+
+@colorHighlight: #F24C27;
+@colorWhite: #F2EFDC;
+*/
+.BorderRadius {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.TopBorderRadius {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-top-left-radius: 3px;
+  -moz-border-top-right-radius: 3px;
+}
+span.ansi-red-fg {
+  color: #b71c1c;
+}
+span.ansi-green-fg {
+  color: #1b5e20;
+}
+span.ansi-blue-fg {
+  color: #0d47a1;
+}
+span.ansi-magenta-fg {
+  color: #512da8;
+}
+span.ansi-yellow-fg {
+  color: #ff8f00;
+}
+span.ansi-cyan-fg {
+  color: #18ffff;
+}
+span.ansi-black-fg {
+  color: #000000;
+}
+span.ansi-white-fg {
+  color: #e0e0e0;
+}
+span.ansi-red-fg-bold {
+  color: #ef5350;
+}
+span.ansi-green-fg-bold {
+  color: #8bc34a;
+}
+span.ansi-blue-fg-bold {
+  color: #64b5f6;
+}
+span.ansi-magenta-fg-bold {
+  color: #ba68c8;
+}
+span.ansi-yellow-fg-bold {
+  color: #ffeb3b;
+}
+span.ansi-cyan-fg-bold {
+  color: #80cbc4;
+}
+span.ansi-black-fg-bold {
+  color: #616161;
+}
+span.ansi-white-fg-bold {
+  color: #ffffff;
+}
+span.ansi-red-bg {
+  background-color: #b71c1c;
+}
+span.ansi-green-bg {
+  background-color: #1b5e20;
+}
+span.ansi-blue-bg {
+  background-color: #0d47a1;
+}
+span.ansi-magenta-bg {
+  background-color: #512da8;
+}
+span.ansi-yellow-bg {
+  background-color: #ff8f00;
+}
+span.ansi-cyan-bg {
+  background-color: #18ffff;
+}
+span.ansi-black-bg {
+  background-color: #000000;
+}
+span.ansi-white-bg {
+  background-color: #e0e0e0;
+}

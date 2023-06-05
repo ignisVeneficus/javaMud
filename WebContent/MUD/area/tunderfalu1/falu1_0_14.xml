@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room open="true" mapfile="@Tunderfalu1/map_0">
+	<stimulus shortDescr="Egy kis kőhídon állsz" intensity="0" type="latas">
+		<descr>Egy kőhídon állsz. Alattad egy kis patak folyik. A víz két partján különbféle bokrok nőnek. Egyes helyeken a fák hatalmas gyökerei közül kimosta a földet a víz. Észak felé a patak felduzzadt, és egy kristálytiszta vizű tavat látsz.</descr>
+	</stimulus>
+	<stimulus shortDescr="Szentjános bogarak rajzanak körülötted" source ="30" intensity="0" type="latas"  condition="este">
+		<descr>Szentjános-bogarak rajzanak körülötted. Kőhíd kisérteties fénnyel világít.</descr>
+	</stimulus>
+	<stimulus shortDescr="Patak csobog alattad" intensity="70" type="hallas">
+		<descr>Sebes patakocska csobog alattad.</descr>
+	</stimulus>
+	<stimulus shortDescr="Vizpermetet hoz feléd a szél" intensity="50" type="szaglas">
+		<descr>Sebes patakocska csobog alattad.</descr>
+	</stimulus>
+	<stimulus shortDescr="A kőhídból árad a mágia" intensity="50" type="magia">
+		<descr>A kőhidat mágiával építették és még árad belőle az ősi mágia</descr>
+	</stimulus>
+	<item>
+		<name targy="a patakot">patak</name>
+		<name targy="a vizet">víz</name>
+		<descr>Egy hidegvizű, sebessodrasú patak tele halakkal.</descr>
+	</item>
+	<item>
+		<name targy="a tavat">tó</name>
+		<descr>Csak a csillogó viztükröt látod.</descr>
+	</item>
+	
+	<item>
+		<name targy="a hidat">hid</name>
+		<name targy="a kőhidat">kőhid</name>
+		<descr>Keskeny ívelt kőhid. Ősrégi, mint a fák, de jól karban van tartva.</descr>
+	</item>
+	<item>
+		<name targy="a fát">fa</name>
+		<name targy="a fákat">fák</name>
+		<descr>Hatalmas fák. A patak szélen párnak félig ki van a gyökere, de még így sem rezdülnek meg a legtombolobb viharban sem.</descr>
+	</item>
+	<exit notice="50" direction="északkelet" destination="@Tunderfalu1/falu1_0_16"/>
+	<exit notice="50" direction="nyugat" destination="@Tunderfalu1/falu1_0_13"/>
+</Room>

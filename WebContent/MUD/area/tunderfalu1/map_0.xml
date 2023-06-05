@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><Map>
+<loc y="1" x="1" id="falu1_0_2">
+<type>room</type>
+</loc>
+<!--to 0_3-->
+<con y2="2" x2="1" y1="1" x1="1"/>
+<!--to _1-->
+<con y2="0" x2="1" y1="1" x1="1"/>
+<loc y="2" x="1" id="falu1_0_3">
+<type>room</type>
+</loc>
+<!--to 0_4-->
+<con y2="3" x2="2" y1="2" x1="1"/>
+<loc y="3" x="2" id="falu1_0_4">
+<type>room</type>
+</loc>
+<!--to 0_5-->
+<con y2="3" x2="3" y1="3" x1="2"/>
+<loc y="3" x="3" id="falu1_0_5">
+<type>room</type>
+</loc>
+<!--to 0_6-->
+<con y2="4" x2="4" y1="3" x1="3"/>
+<loc y="4" x="4" id="falu1_0_6">
+<type>room</type>
+</loc>
+<!--to 0_7-->
+<con y2="5" x2="4" y1="4" x1="4"/>
+<loc y="5" x="4" id="falu1_0_7">
+<type>room</type>
+<overlay>letra</overlay>
+</loc>
+<!--to 0_13-->
+<con y2="6" x2="5" y1="5" x1="4"/>
+<!--to 0_8-->
+<con y2="6" x2="3" y1="5" x1="4"/>
+<!--to 1_34-->
+<loc y="6" x="3" id="falu1_0_8">
+<type>room</type>
+</loc>
+<!--to 0_9-->
+<con y2="6" x2="2" y1="6" x1="3"/>
+<loc y="6" x="2" id="falu1_0_9">
+<type>room</type>
+</loc>
+<!--to 0_12-->
+<con y2="7" x2="2" y1="6" x1="2"/>
+<!--to 0_10-->
+<con y2="6" x2="1" y1="6" x1="2"/>
+<loc y="6" x="1" id="falu1_0_10">
+<type>room</type>
+</loc>
+<!--to 0_11-->
+<con y2="7" x2="1" y1="6" x1="1"/>
+<loc y="7" x="1" id="falu1_0_11">
+<type>room</type>
+</loc>
+<!--to 0_12-->
+<con y2="7" x2="2" y1="7" x1="1"/>
+<!--to 0_9-->
+<con y2="6" x2="2" y1="7" x1="1"/>
+<loc y="7" x="2" id="falu1_0_12">
+<type>room</type>
+</loc>
+<!--to 0_10-->
+<con y2="6" x2="1" y1="7" x1="2"/>
+<loc y="6" x="5" id="falu1_0_13">
+<type>room</type>
+</loc>
+<!--to 0_14-->
+<con y2="6" x2="6" y1="6" x1="5"/>
+<loc y="6" x="6" id="falu1_0_14">
+<type>room</type>
+</loc>
+<!--to 0_16-->
+<con y2="5" x2="7" y1="6" x1="6"/>
+<loc y="5" x="7" id="falu1_0_16">
+<type>room</type>
+<overlay>letra</overlay>
+</loc>
+<!--to 1_52-->
+</Map>

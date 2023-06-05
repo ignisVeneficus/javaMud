@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room mapfile="@Fovaros/map">
+<stimulus shortDescr="1_68" intensity="0" type="latas">
+<descr>DUMMY szoveg - Óváros - Híd</descr>
+</stimulus>
+<exit notice="50" direction="észak" destination="@Fovaros/fovaros_1_98"/>
+<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_1_67"/>
+<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_45"/>
+<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_1_69"/>
+</Room>

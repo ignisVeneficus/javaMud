@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skills>
+	<item name="uszás" 	difficulty="4">
+		<talent>ero</talent>
+		<talent>kitartas</talent>
+	</item>
+	<item name="esés" difficulty="4">
+		<talent>mozgekonysag</talent>
+		<talent>gyorsasag</talent>
+	</item>
+	<item name="mászás" difficulty="5">
+		<talent>mozgekonysag</talent>
+		<talent>ero</talent>
+		<talent>veszelyerzet</talent>
+	</item>
+</skills>

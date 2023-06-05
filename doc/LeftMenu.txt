@@ -1,0 +1,15 @@
+%%list-unstyled-hover
+%%accordion
+![Osztályok]
+*[DiceInteger]
+*[Entity]
+*[Living]
+*[Monster]
+*[Object]
+*[Room]
+*[Stimulus]
+
+![Koncepció]
+
+![Mechanizmus]
+*[Érzékelés]

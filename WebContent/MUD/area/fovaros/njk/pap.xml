@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Living moving="true" race="ember" maxSP="1000" maxHP="10d10+3" qty="1">
+	<stimulus type="latas" intensity="50" >
+		<descr>A templom főpapja</descr>
+	</stimulus>
+	<id>pap</id>
+	<id>főpap</id>
+	<gender>hímnemű</gender>
+	<shortName targy="a főpapot">főpap</shortName>
+
+	<profession type="priest"/>
+	
+	<emotions intervall="10" probality="3">
+		<emotion>
+			<sense name="latas" difficulty="75"/>
+			<sense name="hallas" difficulty="50"/>
+			<descr>%S imádkozik magában.</descr>
+		</emotion>
+		<emotion>
+			<sense name="latas" difficulty="75"/>
+			<sense name="hallas" difficulty="25"/>
+			<descr>%S mormog valamit.</descr>
+		</emotion>
+		<emotion>
+			<sense name="latas" difficulty="75"/>
+			<sense name="hallas" difficulty="25"/>
+			<descr>%S áldást oszt.</descr>
+		</emotion>
+
+	</emotions>
+	
+</Living>

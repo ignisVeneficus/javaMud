@@ -1,0 +1,50 @@
+A Szobákat leíró osztály. Az [Object] leszármazottja.
+[{TableOfContents title='Tartalom'}]
+!!!Root
+Az XML-ben ''Room''-el kell rá hivatkozni
+
+
+!!!Attributumok
+||név||XML Tipus[[1]||számosság[[2]||típus||leírás||
+|action|Elem|*|[JSMap]|Javascript függvény kapcsolatok a különböző akciókhoz
+|entryEvent|Elem|?|Szöveg|a belépő JS függvény neve
+|entryText|Elem|?|Szöveg|Belépő szöveg az entitásnak, aki mozog
+|entryTextRoom|Elem|?|Szöveg|Belépő szöveg a szobában lévőknek. a __%S__ szöveget lecseréli az entitás nevére
+|exit|Elem|*|[Kijárat|Exit]|Kijáratok
+|item|Elem|*|[RoomItem]|Megvizsgálható tárgyak (hangulati eszközök)
+|mapfile|Attr|?|Szöveg|Térképet tartalmazó file neve
+|noRest|Attr|?|Logikai|__true__ esetben nem lehet pihenni a szobában
+|objRef|Elem|*|[Referencia|ObjectRef]|Azon entitások listája, melyek ebbe a szobában vannak|
+|open|Attr|1|Logikai|A szoba nyitott-e, vagyis látható az égbolt, és a napszakok befolyásolják-e a szoba fényét
+|randomObjRef|Elem|*|[RandomObject]|Olyan entitások, melyek véletlenszerűen választódnak ki
+
+!!!JS callback függvények
+!!Action
+Ezeket a függvényeket lehet az XML action elemében összekapcsolni meglévő js függvényekkel:
+%%prettify-nonum
+{{{
+boolean <nev>(_THIS,_OBJ,line);
+}}}
+/%
+ahol:
+*___THIS__: a szoba mint osztály
+*___OBJ__: az entitás aki kiadta a parancsot
+*__line__: a parancs többi része (paraméterek stb)
+Visszatérése:
+__Boolean__: A visszatérési érték nem a sikerességet jelöli, hanem, hogy a rendszer keressen-e további akciót amit végre lehet hajtani.
+!!Reset
+A reset függvény az szoba saját reset függvénye után fut le:
+%%prettify-nonum
+{{{
+void reset(_THIS);
+}}}
+/%
+ahol:
+*___THIS__: a szoba mint osztály
+Visszatérési értéke nincs
+!!!JS hívható függvények
+
+
+----
+[#1] Elem, vagy attribútum, aszerint, hogy az adott változót hogyan kell létrehozni\\
+[#2] 1, ha kötelező és egyszer; ? ha opcionális, * ha tetszőleges számban; 1+ ha legalább egyszer elő kell fordulnia. 

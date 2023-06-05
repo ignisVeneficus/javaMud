@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+	<id>lada</id>
+		<stimulus type="latas" >
+		<descr>Nehéz, kidolgozott tölgyfa-láda, vasalással a sarkain</descr>
+	</stimulus>
+	<shortName>Fa láda</shortName>
+</Container>

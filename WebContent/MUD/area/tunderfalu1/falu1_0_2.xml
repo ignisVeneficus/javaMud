@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room open="true" mapfile="@Tunderfalu1/map_0">
+	<stimulus type="latas" shortDescr="Egy erdei ösvényen állsz." >
+		<descr>Egy erdei ösvényen állsz. Körben óriási több ezer éves fák. Az egész erdő fenséges nyugalmat áraszt. Észak felé egy áthatolhatatlan, tüskés bozot zárja el a kilátást. Csak egy keskeny ösvény vezet át rajta. Délre ritkul az erdő.</descr>
+	</stimulus>
+	<stimulus type="hallas" intensity="50" shortDescr="Madárcsicsergést hallasz." condition="nappal" >
+		<descr>Madarak csicseregnek a fákon, állatok motoznak az avarban és a szél susog a lombok között.</descr>
+	</stimulus>
+	<stimulus type="latas" source="30" shortDescr="Dél felöl fényeket látsz." condition="este">
+		<descr>Dél felöl fények szűrődnek át a fák között</descr>
+	</stimulus>
+	<stimulus type="hallas" intensity="50" shortDescr="Bagolyhuhógást hallasz." condition="este" >
+		<descr>Egy bagoly huhog néha, apró állatok motoznak az avarban</descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="50" shortDescr="Friss levegőt érzel." >
+		<descr>A friss levegőt es a nedves föld szagat érzed.</descr>
+	</stimulus>
+
+	<item>
+		<name targy="a bozotot">bozot</name>
+		<name targy="a bozotost">bozotos</name>
+		<descr>Embermagas, sűrű, tüskés bozot. Van egy olyan érzésed, hogy direkt alakitottak ki ilyen áthatolhatatlanra.</descr>
+	</item>
+	<item>
+		<name targy="a fákat">fák</name>
+		<name targy="a fát">fa</name>
+		<descr>Hatalmas fák. A legkissebbnek a törzsének átmerője is meghaladja a 10 métert.</descr>
+	</item>
+	<item>
+		<name targy="az ösvényt">ösvény</name>
+		<descr>Egy jól kitaposott ösvény. Északról dél felé halad.</descr>
+	</item>
+	<item condition="este">
+		<name targy="a fényt">fény</name>
+		<name targy="a fényeket">fények</name>
+		<descr>A fáktól nem látod honnét jön</descr>
+	</item>
+	
+	<exit notice="50" direction="dél" destination="@Tunderfalu1/falu1_0_3"/>
+	<exit direction="ki" destination="@Outlands/1_300_250" notice="50" onlyPlayer="true"/>
+	<!-- 
+	<objRef qty="1" name="@Tunderfalu1/allatok/szarvas"></objRef>
+	-->
+	
+	<objRef qty="1" name="@items/lada">
+		<objRef qty="1" name="@Tunderfalu1/items/tor"></objRef>
+	</objRef>
+	
+</Room>

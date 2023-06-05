@@ -1,0 +1,54 @@
+Ability-t atnevezni "Sense"-re!
+Erzekek:
+	kezeloosztaly (_NEM_ a livingbe!):
+	az obj es a ability-k koze kerul,
+		Hashmap a tipusoknak, HashMap az azonos tipuson belul;
+		Hashmap a tipusoknak, benne melyik az aktiv
+		Vector, tipusok, amelyek auto-n allnak.
+		add_sense(tipus, sense)
+		remove_sense(senze)
+		guery_acktiv(tipus)
+		set_aktiv(tipus)
+		getByType(tipus) nev szerint adja vissza
+		getByName(name) nev szerint adja vissza
+		
+		get_multiple(
+		HashTable getSenses()
+			y: nev,
+			x: tipus, ertek, alapertek
+		auto valasztas: kiszamolja mindet, es amelyik a legnagyobb az nyer
+		
+	ERZEK
+
+	kozeptartomany, erzekenyseg:
+	megmondja, hogy 0-2 skalan hol erzekel a legtobbet, erzekenyseg pedig a gauss 
+	gorbe lefolyasat
+	
+	tipus:
+	altipus (ha tobb azonos van egy tipuson belul, akkor ez mukodik)
+		ha az altipus nincs (ures) akkor az elsodleges erzekszerv a tipuson belul
+	use -> boole ertek, hasznlaja-e azt az erteket (ki/be kapcsolas)
+	
+	(szorzo)szamitas:
+		input -> vector, tipus
+		
+	
+		static fuggveny az eroseg szamitasra?
+			input-> vector, tipus, "fenymennyiseg"
+			output eroseg
+			azonos tipusbol csak az elsot szamitja be
+		
+	Automatikus allitas:
+	
+	
+	ket ertek minden erzekeles fajtahoz:
+		a, erzekenyseg
+		b, eszleles
+		
+		proba: 100 - a*E vs b
+	
+	
+Cliens
+	ellenorizni, hogy mit csinal az ures sorra a login ablak
+	
+

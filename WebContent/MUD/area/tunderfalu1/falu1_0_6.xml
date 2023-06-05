@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room open="true" mapfile="@Tunderfalu1/map_0">
+	<stimulus type="latas" shortDescr="Egy erdei ösvényen állsz." >
+		<descr>Egy erdei ösvényen állsz. Körben több ezer éves fák. Az egész erdő nyugalmat sugároz. Feletted a tündérek híres faluja található a fák között.</descr>
+	</stimulus>
+	<stimulus type="hallas" intensity="50" shortDescr="A faluból beszédzaj hallatszik.">
+		<descr>Fölötted a függőhidakon beszélgetnek az ottlakok.</descr>
+	</stimulus>
+	<stimulus type="latas" source="50" shortDescr="Fényeket látsz a házak felöl" condition="este">
+		<descr>Barátságos fények világítanak a házakban, függőhidakon, létrákon.</descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="50" shortDescr="Sülő kenyér illatát érzed." >
+		<descr>Valahonnan felülről a frissen sült kenyér illatát érzed.</descr>
+	</stimulus>
+
+	<item>
+		<name targy="a fákat">fák</name>
+		<name targy="a fát">fa</name>
+		<descr>Hatalmas fák. A legkissebbnek a törzsének átmerője is meghaladja a 10 métert. A magasságukat meg sem tudod becsülni.</descr>
+	</item>
+	<item>
+		<name targy="az ösvényt">ösvény</name>
+		<descr>Egy jól kitaposott ösvény. Szép komotosan kanyarodik északnyugatról dél felé.</descr>
+	</item>
+	<item condition="este">
+		<name targy="a fényt">fény</name>
+		<name targy="a fényeket">fények</name>
+		<descr>A fákon lévő házakban, kötéllétrákon, hidakon villágítanak.</descr>
+	</item>
+	<item condition="este">
+		<name targy="a házat">ház</name>
+		<name targy="a házakat">házak</name>
+		<descr>Fábol épültek. Van amely vastagabb ágvillán ül, és vannak amelyek körbeölelik a vastag törzset. Közöttük függőhidak feszülnek. Ablakaik barátságos fénnyel villágítanak.</descr>
+	</item>
+	<item condition="nappal">
+		<name targy="a házat">ház</name>
+		<name targy="a házakat">házak</name>
+		<descr>Fából épültek. Van amely vastagabb ágvillán ül, és vannak amelyek körbeölelik a vastag törzset. Közöttük függőhidak feszülnek.</descr>
+	</item>
+
+	<item condition="nappal">
+		<name targy="a falut">falu</name>
+		<descr>Furcsa falu: A fák közé épült, az utcákat hidak, kötéllétrák alkotják. Egy-egy emelet körülbelül 5 méter magas, a falu három emeletből áll.</descr>
+	</item>
+	<item condition="este">
+		<name targy="a falut">falu</name>
+		<descr>Furcsa falu: A fák közé épült, az utcákat hidak, kötéllétrák alkotják. Egy-egy emelet körülbelül 5 méter magas, a falu három emeletből áll. Sínes fények villágítanak a kötérlétrákon, hidakon.</descr>
+	</item>
+
+	<exit notice="50" direction="dél"
+		destination="@Tunderfalu1/falu1_0_7" />
+	<exit notice="50" direction="északnyugat"
+		destination="@Tunderfalu1/falu1_0_5" />
+</Room>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:g="http://graphml.graphdrawing.org/xmlns" xmlns:y="http://www.yworks.com/xml/graphml" version="1.0">
+	
+	<xsl:output method="TXT" version="1.0"/>
+	
+	<xsl:param name="pathExec"></xsl:param>
+	<xsl:param name="pathOutput"></xsl:param>
+	<xsl:param name="pathSource"></xsl:param>
+	<xsl:param name="path"></xsl:param>
+	
+	<xsl:template match="/*">
+		<xsl:variable name="nodeID" select="/g:graphml/g:key[@for='node'and @yfiles.type='nodegraphics']/@id"></xsl:variable>
+		<xsl:variable name="nameID" select="/g:graphml/g:key[@attr.name='Name']/@id"></xsl:variable>
+		<xsl:variable name="prefixId" select="/g:graphml/g:key[@attr.name='Prefix']/@id"></xsl:variable>
+		<xsl:variable name="prefix" select="/g:graphml/g:graph/g:data[@key=$prefixId]"></xsl:variable>
+
+		<xsl:for-each select="//g:node">
+			<xsl:choose>
+			<xsl:when test="(./g:data[@key=$nodeID]/y:ShapeNode/y:Shape/@type)='ellipse'">
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>call </xsl:text><xsl:value-of select="$pathExec"/><xsl:text> </xsl:text><xsl:value-of select="$pathSource"/><xsl:text> </xsl:text><xsl:value-of select="$prefix"/><xsl:text>_</xsl:text><xsl:value-of select="./g:data[@key=$nameID]"/><xsl:text> </xsl:text><xsl:value-of select="@id"/><xsl:text> </xsl:text><xsl:value-of select="$path"/><xsl:text>
+</xsl:text>
+			</xsl:otherwise>
+			</xsl:choose>
+		</xsl:for-each>
+	</xsl:template>
+
+</xsl:stylesheet>

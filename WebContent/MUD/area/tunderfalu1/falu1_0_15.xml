@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room open="true" mapfile="@Tunderfalu1/map_0">
+<stimulus shortDescr="Patakban lubickolsz" intensity="0" type="latas">
+<descr>DUMMY szoveg - földszint - </descr>
+</stimulus>
+<exit notice="50" direction="dél" destination="@Tunderfalu1/falu1_0_14"/>
+<entryEvent>getEntryEvent</entryEvent>
+
+<js><![CDATA[
+function getEntryEvent(_THIS,_OBJ){
+	list = _OBJ.getAllPerceptibility();
+	_OBJ.addSenseTest(list,"hallas",20);
+	return _OBJ.createSimpleSourceEvent(list, _OBJ, "%S érkezik fentről, és hangos csobannással fog vizet.", null, "Sikeresen a vízbe érkeztél.");
+}
+]]>
+</js>
+</Room>

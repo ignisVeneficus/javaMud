@@ -1,0 +1,66 @@
+GIU:
+html, javascript, websocket, jquery, svg, fonts, stb: statikus oldal
+
+Server:
+tomcat 8.5, lehetoleg spring
+communikacios interface -> mud ertelmezo
+
+Mud kulon csomag, belepo resz az ertelmezo
+
+HeartBeat megy vissza a DELTA, x egysegenkent a teljes allapot.
+Adat 3 reszbol all:
+  - Event (esemeny, kerdes, kepernyo frissites, stb)
+  - delta (sajat allapotban torteno elteres)
+  - teljes (teljes allapot)
+    utobbi ketto kizarja egymast
+
+MUD: 
+ket reszbol all
+  - alapok: ososztalyok, living, deamon, items, stb: javaban
+  - tenyleges entitasok: xml + javascript scripting, ahol kell
+
+
+
+rooms:
+
+
+living
+
+erzekszervek : Gauss fuggveny: kozep + szoras.
+A kozep nem valtozik, a szoras valtozhat.
+lasd: erzekek excel
+
+Erzekelesek:
+- feny alapu
+- hang alapu
+- magia alapu
+(tobbi kell?)
+- szag alapu
+- hallas alapu
+minden erzekszerv kapcsolodik valamelyikhez.
+normal 5 (excel-ben levo ertek/10)
+20% alatt - nincs informacio
+20-60 -> valami
+60% felett minden informacio
+
+minden esemeny 1 v tobb erzekszervhez kapcsolodik (altalabal latas es/vagy magia)
+mozgasok latas/hallas
+~latas erossege a kornyezo feny
+~hallas errossege-bol lejon a kornyezet hangja
+
+
+
+Sebzesek:
+Fizikai:
+  -utes
+  -szuras
+  -vagas
+tuz -> ho
+viz -> fagy
+fold -> sotet
+levego -> feny
+lelek
+mereg
+
+ezekhez van ellenallas is (%-os)
+

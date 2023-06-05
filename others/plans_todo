@@ -1,0 +1,395 @@
+STATIC csak egy helyen kerul letarolasra 
+(atgondolni, az objektumba torteno tarolast, hogy letezik-e mindig
+az adott objektum)
+
+altalanos sugokat kulon file-ba/tablaba (ne foglalja a helyet)
+(races, skills, stats, abilities, jatekrol egeszben)
+property-be
+Ha a help() amit visszaad > -el kezdodik akkor megnezi a help directory-t is.
+
+Object:
+	a nem obj valtozos fg-ket atirni static-ra (pl a findOrLoad()-ot stb..)
+	uj osztaly
+		class common_method{
+			public object eval(obj parent, object[]);
+			static public common_methode load(string root, string path);
+		}
+	egy adott terulet common fuggvenyeinek.
+	erzekszervek altal azonosithato
+		latas,
+		hallas,
+		szaglas
+		izleles
+		tapintas
+		magia
+		0-> nem azonosithato (sosem)
+		100 -> mindig azonosithato
+		atlag 15
+	uj fuggveny 
+		Vector getAllInclude(){
+			ret = new Vector();
+			ret.add(this);
+			each include -> getALLInclude();
+		}
+
+Rooms:
+	ket vector: objektumok, lenyek
+	nem mozdithato objektumok: faklyak a falon, kepek stb. buzeralhatoak
+	feny:
+		a, sajat feny (ritka)
+		b, kornyezet fenye (egbolt x%, a kornyezo szobak fenye oszege stb)
+		c, targyak
+		a feny csak a targyak lathatosagat befolyasolja:
+			uj ertek = regi ertek * feny
+			=> 1 normalis feny
+			=> 0 vak sotet
+			=> 2 vakitas
+			egy gauss gorbe a sorzoertek
+	szaglas:
+		bekerul a szag-informaciok listaba, es reset()-enkent csokken az erosege.
+		A "szaglas" hatasara nyerheto ki
+		(eso, viz, torli)
+	szobakapcsolas:
+		Tobb room ossze van kapcsolva, mintha egy hely lenne
+		teruletnev kell es ami az egyik helyen tortenik: A XXX valahol x csinalt, mondott stb.
+		tipus (erzekszerv) gyongules
+		ha valami tortenik az adott teruleten (pl piacter), akkor a terulet tobbi
+		szobajaban ha az erosege meghaladta (csokenes utan) 0-t megkapja a szoba.
+	folyamatos, teruletre hato hatasok, viz, sebzes stb...
+		beallitas: ido;(proba;eroseg);sikerfg;nemsikerfg;
+		pl viz: 2;uszik;3;uszik();fullad();
+		pl sebzes: 2;;;sebez();
+		xml: uj adatserkezet:
+			hashmap-ot ad at:
+			<map key=""></map>
+
+			key = "time"
+			key = "skill"
+			key = "rate"
+			key = "succes"
+			key = "unsucces"
+
+Living:
+	erzekszervek:
+		default ertek, aktualis ertek
+		0-> erzeketlen
+		100 superallat stb..
+		proba:
+			100-erzet vs érzéksszerv
+			(mint a kepességpróba)
+		proba: (100-erzet) < erzekszerv =>valami
+		(100-erzet) < erzekszerv -x =>biztos
+		latas,
+		hallas,
+		szaglas,
+		tapintas ?,
+		izleles ?,
+		hatodik erzek (magiahoz)
+		spec erzekelesek:
+			holatas (ki/be kell kapcsolni es -N erteket jelent a latas vizsgalatahoz
+				/sotetben is lat, de hamarabb vakul el/)
+			magiaerzek
+		automatikusan nem no, csak cuccal, magiaval, varazsszerrel
+		Statok sem nonek automatikusan csak a hasznalattok
+	EP
+	FP
+
+Doboz:
+	meg lehet adni, hogy egy adott erzekszerv erzekeleset menyire rontja pl a lada
+	a latas teljesen (vagyis nem latszik mi van benne), de lehet hallani
+
+
+Esemenyek:
+	minden tortenes "esemenyt" dob:
+		privat, room, area, word tipus van.
+		minden esemenynek van egy kivalto objektuma
+		dobo objektum
+		altipus (string, a logolashoz kell a kliensben)
+		tomb:
+			erzekszerv,
+			erosseg
+			harom szoveg:
+		
+		tobb erzekszerv eseten amelyik sikerult
+		azonos esetben sorrend?
+		
+		van a kivalto objektum pl jatekos, sotetgomb,
+		van a tulajdonos jatekos,
+		van a esemeny erosege
+		esemeny erosege:
+			a, erzeheto,
+			b, zavaros (zajok, foltok, szagok, izek, magia stb)
+			c, semmi
+		kivalto objektum:
+			a, azonosithato
+			b, valaki/valami
+			c, semmi
+		tulajdonos:
+			a, azonosithato 
+			b, valaki
+			c, nincs
+		celpont
+			a, azonosithato 
+			b, valaki
+			c, nincs
+		azonositas: lat, hall, szagol, spec esetben az izlel es a tapintas is
+		
+		osszefoglalva:
+			(L:latszik, V: valami S: semmi)
+			esemeny:
+				nem deritheto ki -> nem tortent semmi.
+				valami			 -> valami tortent (arnyek szagok stb)
+				kideritheto		 -> tenyleges esemeny (lentebb)
+			targyas eset 6 szoveg:
+				(pelda: XY  O targya elvazsarolja Z-t)
+				(object;tulaj;targy)
+				1	LLL, LLV, VLL, VLV, LVL, LVV, VVL, VVV
+					%O %P %T megjelenik (megfelelo Valaki/valami-re cserelodik)
+					XY  O targya elvarazsolja Z-t
+				2	SLL, SLV, SVL, SVV
+					%T jelenik meg
+					Z elvarazsolodik
+				3	LSL, LSV, VSL, VSV
+					%O %T jelenik meg
+					O elvazsolja  Z-t
+				4	LLS, VLS, LVS, VVS
+					%O %P jelenik meg
+					XY  O targya varazsol
+				5	LSS, VSS
+					%O jelenik meg
+					O varazsol
+				6	SLS, SVS, SSS
+					varazslat volt
+					
+				1-3 osszevonhato [%P %O-ja]|[%O] elvarazsolja %T-t
+				4-5 osszevonhato [%P %O-ja]|[%O] varazsol
+				osszesen 4 mondat 
+				+ 2 mondat a tulajdonosnak:
+				7	%O targyad elvarzsolta %T-t
+				8	%O targyad varazsol
+					(tobbi esetben jon a def. leiras)
+				+2 mondat a celnal:
+				9	[%P %O-ja]|[%O] elvarazsolt
+				A	elvarazsoltak
+			nem targyas esetben
+				4-5, 6
+				+ 1 mondat a tulajnak:
+				8	%O targyad sotetebb
+			nincs obj targyas eset
+				C	elvarazsoltad %T-t
+				B	varazsoltal
+				+2  a celnak
+				D	%P elvarazsolt
+				A	elvarazsoltak
+			nincs tulaj (vagy jatekos)
+				5,6
+				+ 1 mondat:
+				B	teszed
+		Az esetek 99%-ban a csak a hallas/latas kell esetleg csak 1 erzekszerv
+		vagy a szoveget ossze lehet vonni.
+		A szovegek: HashMap:
+			key tipus, value a szoveg:
+			key tipusa: pl string
+			ROOM_OBJECT_LIVING_TARGET	-> (1-3)
+			ROOM_OBJECT_TARGET			-> (1-3)
+			ROOM_OBJECT					-> (4-5)
+			ROOM_TARGET					-> 2
+			ROOM_EVENT					-> 6
+			LIVING_OBJECT_TARGET		-> 7
+			LIVING_OBJECT				-> 8
+			LIVING_TARGET				-> C
+			LIVING						-> B
+			TARGET_OBJECT				-> 9
+			TARGET						-> A
+			TARGET_LIVING				-> D
+		Esemeny tipusa:
+			TYPE_OBJ_ENV_TARGET		(1,2,4,6,7,8,9,A)
+			TYPE_OBJ_ENV			(4,6,8)
+			TYPE_ENV_TARGET			(A,B,C,D)
+			TYPE_ENV				(5,6,B)
+
+Monster_BD:
+	leiras is itt talalhato,
+	van BODY_TYPE vagyis test.
+	statok,
+	skill-ek,
+	erzekszervek
+	ellenallasok
+
+	jatekos fajok:
+		Ember, tunder, torpe, mrr, felork
+
+BODY_TYPE
+	mint a MC-ben:
+	meret: apro, kicsi, kozepes, nagy, oriasi
+	test-graf (body_part)
+		van egy fo(kozpont amirol log a tobbi, pl torzs)
+		flag, hogy vegzetes
+		esetleg sebzesszorzo
+		albontas pl: torzs -> mellkas, has, csipo, hat => pancelok miatt
+		flag, hogy fegyverforgato-e
+		erofuggo sebzesek a fegyverforgato vegtagra
+	humanoid, madar, negylabu, rovar, pok, hal, egyeb erdekes
+
+	pl:
+	fej,
+	(mellkas
+	has
+	csipo)
+	kez,
+	kar,
+	kezfej,
+	lab,
+	labszar,
+	labfej
+
+
+ARMOR
+	meret, es 
+	test graf:
+	melyek testreszeket vedi,
+	flag-el, hogy arra van-e kijarat
+	vagyis pl egy nadragban van-e hely a faroknak
+	pl nadrag: csipo, labak, + farokhely
+	altalanos ruha ososztalyokat kell irni (jatszhato fajoknak, es/vagy testtipusoknak)
+	mire huzhato fel, mire nem. (retegzodes)
+
+Kliens:
+	megcsinalni a csuszka+progress-bar keresztezeset
+	(a darkOcean az ocean-t kell kiterjeszteni, es nemcsak osztalyt kell irni
+	hanem kinezetet is)
+	createUser:
+		user,
+			(nev,  emailcim pass, stb)
+		player
+			(nem, faj)
+		stat
+		skill
+	
+		pontelosztas:
+			HashTable
+			erzekek,
+				"get/ability/",table
+				Y_value: nevek -> key -bol kiszedni.
+				X_value: init, multiple,
+				"send/ability/Point", eloszthato pontok
+				send/ability/",table vissza:
+				Y_value: nevek
+				X_value: ertek
+			skills
+				"get/skill/",table
+				Y_value: nevek -> key -bol kiszedni.
+				X_value: min, init, talent, difficulty,
+				"send/ability/Point", eloszthato pontok
+				pontelosztas: ceil(pont * talent / diff)
+				send/skill/",table vissza:
+				Y_value: nevek
+				X_value: ertek
+		
+SKILLS
+	minden ezekbol szarmazik:
+	skillgraf csak olyat lehet felvenni, aminek a feltetele teljesul.
+		foleg magia, fegyverismeret(forgatas), ketkezes harc stb
+		tobbi annyira nem (eses, ugras, uszas, iras/olvas)
+		
+	ostalyszorzo nem kell
+	A tanitomonster ellenorzi
+	TP osztas (vagy valami hasonlo)
+	fajspecifikus skill-ek
+	tehetseg
+	
+	tanulas. pontonkenti szamolas vagyis minden egyes elkoltott pont elott pillanatnyi
+	tehetseg szamolas
+	
+	pontelosztasos indulokeszlet?
+
+Stats:
+	nem no automatikusan
+	pontelosztas
+	
+	
+	Statok:
+		Érzékek
+		Intelligencia
+		Öszpontosítás
+		Önuralom
+		Erõ
+		Kitartás
+		Egészség
+		Gyorsaság
+		Ügyesség
+	
+
+Resists:
+	resists mukodese:
+	annyi %-ot levon az erosegbol (jobban hangolhato)
+	
+	graf?
+	
+	Tuz
+	Viz
+	Leg
+	Fold
+	Magia (altalanos)
+	Fizikai
+		+ uto
+		+ vago
+		+ zuzo
+	Lelek
+	Mereg
+
+Erzekek:
+	kezeloosztaly (_NEM_ a livingbe!):
+	az obj es a ability-k koze kerul,
+		Hashmap a tipusoknak, HashMap az azonos tipuson belul;
+		Hashmap a tipusoknak, benne melyik az aktiv
+		Vector, tipusok, amelyek auto-n allnak.
+		add_sense(tipus, sense)
+		remove_sense(senze)
+		guery_acktiv(tipus)
+		set_aktiv(tipus)
+		getByType(tipus) nev szerint adja vissza
+		getByName(name) nev szerint adja vissza
+		
+		get_multiple(
+		HashTable getSenses()
+			y: nev,
+			x: tipus, ertek, alapertek
+		auto valasztas: kiszamolja mindet, es amelyik a legnagyobb az nyer
+		
+	ERZEK
+
+	kozeptartomany, erzekenyseg:
+	megmondja, hogy 0-100 skalan hol erzekel a legtobbet, erzekenyseg pedig a gauss 
+	gorbe lefolyasat
+	
+	erzekek: 
+		latas: 50 es 15
+		ejszakai 25, 10 ? (11)
+		infralatas 0, 20
+		
+		(tobbi): 50, 10?
+	
+	
+	tipus:
+	altipus (ha tobb azonos van egy tipuson belul, akkor ez mukodik)
+		ha az altipus nincs (ures) akkor az elsodleges erzekszerv a tipuson belul
+	use -> boole ertek, hasznlaja-e azt az erteket (ki/be kapcsolas)
+	
+	(szorzo)szamitas:
+		input -> vector, tipus
+		
+	
+		static fuggveny az eroseg szamitasra?
+			input-> vector, tipus, "fenymennyiseg"
+			output eroseg
+			azonos tipusbol csak az elsot szamitja be
+		
+	Automatikus allitas:
+	
+	minden elonek egy vektor, amiben azt tartalmazz, hogy mit vett eszre a szobaban, es
+		azt mint micsoda (pl Kyrr -t csak "arnyek"-nak latta) ha valami kikerul a szobabol
+		kiszedni belole, ha valami bekerul, berakni
+	Szoba leirasa incrementalis (szam, szoveg) halmazok.. ha nem lat semmit, akkor attol fuggoen,
+		hogy sotet vagy vilagos, ugy adja a szoveget..
+

@@ -1,0 +1,20 @@
+Javascript adat az XML-ben:
+Lehetőség van javascript függvényeket írni, amik a megfelelő helyen meghívodnak.\\
+[{TableOfContents title='Tartalom'}]
+Két részből áll:
+* függvénygyűjtemény
+* függvénykapcsolat
+!!!Függvénygyűjtemény
+A függvény gyűjtemény egy nagy halom javascript függvény ömlesztve, akár az XML-ben (CDATA formában), akár egy fileban.\\
+A file akkor célszerű ha ugyanazt a függvényt több helyen is fel akarjuk használni.
+
+!!!Függvénykapcsolat
+A definiált javascript függvényeket hozzá kell kapcsolni a hívási pontokhoz. Ez történhez fix függvény nevekkel, és történhet XML elemekkel is.\\
+Előbbi esetén a rendszer adott, előre definiált nevű függvényeket keres, míg a második esetben az XML-ben kell megadni kért információt.\\
+Ez lehet egy adott függvény neve szövegként, vagy név-függvény párosítással:
+|név||XML Tipus[[1]||számosság[[2]||típus||leírás||
+|name|Attr|1|Szöveg|Hivatkozási név, esetenként más-mást jelent|
+|fn|Attr|1|Szöveg|Javascript függvény neve|
+
+!!!Függvénydefició
+Minden esetben más-más a függvény paraméterei.

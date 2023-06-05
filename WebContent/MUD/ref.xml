@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>Mud properties</comment>
+	<entry key="Mud">/MUD/</entry>
+	<entry key="db">@Mud/database/</entry>
+	<entry key="OutlandsMaps">@Mud/map/</entry>
+	<entry key="Outlands">@Mud/outlands/room/</entry>
+	<entry key="Area">@Mud/area/</entry>
+	<entry key="Tunderfalu1">@Area/tunderfalu1/</entry>
+	<entry key="Fovaros">@Area/fovaros/</entry>
+	
+	<entry key="commons">@Mud/common/</entry>
+	<entry key="items">@commons/items/</entry>
+</properties>

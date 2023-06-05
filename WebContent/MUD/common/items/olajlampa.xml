@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Item>
+	<id>olajlámpa</id>
+	<id>lámpa</id>
+	<stimulus type="latas" intensity="100" condition="kikapcs">
+		<descr>Viszonylag nagy olajlámpás, fém és üveg házban. A tetején egy hatalmas karika. {callback:descr} A "megtölt" paranccsal töltheted meg.</descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="50" condition="kikapcs">
+		<descr>Átható olajbűzt áraszt.</descr>
+	</stimulus>
+	<stimulus type="latas" intensity="100" source="30" condition="bekapcs">
+		<descr>Viszonylag nagy olajlámpás, fém és üveg házban. A tetején egy hatalmas karika. Belül tűz ég, sárgás fényt áraszt. {callback:descr} A "megtölt" paranccsal töltheted meg.</descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="50" condition="bekapcs">
+		<descr>Átható olajbűzt, és fekete kormot áraszt.</descr>
+	</stimulus>
+	<stimulus type="hallas" intensity="20" condition="bekapcs">
+		<descr>Halkan serceg a tűz, és pattog a fém szerkezet.</descr>
+	</stimulus>
+	<shortName>olajlámpa</shortName>
+	
+	
+	<action>
+		<item name="meggyújt" fn="bekapcs"/>
+		<item name="gyújt" fn="bekapcs"/>
+		<item name="elolt" fn="kikapcs"/>
+		<item name="olt" fn="kikapcs"/>
+		<item name="megtölt" fn="refill"/>
+		
+	</action>
+	
+	<js><![CDATA[
+	function init(_OBJ){
+		_OBJ.setProperty("kapcs","kikapcs");
+		_OBJ.setProperty("olaj","4");
+		_OBJ.setProperty("olaj2","10");
+	}
+	function heartBeat(_OBJ){
+		allapot = _OBJ.getProperty("kapcs");
+		if(allapot == "kikapcs") return;
+		_ENV = _OBJ.getEnvironment();
+		if(_ENV!=null){
+			_ENV = _ENV.getTopLiving();
+		} 
+		olaj2 = _OBJ.getProperty("olaj2");
+		olaj2 = parseInt(olaj2);
+		olaj2--;
+		/*
+		if(_ENV!=null){
+			_ENV.tell("lampa tick, olaj2: " +olaj2);
+		}
+		*/
+		_OBJ.setProperty("olaj2",""+olaj2);
+		if(olaj2 == 0){
+			olaj = _OBJ.getProperty("olaj");
+			olaj = parseInt(olaj);
+			olaj--;
+			if(olaj>=0){
+				olaj2 = 10;
+				_OBJ.setProperty("olaj",""+olaj);
+				_OBJ.setProperty("olaj2",""+olaj2);
+				if(_ENV!=null) _ENV.tell("Az olajlámpád pislákolt");
+			}
+			else{
+				_OBJ.setProperty("olaj","0");
+				_OBJ.setProperty("olaj2","0");
+				_OBJ.setProperty("kapcs","kikapcs");
+				list = ["latas"];
+				testList = _OBJ.getPerceptibility(list);
+				if(_ENV!=null){
+					e= _OBJ.createSimpleSourceSubjectEvent(testList, _ENV, _OBJ,
+						"%S %T-ja kialszik.",
+						"%T kialszik.",
+						null,
+						null,
+						"%T-d kalszik.");
+					if(e!=null) e.fire();
+				}
+				else{
+					evn = _OBJ.createSimpleSourceEvent(testList, _OBJ, "%S kialszik", null, null);
+					if(e!=null) e.fire();
+				}	
+			}
+		}
+	}
+	function bekapcs(_OBJ,_LIV,_PARAM){
+		if(_PARAM.length==0){
+			_LIV.tell("Mit akarsz meggyújtani?");
+			return true;
+		}
+		name = _PARAM[0];
+		if(!_OBJ.callName(name)){
+			_LIV.tell("Nem teheted!");
+			return true;
+		}
+		allapot = _OBJ.getProperty("kapcs");
+		if(allapot == "bekapcs"){
+			_LIV.tell("Már ég.");
+			return true;
+		}
+		olaj = _OBJ.getProperty("olaj");
+		olaj = parseInt(olaj);
+		if(olaj==0){
+			_LIV.tell("Üres. Nincs benne lámpaolaj. A %^ORANGE%^\"megtölt\"%^RESET%^ paranccsal töltheted meg!");
+			return true;
+		}
+		list = ["latas"];
+		testList = _OBJ.getPerceptibility(list);
+		e= _OBJ.createSimpleSourceSubjectEvent(testList, _LIV, _OBJ,
+			"%S meggyújtja a %T-t.",
+			"%T meggyúlad.",
+			"%S matat valamit.",
+			null,
+			"Meggyujtottad a %T-d.");
+		if(e!=null) e.fire();
+		_OBJ.setProperty("kapcs","bekapcs");
+		return true;
+	}
+	function kikapcs(_OBJ,_LIV,_PARAM){
+		if(_PARAM.length==0){
+			_LIV.tell("Mit akarsz eloltani?");
+			return true;
+		}
+		name = _PARAM[0];
+		if(!_OBJ.callName(name)){
+			_LIV.tell("Nem teheted!");
+			return true;
+		}
+		allapot = _OBJ.getProperty("kapcs");
+		if(allapot == "kikapcs"){
+			_LIV.tell("Nem ég, nem tudod eloltani.");
+			return true;
+		}
+		list = ["latas"];
+		testList = _OBJ.getPerceptibility(list);
+		e= _OBJ.createSimpleSourceSubjectEvent(testList, _LIV, _OBJ,
+			"%S eloltja a %T-t.",
+			"%T elalszik.",
+			"%S matat valamit.",
+			null,
+			"eloltottad a %T-d.");
+		if(e!=null) e.fire();
+		_OBJ.setProperty("kapcs","kikapcs");
+		return true;
+	}
+	function getObjectStatus(_OBJ){
+		ret = _OBJ.getProperty("kapcs");
+		return ret;
+	}
+	function descr(_OBJ){
+		olaj = _OBJ.getProperty("olaj");
+		olaj = parseInt(olaj);
+		olaj2 = _OBJ.getProperty("olaj2");
+		olaj2 = parseInt(olaj2);
+		if(olaj2>0) olaj = olaj+1;
+		if(olaj == 0){
+			return "Üres, fel kellene tölteni";
+		}
+		return "Még " + olaj + " adag olaj van benne";
+		
+	}
+	
+	
+	]]></js>
+</Item>

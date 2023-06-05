@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class NounGenerator {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.print("Adja meg a főnevet: ");
+    String noun = input.nextLine();
+
+    if (noun.endsWith("a") || noun.endsWith("e")) {
+      System.out.println(noun + "nak");
+      System.out.println(noun + "nek");
+      System.out.println(noun + "hoz");
+      System.out.println(noun + "höz");
+      System.out.println(noun + "től");
+      System.out.println(noun + "ig");
+      System.out.println(noun + "t");
+    } else if (noun.endsWith("o")) {
+      System.out.println(noun + "nak");
+      System.out.println(noun + "nek");
+      System.out.println(noun + "hoz");
+      System.out.println(noun + "höz");
+      System.out.println(noun + "tól");
+      System.out.println(noun + "ig");
+      System.out.println(noun + "t");
+    } else if (noun.endsWith("ó")) {
+      System.out.println(noun + "nak");
+      System.out.println(noun + "nek");
+      System.out.println(noun + "hoz");
+      System.out.println(noun + "höz");
+      System.out.println(noun + "tól");
+      System.out.println(noun + "ig");
+      System.out.println(noun + "t");
+    } else {
+      System.out.println(noun + "nak");
+      System.out.println(noun + "nek");
+      System.out.println(noun + "ban");
+      System.out.println(noun + "ben");
+      System.out.println(noun + "től");
+      System.out.println(noun + "ig");
+      System.out.println(noun + "-t");
+    }
+  }
+}

@@ -1,0 +1,36 @@
+Előlények. Ide tartoznak a játékosok, szörnyek, NJK-k. Az [Entity] leszármazottja.
+
+[{TableOfContents title='Tartalom'}]
+!!!Root
+%%information
+Nem lehet XMLben definiálni
+%%
+
+
+!!!Attributumok
+||név||XML Tipus[[1]||számosság[[2]||típus||leírás||
+|objRef|elem|*|[Referencia|ObjectRef]|Azon entitások listája, melyek ennek az élőlénynek a leltárjában van|
+|maxSP|Attr|?|[Kocka|DiceInteger]|Maximális kitartáspont|
+|maxHP|Attr|?|[Kocka|DiceInteger]|Maximális életerőpont|
+|maxMP|Attr|?|[Kocka|DiceInteger]|Maximális manapont|
+|actSP|Attr|?|[Kocka|DiceInteger]|Aktuális kitartáspont|
+|actHP|Attr|?|[Kocka|DiceInteger]|Aktuális életerőpont|
+|actMP|Attr|?|[Kocka|DiceInteger]|Aktuális manapont|
+|actSPReg|Attr|?|[Kocka|DiceInteger]|Aktuális kitartáspont regeneráció|
+|actHPReg|Attr|?|[Kocka|DiceInteger]|Aktuális életerőpont regeneráció|
+|actMPReg|Attr|?|[Kocka|DiceInteger]|Aktuális manapont regeneráció|
+|baseSPReg|Attr|?|[Kocka|DiceInteger]|Alap kitartáspont regeneráció|
+|baseHPReg|Attr|?|[Kocka|DiceInteger]|Alap életerőpont regeneráció|
+|baseMPReg|Attr|?|[Kocka|DiceInteger]|Alap manapont regeneráció|
+|race|Attr|?|Szöveg|Élőlény faja. Létezni kell a [Fajok adatbázis|RaceDB]ban, az érzékeket, képességet onnét tölti fel
+|gender|Attr|?|Szöveg|Neme
+|class|Attr|?|Szöveg|osztálya, mágus, harcos, stb
+|bonus|Elem|*|[Bonus]|Különböző módosítókat lehet hozzáadni
+
+
+[[#1] Elem, vagy attribútum, aszerint, hogy az adott változót hogyan kell létrehozni\\
+[[#2] 1, ha kötelező és egyszer; ? ha opcionális, * ha tetszőleges számban; 1+ ha legalább egyszer elő kell fordulnia. 
+
+
+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Living moving="true" race="szarvas" maxSP="1000" maxHP="10d10+3" qty="1">
+	<stimulus type="latas" intensity="50" >
+		<descr>Egy nagy szarvasbika. Az agancsa alapján olyan {r:2-3:4-5:6-7} évesnek becsülöd.</descr>
+	</stimulus>
+	<id>szarvas</id>
+	<id>szarvasbika</id>
+	<id>állat</id>
+	<id>bika</id>
+	<gender>hímnemű</gender>
+	<shortName targy="a szarvast">szarvas</shortName>
+	<!-- <emotions intervall="5" probality="10"> -->
+	<emotions intervall="1" probality="3">
+		<emotion>
+			<sense name="latas" difficulty="75"/>
+			<sense name="hallas" difficulty="50"/>
+			<descr>%S majszol egy kis füvet.</descr>
+		</emotion>
+		<emotion >
+			<sense name="latas" difficulty="75"/>
+			<descr>%S meredő szemekkel kémleli a veszélyeket</descr>
+		</emotion>
+		<emotion>
+			<sense name="latas" difficulty="75"/>
+			<sense name="hallas" difficulty="25"/>
+			<descr>%S körbesétál füvet keresve.</descr>
+		</emotion>
+
+	</emotions>
+</Living>

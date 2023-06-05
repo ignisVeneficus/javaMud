@@ -1,0 +1,70 @@
+A játékos (és a szörnyek is) minden információt, leírást az érzékszervein keresztül kap meg.
+[{TableOfContents title='Tartalom'}]
+!!!Érzékszervek (Mivel)
+A játékban 4 típusú érzékelés van:
+*Látás
+*Hallás
+*Szaglás
+*Mágia
+Az "érzékszervek", inkább érzékelési módok, ezekhez kötődnek.\\
+Minden érzékszerv egy gauss görbe szerint működik:
+[{Image src='gauss1.png' caption='gauss görbe'}]
+
+Két értéke van:
+* __value__: ez a szorásnak felel meg
+* __mean__: közepe
+Leegyszerűsítve: a __mean__ mondja meg, hol van a maximuma, a __value__ megmondja, hogy mennyire lapos (minél nagyobb, annál laposabb)
+\\
+Minden érzékelési módhoz szükséges egy érzékelés (mire vonatkozik), a __mean__ és a __value__.\\
+Egy érzékeléshez több érzékszerv is tartozhat, pl a Látás esetén lehet normális látás, és infralátás is (aminek mások az értékei).
+
+Mind a __mean_ mind a __value_ 0-100 közötti értéket vehet fel
+
+Érzékszervek definicióját az XML-ben a [Sense] típus határozza meg.
+!!!Érzékszervek működése (Hogyan)
+Kétfajta érzékszerv van:
+* Látás - környezet fényével működik, az érzékszervi benyomások külön-külön értékelődik ki.
+* Szaglás, hallás, mágia - az adott érzékszervi benyomás a környezetben lévők ellen működik.
+!!Látás
+A rendszer összeszedi a környezet fényét.\\
+Kiszámolja a gauss görbe értékét a környezet fényéhez.
+*Ha az érték kisebb mint 0.5, akkor már nem látja rendesen
+*Ha az érték kisebb mint 0.2, akkor túl sötét van, vagy túl világos, hogy lásson
+A látáshoz tartozó erősség egy százalék: mennyire vehető észre, ennyi százalékkal csökken a __value__ értéke.\\
+
+!!Szaglás, hallás, mágia
+Kiszámolja a gauss görbe értékét a aktuális benyomáshoz.
+*Ha a benyomás nagyobb mint a __mean__ érték, akkor érzékeli.
+*Ha az érték kisebb mint 0.5, akkor már nem érzékeli rendesen.
+*Ha az érték kisebb mint 0.2, akkor nem érzékel semmit.
+
+!!!Érzékszervi benyomások (Mit)
+!!Leírások
+A Leírások az entitásokhoz, szobákhoz kapcsolt XML adat. A definiót az [Érzékek|Stimulus] írja le.
+A következő adatokat tartalmazza:
+*érzékszervek listája
+*ha fényforrás, a fény erőssége
+*a benyomás erőssége (ha nincs megadva, akkor 100, látásnál gyakori)
+*bőbeszédű (hosszú) leírás
+*szűkszavú (rövid) leírás
+*feltétel
+Egyszerű a működése: ha az adott előlény érzékeli a benyomást, akkor megkapja a rövid/hosszú leírást. Különlegessége a __feltétel__. A rendszer összeszedi a szobából a státuszszövegeket, és csak azokat a benyomásokat nézi, aminek a feltételéhez van státuszszöveg.\\
+Bármi lehet státuszszöveg, de általában a időhöz köthető. Pl a Astronomy napszaktól függően "nappal", "este" "éjfél" stb státuszokat ad.\\
+Ezzel a trükkel megoldható, hogy más-más leírás legyen nappal és éjszaka. Megoldható különös, ritka események, pl csak éjfélkor létező leírás.
+
+!!Események
+Az eseményeknél maga az esemény is egy érzékszervi benyomás. Amennyiben nem tudja az adott élő érzékelni, akkor nem veszi észre. Minden eseményhez egy vagy több érzékszerv tartozik.\\
+Ha maga az esemény érzékelve van, akkor jönnek a résztvevők: aki kiváltotta, akire hat, stb. Minden résztvevőre kiértékelődik és az érzékelhetőség függvényében változik a leírás.
+
+!!Kijáratok
+Minden [Kijárat|Exit] adat tartalmazhat több [SenseTest]-et, ami egy érzékszer típus megnevezésből és egy érzékelhetőséget tartalmaz. Amennyiben nincs, úgy egy tökéletesen látható (100-as) látás teszt generálódik.\\
+Amennyiben az élőlény valahogy érzékeli a kijáratot, akkor már tud róla.\\
+Itt csak teljes érzékelés van (vagy tudja, vagy nem, a félig eset nem áll fent)
+
+!!Entity
+Az Entity-k esetén az érzékelhetőség hasonlóan működik, mint a szobák esetén.
+!Living
+Living esetén az erőség nagyban függ a skillektől is, és a különböző állapotoktól.
+
+
+

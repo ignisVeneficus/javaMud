@@ -1,0 +1,15 @@
+RoomItem a szobákban lévő megvizsgálható tárgyak, amiket csak megnézni lehet. Hangulati elem.
+[{TableOfContents title='Tartalom'}]
+!!!Root
+%%information
+Nem lehet XML gyökéreleme
+%%
+
+!!!Attributumok
+||név||XML Tipus[1]||számosság[2]||típus||leírás||
+|descr|Elem|+|[Leírás|ConditionDescr]|Leírások feltétellel|
+|name|Elem|+|[ragozottAlak|InflectionWord]|Id amivel hivatkozni lehet rá a megvizsgálása során|
+
+----
+[#1] Elem, vagy attribútum, aszerint, hogy az adott változót hogyan kell létrehozni\\
+[#2] 1, ha kötelező és egyszer; ? ha opcionális, * ha tetszőleges számban; 1+ ha legalább egyszer elő kell fordulnia. 

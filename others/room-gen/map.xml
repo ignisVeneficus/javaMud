@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8"?><Map>
+<loc y="2" x="9" id="fovaros_3_1" group="3">
+<type>room</type>
+</loc>
+<!--to _124-->
+<con y2="1" x2="9" y1="2" x1="9"/>
+<loc y="3" x="9" id="fovaros_3_2" group="3">
+<type>room</type>
+</loc>
+<!--to 3_1-->
+<con y2="2" x2="9" y1="3" x1="9"/>
+<!--to 2_122-->
+<con y2="2" x2="10" y1="3" x1="9"/>
+<!--to 3_133-->
+<con y2="3" x2="8" y1="3" x1="9"/>
+<loc y="4" x="9" id="fovaros_3_3" group="3">
+<type>room</type>
+</loc>
+<!--to 3_2-->
+<con y2="3" x2="9" y1="4" x1="9"/>
+<!--to 2_110-->
+<con y2="4" x2="10" y1="4" x1="9"/>
+<loc y="5" x="9" id="fovaros_5_4" group="5">
+<type>room</type>
+</loc>
+<!--to 3_3-->
+<con y2="4" x2="9" y1="5" x1="9"/>
+<!--to 5_89-->
+<con y2="5" x2="10" y1="5" x1="9"/>
+<loc y="6" x="9" id="fovaros_5_5" group="5">
+<type>room</type>
+</loc>
+<!--to 5_4-->
+<con y2="5" x2="9" y1="6" x1="9"/>
+<!--to 5_90-->
+<con y2="5" x2="8" y1="6" x1="9"/>
+<!--to 5_89-->
+<con y2="5" x2="10" y1="6" x1="9"/>
+<!--to 5_88-->
+<con y2="6" x2="10" y1="6" x1="9"/>
+<loc y="7" x="9" id="fovaros_5_6" group="5">
+<type>room</type>
+</loc>
+<!--to 5_5-->
+<con y2="6" x2="9" y1="7" x1="9"/>
+<!--to 5_88-->
+<con y2="6" x2="10" y1="7" x1="9"/>
+<!--to 5_87-->
+<con y2="7" x2="10" y1="7" x1="9"/>
+<!--to 5_91-->
+<con y2="6" x2="8" y1="7" x1="9"/>
+<loc y="8" x="9" id="fovaros_5_7" group="5">
+<type>room</type>
+</loc>
+<!--to 5_6-->
+<con y2="7" x2="9" y1="8" x1="9"/>
+<!--to 5_87-->
+<con y2="7" x2="10" y1="8" x1="9"/>
+<!--to 5_92-->
+<con y2="7" x2="8" y1="8" x1="9"/>
+<!--to 5_86-->
+<con y2="8" x2="10" y1="8" x1="9"/>
+<loc y="9" x="9" id="fovaros_5_8" group="5">
+<type>room</type>
+</loc>
+<!--to 5_7-->
+<con y2="8" x2="9" y1="9" x1="9"/>
+<!--to 5_86-->
+<con y2="8" x2="10" y1="9" x1="9"/>
+<!--to 5_93-->
+<con y2="8" x2="8" y1="9" x1="9"/>
+<loc y="10" x="9" id="fovaros_1_9" group="1">
+<type>room</type>
+</loc>
+<!--to 5_8-->
+<con y2="9" x2="9" y1="10" x1="9"/>
+<!--to 1_80-->
+<con y2="11" x2="8" y1="10" x1="9"/>
+<loc y="11" x="9" id="fovaros_1_10" group="1">
+<type>room</type>
+</loc>
+<!--to 1_9-->
+<con y2="10" x2="9" y1="11" x1="9"/>
+<!--to 1_65-->
+<con y2="10" x2="10" y1="11" x1="9"/>
+<loc y="12" x="9" id="fovaros_1_11" group="1">
+<type>room</type>
+</loc>
+<!--to 1_10-->
+<con y2="11" x2="9" y1="12" x1="9"/>
+<loc y="13" x="9" id="fovaros_1_12" group="1">
+<type>room</type>
+</loc>
+<!--to 1_11-->
+<con y2="12" x2="9" y1="13" x1="9"/>
+<loc y="14" x="9" id="fovaros_1_13" group="1">
+<type>room</type>
+</loc>
+<!--to 1_33-->
+<con y2="14" x2="10" y1="14" x1="9"/>
+<!--to 1_39-->
+<con y2="14" x2="8" y1="14" x1="9"/>
+<!--to 1_12-->
+<con y2="13" x2="9" y1="14" x1="9"/>
+<loc y="15" x="9" id="fovaros_4_14" group="4">
+<type>room</type>
+</loc>
+<!--to 4_17-->
+<con y2="16" x2="8" y1="15" x1="9"/>
+<!--to 4_19-->
+<con y2="16" x2="10" y1="15" x1="9"/>
+<!--to 4_23-->
+<con y2="15" x2="10" y1="15" x1="9"/>
+<loc y="17" x="9" id="fovaros_4_15" group="4">
+<type>room</type>
+</loc>
+<!--to 4_16-->
+<con y2="18" x2="9" y1="17" x1="9"/>
+<loc y="18" x="9" id="fovaros_4_16" group="4">
+<type>room</type>
+</loc>
+<!--to 4_18-->
+<con y2="18" x2="10" y1="18" x1="9"/>
+<!--to _63-->
+<con y2="19" x2="9" y1="18" x1="9"/>
+<loc y="16" x="8" id="fovaros_4_17" group="4">
+<type>room</type>
+</loc>
+<!--to 4_15-->
+<con y2="17" x2="9" y1="16" x1="8"/>
+<loc y="18" x="10" id="fovaros_4_18" group="4">
+<type>room</type>
+</loc>
+<loc y="16" x="10" id="fovaros_4_19" group="4">
+<type>room</type>
+</loc>
+<!--to 4_20-->
+<con y2="17" x2="10" y1="16" x1="10"/>
+<loc y="17" x="10" id="fovaros_4_20" group="4">
+<type>room</type>
+</loc>
+<!--to 4_22-->
+<con y2="16" x2="11" y1="17" x1="10"/>
+<loc y="17" x="11" id="fovaros_4_21" group="4">
+<type>room</type>
+</loc>
+<!--to 4_18-->
+<con y2="18" x2="10" y1="17" x1="11"/>
+<!--to 4_28-->
+<con y2="17" x2="12" y1="17" x1="11"/>
+<!--to 4_27-->
+<con y2="16" x2="12" y1="17" x1="11"/>
+<loc y="16" x="11" id="fovaros_4_22" group="4">
+<type>room</type>
+</loc>
+<!--to 4_28-->
+<con y2="17" x2="12" y1="16" x1="11"/>
+<loc y="15" x="10" id="fovaros_4_23" group="4">
+<type>room</type>
+</loc>
+<!--to 4_24-->
+<con y2="15" x2="11" y1="15" x1="10"/>
+<loc y="15" x="11" id="fovaros_4_24" group="4">
+<type>room</type>
+</loc>
+<!--to 4_25-->
+<con y2="15" x2="12" y1="15" x1="11"/>
+<loc y="15" x="12" id="fovaros_4_25" group="4">
+<type>room</type>
+</loc>
+<!--to 4_26-->
+<con y2="15" x2="13" y1="15" x1="12"/>
+<loc y="15" x="13" id="fovaros_4_26" group="4">
+<type>room</type>
+</loc>
+<!--to 4_36-->
+<con y2="16" x2="14" y1="15" x1="13"/>
+<!--to 4_53-->
+<con y2="14" x2="14" y1="15" x1="13"/>
+<loc y="16" x="12" id="fovaros_4_27" group="4">
+<type>room</type>
+</loc>
+<!--to 4_25-->
+<con y2="15" x2="12" y1="16" x1="12"/>
+<!--to 4_30-->
+<con y2="16" x2="13" y1="16" x1="12"/>
+<loc y="17" x="12" id="fovaros_4_28" group="4">
+<type>room</type>
+</loc>
+<loc y="18" x="12" id="fovaros_4_29" group="4">
+<type>room</type>
+</loc>
+<!--to 4_28-->
+<con y2="17" x2="12" y1="18" x1="12"/>
+<loc y="16" x="13" id="fovaros_4_30" group="4">
+<type>room</type>
+<overlay>Vegyesbolt</overlay>
+</loc>
+<loc y="14" x="13" id="fovaros_4_31" group="4">
+<type>room</type>
+</loc>
+<!--to 4_26-->
+<con y2="15" x2="13" y1="14" x1="13"/>
+<!--to 4_25-->
+<con y2="15" x2="12" y1="14" x1="13"/>
+<loc y="13" x="12" id="fovaros_1_32" group="1">
+<type>room</type>
+</loc>
+<!--to 4_31-->
+<con y2="14" x2="13" y1="13" x1="12"/>
+<loc y="14" x="10" id="fovaros_1_33" group="1">
+<type>room</type>
+</loc>
+<!--to 1_34-->
+<con y2="13" x2="10" y1="14" x1="10"/>
+<loc y="13" x="10" id="fovaros_1_34" group="1">
+<type>room</type>
+</loc>
+<!--to 1_35-->
+<con y2="12" x2="11" y1="13" x1="10"/>
+<!--to 1_41-->
+<con y2="13" x2="11" y1="13" x1="10"/>
+<loc y="12" x="11" id="fovaros_1_35" group="1">
+<type>room</type>
+</loc>
+<!--to 1_32-->
+<con y2="13" x2="12" y1="12" x1="11"/>
+<!--to 1_43-->
+<con y2="11" x2="11.916666666666666" y1="12" x1="11"/>
+<loc y="16" x="14" id="fovaros_4_36" group="4">
+<type>room</type>
+</loc>
+<!--to 4_37-->
+<con y2="17" x2="14" y1="16" x1="14"/>
+<loc y="17" x="14" id="fovaros_4_37" group="4">
+<type>room</type>
+</loc>
+<!--to 4_38-->
+<con y2="18" x2="13" y1="17" x1="14"/>
+<!--to 4_46-->
+<con y2="17" x2="15" y1="17" x1="14"/>
+<loc y="18" x="13" id="fovaros_4_38" group="4">
+<type>room</type>
+</loc>
+<!--to 4_28-->
+<con y2="17" x2="12" y1="18" x1="13"/>
+<!--to 4_29-->
+<con y2="18" x2="12" y1="18" x1="13"/>
+<loc y="14" x="8" id="fovaros_1_39" group="1">
+<type>room</type>
+</loc>
+<!--to 1_40-->
+<con y2="14" x2="7" y1="14" x1="8"/>
+<loc y="14" x="7" id="fovaros_1_40" group="1">
+<type>room</type>
+</loc>
+<!--to 1_72-->
+<con y2="13" x2="6" y1="14" x1="7"/>
+<loc y="13" x="11" id="fovaros_1_41" group="1">
+<type>room</type>
+<overlay>Erőd</overlay>
+</loc>
+<loc y="11" x="10" id="fovaros_1_42" group="1">
+<type>room</type>
+<overlay>Kocsma</overlay>
+</loc>
+<!--to 1_35-->
+<con y2="12" x2="11" y1="11" x1="10"/>
+<loc y="11" x="11.916666666666666" id="fovaros_1_43" group="1">
+<type>room</type>
+</loc>
+<!--to 1_44-->
+<!--<con x1="11.916666666666666" y1="11" x2="13" y2="11"/>-->
+<loc y="11" x="13" id="fovaros_1_44" group="1">
+<type>room</type>
+</loc>
+<!--to 1_45-->
+<con y2="10" x2="13" y1="11" x1="13"/>
+<loc y="10" x="13" id="fovaros_1_45" group="1">
+<type>room</type>
+</loc>
+<!--to 1_68-->
+<con y2="9" x2="13" y1="10" x1="13"/>
+<loc y="17" x="15" id="fovaros_4_46" group="4">
+<type>room</type>
+</loc>
+<!--to 4_47-->
+<con y2="16" x2="16" y1="17" x1="15"/>
+<loc y="16" x="16" id="fovaros_4_47" group="4">
+<type>room</type>
+</loc>
+<!--to 4_48-->
+<con y2="15" x2="16" y1="16" x1="16"/>
+<loc y="15" x="16" id="fovaros_4_48" group="4">
+<type>room</type>
+</loc>
+<!--to 4_49-->
+<con y2="14" x2="17" y1="15" x1="16"/>
+<loc y="14" x="17" id="fovaros_4_49" group="4">
+<type>room</type>
+</loc>
+<!--to 4_50-->
+<con y2="13" x2="16" y1="14" x1="17"/>
+<loc y="13" x="16" id="fovaros_4_50" group="4">
+<type>room</type>
+</loc>
+<!--to 4_51-->
+<con y2="13" x2="15" y1="13" x1="16"/>
+<!--to 4_52-->
+<con y2="12" x2="16" y1="13" x1="16"/>
+<loc y="13" x="15" id="fovaros_4_51" group="4">
+<type>room</type>
+</loc>
+<!--to 4_54-->
+<con y2="13" x2="14" y1="13" x1="15"/>
+<!--to 4_52-->
+<con y2="12" x2="16" y1="13" x1="15"/>
+<loc y="12" x="16" id="fovaros_4_52" group="4">
+<type>room</type>
+</loc>
+<!--to 4_56-->
+<con y2="11" x2="15" y1="12" x1="16"/>
+<loc y="14" x="14" id="fovaros_4_53" group="4">
+<type>room</type>
+</loc>
+<!--to 4_31-->
+<con y2="14" x2="13" y1="14" x1="14"/>
+<loc y="13" x="14" id="fovaros_4_54" group="4">
+<type>room</type>
+</loc>
+<!--to 4_53-->
+<con y2="14" x2="14" y1="13" x1="14"/>
+<!--to 4_55-->
+<con y2="12" x2="14" y1="13" x1="14"/>
+<loc y="12" x="14" id="fovaros_4_55" group="4">
+<type>room</type>
+</loc>
+<!--to 4_61-->
+<con y2="11" x2="14" y1="12" x1="14"/>
+<loc y="11" x="15" id="fovaros_4_56" group="4">
+<type>room</type>
+<overlay>Kovács</overlay>
+</loc>
+<loc y="11" x="17" id="fovaros_4_57" group="4">
+<type>room</type>
+</loc>
+<!--to 4_52-->
+<con y2="12" x2="16" y1="11" x1="17"/>
+<loc y="10" x="16" id="fovaros_4_58" group="4">
+<type>room</type>
+</loc>
+<!--to 4_57-->
+<con y2="11" x2="17" y1="10" x1="16"/>
+<loc y="9" x="15" id="fovaros_4_59" group="4">
+<type>room</type>
+</loc>
+<!--to 4_58-->
+<con y2="10" x2="16" y1="9" x1="15"/>
+<!--to _62-->
+<con y2="9" x2="16" y1="9" x1="15"/>
+<loc y="10" x="14" id="fovaros_4_60" group="4">
+<type>room</type>
+</loc>
+<!--to 4_59-->
+<con y2="9" x2="15" y1="10" x1="14"/>
+<loc y="11" x="14" id="fovaros_4_61" group="4">
+<type>room</type>
+</loc>
+<!--to 4_60-->
+<con y2="10" x2="14" y1="11" x1="14"/>
+<loc y="11" x="11" id="fovaros_1_64" group="1">
+<type>room</type>
+<overlay>Bank</overlay>
+</loc>
+<!--to 1_65-->
+<con y2="10" x2="10" y1="11" x1="11"/>
+<loc y="10" x="10" id="fovaros_1_65" group="1">
+<type>room</type>
+</loc>
+<!--to 1_66-->
+<con y2="10" x2="11" y1="10" x1="10"/>
+<!--to 1_9-->
+<con y2="10" x2="9" y1="10" x1="10"/>
+<!--to 1_70-->
+<con y2="9" x2="11" y1="10" x1="10"/>
+<loc y="10" x="11" id="fovaros_1_66" group="1">
+<type>room</type>
+</loc>
+<!--to 1_67-->
+<con y2="10" x2="12" y1="10" x1="11"/>
+<loc y="10" x="12" id="fovaros_1_67" group="1">
+<type>room</type>
+</loc>
+<!--to 1_68-->
+<con y2="9" x2="13" y1="10" x1="12"/>
+<loc y="9" x="13" id="fovaros_1_68" group="1">
+<type>room</type>
+</loc>
+<!--to 1_98-->
+<con y2="8" x2="13" y1="9" x1="13"/>
+<loc y="9" x="12" id="fovaros_1_69" group="1">
+<type>room</type>
+</loc>
+<!--to 1_68-->
+<con y2="9" x2="13" y1="9" x1="12"/>
+<loc y="9" x="11" id="fovaros_1_70" group="1">
+<type>room</type>
+</loc>
+<!--to 1_69-->
+<con y2="9" x2="12" y1="9" x1="11"/>
+<!--to 5_71-->
+<con y2="9" x2="10" y1="9" x1="11"/>
+<loc y="9" x="10" id="fovaros_5_71" group="5">
+<type>room</type>
+</loc>
+<!--to 5_8-->
+<con y2="9" x2="9" y1="9" x1="10"/>
+<!--to 5_7-->
+<con y2="8" x2="9" y1="9" x1="10"/>
+<loc y="13" x="6" id="fovaros_1_72" group="1">
+<type>room</type>
+</loc>
+<!--to 1_74-->
+<con y2="12" x2="5" y1="13" x1="6"/>
+<!--to _73-->
+<con y2="14" x2="5" y1="13" x1="6"/>
+<!--to 1_75-->
+<con y2="12" x2="7" y1="13" x1="6"/>
+<loc y="12" x="5" id="fovaros_1_74" group="1">
+<type>room</type>
+</loc>
+<!--to 1_100-->
+<con y2="11" x2="5" y1="12" x1="5"/>
+<loc y="12" x="7" id="fovaros_1_75" group="1">
+<type>room</type>
+</loc>
+<!--to 1_78-->
+<con y2="12" x2="8" y1="12" x1="7"/>
+<!--to 1_76-->
+<con y2="11" x2="7" y1="12" x1="7"/>
+<!--to 1_77-->
+<con y2="11" x2="6" y1="12" x1="7"/>
+<loc y="11" x="7" id="fovaros_1_76" group="1">
+<type>room</type>
+</loc>
+<!--to 1_77-->
+<con y2="11" x2="6" y1="11" x1="7"/>
+<loc y="11" x="6" id="fovaros_1_77" group="1">
+<type>room</type>
+</loc>
+<!--to 1_81-->
+<con y2="10" x2="6" y1="11" x1="6"/>
+<loc y="12" x="8" id="fovaros_1_78" group="1">
+<type>room</type>
+</loc>
+<!--to 1_79-->
+<con y2="13" x2="7" y1="12" x1="8"/>
+<!--to 1_11-->
+<con y2="12" x2="9" y1="12" x1="8"/>
+<loc y="13" x="7" id="fovaros_1_79" group="1">
+<type>room</type>
+</loc>
+<!--to 1_40-->
+<con y2="14" x2="7" y1="13" x1="7"/>
+<loc y="11" x="8" id="fovaros_1_80" group="1">
+<type>room</type>
+</loc>
+<!--to 1_78-->
+<con y2="12" x2="8" y1="11" x1="8"/>
+<loc y="10" x="6" id="fovaros_1_81" group="1">
+<type>room</type>
+</loc>
+<!--to 1_82-->
+<con y2="9" x2="6" y1="10" x1="6"/>
+<loc y="9" x="6" id="fovaros_1_82" group="1">
+<type>room</type>
+</loc>
+<!--to 1_85-->
+<con y2="9" x2="7" y1="9" x1="6"/>
+<loc y="10" x="8" id="fovaros_1_83" group="1">
+<type>room</type>
+<overlay>Templom</overlay>
+</loc>
+<loc y="9" x="8" id="fovaros_5_84" group="5">
+<type>room</type>
+</loc>
+<!--to 5_8-->
+<con y2="9" x2="9" y1="9" x1="8"/>
+<!--to 1_83-->
+<con y2="10" x2="8" y1="9" x1="8"/>
+<!--to 5_93-->
+<con y2="8" x2="8" y1="9" x1="8"/>
+<!--to 5_7-->
+<con y2="8" x2="9" y1="9" x1="8"/>
+<loc y="9" x="7" id="fovaros_1_85" group="1">
+<type>room</type>
+</loc>
+<!--to 5_84-->
+<con y2="9" x2="8" y1="9" x1="7"/>
+<!--to 1_125-->
+<con y2="8" x2="7" y1="9" x1="7"/>
+<loc y="8" x="10" id="fovaros_5_86" group="5">
+<type>room</type>
+</loc>
+<!--to 5_71-->
+<con y2="9" x2="10" y1="8" x1="10"/>
+<!--to 1_94-->
+<con y2="7" x2="11" y1="8" x1="10"/>
+<!--to 5_6-->
+<con y2="7" x2="9" y1="8" x1="10"/>
+<loc y="7" x="10" id="fovaros_5_87" group="5">
+<type>room</type>
+</loc>
+<!--to 5_86-->
+<con y2="8" x2="10" y1="7" x1="10"/>
+<!--to 5_5-->
+<con y2="6" x2="9" y1="7" x1="10"/>
+<loc y="6" x="10" id="fovaros_5_88" group="5">
+<type>room</type>
+</loc>
+<!--to 5_87-->
+<con y2="7" x2="10" y1="6" x1="10"/>
+<!--to 5_4-->
+<con y2="5" x2="9" y1="6" x1="10"/>
+<!--to 1_99-->
+<con y2="6" x2="11" y1="6" x1="10"/>
+<loc y="5" x="10" id="fovaros_5_89" group="5">
+<type>room</type>
+</loc>
+<!--to 5_88-->
+<con y2="6" x2="10" y1="5" x1="10"/>
+<!--to 1_103-->
+<con y2="5" x2="11" y1="5" x1="10"/>
+<loc y="5" x="8" id="fovaros_5_90" group="5">
+<type>room</type>
+</loc>
+<!--to 5_4-->
+<con y2="5" x2="9" y1="5" x1="8"/>
+<loc y="6" x="8" id="fovaros_5_91" group="5">
+<type>room</type>
+</loc>
+<!--to 5_90-->
+<con y2="5" x2="8" y1="6" x1="8"/>
+<!--to 5_4-->
+<con y2="5" x2="9" y1="6" x1="8"/>
+<!--to 5_5-->
+<con y2="6" x2="9" y1="6" x1="8"/>
+<loc y="7" x="8" id="fovaros_5_92" group="5">
+<type>room</type>
+</loc>
+<!--to 5_91-->
+<con y2="6" x2="8" y1="7" x1="8"/>
+<!--to 5_5-->
+<con y2="6" x2="9" y1="7" x1="8"/>
+<!--to 5_6-->
+<con y2="7" x2="9" y1="7" x1="8"/>
+<loc y="8" x="8" id="fovaros_5_93" group="5">
+<type>room</type>
+</loc>
+<!--to 5_92-->
+<con y2="7" x2="8" y1="8" x1="8"/>
+<!--to 5_6-->
+<con y2="7" x2="9" y1="8" x1="8"/>
+<!--to 5_7-->
+<con y2="8" x2="9" y1="8" x1="8"/>
+<loc y="7" x="11" id="fovaros_1_94" group="1">
+<type>room</type>
+</loc>
+<!--to 1_95-->
+<con y2="7" x2="12" y1="7" x1="11"/>
+<loc y="7" x="12" id="fovaros_1_95" group="1">
+<type>room</type>
+</loc>
+<!--to 1_96-->
+<con y2="6" x2="12" y1="7" x1="12"/>
+<loc y="6" x="12" id="fovaros_1_96" group="1">
+<type>room</type>
+</loc>
+<!--to 2_104-->
+<con y2="5" x2="12" y1="6" x1="12"/>
+<loc y="7" x="13" id="fovaros_1_97" group="1">
+<type>room</type>
+</loc>
+<!--to 1_96-->
+<con y2="6" x2="12" y1="7" x1="13"/>
+<loc y="8" x="13" id="fovaros_1_98" group="1">
+<type>room</type>
+</loc>
+<!--to 1_97-->
+<con y2="7" x2="13" y1="8" x1="13"/>
+<loc y="6" x="11" id="fovaros_1_99" group="1">
+<type>room</type>
+<overlay>Bárdok</overlay>
+</loc>
+<loc y="11" x="5" id="fovaros_1_100" group="1">
+<type>room</type>
+</loc>
+<!--to 1_101-->
+<con y2="10" x2="5" y1="11" x1="5"/>
+<loc y="10" x="5" id="fovaros_1_101" group="1">
+<type>room</type>
+</loc>
+<!--to 1_102-->
+<con y2="9" x2="5" y1="10" x1="5"/>
+<loc y="9" x="5" id="fovaros_1_102" group="1">
+<type>room</type>
+</loc>
+<!--to 1_82-->
+<con y2="9" x2="6" y1="9" x1="5"/>
+<!--to 1_132-->
+<con y2="8" x2="5" y1="9" x1="5"/>
+<!--to 3_144-->
+<con y2="9" x2="4" y1="9" x1="5"/>
+<loc y="5" x="11" id="fovaros_1_103" group="1">
+<type>room</type>
+</loc>
+<!--to 1_96-->
+<con y2="6" x2="12" y1="5" x1="11"/>
+<loc y="5" x="12" id="fovaros_2_104" group="2">
+<type>room</type>
+</loc>
+<!--to 2_105-->
+<con y2="6" x2="13" y1="5" x1="12"/>
+<loc y="6" x="13" id="fovaros_2_105" group="2">
+<type>room</type>
+</loc>
+<loc y="5" x="13" id="fovaros_2_106" group="2">
+<type>room</type>
+</loc>
+<!--to 2_105-->
+<con y2="6" x2="13" y1="5" x1="13"/>
+<!--to 2_107-->
+<con y2="5" x2="14" y1="5" x1="13"/>
+<loc y="5" x="14" id="fovaros_2_107" group="2">
+<type>room</type>
+</loc>
+<!--to 2_111-->
+<con y2="4" x2="13" y1="5" x1="14"/>
+<!--to 2_112-->
+<con y2="4" x2="15" y1="5" x1="14"/>
+<loc y="4" x="12" id="fovaros_2_108" group="2">
+<type>room</type>
+</loc>
+<!--to 2_106-->
+<con y2="5" x2="13" y1="4" x1="12"/>
+<!--to 2_114-->
+<con y2="3" x2="13" y1="4" x1="12"/>
+<loc y="3" x="11" id="fovaros_2_109" group="2">
+<type>room</type>
+</loc>
+<!--to 2_108-->
+<con y2="4" x2="12" y1="3" x1="11"/>
+<loc y="4" x="10" id="fovaros_2_110" group="2">
+<type>room</type>
+</loc>
+<!--to 2_109-->
+<con y2="3" x2="11" y1="4" x1="10"/>
+<loc y="4" x="13" id="fovaros_2_111" group="2">
+<type>room</type>
+</loc>
+<loc y="4" x="15" id="fovaros_2_112" group="2">
+<type>room</type>
+</loc>
+<loc y="4" x="14" id="fovaros_2_113" group="2">
+<type>room</type>
+</loc>
+<loc y="3" x="13" id="fovaros_2_114" group="2">
+<type>room</type>
+</loc>
+<!--to 2_113-->
+<con y2="4" x2="14" y1="3" x1="13"/>
+<!--to 2_115-->
+<con y2="3" x2="14" y1="3" x1="13"/>
+<!--to 2_119-->
+<con y2="2" x2="12" y1="3" x1="13"/>
+<loc y="3" x="14" id="fovaros_2_115" group="2">
+<type>room</type>
+<overlay>Orgazda - tolvajok</overlay>
+</loc>
+<loc y="3" x="15" id="fovaros_2_116" group="2">
+<type>room</type>
+</loc>
+<!--to 2_112-->
+<con y2="4" x2="15" y1="3" x1="15"/>
+<loc y="2" x="14" id="fovaros_2_117" group="2">
+<type>room</type>
+</loc>
+<!--to 2_116-->
+<con y2="3" x2="15" y1="2" x1="14"/>
+<loc y="2" x="13" id="fovaros_2_118" group="2">
+<type>room</type>
+</loc>
+<!--to 2_117-->
+<con y2="2" x2="14" y1="2" x1="13"/>
+<loc y="2" x="12" id="fovaros_2_119" group="2">
+<type>room</type>
+</loc>
+<!--to 2_123-->
+<con y2="1" x2="12" y1="2" x1="12"/>
+<loc y="3" x="12" id="fovaros_2_120" group="2">
+<type>room</type>
+</loc>
+<!--to 2_114-->
+<con y2="3" x2="13" y1="3" x1="12"/>
+<!--to 2_118-->
+<con y2="2" x2="13" y1="3" x1="12"/>
+<loc y="2" x="11" id="fovaros_2_121" group="2">
+<type>room</type>
+</loc>
+<!--to 2_109-->
+<con y2="3" x2="11" y1="2" x1="11"/>
+<!--to 2_120-->
+<con y2="3" x2="12" y1="2" x1="11"/>
+<loc y="2" x="10" id="fovaros_2_122" group="2">
+<type>room</type>
+</loc>
+<!--to 2_121-->
+<con y2="2" x2="11" y1="2" x1="10"/>
+<loc y="1" x="12" id="fovaros_2_123" group="2">
+<type>room</type>
+</loc>
+<!--to 2_121-->
+<con y2="2" x2="11" y1="1" x1="12"/>
+<loc y="8" x="7" id="fovaros_1_125" group="1">
+<type>room</type>
+</loc>
+<!--to 1_126-->
+<con y2="7" x2="7" y1="8" x1="7"/>
+<loc y="7" x="7" id="fovaros_1_126" group="1">
+<type>room</type>
+</loc>
+<!--to 1_128-->
+<con y2="7" x2="6" y1="7" x1="7"/>
+<loc y="6" x="7" id="fovaros_1_127" group="1">
+<type>room</type>
+</loc>
+<!--to 1_130-->
+<con y2="5" x2="7" y1="6" x1="7"/>
+<loc y="7" x="6" id="fovaros_1_128" group="1">
+<type>room</type>
+</loc>
+<!--to 1_127-->
+<con y2="6" x2="7" y1="7" x1="6"/>
+<loc y="6" x="6" id="fovaros_1_129" group="1">
+<type>room</type>
+</loc>
+<!--to 1_130-->
+<con y2="5" x2="7" y1="6" x1="6"/>
+<loc y="5" x="7" id="fovaros_1_130" group="1">
+<type>room</type>
+</loc>
+<!--to 5_90-->
+<con y2="5" x2="8" y1="5" x1="7"/>
+<loc y="7" x="5" id="fovaros_1_131" group="1">
+<type>room</type>
+</loc>
+<!--to 1_129-->
+<con y2="6" x2="6" y1="7" x1="5"/>
+<loc y="8" x="5" id="fovaros_1_132" group="1">
+<type>room</type>
+</loc>
+<!--to 1_131-->
+<con y2="7" x2="5" y1="8" x1="5"/>
+<loc y="3" x="8" id="fovaros_3_133" group="3">
+<type>room</type>
+</loc>
+<!--to 3_134-->
+<con y2="2" x2="7" y1="3" x1="8"/>
+<!--to 3_135-->
+<con y2="4" x2="7" y1="3" x1="8"/>
+<loc y="2" x="7" id="fovaros_3_134" group="3">
+<type>room</type>
+</loc>
+<loc y="4" x="7" id="fovaros_3_135" group="3">
+<type>room</type>
+</loc>
+<!--to 3_141-->
+<con y2="5" x2="6" y1="4" x1="7"/>
+<loc y="6" x="5" id="fovaros_3_136" group="3">
+<type>room</type>
+</loc>
+<!--to 3_139-->
+<con y2="7" x2="4" y1="6" x1="5"/>
+<loc y="5" x="5" id="fovaros_3_137" group="3">
+<type>room</type>
+</loc>
+<!--to 3_138-->
+<con y2="4" x2="5" y1="5" x1="5"/>
+<!--to 3_136-->
+<con y2="6" x2="5" y1="5" x1="5"/>
+<loc y="4" x="5" id="fovaros_3_138" group="3">
+<type>room</type>
+<overlay>Kocsma</overlay>
+</loc>
+<loc y="7" x="4" id="fovaros_3_139" group="3">
+<type>room</type>
+</loc>
+<!--to 3_140-->
+<con y2="6" x2="4" y1="7" x1="4"/>
+<loc y="6" x="4" id="fovaros_3_140" group="3">
+<type>room</type>
+<overlay>vegyesbolt</overlay>
+</loc>
+<loc y="5" x="6" id="fovaros_3_141" group="3">
+<type>room</type>
+</loc>
+<!--to 3_137-->
+<con y2="5" x2="5" y1="5" x1="6"/>
+<loc y="8" x="3" id="fovaros_3_142" group="3">
+<type>room</type>
+</loc>
+<!--to 3_139-->
+<con y2="7" x2="4" y1="8" x1="3"/>
+<loc y="8" x="4" id="fovaros_3_143" group="3">
+<type>room</type>
+</loc>
+<!--to 3_142-->
+<con y2="8" x2="3" y1="8" x1="4"/>
+<loc y="9" x="4" id="fovaros_3_144" group="3">
+<type>room</type>
+</loc>
+<!--to 3_145-->
+<con y2="9" x2="3" y1="9" x1="4"/>
+<!--to 3_143-->
+<con y2="8" x2="4" y1="9" x1="4"/>
+<loc y="9" x="3" id="fovaros_3_145" group="3">
+<type>room</type>
+</loc>
+<!--to 3_146-->
+<con y2="9" x2="2" y1="9" x1="3"/>
+<loc y="9" x="2" id="fovaros_3_146" group="3">
+<type>room</type>
+</loc>
+<!--to _147-->
+<con y2="9" x2="1" y1="9" x1="2"/>
+<!--to 3_148-->
+<con y2="8" x2="2" y1="9" x1="2"/>
+<loc y="8" x="2" id="fovaros_3_148" group="3">
+<type>room</type>
+</loc>
+<!--to 3_149-->
+<con y2="7" x2="3" y1="8" x1="2"/>
+<loc y="7" x="3" id="fovaros_3_149" group="3">
+<type>room</type>
+</loc>
+<!--to 3_150-->
+<con y2="6" x2="3" y1="7" x1="3"/>
+<loc y="6" x="3" id="fovaros_3_150" group="3">
+<type>room</type>
+</loc>
+<!--to 3_152-->
+<con y2="5" x2="4" y1="6" x1="3"/>
+<!--to 3_151-->
+<con y2="5" x2="3" y1="6" x1="3"/>
+<loc y="5" x="3" id="fovaros_3_151" group="3">
+<type>room</type>
+</loc>
+<!--to 3_152-->
+<con y2="5" x2="4" y1="5" x1="3"/>
+<loc y="5" x="4" id="fovaros_3_152" group="3">
+<type>room</type>
+</loc>
+<!--to 3_137-->
+<con y2="5" x2="5" y1="5" x1="4"/>
+<!--to 3_153-->
+<con y2="4" x2="4" y1="5" x1="4"/>
+<loc y="4" x="4" id="fovaros_3_153" group="3">
+<type>room</type>
+</loc>
+<!--to 3_154-->
+<con y2="3" x2="5" y1="4" x1="4"/>
+<loc y="3" x="5" id="fovaros_3_154" group="3">
+<type>room</type>
+</loc>
+<!--to 3_155-->
+<con y2="3" x2="6" y1="3" x1="5"/>
+<loc y="3" x="6" id="fovaros_3_155" group="3">
+<type>room</type>
+</loc>
+<!--to 3_134-->
+<con y2="2" x2="7" y1="3" x1="6"/>
+<!--to 4_47-->
+<con y2="16" x2="16" y1="17" x1="17"/>
+<!--to 2_116-->
+<con y2="3" x2="15" y1="2" x1="16"/>
+<!--to 3_151-->
+<con y2="5" x2="3" y1="4" x1="2"/>
+</Map>

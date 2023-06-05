@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room mapfile="@Fovaros/map" indoor="1">
+	<stimulus shortDescr="Templom" source ="50" type="latas">
+		<descr>A Főváros temploma</descr>
+	</stimulus>
+	<exit notice="50" direction="észak"
+		destination="@Fovaros/fovaros_5_84" />
+		
+	<objRef qty="1" name="@Fovaros/njk/pap"></objRef>
+		
+</Room>

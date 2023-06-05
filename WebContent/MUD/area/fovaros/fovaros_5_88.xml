@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room mapfile="@Fovaros/map">
+<stimulus shortDescr="5_88" intensity="0" type="latas">
+<descr>DUMMY szoveg - Főtér - </descr>
+</stimulus>
+<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_87"/>
+<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_4"/>
+<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_99"/>
+<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_89"/>
+<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_6"/>
+<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_5"/>
+</Room>

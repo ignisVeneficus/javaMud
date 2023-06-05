@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Room open="true" mapfile="@Tunderfalu1/map_1">
+	<stimulus type="latas" intensity="0" shortDescr="Egy függőhídon állsz a falu keleti végében." >
+		<descr>Egy függőhídon állsz a falu keleti végében két ház között. Fölötted függőhidak vezetnek fától fáig. Alattad egy patak kanyarog.</descr>
+	</stimulus>
+	<stimulus type="latas" intensity="0" shortDescr="Egy függőhídon állsz a falu keleti végében."  condition = "nappal">
+		<descr>Pár járókelőt a közeli hidakon.</descr>
+	</stimulus>
+	<stimulus type="hallas" intensity="50" shortDescr="Alolad vízcsobogás hallatszik." condition="nappal" >
+		<descr>Nyugat felöl idehallatszik a falu zsivaja, a tartókötéllek nyikorognak. Alolad vízcsobogás hallatszik.</descr>
+	</stimulus>
+	<stimulus type="latas" source="50" shortDescr="A függőhídak zöldes fénnyel világítanak." condition="este">
+		<descr>A nyugatról és feljebbről fényeket látsz, a függőhídak zöldes fénnyel világítanak.</descr>
+	</stimulus>
+	<stimulus type="hallas" intensity="50" shortDescr="Alolad vízcsobogás hallatszik." condition="este" >
+		<descr>A tartókötelek nyikorgása mintha hangosabb lenne. Alolad vízcsobogás hallatszik.</descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="50" shortDescr="Friss levegőt érzel." >
+		<descr>Valahonnét friss forgács szagát hozza a szél.</descr>
+	</stimulus>
+
+ 
+	<item>
+		<name targy="a hidat">híd</name>
+		<name targy="a kötélhidat">kötélhíd</name>
+		<name targy="a függőhidat">függőhíd</name>
+		<descr>Embermagas, sűrű, tüskés bozot. Van egy olyan érzésed, hogy direkt alakitottak ki ilyen áthatolhatatlanra.</descr>
+	</item>
+	<item condition="nappal">
+		<name targy="a vizet">víz</name>
+		<name targy="a patakot">patak</name>
+		<descr>Egy kis patak kanyarog a fák között, itt lelassul, kiszélesedik, és egy apró tavat alkot. Mintha valami csillogna a vízben.</descr>
+	</item>
+	<item condition="este">
+		<name targy="a vizet">víz</name>
+		<name targy="a patakot">patak</name>
+		<descr>Egy kis patak kanyarog a fák között, itt lelassul, kiszélesedik, és egy apró tavat alkot.</descr>
+	</item>
+	<item condition="nappal">
+		<name targy="a csillogást">csillogás</name>
+		<descr>Igen, határozottan látod, hogy egy arannyal futattott kard van a víz alatt. Ha gondolod beleugorhatsz a tavacskába érte.</descr>
+	</item>
+	
+<!-- 
+	<item>
+		<name targy="a fákat">fák</name>
+		<name targy="a fát">fa</name>
+		<descr>Hatalmas fák. A legkissebbnek a törzsének átmerője is meghaladja a 10 métert.</descr>
+	</item>
+	<item>
+		<name targy="az ösvényt">ösvény</name>
+		<descr>Egy jól kitaposott ösvény. Északról dél felé halad.</descr>
+	</item>
+	<item condition="este">
+		<name targy="a fényt">fény</name>
+		<name targy="a fényeket">fények</name>
+		<descr>A fáktól nem látod honnét jön</descr>
+	</item>
+-->
+<exit notice="50" direction="nyugat" destination="@Tunderfalu1/falu1_1_54"/>
+<exit notice="50" direction="észak" destination="@Tunderfalu1/falu1_1_58"/>
+
+<action>
+	<item name="le" fn="ugrik"/>
+	<item name="ugrik" fn="ugrik"/>
+	<item name="leugrik" fn="ugrik"/>
+</action>
+<js><![CDATA[
+function ugrik(_ROOM,_OBJ,_PARAM){
+	list = _OBJ.getAllPerceptibility();
+	evn = _OBJ.createSimpleSourceEvent(list, _OBJ, "%S egy lendülettel átugrik a korláton, és eltünik.", null, "Átugrasz a korláton és zuhansz.");
+	_OBJ.moveObject("@Tunderfalu1/falu1_0_15",evn,null);
+	return true;
+}
+]]></js>
+
+
+
+</Room>

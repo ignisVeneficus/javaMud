@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Food  HP="3d10+3">
+	<stimulus type="latas" intensity="100" shortDescr="">
+		<descr>Egy szép, körülbelül két kilós, piros, érett alma.</descr>
+	</stimulus>
+	<stimulus type="szaglas" intensity="50">
+		<descr>Finom, érett gyümölcsszagot áraszt.</descr>
+	</stimulus>
+	<price>0</price>
+	<weight>2d10+200</weight>
+	<id>gyümölcs</id>
+	<id>alma</id>
+	<shortName>alma</shortName>
+	
+	<remainder>@Tunderfalu1/items/csutka</remainder>
+
+</Food>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Java Mud</title>
+	<link href="font/DejaVu.css" rel="stylesheet" type="text/css">
+	<link href="font/icons2.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery-3.5.1.js"></script> <!-- jquery -->
+	<script type="text/javascript" src="js/ansi_up.js"></script> <!-- ansi -->
+	<script type="text/javascript" src="js/drager.js"></script> <!-- slider -->
+	<script type="text/javascript" src="js/jquery.Tooltip.js"></script> <!-- tooltip -->
+	<script type="text/javascript" src="js/jquery.slimscroll.js"></script> <!-- scroolbar -->
+
+	<link href="css/ansi.css" rel="stylesheet" type="text/css"> <!--  ansi szinek -->
+	<link href="css/main.css" rel="stylesheet" type="text/css"> <!--  main -->
+	
+	<script>
+		var selectedTab = "";
+		
+		function handleTab(id){
+			$("#tabs .label").each(function( index ) {
+					if($( this ).attr("id")==id){
+						$(this).addClass("selected");
+						$("#"+id+"c").removeClass("hidden");
+					}
+					else{
+						$(this).removeClass("selected");
+						var locid = $(this).attr("id");
+						$("#"+locid+"c").addClass("hidden");
+					}
+			});
+		}
+
+		function selectTab(){
+			selectedTab.removeClass("selected");
+			var id = selectedTab.attr("id");
+			content = $("#"+id+"t").addClass("hidden");
+			selectedTab = $(this).addClass("selected");
+			id = selectedTab.attr("id");
+			content = $("#"+id+"t").removeClass("hidden");
+		}
+	
+		
+		var ansi_up = new AnsiUp();
+		ansi_up.use_classes = true;
+		
+		function handleEvent(event){
+			console.debug(event)
+			if(event.event){
+				if(event.event.text){
+					let parent = $("#out");
+					$.each(event.event.text, function( index, value ) {
+						var node= $("<div></div>");
+						if((value==null)||(value=="")){
+							html = "&nbsp;";
+						}
+						else{
+							html = ansi_up.ansi_to_html(value);
+						}
+						node.html(html);
+						node.appendTo(parent)
+					});
+					parent.scrollTop(parent[0].scrollHeight);
+				}
+			}
+			if(event.status){
+				let st = event.status;
+				console.debug(st);
+				let hp = st.actHP/st.maxHP;
+				let mp = 0;
+				if(st.maxMP!=0){
+					mp =st.actMP/st.maxMP;
+				}
+				let sp = st.actSP/st.maxSP;
+				console.debug([hp,mp,sp]);
+				setBar("HP",hp,st.actHP,st.maxHP);
+				setBar("SP",sp,st.actSP,st.maxSP);
+				setBar("MP",mp,st.actMP,st.maxMP);
+				
+			}
+			if(event.room){
+				var room = event.room;
+				writeIntoDiv(room.seeing,"latas");
+				writeIntoDiv(room.listening,"hallas");
+				writeIntoDiv(room.smelling,"szaglas");
+				
+				let wrapper = $('#exits');
+				wrapper.empty();
+				let windrose = $('#windrose');
+				let links = windrose.find('a');
+				links.each(function( index ) {
+					disableRose($( this ));
+				});
+				for(var i=0;i<room.exits.length;i++){
+					let exit=room.exits[i];
+					switch(exit){
+					case 'észak':
+						enableRose('wr_eszak',exit);
+						break;
+					case 'északkelet':
+						enableRose('wr_eszakkelet',exit);
+						break;
+					case 'kelet':
+						enableRose('wr_kelet',exit);
+						break;
+					case 'délkelet':
+						enableRose('wr_delkelet',exit);
+						break;
+					case 'dél':
+						enableRose('wr_del',exit);
+						break;
+					case 'délnyugat':
+						enableRose('wr_delnyugat',exit);
+						break;
+					case 'nyugat':
+						enableRose('wr_nyugat',exit);
+						break;
+					case 'északnyugat':
+						enableRose('wr_eszaknyugat',exit);
+						break;
+					default:
+						addDirection(wrapper,exit);
+						break;
+					}
+				}
+			}
+		}
+		function addDirection(parent,dir){
+			let node = $("<a></a>").html(dir).addClass("button").on("click",function(){
+				send(dir); }).appendTo(parent);
+		}
+		function disableRose(node){
+			node.removeClass("enabled");
+			node.off("click");
+		}
+		function enableRose(id,dir){
+			let node = $('#'+id);
+			node.addClass("enabled");
+			node.on("click",function(){
+				send(dir); });
+		}
+		
+		function writeIntoDiv(array,parentID){
+			var parent = $("#" + parentID);
+			var div = parent.find(".wrapper");
+			if((array!=null) && (array.length>0)){
+				parent.show()
+				div.empty();
+				$.each(array, function( index, value ) {
+					var node= $("<div></div>");
+					if((value==null)||(value=="")){
+						html = "&nbsp;";
+					}
+					else{
+						html = value;
+					}
+					node.html(html);
+					node.appendTo(div)
+				});
+			}
+			else{
+				parent.hide();
+			}
+			return parent;
+		}
+		
+		function sendField(){
+	        var txt = $("#in").val();
+	        $("#in").val('');
+	        if(txt!=""){
+	        	send(txt);
+	        }
+			
+		}
+		function toHex(n) {
+		    var h = (~~n).toString(16);
+		    if (h.length < 2)
+		        h = "0" + h;
+		    return h;
+		}
+		
+		function setBar(type, percent,act,max){
+			var color = "#8BC34A";
+			if(percent>0.5){ // green-> yellow
+				//	#8BC34A; -> #FFEB3B;
+				// 139, 195, 74  -> 255, 235, 59
+				var p = (percent-0.5) * 2;
+				var r = ((139 - 255) * p ) + 255;
+				var g = ((195 - 235) * p ) + 235;
+				var b = ((74 - 59) * p ) + 59;
+				color = "#" + toHex(r) + toHex(g) + toHex(b);
+			}
+			else{ // yellow - > red
+				// #FFEB3B -> #EF5350
+				// 255, 235, 59 -> 239, 83, 80
+			
+				var p = (percent) * 2;
+				var r = ((255 - 239) * p ) + 239;
+				var g = ((235 - 83) * p ) + 83;
+				var b = ((59 - 80) * p ) + 80;
+				color = "#" + toHex(r) + toHex(g) + toHex(b);
+			}
+			var parent = $("#" + type + "Bar");
+			var node = parent.find('.inner');
+			node.css({"height":(percent*100) + "%","background-color":color});
+			node.attr("data-tooltip",node.data("orig")+"<br>"+act + "/" + max);
+			let tooltip = $("#Tooltip");
+			if(tooltip.data("parent")==parent){
+				tooltip.html(parent.attr("data-tooltip"));
+			}
+		}
+		$(document).ready(function () {
+		    $("#bt").on("click", sendField);
+		    $('#in').keypress(function (e) {
+		    	  if (e.which == 13) {
+		    		sendField()
+		    	    return false; 
+		    	  }
+		    	});
+			$('#HPBar').slider({cssClass: 'dragger tooltiph',tooltip:"Bátorság: "});
+			
+			$("#tabs .label").click(selectTab);
+			handleTab("room");
+			
+			$(".tooltiph").each(function(){
+				let node =$(this);
+				node.data("orig",node.attr("data-tooltip"));
+			})
+			$(".tooltiph").addTooltip();
+			
+			selectedTab = $("#room");
+			/*
+			$("#out").slimscroll({
+			    size: '15px'
+			  });
+			$(".descr").slimscroll({
+			    size: '15px'
+			  });
+			  */
+		});
+	</script>
+</head>
+<body>
+<div id="tooltip" class="tooltip"></div>
+
+<div id="page">
+<div id="header">
+	<div id="logoText">The Ethereal Nexus</div>
+</div>
+<div id="content">
+
+
+<div id="points">
+    <div class="pointBar" id="MPBar" >
+        <div class="inner tooltiph" style="height: 0%; background-color: rgb(239, 83, 80);" data-tooltip="MP:"></div>
+    </div>
+   <div class="pointBar" id="SPBar">
+        <div class="inner tooltiph" style="height: 100%; background-color: rgb(139, 195, 74);" data-tooltip="SP:"></div>
+    </div>
+    <div class="pointBar" id="HPBar">
+        <div class="inner tooltiph" style="height: 100%; background-color: rgb(139, 195, 74);" data-tooltip="HP:"></div>
+    </div>
+ </div>
+
+
+<div id="output">
+<div id="out" class="terminal">
+<div>&nbsp;</div><div><span class="ansi-green-fg-bold">Koordinata: [300|250]</span></div><div><span class="ansi-green-fg-bold">A terep délkelet irányba enyhén lejt.</span></div><div><span class="ansi-green-fg-bold">Egy ösvény tünik el a fák között</span></div><div><span class="ansi-blue-fg-bold">[észak, északkelet, kelet, délkelet, dél, délnyugat, nyugat, északnyugat és ösvény]</span></div><div>&nbsp;</div><div><span class="ansi-yellow-fg">beta, gamma, ignis és player_3</span></div><div>&nbsp;</div><div>&nbsp;</div></div>
+<div id="input">
+<input id="in" type="text"><input type="button" value="Send" id="bt">
+</div>
+</div>
+
+
+
+<div id="side">
+<div id="tabs">
+	<div id="room" class="label selected">Helyszín</div>
+	<div id="terkep" class="label">Térkép</div>
+	<div id="stat" class="label">Karakter</div>
+	<div id="inventory" class="label">Leltár</div>	
+	<div id="skill" class="label">Képzetségek</div>	
+</div>
+<div id="contents">
+<div id="roomt" class="tab_content">
+<div class="descriptions">
+<div class="descr" id="latas">
+<div class="inicial icons2-see2"></div>
+<div class="wrapper"><div>Koordinata: [300|250]
+A terep délkelet irányba enyhén lejt.
+Egy ösvény tünik el a fák között</div></div>
+</div>
+<div class="descr" id="hallas" style="display: none;">
+<div class="inicial icons2-hear2"></div>
+<div class="wrapper"></div>
+</div>
+<div class="descr" id="szaglas" style="display: none;">
+<div class="inicial icons2-smell2"></div>
+<div class="wrapper"></div>
+</div>
+</div>
+<div class="inventory">
+</div>
+<div class="exits">
+<div class="svgWrapper">
+<svg version="1.1" id="windrose" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 150">
+	<a class="direction enabled" id="wr_eszak"><polygon points="75,50.1 87.4,45 75,15 62.6,45 "></polygon></a>
+	<a class="direction enabled" id="wr_eszakkelet"><polygon points="92.6,57.4 105,62.6 117.4,32.6 87.4,45 "></polygon></a>
+	<a class="direction enabled" id="wr_kelet"><polygon points="99.9,75 105,87.4 135,75 105,62.6 "></polygon></a>
+	<a class="direction enabled" id="wr_delkelet"><polygon points="92.6,92.6 87.4,105 117.4,117.4 105,87.4 "></polygon></a>
+	<a class="direction enabled" id="wr_del"><polygon points="75,99.9 87.4,105 75,135 62.6,105 "></polygon></a>
+	<a class="direction enabled" id="wr_delnyugat"><polygon points="45,87.4 57.4,92.6 62.6,105 32.6,117.4 "></polygon></a>
+	<a class="direction enabled" id="wr_nyugat"><polygon points="45,87.4 15,75 45,62.6 50.1,75 "></polygon></a>
+	<a class="direction enabled" id="wr_eszaknyugat"><polygon points="62.6,45 32.6,32.6 45,62.6 57.4,57.4 "></polygon></a>
+</svg>
+</div>
+<div id="exits" class="otherWarapper"><a class="button">ösvény</a></div>
+</div>
+</div>
+
+<div id="terkept" class="tab_content" style="display:none;">
+</div>
+<div id="statt" class="tab_content" style="display:none;">
+</div>
+<div id="inventoryt" class="tab_content" style="display:none;">
+</div>
+<div id="skillt" class="tab_content" style="display:none;">
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

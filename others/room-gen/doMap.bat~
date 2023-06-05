@@ -1,0 +1,1 @@
+call xalan.bat "%1" nop.xsl "%~n1.nop.graphml"

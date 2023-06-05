@@ -1,0 +1,18 @@
+RPG-ben elfogadott kockadobások leírása.
+Az adott szám lehet normál egész szám (negatív előjellel) vagy a __<szam1>d<szam2>/x<szam3>+-<szam4>__ formátum, ami:\\
+__<szam1>__ darab __<szam2>__ oldalú kockával dobunk, azt osztjuk/szorozzuk __<szam3>__-al, és hozzáadjuk/kivonjuk a __<szám4>__-et.
+
+Például:
+* 5d10: 5 darab 10 oldalú kocka
+* 3d4+10: 3 darab 4 oldalú kocka +10
+
+
+Regexben a elfogadott kifejezés:
+{{{
+([1-9]\\d*)?[dk]([1-9]\\d*)([/x][1-9]\\d*)?([+-][1-9]\\d*)?
+}}}
+
+%%information
+Az érték az XML felolvasása során értékelődik ki. Szörnyek esetén minden szörnyben külön-külön. Szobák esetén csak akkor változik, ha a szoba újra betöltődik
+%%
+

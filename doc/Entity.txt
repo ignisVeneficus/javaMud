@@ -1,0 +1,11 @@
+Ez az őse minden, a szobákban előforulható osztálynak, mint a tárgyak, és az előlények. Az [Object] leszármazottja.
+
+[{TableOfContents title='Tartalom'}]
+!!!Attributumok
+||név||XML Tipus[1]||számosság[2]||típus||leírás||
+|shortName|elem|1|[ragozottAlak|InflectionWord]|Rövid név ami megjelenik, amivel hivatkozni lehet rá, ez kerül bele minden szövegbe, ahol az entitás neve előfordul.|
+|id|elem|1+|[kulcs-lista]|Objektum ID-jai. Ezekkel lehet rá hivatkozni a parancsok kiadása során|
+
+
+[#1] Elem, vagy attribútum, aszerint, hogy az adott változót hogyan kell létrehozni\\
+[#2] 1, ha kötelező és egyszer; ? ha opcionális, * ha tetszőleges számban; 1+ ha legalább egyszer elő kell fordulnia. 
