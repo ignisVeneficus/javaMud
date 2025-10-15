@@ -1,9 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="1_40" intensity="0" type="latas">
-<descr>DUMMY szoveg - Óváros - Híd</descr>
-</stimulus>
-<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_1_72"/>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_39"/>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_1_79"/>
+	<stimulus condition="nappal" shortDescr="Körút keleti kanyar a hídon" intensity="0" type="latas">
+		<descr>A körút ezen szakasza enyhén kanyarodik északnyugat felől kelet felé, miközben egy széles, kőből emelt hídon halad át a folyó felett. A híd boltívei alá lassan csordogál a városi folyó, amely alatt keskeny gyalogút kanyarog a víz mentén északra. A híd keleti oldalán túl, délre és délnyugatra, a városfal magasodik, szürke kövei szinte elnyelik a napfényt. A hídon átvezető forgalom folyamatos, szekerek és gyalogosok váltják egymást, a híd mellvédje kovácsoltvas korláttal van díszítve.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Körút hídja és városfal – éjszaka" intensity="0" type="latas">
+		<descr>Éjjel a körút csendesebb, de a híd még mindig nyitva áll az éjszakai járókelők előtt. A folyó sötét víztükre tompán csillog a városi fények alatt, a híd mellvédjén gyér kandelláberek világítanak. A délnyugati égbolton a városfal tömbje feketén tornyosul, kontúrjai csak halványan sejlenek fel. A gyalogút a folyó mellett sötétségbe vész, csupán néhány fényfolt pislákol a távolból.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Körút zaja, folyó moraja">
+		<descr>Szekerek zörögnek a kőhídon, cipők kopognak a burkolaton. A folyó halkan csobog, s a városfal felől néha visszhangzik egy-egy kiáltás vagy fémes zörej.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Folyó csobogása, halk neszek">
+		<descr>A hídon kevesebb a zaj, inkább a folyó tompa morajlása hallatszik. A városfal mögül halk zörejek és egy-egy madárhang szűrődik át.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="szaglas" intensity="30" shortDescr="Folyóvíz és kőillat">
+		<descr>A levegő nedves és enyhén algás szagú, a kőhíd meleg burkolata poros illatot áraszt, a kövek repedéseiből vízpermet és penész illata száll fel.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Hűvös vízpára, enyhe penészszag">
+		<descr>Az esti párában a folyó hűvössége dominál. A híd alatt terjengő sötétségből árad a penészes kő és az iszap szaga. A városfal felől enyhe füstszag is sodródhat.</descr>
+	</stimulus>
+
+
+	<item>
+		<name targy="a kőhidat">kőhíd</name>
+		<name targy="a kőhidat">híd</name>
+		<description>A masszív boltíves kőhíd évtizedek óta szolgálja a város forgalmát. Korlátján rozsdamarta kovácsoltvas mintázat fut végig, lábai mélyen a folyómederbe nyúlnak.</description>
+	</item>
+	<item>
+		<name targy="a városfalat">városfal</name>
+		<name targy="a városfalat">fal</name>
+		<description>A déli és délnyugati oldalon tornyosuló városfal impozáns méretű, kőlapjai repedések és mohafoltok díszítik. Néhol lőrések és régi rúnák is láthatók.</description>
+	</item>
+	<item>
+		<name targy="a gyalogutat">gyalogút</name>
+		<name targy="a gyalogutat">út</name>
+		<description>A folyó keleti oldalán húzódó keskeny gyalogút a part mentén halad észak felé. A kövezete simára kopott, peremén itt-ott növények kapaszkodnak.</description>
+	</item>
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>A híd mellvédjén álló kovácsoltvas oszlop tompa fénnyel világítja meg az éjszakai utat. A lámpása zümmögve ég, körülötte rovarok keringenek.</description>
+	</item>
+
+	<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_1_72"/>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_39"/>
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_1_79"/>
 </Room>

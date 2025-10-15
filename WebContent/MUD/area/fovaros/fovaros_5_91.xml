@@ -1,11 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_91" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_90"/>
-<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_4"/>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_5"/>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_92"/>
-<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_6"/>
+	<stimulus condition="nappal" shortDescr="Piac nyugati széle" intensity="0" type="latas">
+		<descr>A piac nyugati szélén földes ruhájú parasztok sorakoznak termékeikkel: halmokba rakott zöldségek, frissen szedett gyümölcsök, élő szárnyasok ketrecekben. A standok egyszerű fából készültek, néhol ponyvával árnyékolva. A levegő friss és mozgalmas, a parasztok hangosan kínálják portékáikat, gyakran egymás szavába vágva. A kandelláberek nappal is ott állnak, bár fényeik ekkor még alszanak. Kelet felé a piac forgataga sűrűsödik, nyugat felé már a városfal kövei sejlenek.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" shortDescr="Piac nyugati széle" source="30" type="latas">
+		<descr>Estére a parasztok java már hazatért, csak néhány letakaratlan halom vagy elhagyott kosár jelzi a napi forgalmat. A kandelláberek tompa fénykörében szétázott ládák és elszórt gyümölcsök maradtak, a vizes föld felcsillan a kövek között. A városfal sötét tömbje nyugat felé borús hátteret ad, míg keletre a még nyüzsgőbb piactér fényei és mozgása vonzza a tekintetet. A tér ezen része már szinte üres, csak a szél zörgeti a ponyvát.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Hangos árusítás és jószág zaja">
+		<descr>Parasztok kiabálnak egymás szavába vágva, kotkodácsolás, csiripelés és a piaci lárma keveredik a levegőben.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Zörgő ponyvák és távoli zsivaj">
+		<descr>Csak a szél zörgése és a távoli piactér halk zaja hallatszik, időnként megcsörren egy elmozdult láda vagy kilazult lánc.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Föld és friss termény illata">
+		<descr>Friss zöldség, érett gyümölcs és a nedves föld erős illata tölti meg a levegőt, helyenként állati szagokkal keveredve.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Ázott szalma és rothadó termény">
+		<descr>A magukra hagyott kosarakból áradó gyümölcsök és ázott szalma fanyar szaga lebeg a sötétben.</descr>
+	</stimulus>
+	
+	<stimulus type="magia" intensity="10" shortDescr="Semleges aura">
+		<descr>Nem érződik különösebb mágikus jelenlét — ez a város egyik legegyszerűbb, legföldhözragadtabb zuga.</descr>
+	</stimulus>
+	
+	<stimulus type="szaglas" intensity="10" shortDescr="Kénes szag">
+		<descr>Az egyik csatornából kénes szag szivárog.</descr>
+	</stimulus>
+		
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>A vasból készült kandelláber karcsú oszlopán fakuló címerek díszelegnek. Éjjel gyér fényében csillog a vizes kőburkolat, nappal csak dísznek tűnik.</description>
+	</item>
+	<item>
+		<name targy="a ketrecet">ketrec</name>
+		<description>A rozsdás fémketrecben néhány szárnyas mocorog, gubbasztva a zsúfolt rács mögött. Éles szaguk belengi a környéket.</description>
+	</item>
+	<item>
+		<name targy="a ládát">láda</name>
+		<description>Durván ácsolt faláda, amelyben még néhány gyökérzöldség hever. Az alja sáros, oldala repedt.</description>
+	</item>
+	<item>
+		<name targy="a ponyvát">ponyva</name>
+		<description>Szürkésbarna, vászonból készült ponyva, amely nappal árnyékot ad, éjjel pedig csapzottan csapkodja a szél.</description>
+	</item>
+>
+
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_90"/>
+	<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_4"/>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_5"/>
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_92"/>
+	<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_6"/>
 </Room>

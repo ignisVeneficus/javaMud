@@ -1,7 +1,7 @@
 /**
  * javascript server file for communication with the mud server
  */
-	var webSocket = new WebSocket('ws://localhost:8080/javaMud3/server');
+	var webSocket = new WebSocket("ws"+(location.protocol=="https:"?"s":"")+"://"+location.host+"/javaMud3/server");
 
     webSocket.onerror = function(event) {
         onError(event)
@@ -10,6 +10,11 @@
     webSocket.onopen = function(event) {
         onOpen(event)
     };
+
+    webSocket.onclose = function(event) {
+        onError(event)
+    };
+
 
     webSocket.onmessage = function(event) {
         onMessage(event)
@@ -26,6 +31,7 @@
     }
 
     function onError(event) {
+    	console.debug(event);
         alert(event.data);
     }
 

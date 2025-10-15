@@ -1,10 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_89" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_88"/>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_103"/>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_4"/>
-<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_5"/>
+	<stimulus condition="nappal" shortDescr="Piac északkeleti sarka" intensity="0" type="latas">
+		<descr>A piac északkeleti sarkában bolhapiaci kavalkád fogad: összevissza felállított ponyvák, poros ládák és kifakult rongyokkal letakart asztalok sorakoznak. A keletre kanyarodó körút mentén hömpölyög a tömeg, míg nyugatra a sugárút kereszteződése mozgalmas hátteret ad. Régi könyvek, csorba edények és elromlott mechanikus szerkezetek hevernek egymás hegyén-hátán, a kacatok közt kíváncsi tekintetek kutatnak. A kandelláberek nappal is ott állnak az út mentén, de csak dísznek tűnnek az erős fényben.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" shortDescr="Piac északkeleti sarka" source="30" type="latas">
+		<descr>Éjszaka a bolhapiac helyét suttogás és árnyak veszik át. A kandelláberek sárgás, remegő fénykörében sötét alakok üzletelnek, egymás tenyerébe csúsztatva apró csomagokat. A standok többsége elhagyatott, de néhány pult mögött komor, csuklyás alakok ácsorognak. Keletre a körút fényei és zajai derengenek, míg nyugaton, a sugárút irányában, csak homályos körvonalak látszanak. A tér hangulata megváltozott: itt most nem alkudoznak, hanem hallgatnak.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Alkudozás és keresgélés zaja">
+		<descr>Az árusok és vevők hangosan alkudoznak, a kacatok között turkáló kezek zörgése vegyül a körút távoli zsivajába.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="hallas" intensity="30" shortDescr="Suttogások és lopott lépések">
+		<descr>Tompa léptek, suttogások, néha egy-egy nyikorgó fadoboz hangja szeli át a sötét csendet.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Por és öreg holmik illata">
+		<descr>Száraz por, öreg textíliák, penészes könyvek és régi fa szaga lengi be a teret.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Viasz és áporodottság">
+		<descr>Az éjszakai levegőben viaszos mécsesek és régóta nem szellőztetett holmik fülledt szaga kering.</descr>
+	</stimulus>
+	
+	<stimulus type="magia" intensity="40" shortDescr="Kísérteties rezgés">
+		<descr>Az éjszakai sarkon valami megmagyarázhatatlan rezgés terjeng a levegőben — mintha néhány árus portékája több lenne egyszerű ócskaságnál.</descr>
+	</stimulus>
+		
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<name targy="a lámpást">lámpás</name>
+		<description>Öntöttvasból készült kandelláber, tetején üvegkalitkában pislákoló láng világítja meg az éjszakát. Alapját graffiti-szerű karcolatok borítják.</description>
+	</item>
+	<item>
+		<name targy="a poros könyvet">könyv</name>
+		<description>Egy megsárgult lapokkal teli, poros könyv, címlapja rég lekopott. A belsejében furcsa, ismeretlen írásjelek sorakoznak.</description>
+	</item>
+	<item>
+		<name targy="a kereskedőt">kereskedő</name>
+		<name targy="az árust">árus</name>
+		<description>Az árus köpenye alól alig villan ki az arca, de a mozdulatai gyakorlottak. A keze gyorsan és hangtalanul csúsztat át apró tárgyakat a vevőknek.</description>
+	</item>
+	<item>
+		<name targy="a ládát">láda</name>
+		<description>Egy elrepedt fedelű láda, amelyből régiségek, elhasznált késeket és megkopott érméket tartalmazó zsákocskák kandikálnak ki.</description>
+	</item>
+	
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_88"/>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_103"/>
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_4"/>
+	<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_5"/>
 </Room>

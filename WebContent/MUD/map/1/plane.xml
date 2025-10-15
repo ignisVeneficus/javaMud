@@ -12,173 +12,1429 @@
 		Zey
 		Amwell
 	 -->
-
-
+	
+	
 	<map mapType="terrain" file="domborzat.png"/>
 	<map mapType="biomes" file="outland.png">
 		<!--  tenger -->
-		<mapColor rgb="000381" type="room" mapType="tenger" SPLost="0" isWater = "true">
-			<stimulus type="latas" intensity="0" shortDescr="Tengerben vagy." >
-				<descr>A tengerben áztatod magad. Körben a víz összefolyik az éggel. Szárazföldet semmerre sem látsz. Taposod a kristálytiszta vizet, amelyben 20 méterig is le lehet látni, de a tenger fenekét a talpad alatt a mélybe vész. Szép lehet innen a naplemente és a napkelte, de a helyedben nem várnam meg. A fekete mélységben bármi lehet...</descr>
+		<mapColor rgb="000381" type="room" mapType="tenger" SPLost="0" isWater="true">
+			<stimulus type="latas" condition="nappal" shortDescr="Nyílt tenger">
+				<descr>A napfény szikrázva tükröződik a nyugodt vízfelszínen. A horizont körben teljesen üres, sehol part vagy hajó. A tested lassan lebeg, a víz sós, meleg és szinte mozdulatlan. A víz alatt halk mozdulatok, egy-egy buborék és fénycsík kavarog, mintha valami figyelne odalent.</descr>
 			</stimulus>
-			<stimulus type="hallas" intensity="50" shortDescr="Tengerzugást hallasz." >
-				<descr>A tengerzúgást és néha egy egy sirály hangját hallod.</descr>
+			<stimulus type="latas" condition="este" shortDescr="Sötét tenger">
+				<descr>A tenger sötét, mély és végtelen. Csak a csillagok és a hold fénye tükröződik a vízen. A tested ring a felszínen, körülötted a sötétség csendje. Időnként egy apró hullám vagy buborék tör meg a víztükrön, de semmi mást nem látsz – csak magadat, lebegve az ismeretlen fölött.</descr>
 			</stimulus>
-			<stimulus type="szaglas" intensity="50" shortDescr="Sós vízpárát érzel." >
-				<descr>A tenger sós illatát érzed.</descr>
+			<stimulus type="hallas" intensity="50" shortDescr="Halk hullámverés">
+				<descr>A víz halk loccsanása, a saját légzésed és néha egy-egy távoli vízmozdulat tölti be a csendet.</descr>
 			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Sós tengeri illat">
+				<descr>A levegő tele van sóval és vízpárával. A szag friss, kissé maró, de tiszta.</descr>
+			</stimulus>
+			<item>
+				<name targy="a vízfelszínt">vízfelszín</name>
+				<descr>A nap vagy a csillagok fénye játszik rajta. Sima, áttetsző, enyhén ringatózik.</descr>
+			</item>
+			<item>
+				<name targy="a buborékokat">buborékok</name>
+				<descr>Apró buborékok emelkednek a mélyből. Talán csak halak – vagy valami más is lehet alattad.</descr>
+			</item>
+			<item>
+				<name targy="a sós ízt">sós íz</name>
+				<descr>A szádba kerülő víz sós és enyhén égető. Nem kellemes, de nem is idegen.</descr>
+			</item>
 		</mapColor>
-		<mapColor rgb="010482" type="room" mapType="tenger" SPLost="0" isWater = "true">
-			<stimulus type="latas" intensity="0" shortDescr="Tengerben vagy." >
-				<descr>A hullámok között uszkálsz. A lábad folyamatosan stabil pontot keres, de néhány halon kívül semmit nem talál... Néha átcsap fölötted egy-egy nagyobb hullám. Csak nehogy egy még nagyobb hullám a vesztedet okozza!</descr>
+
+	<!-- 2. Viharos tenger -->
+		<mapColor rgb="010482" type="room" mapType="tenger" SPLost="0" isWater="true">
+			<stimulus type="latas" condition="nappal" shortDescr="Tenger vihar előtt">
+				<descr>A hullámok magasabbra nőnek, a víz sötétebb árnyalatot ölt. A szél erősebben fúj, sodorni kezd, a testedet néha elkapja egy-egy erősebb áramlat. Az ég szürkül, távolban felhők gyülekeznek. Minden mozdulat kimerítőbb, a víz feszülten él.</descr>
 			</stimulus>
-			<stimulus type="hallas" intensity="50" shortDescr="Hullámokat hallasz." >
-				<descr>A hullámok hangját hallod.</descr>
+			<stimulus type="latas" condition="este" shortDescr="Sötét hullámok">
+				<descr>A vihar közel van. A villámfény időnként megvilágítja a víz tajtékos felszínét, majd újra sötétség borul rád. A hullámok nekicsapódnak a testednek, a víz csapkod, néha egy-egy árny mozdul a felszín alatt.</descr>
 			</stimulus>
-			<stimulus type="szaglas" intensity="50" shortDescr="Sós vízpárát érzel." >
-				<descr>Sós permetet hoz feléd a szél.</descr>
+			<stimulus type="hallas" intensity="50" shortDescr="Feszültséggel teli hullámzás">
+				<descr>A hullámverés hangja erősebb, a szél süvít, a távolban mennydörgés hallatszik. Minden zaj közelinek és fenyegetőnek tűnik.</descr>
 			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Sós, feszülő levegő">
+				<descr>A levegő sűrű, sós és a vihar feszültségétől terhes. A tenger illata erősebb, nyugtalanítóbb.</descr>
+			</stimulus>
+			<item>
+				<name targy="a hullámokat">hullámok</name>
+				<descr>Magasra emelkednek, tajtékosak, néha egy-egy hullám teljesen elsodorja a testedet.</descr>
+			</item>
+			<item>
+				<name targy="a felhőket">felhők</name>
+				<descr>Feketén tornyosulnak a horizonton. A villámok néha keresztülhasítják őket.</descr>
+			</item>
+			<item>
+				<name targy="a sós cseppeket">sós cseppek</name>
+				<descr>A vízpermet hideg és maró, az arcodra csapódik, elhomályosítja a látást.</descr>
+			</item>
 		</mapColor>
-		<mapColor rgb="020583" type="room" mapType="tenger" SPLost="0" isWater = "true">
-			<stimulus type="latas" intensity="0" shortDescr="Tengerben vagy." >
-				<descr>Bármerre nézel, mindenütt csak víz, víz, egészen a látóhatárig. Az igaz, hogy jó dolog a fürdés, de azert ez már kezd unalmas lenni!</descr>
+
+	<!-- 3. Tengeri köd -->
+		<mapColor rgb="020583" type="room" mapType="tenger" SPLost="0" isWater="true">
+			<stimulus type="latas" condition="nappal" shortDescr="Ködös tenger">
+				<descr>A köd minden irányban körülvesz. A víz szürke és mozdulatlan, a horizont eltűnt, csak a tested és a végtelen semmi. A felszín alatt halvány foltok mozognak, de mire rájuk néznél, már eltűnnek.</descr>
 			</stimulus>
-			<stimulus type="hallas" intensity="50" shortDescr="Hullámokat hallasz." >
-				<descr>A hullámok hangját hallod.</descr>
+			<stimulus type="latas" condition="este" shortDescr="Sűrű köd, sötét víz">
+				<descr>A köd sötét, a látás szinte lehetetlen. Egy halvány fény dereng időnként – talán lidércfény, vagy csak a szemed játéka. A víz nyugtalan, de nem mozog. Minden irány ugyanúgy tűnik.</descr>
 			</stimulus>
-			<stimulus type="szaglas" intensity="50" shortDescr="Sós vízpárát érzel." >
-				<descr>Sós permetet hoz feléd a szél.</descr>
+			<stimulus type="hallas" intensity="50" shortDescr="Némaság a ködben">
+				<descr>A hangok tompák, elnyelte őket a köd. Csak a saját mozdulataidat hallod, és néha valamit, ami nem tőled jött.</descr>
 			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Nedves köd">
+				<descr>A köd hűvös és nedves, a sós szag gyengébb, de mindenhol ott van.</descr>
+			</stimulus>
+			<item>
+				<name targy="a ködöt">köd</name>
+				<descr>Sűrű, nyirkos fátyol borítja a környezetedet. Elveszi a távolságokat.</descr>
+			</item>
+			<item>
+				<name targy="a foszforeszkáló fényt">lidércfény</name>
+				<descr>Halvány, kékes fény dereng egy pillanatra a ködben, majd eltűnik. Nem tudni, mi okozta.</descr>
+			</item>
+			<item>
+				<name targy="a mozgó foltokat">foltok</name>
+				<descr>Valami elúszik alattad – túl gyorsan ahhoz, hogy megfigyelhesd. Nem tudod, mi volt az.</descr>
+			</item>
 		</mapColor>
-		<mapColor rgb="030684" type="room" mapType="tenger" SPLost="0" isWater = "true">
-			<stimulus type="latas" intensity="0" shortDescr="Tengerben vagy." >
-				<descr>A mélyben uszkálsz. Idelenn eléggé hűvös a viz. Talán jobb lenne a szárazföldön sétálni... Egyre fáradtabb vagy a sok úszástól.</descr>
+
+	<!-- 4. Mély tenger -->
+		<mapColor rgb="030684" type="room" mapType="tenger" SPLost="0" isWater="true">
+			<stimulus type="latas" condition="nappal" shortDescr="Mély víz fölött">
+				<descr>A víz alatt semmi nem látszik – feketeség tátong mélyen, mintha alatta nem lenne világ. A tested lebeg a felszínen, a napfény csak a vízfelszínig jut. A mélység vonz és taszít egyszerre.</descr>
 			</stimulus>
-			<stimulus type="hallas" intensity="50" shortDescr="Tengerzugást hallasz." >
-				<descr>A tengerzúgást és néha egy egy sirály hangját hallod.</descr>
+			<stimulus type="latas" source="10" intensity="0" condition="este" shortDescr="Sötét mélység">
+				<descr>Az ég és a víz egyformán fekete. A testedet csak saját erőddel tartod a felszínen. Időnként halvány, kékes-zöld fények derengenek fel a víz mélyén, apró pontokként vagy lassan mozgó csíkokként. A látvány egyszerre gyönyörű és nyugtalanító — nem tudni, mi okozza őket. A hideg áramlatok mozdulnak a lábad körül, mintha valami feljebb úszna.</descr>
 			</stimulus>
-			<stimulus type="szaglas" intensity="50" shortDescr="Sós vízpárát érzel." >
-				<descr>A tenger sós illatát érzed.</descr>
+			<stimulus type="hallas" intensity="50" shortDescr="Fojtott csend">
+				<descr>Semmi nesz. Csak a saját szívdobbanásod és a víz apró mozdulatai hallhatók.</descr>
 			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Hideg, sós levegő">
+				<descr>A levegő hűvös és sós. Minden érzéked élesebb a csendben.</descr>
+			</stimulus>
+			<item>
+				<name targy="a mélységet">mélység</name>
+				<descr>Végtelen, fekete üresség húzódik alattad. Semmit nem látsz – és ez a legfélelmetesebb.</descr>
+			</item>
+			<item>
+				<name targy="a víz alatti fényeket">víz alatti fények</name>
+				<descr>Halvány, zöldes-kékes derengés mozog a sötét mélységben. Talán élőlények, talán valami más. A mozgásuk lassú és nem egyértelműen természetes.</descr>
+			</item>
+			<item>
+				<name targy="a hideg áramlatokat">áramlat</name>
+				<descr>Időnként egy-egy hideg sodrás kúszik fel a lábad mentén, mintha valami megmozdult volna alattad.</descr>
+			</item>
 		</mapColor>
+
 		<!--  tengerpart -->
-		<mapColor rgb="fffc00" type="room" mapType="tengerpart" SPLost="1" isWater = "false">
-		</mapColor>
-		<mapColor rgb="fffd01" type="room" mapType="tengerpart" SPLost="1" isWater = "false">
-		</mapColor>
-		<mapColor rgb="fffe02" type="room" mapType="tengerpart" SPLost="1" isWater = "false">
-		</mapColor>
-		<mapColor rgb="ffff03" type="room" mapType="tengerpart" SPLost="1" isWater = "false">
-		</mapColor>
-		<!--  mezo -->
-		<mapColor rgb="7de403" type="room" mapType="mezo" SPLost="1" isWater = "false">
-		</mapColor>
-		<mapColor rgb="7ee504" type="room" mapType="mezo" SPLost="1" isWater = "false">
-		</mapColor>
-		<mapColor rgb="7fe605" type="room" mapType="mezo" SPLost="1" isWater = "false">
-		</mapColor>
-		<mapColor rgb="80e706" type="room" mapType="mezo" SPLost="1" isWater = "false">
-		</mapColor>
-		<!--  mocsar -->
-		<mapColor rgb="026226" type="room" mapType="mocsar" SPLost="3" isWater = "false">
-			<stimulus type="latas" intensity="0" shortDescr="Mocsárban vagy." condition="nappal">
-				<descr>Egy büdös mocsárban rohasztod a lábad. Körülötted mérges gázok és kipárolgások gomolyognak. A talaj mindenhol süppedős, inkább ne nézelődj sokáig. Iszonyú lehet itt megfelelo felszerelés nélkül menni.</descr>
+		<mapColor rgb="fffc00" type="room" mapType="tengerpart" SPLost="1" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Széles homokos part">
+				<descr>A part szélesen nyúlik el a horizontig, világos színű homokkal borítva. A reggeli napfény apró csillanásokat idéz elő a tenger felszínén. A víz lassan, szinte lustán mossa a partot, kagylókat és apró tengeri törmelékeket sodorva ki. A homokban lábnyomok vezetnek a víz felé, de hamar elsimulnak a következő hullám érkezésekor.</descr>
 			</stimulus>
-			<stimulus type="latas" source="10" intensity="0" shortDescr="Mocsárban vagy." condition="este">
-				<descr>Egy büdös mocsárban rohasztod a lábad. Körülötted mérges gázok és kipárolgások gomolyognak. Néhány helyen kékes fények vannak. A talaj mindenhol süppedős, alig látod, hogy mire lépsz rá. Iszonyú lehet itt megfelelo felszerelés nélkül menni.</descr>
+			
+			<stimulus type="latas" condition="este" shortDescr="Széles homokos part">
+				<descr>A partot puha sötétség borítja, csak a holdfény tükröződik a víz sima felszínén. A hullámok lassan közelednek, mintha megfontolt léptekkel térnének vissza a földre. A homok hideg, és a sós pára leheletfinoman ül meg a felszínén. Távolról halk zene vagy dalfoszlány is elérhet a szeleken át – talán csak a tenger saját hangja.</descr>
 			</stimulus>
-			<stimulus type="hallas" intensity="50" shortDescr="Szúnyogokat hallasz." >
-				<descr>Távol és közel ezernyi szúnyogot hallasz, ahogy prédát keresnek.</descr>
+			
+			<stimulus type="hallas" intensity="50" shortDescr="Hullámverés és sirályhangok">
+				<descr>Az enyhe hullámverés ritmusát csak néha szakítja meg egy sirály rikoltása a távolban.</descr>
 			</stimulus>
-			<stimulus type="szaglas" intensity="50" shortDescr="Rothadó növényzetet érzel." >
-				<descr>A rothadó növenyzet kábító szagot ereszt magából.</descr>
+			
+			<stimulus type="szaglas" intensity="50" shortDescr="Sós, tengeri levegő">
+				<descr>A levegő sós és friss, tengeri algák és nedves homok illatát hordozza.</descr>
 			</stimulus>
+			
 			<item>
-				<name targy="a fényt">fény</name>
-				<name targy="a fényeket">fények</name>
-				<descr>Kékesen villodzó fények. Lidércek? vagy csak a büdős gázok égnek?</descr>
+				<name targy="a homokot">homok</name>
+				<descr>Finom szemcsés, világos homok. Meleg nappal, hűvös este. Könnyen hagy nyomot.</descr>
 			</item>
+			
 			<item>
-				<name targy="a talajt">talaj</name>
-				<descr>Süppedős, hol szilárd, hol folyik. Nem tudod milyen mély a sár.</descr>
+				<name targy="a kagylókat">kagylók</name>
+				<name targy="a kagylót">kagyló</name>
+				<descr>A homokban kisebb-nagyobb kagylóhéjak hevernek. Némelyik még ép, mások töröttek.</descr>
+			</item>
+			
+			<item>
+				<name targy="a lábnyomokat">lábnyomok</name>
+				<name targy="a lábnyomot">lábnyom</name>
+				<name targy="a nyomokat">nyomok</name>
+				<name targy="a nyomot">nyom</name>
+				<descr>Valaki nemrég járt itt. A homokban mély lábnyomok vezetnek a víz felé, majd eltűnnek.</descr>
+			</item>
+			
+			<item>
+				<name targy="az uszadékfát">uszadékfa</name>
+				<name targy="az fát">fa</name>
+				<descr>Egy elsodródott faág hever a parton, sós víz áztatta, kiszáradófélben.</descr>
 			</item>
 		</mapColor>
-		<mapColor rgb="036327" type="room" mapType="mocsar" SPLost="3" isWater = "false">
-		</mapColor>
-		<mapColor rgb="046428" type="room" mapType="mocsar" SPLost="3" isWater = "false">
-		</mapColor>
-		<mapColor rgb="056529" type="room" mapType="mocsar" SPLost="3" isWater = "false">
-		</mapColor>
-		<!--  erdo -->
-		<mapColor rgb="019323" type="room" mapType="erdo" SPLost="2" isWater = "false">
-			<stimulus type="latas" intensity="0" shortDescr="Erdőben vagy." condition="nappal">
-				<descr>Az erdő sűrű fái magasan összeérnek, de néhol a napsugár áttörve a lombok között megvilágítja a földet. A levelek zöldje ragyog az erdei fényben.</descr>
+		<mapColor rgb="fffd01" type="room" mapType="tengerpart" SPLost="1" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Elhagyatott homokos part">
+				<descr>A homok itt durvább szemcséjű, keveredve apró kavicsokkal és tengeri törmelékkel. A part mentén elszórtan uszadékfák és szárított tengeri növények hevernek. A nap már magasan jár, a fényben szikrázó víz lassú hullámokban érkezik.</descr>
 			</stimulus>
+			
+			<stimulus type="latas" condition="este" shortDescr="Elhagyatott homokos part">
+				<descr>A homok sötét árnyalatot ölt a leszálló estétől. A víz nyugodt, mintha visszavonult volna. A parton apró csillanások látszanak – kagylók, kavicsok vagy valami más, amit a tenger hozott. A levegő sűrű, a csend szinte tapintható.</descr>
+			</stimulus>
+			
+			<stimulus type="hallas" intensity="50" shortDescr="Zajok nélküli tengerpart">
+				<descr>Csak a hullámok alig hallható nesze kísér, mintha minden más elnémult volna.</descr>
+			</stimulus>
+			
+			<stimulus type="szaglas" intensity="50" shortDescr="Algás, sós illat">
+				<descr>Az elhagyatott parton az alga szaga dominál, keveredve nedves fadarabok és a sós levegő illatával.</descr>
+			</stimulus>
+			
+			<item>
+				<name targy="a törmeléket">törmelék</name>
+				<descr>Rákpáncél, kagylótöredék, sodort fém és fa – mindent a tenger vetett partra.</descr>
+			</item>
+			
+			<item>
+				<name targy="az uszadékfát">uszadékfa</name>
+				<name targy="az fát">fa</name>
+				<descr>Időzött fa, víztől simára csiszolt. Érintése nyirkos és hideg.</descr>
+			</item>
+			
+			<item>
+				<name targy="az algát">alga</name>
+				<descr>Zöldesbarna színű, száradó algacsomók terülnek el foltokban.</descr>
+			</item>
 		</mapColor>
-		<mapColor rgb="029424" type="room" mapType="erdo" SPLost="2" isWater = "false">
+		<mapColor rgb="fffe02" type="room" mapType="tengerpart" SPLost="1" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Sziklás partszakasz">
+				<descr>A tengerpart itt meredek sziklafalban végződik, melynek alsó részét a hullámok fáradhatatlanul mossák. A sziklákon tengeri madarak pihennek, és mindenhol apró élőlények nyüzsögnek. A felületek csúszósak, de a látvány lenyűgöző.</descr>
+			</stimulus>
+			
+			<stimulus type="latas" condition="este" shortDescr="Sziklás partszakasz">
+				<descr>A sötétedő sziklák élesen rajzolódnak ki a tengerre vetülő holdfényben. A víz hangja felerősödik, a levegőben pedig nehéz a pára. Az árnyékok mélyebbek, és minden mozdulatlanabbnak tűnik, mint nappal.</descr>
+			</stimulus>
+			
+			<stimulus type="hallas" intensity="50" shortDescr="Hullámcsapások a sziklákon">
+				<descr>A víz hangosan csapódik a köveknek, visszhangja megtölti a sziklás völgyet.</descr>
+			</stimulus>
+			
+			<stimulus type="szaglas" intensity="50" shortDescr="Sós, nedves kőillat">
+				<descr>A sós tengeri levegő keveredik a nedves sziklák hideg, ásványos illatával.</descr>
+			</stimulus>
+			
+			<item>
+				<name targy="a sziklákat">sziklák</name>
+				<name targy="a sziklát">szikla</name>
+				<name targy="a köveket">kövek</name>
+				<name targy="a követ">kő</name>
+				<descr>A sziklák élesek, helyenként mohásak. A víz eróziója nyomot hagyott rajtuk.</descr>
+			</item>
+			
+			<item>
+				<name targy="a madarakat">madarak</name>
+				<name targy="a madarat">madár</name>
+				<descr>Fehér tollú tengeri madarak ülnek a magasabb köveken. Ha közel kerülsz, felröppennek.</descr>
+			</item>
+			
+			<item>
+				<name targy="az árapály nyomait">árapály</name>
+				<descr>A kövek alsó részén sötétebb, csúszós sáv jelzi, meddig ért a víz korábban.</descr>
+			</item>
 		</mapColor>
-		<mapColor rgb="039525" type="room" mapType="erdo" SPLost="2" isWater = "false">
-		</mapColor>
-		<mapColor rgb="049626" type="room" mapType="erdo" SPLost="2" isWater = "false">
-		</mapColor>
-		<!--  fenyves -->
-		<mapColor rgb="315d41" type="room" mapType="fenyves" SPLost="1" isWater = "false">
-		</mapColor>
-		<mapColor rgb="325e42" type="room" mapType="fenyves" SPLost="1" isWater = "false">
-		</mapColor>
-		<mapColor rgb="335f43" type="room" mapType="fenyves" SPLost="1" isWater = "false">
-		</mapColor>
-		<mapColor rgb="346044" type="room" mapType="fenyves" SPLost="1" isWater = "false">
-		</mapColor>
-		<!--  sziklak -->
-		<mapColor rgb="8a8a8a" type="room" mapType="sziklak" SPLost="4" isWater = "false">
-		</mapColor>
-		<mapColor rgb="8b8b8b" type="room" mapType="sziklak" SPLost="4" isWater = "false">
-		</mapColor>
-		<mapColor rgb="8c8c8c" type="room" mapType="sziklak" SPLost="4" isWater = "false">
-		</mapColor>
-		<mapColor rgb="8d8d8d" type="room" mapType="sziklak" SPLost="4" isWater = "false">
-		</mapColor>
-		<!--  torpefenyves -->
-		<mapColor rgb="08ffb1" type="room" mapType="torpefenyves" SPLost="4" isWater = "false">
-		</mapColor>
-		<mapColor rgb="09ffb2" type="room" mapType="torpefenyves" SPLost="4" isWater = "false">
-		</mapColor>
-		<mapColor rgb="0affb3" type="room" mapType="torpefenyves" SPLost="4" isWater = "false">
-		</mapColor>
-		<mapColor rgb="0bffb4" type="room" mapType="torpefenyves" SPLost="4" isWater = "false">
-		</mapColor>
-		<!--  ho -->
-		<mapColor rgb="fafafa" type="room" mapType="ho" SPLost="3" isWater = "false">
-		</mapColor>
-		<mapColor rgb="fbfbfb" type="room" mapType="ho" SPLost="3" isWater = "false">
-		</mapColor>
-		<mapColor rgb="fcfcfc" type="room" mapType="ho" SPLost="3" isWater = "false">
-		</mapColor>
-		<mapColor rgb="fdfdfd" type="room" mapType="ho" SPLost="3" isWater = "false">
-		</mapColor>
-		<!--  meredek sziklak -->
-		<mapColor rgb="646464" type="room" mapType="sziklafal" SPLost="4" isWater = "false">
-		</mapColor>
-		<mapColor rgb="656565" type="room" mapType="sziklafal" SPLost="4" isWater = "false">
-		</mapColor>
-		<mapColor rgb="666666" type="room" mapType="sziklafal" SPLost="4" isWater = "false">
-		</mapColor>
-		<mapColor rgb="676767" type="room" mapType="sziklafal" SPLost="4" isWater = "false">
+		<mapColor rgb="ffff03" type="room" mapType="tengerpart" SPLost="1" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Meredek, omladozó sziklapart">
+				<descr>A sziklák meredeken ereszkednek le a tengerhez, néhol omladékok és repedések látszanak. A talaj kavicsos, nehezen járható. A napfény élesen csillan a nedves kőtömbökön, és a hullámok határozott ritmusban verődnek neki.</descr>
+			</stimulus>
+			
+			<stimulus type="latas" condition="este" shortDescr="Meredek, omladozó sziklapart">
+				<descr>A sziklák sötét tömbökként magasodnak a parton. A holdfény tompán csúszik végig a durva felszíneken, árnyakat vetve a mélyedésekbe. A levegő nyirkos, minden mozdulat visszhangzik a sziklák között.</descr>
+			</stimulus>
+			
+			<stimulus type="hallas" intensity="50" shortDescr="Erős hullámzás">
+				<descr>A hullámok erőteljesen csapódnak a part szikláihoz, hangjuk néha robbanásszerűen tör elő.</descr>
+			</stimulus>
+			
+			<stimulus type="szaglas" intensity="50" shortDescr="Törmelékes tengeri illat">
+				<descr>A levegőben sós, kavicsos és algás illat keveredik. Az omladékos földnek enyhe fémes szaga is van.</descr>
+			</stimulus>
+			
+			<item>
+				<name targy="az omladékot">omladék</name>
+				<descr>Frissen lehullott kövek és törmelékek borítják a part egy részét. Veszélyes lehet rálépni.</descr>
+			</item>
+			
+			<item>
+				<name targy="a hasadékokat">hasadék</name>
+				<descr>A sziklák közé repedések futnak, mélyek és sötétek. Nehéz megmondani, hová vezetnek.</descr>
+			</item>
+			
+			<item>
+				<name targy="a kőlapokat">kőlap</name>
+				<descr>Az egyik nagyobb sziklalap sima felületű, valószínűleg víz koptatta simára.</descr>
+			</item>
 		</mapColor>
 		
+		<!--  mezo -->
+		<mapColor rgb="7de403" type="room" mapType="mezo" SPLost="1" isWater="false">
+	<!-- Széltépte mező -->
+			<stimulus type="latas" condition="nappal" shortDescr="Széltépte mező">
+				<descr>Az alacsony, sárgás fűcsomók folyamatosan hajladoznak a szélben, mintha a föld maga lélegezne. A mező végtelennek tűnik, távolabb néhány alacsony bokor vet árnyékot a földre. A fűben itt-ott kiszáradt, göcsörtös szárak merednek az ég felé. A levegő tiszta, a szél minden neszt elsodor, és csak a fű halk zizegése marad.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Széltépte mező">
+				<descr>A szürkületben a mező színei elhalványulnak, de a szél nem csitul. A hajladozó fűárnyak a sötétedő égbolt alatt szinte élnek. Időnként egy-egy bokor mozdul meg, ahogy a szél beléjük kap. Minden irányban üresség, csak a szél marad társaságnak.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Szélzúgás">
+				<descr>A folyamatos, tompa szélzúgás betölti a mezőt, néha élesebb füttyentéssel törve meg.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Száraz fű illata">
+				<descr>A levegőben széna- és porillat keveredik, a fűszálakon régóta nem esett eső.</descr>
+			</stimulus>
+			<item>
+				<name targy="a bokrokat">bokrok</name>
+				<name targy="a bokrot">bokor</name>
+				<descr>Göcsörtös, alacsony bokrok, amelyeket a szél megcsavart és elhajlított.</descr>
+			</item>
+			<item>
+				<name targy="a fűcsomókat">fűcsomók</name>
+				<name targy="a fűcsomókat">fű</name>
+				<descr>A kiszáradt, sárgás fűcsomók szívósan kapaszkodnak a talajba.</descr>
+			</item>
+			<item>
+				<name targy="a poros szárakat">szárak</name>
+				<name targy="a poros szárat">szár</name>
+				<descr>Keményre száradt, csontos növényszárak merednek a földből.</descr>
+			</item>
+		
+		</mapColor>
+		<mapColor rgb="7ee504" type="room" mapType="mezo" SPLost="1" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Vadvirágos rét">
+				<descr>Színes virágmező terül el előtted, ahol pipacsok, százszorszépek és harangvirágok ringanak a gyenge szellőben. A fű buján nő, a napfény melegen csillan a szirmokon. Lepkék röppennek fel minden lépésedre, és méhek zümmögése tölti be a levegőt.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Vadvirágos rét">
+				<descr>A nap lemenőben, és a virágok lassan becsukják szirmaikat. A fű sötétebb árnyalatot ölt, s a lepkék helyét tücskök hangja veszi át. A levegőben még ott lebeg a virágok illata, de az este csendet parancsol a mezőre.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Zümmögés és tücsökciripelés">
+				<descr>Nappal méhek zümmögnek, este tücskök ciripelnek kitartóan a fű között.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Virágos illatfelhő">
+				<descr>Erős virágillat lengi be a rétet – édes, bódító és frissítő egyszerre.</descr>
+			</stimulus>
+			<item>
+				<name targy="a pipacsokat">pipacsok</name>
+				<name targy="a pipacsot">pipacs</name>
+				<descr>Élénkpiros szirmú virágok, amelyeket a legkisebb szellő is megrezegtet.</descr>
+			</item>
+			<item>
+				<name targy="a harangvirágokat">harangvirágok</name>
+				<name targy="a harangvirágot">harangvirág</name>
+				<descr>Kékeslila virágok hajlanak a fű fölé, szirmaik lágyan koccannak egymáshoz.</descr>
+			</item>
+			<item>
+				<name targy="a lepkéket">lepkék</name>
+				<name targy="a lepkét">lepke</name>
+				<descr>Színes szárnyú lepkék röppennek virágról virágra, nehéz őket követni a tekintettel.</descr>
+			</item>
+		</mapColor>
+		
+		<mapColor rgb="7fe605" type="room" mapType="mezo" SPLost="1" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Ligetes rét">
+				<descr>A ritkás fák között foltokban tör be a napfény, világos és árnyékos részek tarkítják a mezőt. Az aljnövényzet sűrű, de átjárható, madarak röppennek fel egy-egy bokorból. A fák lombjai között zölden szűrődik át a fény.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Ligetes rét">
+				<descr>A fák árnyai megnyúlnak, és az aljnövényzetben szinte teljes sötétség telepszik meg. Az utolsó madárhangokat gyorsan elnyeli az este. A fények megfakulnak, és a rét sötét foltokká válik a ligetes háttér előtt.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Madárcsicsergés és levélzaj">
+				<descr>Madarak csicseregnek, levelek susognak a fák között – minden hang természetes és megnyugtató.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Friss zöld illat">
+				<descr>A fák alatti árnyékban nedves föld- és lombillat keveredik a réti növények frissességével.</descr>
+			</stimulus>
+			<item>
+				<name targy="a fákat">fák</name>
+				<name targy="a fát">fa</name>
+				<descr>Karcsú, világos kérgű fák, amelyek ritkán állnak, lombjuk nem zárja ki teljesen a fényt.</descr>
+			</item>
+			<item>
+				<name targy="a bokrokat">bokrok</name>
+				<name targy="a bokrot">bokor</name>
+				<descr>A bokrok sűrűn nőnek a fák között, s gyakran madarak vagy kisállatok fészkelnek bennük.</descr>
+			</item>
+			<item>
+				<name targy="a lombot">lomb</name>
+				<descr>A fák lombja zölden szűri meg a fényt, minden mozgásuk más árnyalatot vet a földre.</descr>
+			</item>
+		
+		</mapColor>
+		<mapColor rgb="80e706" type="room" mapType="mezo" SPLost="1" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Vizenyős rét">
+				<descr>A fű között apró víztükrök csillognak, néhol gyékény és sás emelkedik ki az iszapos talajból. A növények tömöttek, zöldek, és sötétebb árnyalatot viselnek, mint a szárazabb területeken. A mező minden lépésnél cuppog vagy ingadozik.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Vizenyős rét">
+				<descr>A víztükrök sötéten villannak fel az alkonyi fényben. A fű és gyékény mozdulatlan, de a víz alatt élet mocorog. A talaj nyirkos, és a csendet csak a békák kuruttyolása vagy egy-egy csobbanás töri meg.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Békák és vízcsobbanás">
+				<descr>Békák kuruttyolnak, néha egy hal vagy rovar csobban a vízbe, a háttérben halk zizegés hallatszik.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Nedves, mocsaras illat">
+				<descr>Az iszap, az állott víz és az élő növények nedves illata keveredik a levegőben.</descr>
+			</stimulus>
+			<item>
+				<name targy="a gyékényeket">gyékények</name>
+				<name targy="a gyékényt">gyékény</name>
+				<descr>Magas, barna buga végű növények, egyenes szárral a vízből nőnek ki.</descr>
+			</item>
+			<item>
+				<name targy="a sásokat">sások</name>
+				<name targy="a sást">sás</name>
+				<descr>Hosszú levelű, sűrűn álló vízi növények, amelyek a víztükrök mentén nőnek.</descr>
+			</item>
+			<item>
+				<name targy="a víztükröket">víztükrök</name>
+				<name targy="a vízet">víz</name>
+				<descr>Apró tócsák, amelyekben az égbolt vagy a növényzet tükröződik – néha valami mozog bennük.</descr>
+			</item>
+		</mapColor>
+		<!--  mocsar -->
+		
+<!-- 1. Általános mocsár -->
+		<mapColor rgb="026226" type="room" mapType="mocsar" SPLost="3" isWater="true">
+			<stimulus type="latas" condition="nappal" shortDescr="Mocsaras terület">
+				<descr>A sásos, vízfoltokkal tarkított lápvidék lassan ébred. A párás levegőben apró rovarok zümmögnek, és a víztükrön lehullott levelek úsznak. A fák gyökerei a felszínen kúsznak, és minden lépésnél cuppanó hang hallatszik a süppedős talajból.</descr>
+			</stimulus>
+			<stimulus type="latas"  source="10" condition="este" shortDescr="Mocsaras terület">
+				<descr>A köd megül a vízfelszínen, és tompítja a távoli neszeket. A láp tükrében halvány, vibráló lidércfények bukkannak fel, majd eltűnnek. Az éjszakai nedvesség minden faágon megcsillan, mintha a sötétség is figyelne.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Cuppogás, brekegés, vízmozgás">
+				<descr>Távoli békák brekegése, lágy csobbanások, víz alatti buborékok és időnként egy elnyújtott reccsenés hallatszik.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Nedves, rothadó szag">
+				<descr>A lápvidéket a vízzel kevert rothadó növények szaga hatja át. Nehéz, áporodott levegő telepszik az orrodra.</descr>
+			</stimulus>
+			<item>
+				<name targy="a sásokat">sások</name>
+				<name targy="a sást">sás</name>
+				<descr>Keskeny levelű növények, amelyek dúsan nőnek a vízparton. Szélben hajladozva surrognak.</descr>
+			</item>
+			<item>
+				<name targy="a víztükröt">víztükör</name>
+				<name targy="a vízet">víz</name>
+				<descr>Nyugodt felszín, amelyen levelek lebegnek. Néhol buborékok törnek fel alóla.</descr>
+			</item>
+			<item>
+				<name targy="az iszapot">iszap</name>
+				<descr>A lábad alatt mély és csúszós, barnásszürke anyag. Minden lépésnél ellenállással süpped össze.</descr>
+			</item>
+		</mapColor>
+
+<!-- 2. Sötét, mély mocsár -->
+		<mapColor rgb="036327" type="room" mapType="melymocsar" SPLost="3" isWater="true">
+			<stimulus type="latas" condition="nappal" shortDescr="Sötét láp">
+				<descr>A fák sűrűn nőnek, vastag törzsükkel elzárják a fényt. A víz sötét, a mélységét nem lehet felmérni. A növények fonnyadtak és elhalóban, mintha a hely maga is beteg lenne. Minden mozdulat elnyomott, minden árnyék súlyos.</descr>
+			</stimulus>
+			<stimulus type="latas" source="10" intensity="0" condition="este" shortDescr="Sötét láp">
+				<descr>A sötétség teljesen ráborul a mocsárra. Csak a vízfelszínen lebegő halvány lidércfények nyújtanak tájékozódást, amelyek azonban meg-megszűnnek. A bokrok mögött mintha árnyékok mozognának. A csend túlságosan mély.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Fojtott reccsenések, buborékok, mozdulatlanság">
+				<descr>A sötét víz alól pukkanások hallatszanak. A nád ritkán susog, inkább hallgat. Néha egy gally roppan el magától.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Áporodott, nehéz levegő">
+				<descr>A levegő fojtó és dohos, mintha a mocsár nem engedne ki semmit magából. Az iszap szaga betölti a mellkast.</descr>
+			</stimulus>
+			<item>
+				<name targy="a fákat">fák</name>
+				<name targy="a fát">fa</name>
+				<descr>Vastag törzsűek, repedezett kérgűek. Gyökereik félig vízben állnak, és mozdulatlannak tűnnek.</descr>
+			</item>
+			<item>
+				<name targy="a vizet">víz</name>
+				<descr>A víz sűrű, feketének tűnik. Nem lehet tudni, mi van a felszín alatt.</descr>
+			</item>
+			<item>
+				<name targy="a lidércfényeket">lidércfények</name>
+				<name targy="a lidércfényet">lidércfény</name>
+				<name targy="a fényeket">fények</name>
+				<name targy="a fényt">fény</name>
+				<descr>Halvány, kékes-zöldes fények lebegnek a vízfelszín felett. Kísértetiesek, de hirtelen eltűnnek.</descr>
+			</item>
+		</mapColor>
+
+<!-- 3. Nádasos láp -->
+		<mapColor rgb="046428" type="room" mapType="nadas" SPLost="3" isWater="true">
+			<stimulus type="latas" condition="nappal" shortDescr="Nádas láp">
+				<descr>A nád magasra nő, szinte falat képezve. A keskeny ösvények kanyargósan haladnak a vízfoltok között. A napfény csillan a vízcseppeken, és az árnyékos részek hűvösek. A mozgás lassú, óvatos haladást igényel.</descr>
+			</stimulus>
+			<stimulus type="latas" source="10" intensity="0" condition="este" shortDescr="Nádas láp">
+				<descr>A nádszálak között suhogás hallatszik, és a sűrűségük még jobban elrejti a terepet. Halvány lidércfények villannak fel néhol a nád felett, majd elhalnak. A sötétben csak a víz csillan néha, ha mozdul valami benne.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Suhogás, zörrenések, vízcsobbanás">
+				<descr>A nád halk susogása keveredik apró csobbanásokkal. Valami mindig mozdul a háttérben.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Friss, vízi növényes illat">
+				<descr>A nádas illata friss, zöld és vizes. Néha egy-egy rothadó levél emlékeztet a lápvidék veszélyeire.</descr>
+			</stimulus>
+			<item>
+				<name targy="a nádszálakat">nádszálak</name>
+				<name targy="a nádszálat">nádszál</name>
+				<descr>Magas, zöld szárak, némelyik már megsárgult. Könnyen elhajlik, de visszarugózik.</descr>
+			</item>
+			<item>
+				<name targy="a vízpartot">vízpart</name>
+				<descr>Keskeny, sáros sáv, amit a nád határol. A csizmád mélyre süllyed benne.</descr>
+			</item>
+			<item>
+				<name targy="a lidércfényeket">lidércfények</name>
+				<name targy="a lidércfényet">lidércfény</name>
+				<name targy="a fényeket">fények</name>
+				<name targy="a fényt">fény</name>
+				<descr>Villanó fények, amelyek rövid ideig lebegnek a nád fölött. Kékes és zöldes árnyalatban játszanak.</descr>
+			</item>
+		</mapColor>
+
+<!-- 4. Kietlen lápvidék -->
+		<mapColor rgb="056529" type="room" mapType="lap" SPLost="3" isWater="true">
+			<stimulus type="latas" condition="nappal" shortDescr="Kietlen láp">
+				<descr>Szürke, alacsony növényzet borítja a lápot. A víztükrök alig láthatók, a talaj süpped, és a messzeségbe csak homályos körvonalak vezetnek. Nincs semmi, ami kapaszkodót adna – csak a párás horizont.</descr>
+			</stimulus>
+			<stimulus type="latas" source="10" intensity="0" condition="este" shortDescr="Kietlen láp">
+				<descr>A naplemente után a láp sík felszíne sötéten tükröződik. A lidércfények távol, apró foltokként tűnnek fel a horizonton, de soha nem közelednek. A köd szinte fojtó takarót von a föld fölé.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Szél, reccsenés, tompa visszhang">
+				<descr>Csak a szél zúgása hallatszik, néha egy reccsenés vagy cuppanás. A hangok messzire terjednek, mintha senki sem lenne közel.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Hideg, szagtalan párásság">
+				<descr>A levegő hűvös és párás, alig érezni benne illatot – csak a nedves föld és víz semleges jelenlétét.</descr>
+			</stimulus>
+			
+			<item>
+				<name targy="a földet">föld</name>
+				<descr>Szürkés, vizes és süppedős. Minden lépésnél alig tartja meg a súlyt.</descr>
+			</item>
+			<item>
+				<name targy="a vízfoltokat">vízfoltok</name>
+				<name targy="a vízfoltot">vízfolt</name>
+				<descr>Kisebb tavak és tócsák, amelyek szinte mozdulatlanul tükröznek vissza minden fényt.</descr>
+			</item>
+			<item>
+				<name targy="a ködöt">köd</name>
+				<descr>Sűrű és hideg, a föld fölött gomolyog. A látótávolságot erősen korlátozza.</descr>
+			</item>
+			<item>
+				<name targy="a mohos köveket">kövek</name>
+				<name targy="a mohos követ">kő</name>
+				<descr>Néhány kiemelkedő, zöldes mohával borított kő, mintha régen ösvény részei lettek volna.</descr>
+			</item>
+			<item>
+				<name targy="a fűcsomókat">fűcsomók</name>
+				<name targy="a fűcsomót">fűcsomó</name>
+				<descr>Szórványosan nőnek, száraznak tűnnek, de alattuk is süpped a talaj.</descr>
+			</item>
+			<item>
+				<name targy="a gödröket">gödrök</name>
+				<name targy="a gödröt">gödör</name>
+				<descr>Apró mélyedések a talajban, némelyikben víz gyűlt össze. Nem látni, milyen mélyek.</descr>
+			</item>
+			<item>
+				<name targy="a lidércfényeket">lidércfények</name>
+				<name targy="a lidércfényet">lidércfény</name>
+				<name targy="a fényeket">fények</name>
+				<name targy="a fényt">fény</name>
+				<descr>Villanó fények, amelyek rövid ideig lebegnek a nád fölött. Kékes és zöldes árnyalatban játszanak.</descr>
+			</item>
+		</mapColor>
+		
+		<!--  erdo -->
+  <!-- 1. Ködpárnás erdő -->
+		<mapColor rgb="019323" type="room" mapType="erdo" SPLost="2" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Ködös erdő">
+				<descr>Hajnalban a köd mélyen ül a fák között, fátyolosan elrejtve az ösvényt. A pára gyöngyözve ül meg az ágakon és leveleken, miközben a fénysugarak alig tudnak áttörni a párarétegen. A fény szűrt és sápadt, a fák töve sötét árnyékokba burkolózik. A talaj nedves és süppedős, az avar csúszós. A köd néhol örvénylik, mintha a levegő önálló életet élne.</descr>
+			</stimulus>
+			
+			<stimulus type="latas" condition="este" shortDescr="Ködös erdő">
+				<descr>Az éjszakai köd sűrű és áthatolhatatlan, a holdfény csak tompán szűrődik át rajta. Az ágak árnyai a ködben mozognak, hol eltűnnek, hol előbukkannak. A fák között mélysötét rések tátonganak, és minden mozdulat mintha kétszer látszana a párán át. A sűrű levegő csillapítja a hangokat, nyugtalanító csendet hagyva maga után.</descr>
+			</stimulus>
+			
+			<stimulus type="hallas" intensity="50" shortDescr="Tompa, szűrt zajok">
+				<descr>A köd fojtja a hangokat: halk csöpögés, távoli ágreccsenés és alig hallható neszek tűnnek fel és süllyednek el a sűrűségben.</descr>
+			</stimulus>
+			
+			<stimulus type="szaglas" intensity="50" shortDescr="Nedves, dohos szag">
+				<descr>A nyirkos fa, az avarban rothadó levelek és a ködpárából kicsapódó víz szaga keveredik – minden elnehezült és nyirkos.</descr>
+			</stimulus>
+			
+			<item>
+				<name targy="a ködöt">köd</name>
+				<descr>A köd sűrű és gomolygó, hol fehér fátyolként terül el, hol sötét árnyként gomolyog. Elrejti a távolabbi részleteket.</descr>
+			</item>
+			<item>
+				<name targy="az avart">avar</name>
+				<descr>A talajt vastag avarréteg fedi, nedves és csúszós. Néhol gombák vagy apró rovarok mozognak benne.</descr>
+			</item>
+			<item>
+				<name targy="a fákat">fák</name>
+				<name targy="a fát">fa</name>
+				<descr>A fák kérge nedves és sötét, törzsük nyirkos tapintású. Többön moha vagy zuzmó nő, másokon apró odvak tátonganak.</descr>
+			</item>
+			<item>
+				<name targy="a gyökereket">gyökerek</name>
+				<name targy="a gyökeret">gyökér</name>
+				<descr>Az aljnövényzet között vastag gyökerek tekeregnek, néhol kibújnak a talajból, akadályt képezve az ösvényen.</descr>
+			</item>
+			<item>
+				<name targy="a gombákat">gombák</name>
+				<name targy="a gombát">gomba</name>
+				<descr>A köd párájában burjánzó gombák különféle színekben tűnnek fel. Vannak halványfehérek, sárgásak, sötétbarnák – egyesek nedvesek és nyálkásak.</descr>
+			</item>
+			<item>
+				<name targy="az ágakat">ágak</name>
+				<name targy="az ágat">ág</name>
+				<descr>A fák alsó ágai közel hajolnak a földhöz. Nedvesek, levelek tapadnak rájuk, némelyik finoman ring, mintha valami megmozdította volna őket.</descr>
+			</item>
+		</mapColor>
+
+  <!-- 2. Napfényes tisztás -->
+		<mapColor rgb="029424" type="room" mapType="erdo" SPLost="2" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Erdőtisztás">
+				<descr>Az erdő sűrűje hirtelen véget ér, és egy tisztás nyílik előtted. A fű alacsony, de sűrű, és apró vadvirágok pettyezik. Néhány kidőlt fa vagy farönk hever a mezőn. A napfény akadálytalanul árasztja el a teret, melegítve a levegőt. A környező fák árnyékot vetnek a tisztás szélére.</descr>
+			</stimulus>
+			
+			<stimulus type="latas" condition="este" shortDescr="Erdőtisztás">
+				<descr>A tisztás éjjel nyitott, sötét térként hat. A holdfény bevilágítja a füvet és a fák szegélyét. A csend mélyebb, mint a fák között, és minden zaj visszhangzik. A fűszálak mozdulatlanul állnak, a levegő hűvös és szinte mozdulatlan.</descr>
+			</stimulus>
+			
+			<stimulus type="hallas" intensity="50" shortDescr="Nyílt tér hangjai">
+				<descr>Távoli madárhangok, egy-egy nesz a fák felől, és néha a szél halk suhanása hallatszik a nyílt téren.</descr>
+			</stimulus>
+			
+			<stimulus type="szaglas" intensity="50" shortDescr="Friss mezőillat">
+				<descr>Friss fű, vadvirágok és a napsütötte föld illata tölti be a levegőt. A páratartalom alacsonyabb, a levegő tisztábbnak hat.</descr>
+			</stimulus>
+			
+			<item>
+				<name targy="a füvet">fű</name>
+				<descr>Apró, zöld fűszálak borítják a tisztás nagy részét. Néhol kitaposhatták már az állatok vagy a korábbi áthaladók.</descr>
+			</item>
+			<item>
+				<name targy="a virágokat">virágok</name>
+				<name targy="a virágot">virág</name>
+				<descr>Különféle apró vadvirágok nyílnak a mezőn: lila, fehér, sárga színekben pompáznak. Többségük alacsony, szerény külsejű.</descr>
+			</item>
+			<item>
+				<name targy="a fatörzseket">fatörzsek</name>
+				<name targy="a fatörzset">fatörzs</name>
+				<descr>Néhány régi fatörzs hever a tisztás szélén vagy közepén, korhadt vagy mohos felületükön rovarok mászkálnak.</descr>
+			</item>
+			<item>
+				<name targy="a fákat">fák</name>
+				<name targy="a fát">fa</name>
+				<descr>A tisztás körül magas fák sorakoznak, szinte falat alkotva. Ágai belógnak a tisztás fölé, árnyékot vetve a szélére.</descr>
+			</item>
+		</mapColor>
+		
+
+		<!-- sziklas -->
+		<mapColor rgb="039525" type="room" mapType="erdo" SPLost="4" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Sziklás erdő">
+				<descr>A fák között sziklák emelkednek ki a földből, egyenetlenül, némelyik mohával vagy zuzmóval borítva. Az ösvény köves, nehéz rajta haladni, mert gyökerek és kövek váltják egymást. A fény hol elakad a magasabb szirteken, hol visszaverődik a szürke kőzeten.</descr>
+			</stimulus>
+			
+			<stimulus type="latas" condition="este" shortDescr="Sziklás erdő">
+				<descr>Sötétedéskor az erdő sziklái árnyként magasodnak a fák között. A holdfény visszacsillan a kövek nedves felszínén. Árnyékok mozognak a kőtömbök mögött, és a hepehupás terep veszélyes minden figyelmetlen lépésnél.</descr>
+			</stimulus>
+			
+			<stimulus type="hallas" intensity="50" shortDescr="Hangvisszaverő neszek">
+				<descr>Hangok visszaverődnek a sziklákról: lépések koppanása, ágak reccsenése, madarak rikoltása – mind felerősítve térnek vissza.</descr>
+			</stimulus>
+			
+			<stimulus type="szaglas" intensity="50" shortDescr="Hűvös, ásványos levegő">
+				<descr>A kő és a moha illata keveredik. A levegő szárazabb, és érezhető benne az ásványi talaj jellegzetes aromája.</descr>
+			</stimulus>
+			
+			<item>
+				<name targy="a sziklákat">sziklák</name>
+				<name targy="a sziklát">szikla</name>
+				<descr>Nagy, szabálytalan kövek, némelyik meredeken emelkedik ki a földből. Egyeseken apró repedések vagy zuzmók láthatók.</descr>
+			</item>
+			<item>
+				<name targy="a mohát">moha</name>
+				<descr>A sziklák oldalán vagy a fatörzsek alján puha, zöld moha nő, vastagon borítva a felületet. Nedves, szivacsszerű tapintású.</descr>
+			</item>
+			<item>
+				<name targy="a gyökereket">gyökerek</name>
+				<name targy="a gyökereket">gyökér</name>
+				<descr>Vastag gyökerek kapaszkodnak a sziklák közé, mintha meg akarnák tartani a fákat az egyenetlen terepen.</descr>
+			</item>
+			<item>
+				<name targy="a leveleket">levelek</name>
+				<name targy="a levelet">levél</name>
+				<descr>A kövek közé beszorult száraz levelek zizegnek a szélben. Némelyikük régi és törékeny, mások még zöldellnek.</descr>
+			</item>
+			<item>
+				<name targy="a fák kérgét">kéreg</name>
+				<descr>A fatörzsek kérge érdes és sötét, néhol lehasadt darabokat lehet látni. A sziklákhoz súrlódva kopottabbnak tűnnek.</descr>
+			</item>
+		</mapColor>
+
+  <!-- Sűrű erdő -->
+		<mapColor rgb="049626" type="room" mapType="erdo" SPLost="4" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Sűrű erdő">
+				<descr>A fák olyan sűrűn állnak, hogy alig szűrődik át a fény a lombkoronán. A levegő állott, és minden irányban sötét árnyékok lapulnak. Az ösvény alig követhető, mert az aljnövényzet benőtte. A bokrok, gyökerek és indák áthatolhatatlan falat alkotnak, mintha maga az erdő nem akarna utat engedni.</descr>
+			</stimulus>
+			
+			<stimulus type="latas" condition="este" shortDescr="Sűrű erdő">
+				<descr>Az éjszakai erdő sötétje szinte teljes. A fák törzsei oszlopként emelkednek a feketeségbe, és minden mozgás – egy reccsenő ág, egy megrezdülő bokor – ijesztően élesen hat. A holdfény csak néhol hatol be, foltokban világítva meg az avart és a gyökereket. A látóhatár néhány méter után elvész a sötétben.</descr>
+			</stimulus>
+			
+			<stimulus type="hallas" intensity="50" shortDescr="Erdei neszek és mozgások">
+				<descr>Madárcsicsergés, levelek közti suhogás, távoli reccsenések és néha a szél zúgása hallatszik. Mintha valami mindig közelebb lenne, mint szeretnéd.</descr>
+			</stimulus>
+			
+			<stimulus type="szaglas" intensity="50" shortDescr="Földes, zöld illat">
+				<descr>A levegő tele van nyers, zöld növényillatú párával. A nedves föld, a zúzott levelek és az aljnövényzet erős, élő aromát árasztanak.</descr>
+			</stimulus>
+			
+			<item>
+				<name targy="az aljnövényzetet">aljnövényzet</name>
+				<descr>Magasra nőtt páfrányok, sűrű bokrok és vastag levelek alkotják. Nehéz átlátni rajta, és sokszor meg kell küzdeni az előrehaladásért.</descr>
+			</item>
+			<item>
+				<name targy="a fákat">fák</name>
+				<name targy="a fát">fa</name>
+				<descr>Sűrűn álló fatörzsek, többségük magas és egyenes. Némelyik gyökerei kiemelkednek a földből, másokon madarak vagy rovarok nyomai látszanak.</descr>
+			</item>
+			<item>
+				<name targy="a gyökereket">gyökerek</name>
+				<name targy="a gyökeret">gyökér</name>
+				<descr>A földet barázdáló gyökerek csapdát képeznek a figyelmetleneknek. Vastag, göcsörtös erezetként szövik át a talajt.</descr>
+			</item>
+			<item>
+				<name targy="a leveleket">levelek</name>
+				<name targy="a levelet">levél</name>
+				<descr>Frissen lehullott vagy már korhadásnak indult levelek hevernek mindenfelé. Lépkedve rajtuk halk susogást hallani.</descr>
+			</item>
+			<item>
+				<name targy="a bokrokat">bokrok</name>
+				<name targy="a bokrot">bokor</name>
+				<descr>Szúrós, sűrű ágú bokrok, némelyik bogyókat vagy virágmaradványokat hordoz. Áthatolhatatlannak tűnnek.</descr>
+			</item>
+		</mapColor>
+		
+		<!--  fenyves -->
+	<!-- 1. Sötét fenyves -->
+		<mapColor rgb="315d41" type="room" mapType="fenyves" SPLost="1" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Sötét fenyves">
+				<descr>A fenyők magasra nyúló törzsei elzárják a napfényt, így csak szórt fény szűrődik át a tűlevelek sűrűjén. A talaj sötét, szinte fekete avarral borított. A csend szinte tapintható, csak néha hallatszik egy távoli reccsenés. A fák közti tér szűk, minden lépés visszhangot ver a csupasz törzsek között.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Sötét fenyves">
+				<descr>A fenyőfák árnyéka elnyeli a holdfényt, így az erdő szinte teljes sötétségbe burkolózik. A fák között árnyak mozognak, vagy talán csak a szél játszik az érzékekkel. A föld nedves és süppedős, minden zaj felerősödik a csendben. Az erdő sűrűje szinte beburkolja a látogatót.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Tompa erdei neszek">
+				<descr>A távolból halk reccsenések és tűlevelek susogása hallatszik, mintha valami óvatosan mozogna.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Gyantás, nedves avarillat">
+				<descr>A fenyőgyanta illata keveredik az avarból áradó nedves, földes szaggal.</descr>
+			</stimulus>
+			<item>
+				<name targy="a tűleveleket">tűlevelek</name>
+				<name targy="a tűlevet">tűlevél</name>
+				<descr>Száraz és friss tűlevelek keveréke borítja a talajt, néhol vastagon rétegződve.</descr>
+			</item>
+			<item>
+				<name targy="a fatörzseket">fatörzsek</name>
+				<name targy="a fatörzset">fatörzs</name>
+				<name targy="a törzseket">törzsek</name>
+				<name targy="a törzset">törzs</name>
+				<name targy="a fenyőtörzseket">fenyőtörzsek</name>
+				<name targy="a fenyőtörzset">fenyőtörzs</name>
+				<descr>A fenyőfák törzsei vastagok, sötétek, a kérgük néhol repedezett és gyantás.</descr>
+			</item>
+			<item>
+				<name targy="a gyökereket">gyökerek</name>
+				<name targy="a gyökeret">gyökér</name>
+				<descr>A fák felszíni gyökerei kacskaringósan tekergőznek az avarban, néhol kiállnak a földből.</descr>
+			</item>
+			<item>
+				<name targy="az árnyékokat">árnyékok</name>
+				<name targy="az árnyékot">árnyék</name>
+				<descr>A fák vetette árnyékok mozdulatlanul nyúlnak el a földön, mégis nyugtalanítók.</descr>
+			</item>
+		</mapColor>
+
+	<!-- 2. Hegyi fenyves -->
+		<mapColor rgb="325e42" type="room" mapType="fenyves" SPLost="2" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Hegyi fenyves">
+				<descr>A fenyők a sziklás talajból nőnek ki, törzsük vastag és időjárás formálta. A szél suttogva fúj át a hegygerincen. Az ég tiszta, a levegő friss. A fák között néha távoli völgyekre lehet látni. A napfény fényfoltokat vet a köves aljnövényzetre.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Hegyi fenyves">
+				<descr>A hegyoldal mentén álló fenyőket holdfény ezüstözi. A sziklák árnyékot vetnek a göröngyös ösvényekre. A hideg éjszakai levegő tiszta és csípős. A fák sötéten sziluetteződnek az ég háttér előtt, és minden mozdulat visszhangzik a sziklák között.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Szél és sziklák zaja">
+				<descr>A szél időnként fütyülve söpör végig a sziklákon, kavicsokat görgetve lefelé.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Tiszta, fenyőillatú levegő">
+				<descr>A fenyőgyanta éles illata keveredik a hegyi levegő frissességével.</descr>
+			</stimulus>
+			<item>
+				<name targy="a sziklákat">sziklák</name>
+				<name targy="a sziklát">szikla</name>
+				<descr>Durva felületű, mohafoltos sziklák állnak szétszórtan az ösvény mellett.</descr>
+			</item>
+			<item>
+				<name targy="a fatörzseket">fatörzsek</name>
+				<name targy="a fatörzset">fatörzs</name>
+				<name targy="a törzseket">törzsek</name>
+				<name targy="a törzset">törzs</name>
+				<name targy="a fenyőtörzseket">fenyőtörzsek</name>
+				<name targy="a fenyőtörzset">fenyőtörzs</name>
+				<descr>Vastag, repedezett kérgű törzsek, melyek a sziklás talajhoz idomultak.</descr>
+			</item>
+			<item>
+				<name targy="az aljnövényzetet">aljnövényzet</name>
+				<descr>Szórványosan nőnek bokrok és törpefenyők, küzdve a köves talajjal.</descr>
+			</item>
+			<item>
+				<name targy="a köveket">kövek</name>
+				<name targy="a követ">kö</name>
+				<descr>Kisebb-nagyobb kövek hevernek szerteszét, néhány mohos, mások éles szélűek.</descr>
+			</item>
+		</mapColor>
+
+	<!-- 3. Ropogós avarú fenyves -->
+		<mapColor rgb="335f43" type="room" mapType="fenyves" SPLost="2" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Száraz fenyves">
+				<descr>A tűlevelek vastagon borítják a földet, száraz zizegés hallatszik minden lépésnél. A fák közötti tér nyitottabb, a napfény elér a talajig. Kevés zöld növény díszíti az aljnövényzetet. A törzsek hosszú árnyékot vetnek, ahogy a nap emelkedik az égen.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Száraz fenyves">
+				<descr>Az est beálltával a száraz levelek susogása felerősödik. A sötétedő erdőben minden mozdulat visszhangzik a tűlevelekkel borított talajon. A fák között sötét csíkok húzódnak, a levegő száraz, hűvös.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Ropogó avar">
+				<descr>Minden lépésnél száraz tűlevelek roppannak a talp alatt, a hang messzire elhallatszik.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Száraz gyantaillat">
+				<descr>A nap melegítette tűlevelek és gyanta édeskés, száraz illata terjeng a levegőben.</descr>
+			</stimulus>
+			<item>
+				<name targy="a tűszőnyeget">tűszőnyeg</name>
+				<descr>A talajt vastagon borítják a megszáradt tűlevelek, amik könnyen zizegnek.</descr>
+			</item>
+			<item>
+				<name targy="az árnyékokat">árnyékok</name>
+				<name targy="az árnyékot">árnyék</name>
+				<descr>A hosszú árnyékok mozdulatlanul hevernek a fák alatt, mégis élőnek tűnnek.</descr>
+			</item>
+			<item>
+				<name targy="a fák kérgét">kéreg</name>
+				<descr>A fenyők kérge pikkelyes, néhol lepattogzott, gyantás illatot áraszt.</descr>
+			</item>
+			<item>
+				<name targy="a tűleveleket">tűlevelek</name>
+				<name targy="a tűlevelet">tűlevél</name>
+				<descr>Rövidek, barnák és zizegnek, ha megmozdulnak. Több rétegben fekszenek egymáson.</descr>
+			</item>
+		</mapColor>
+
+	<!-- 4. Szeles fenyves -->
+		<mapColor rgb="346044" type="room" mapType="fenyves" SPLost="2" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Szellős fenyves">
+				<descr>A fák ritkásan állnak, közöttük tágas tér tátong. A napfény akadálytalanul bejut az erdőbe, a szél pedig megmozgatja az ágakat. A földön zöld aljnövényzet is megtelepedett. A mozgó árnyékok állandó változásban tartják a látványt.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Szellős fenyves">
+				<descr>A szél az esti félhomályban is végigseper az erdőn, a fák ágai zörögve mozognak. A holdfény játszik a mozgó árnyékokon, a távolban minden elmosódik a szél sodorta mozgásban. A nyitott térben könnyen elveszhet az ember tekintete.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Suhogó szél">
+				<descr>A szél állandóan fúj, zizegtetve a lombkoronát, néha fütyülve szalad át az ágak között.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Levegős fenyőillat">
+				<descr>A levegő mozgása felfrissíti a fenyőerdő illatát, amit időnként virágok vagy nedves föld szaga tarkít.</descr>
+			</stimulus>
+			<item>
+				<name targy="az ágakat">ágak</name>
+				<name targy="az ágat">ág</name>
+				<descr>A szél hatására folyamatosan mozgásban vannak, egyesek hajladoznak, mások zörögnek.</descr>
+			</item>
+			<item>
+				<name targy="a mozgó árnyékokat">árnyékok</name>
+				<name targy="a mozgó árnyékot">árnyék</name>
+				<descr>A szél mozgatta fák árnyéka táncol a földön, különös formákat rajzolva.</descr>
+			</item>
+			<item>
+				<name targy="az aljnövényzetet">aljnövényzet</name>
+				<descr>Kis bokrok, fűfélék és mohapamacok színesítik a földet a fák között.</descr>
+			</item>
+			<item>
+				<name targy="a fatörzseket">fatörzsek</name>
+				<name targy="a fatörzset">fatörzs</name>
+				<name targy="a törzseket">törzsek</name>
+				<name targy="a törzset">törzs</name>
+				<name targy="a fenyőtörzseket">fenyőtörzsek</name>
+				<name targy="a fenyőtörzset">fenyőtörzs</name>
+				<descr>A törzsek karcsúbbak, mint más erdőkben, és a szél gyakran megrezegteti őket.</descr>
+			</item>
+		</mapColor>
+
+	<!--  sziklak -->
+		<mapColor rgb="8a8a8a" type="room" mapType="sziklak" SPLost="4" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Meredek sziklás lejtő">
+				<descr>A hegyoldal szinte függőlegesen zuhan alá, szürkés sziklák és kőomlások borítják. A napfény kemény árnyékokat vet a sziklafalakra, a repedésekben pedig száraz zuzmók kapaszkodnak. Lépted alatt morzsalékos kő pereg lefelé, jelezve, mennyire törékeny ez a terep.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Sötét sziklás lejtő">
+				<descr>A meredek lejtő sötétségbe burkolózik. A sziklafalak élei alig kivehetők, az árnyékok összefolynak. A mélyedésekből hideg huzat tör fel, a sziklák között neszek visszhangoznak, mintha valaki járna odalent.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Kavicszörgés és szél">
+				<descr>A szél fütyülve szalad végig a sziklák között, néha egy-egy kavics gördül le a mélybe.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Száraz, poros levegő">
+				<descr>A levegő száraz és poros, alig érezhető benne bármi illat.</descr>
+			</stimulus>
+			<item>
+				<name targy="a sziklákat">sziklák</name>
+				<name targy="a sziklát">szikla</name>
+				<descr>Szögletes, rideg kőfelszínek, repedésekkel és horzsolásokkal.</descr>
+			</item>
+			<item>
+				<name targy="a köveket">kövek</name>
+				<name targy="a követ">kő</name>
+				<descr>Kavicsos és morzsalékos kövek, amelyeken könnyű megcsúszni.</descr>
+			</item>
+			<item>
+				<name targy="a zuzmókat">zuzmók</name>
+				<name targy="a zuzmót">zuzmó</name>
+				<descr>Szürke és zöldes színű zuzmók kapaszkodnak a sziklákon.</descr>
+			</item>
+		
+		</mapColor>
+		<mapColor rgb="8b8b8b" type="room" mapType="sziklak" SPLost="4" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Kőtörmelékes hegyoldal">
+				<descr>A meredek hegyoldalt szürke kőtörmelék borítja, apró és közepes méretű kövek alkotnak laza lejtőt. A napsütés vakítóan verődik vissza a sziklatöredékekről. Néhány szívós fűcsomó kapaszkodik a sziklák között. Fentebb egy sötétebb réteg határolja a lejtőt, mintha régi omlásnyom lenne. A levegő tiszta, de poros, a kavicsok sercegnek minden lépés alatt.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Sötétedő kőtörmelékes lejtő">
+				<descr>A kövek szürkéje sötétkékre vált az alkonyati fényben, a meredek lejtőn csak árnyak mozdulnak. A sziklák közötti réseket feketeség tölti ki. Fent a csúcsok sziluettje sötéten rajzolódik ki az égre. A kőpor illata éles, szinte fémes. Egy-egy kő lecsúszik a lejtőn, koppanása messzire hallatszik.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Zörgő kövek, néma magaslat">
+				<descr>Időnként apró kövek gurulnak le a lejtőn. Máskor teljes csend uralja a tájat.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Poros hegyi levegő">
+				<descr>Száraz, poros levegő, mintha ősi sziklák morzsolódnának szét minden lélegzettel.</descr>
+			</stimulus>
+			<item>
+				<name targy="a törmeléket">törmelék</name>
+				<descr>Apró és nagyobb kövek alkotják, instabil, morzsalékos rétegként borítva a lejtőt.</descr>
+			</item>
+			<item>
+				<name targy="a fűcsomókat">fűcsomók</name>
+				<name targy="a fűcsomót">fűcsomó</name>
+				<descr>Makacs növények, amik valahogy mégis gyökeret vertek a kövek között.</descr>
+			</item>
+			<item>
+				<name targy="az omlásnyomokat">omlásnyomok</name>
+				<name targy="az omlásnyomot">omlásnyom</name>
+				<descr>Feketébb kőréteg, ahol valaha a lejtő egy része leomlott. A kövek lazábban állnak ott.</descr>
+			</item>
+		
+		</mapColor>
+		
+		<mapColor rgb="8c8c8c" type="room" mapType="sziklak" SPLost="4" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Mohás sziklatörések">
+				<descr>A sziklák hatalmas, repedezett tömbökké torlódnak egymásra, néhol méteres rések nyílnak közöttük. A kőzet felületén zöldes-sárgás moha terjed, árulkodva az árnyékos, nedves levegőről. Egy-két fenyőtörzs nő ki közvetlenül a sziklák repedéseiből. A hegyvidéki szél halkan susog a hasadékokban.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Sötétedő sziklatörések">
+				<descr>A mohával borított kövek sötétzölden olvadnak bele az árnyékba. A sziklatömbök közötti hasadékok mély feketeséggel ásítanak. A levegő hűvös és nedves, néha halvány köd száll le a sziklák közé. A fák körvonalai elmosódottak, és minden mozdulatnál úgy tűnik, mintha valami a sziklák mögött rejtőzne.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Szél és rejtett neszek">
+				<descr>A szél suttogva jár a kőtömbök között. Időnként valami finoman koppan vagy karistol a mélyedésekben.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Nedves kő és moha szaga">
+				<descr>A levegőben nehéz, mohás, nyirkos illat terjeng, mintha sosem száradna ki ez a hely.</descr>
+			</stimulus>
+			<item>
+				<name targy="a sziklákat">sziklák</name>
+				<name targy="a sziklát">szikla</name>
+				<descr>Repedezett, mohás kőtömbök, élesen kirajzolódó élekkel és mély hasadékokkal.</descr>
+			</item>
+			<item>
+				<name targy="a mohát">moha</name>
+				<descr>Puhának tűnik, de tapintásra nyirkos és hideg. A sziklák árnyékos oldalán terjed.</descr>
+			</item>
+			<item>
+				<name targy="a hasadékokat">hasadékok</name>
+				<name targy="a hasadékot">hasadék</name>
+				<descr>Mély, sötét rések a sziklák között – némelyikbe beférnél, de nem látsz a mélyére.</descr>
+			</item>
+			<item>
+				<name targy="a fenyőket">fenyők</name>
+				<name targy="a fenyőt">fenyő</name>
+				<descr>Keskeny törzsű, magas fák, amelyek makacsul gyökereznek a sziklarésekben.</descr>
+			</item>
+		
+		</mapColor>
+		<mapColor rgb="8d8d8d" type="room" mapType="sziklak" SPLost="4" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Kőtörmelékes hegyoldal">
+				<descr>A meredek hegyoldalt szürke kőtörmelék borítja, apró és közepes méretű kövek alkotnak laza lejtőt. A napsütés vakítóan verődik vissza a sziklatöredékekről. Néhány szívós fűcsomó kapaszkodik a sziklák között. Fentebb egy sötétebb réteg határolja a lejtőt, mintha régi omlásnyom lenne. A levegő tiszta, de poros, a kavicsok sercegnek minden lépés alatt.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Sötétedő kőtörmelékes lejtő">
+				<descr>A kövek szürkéje sötétkékre vált az alkonyati fényben, a meredek lejtőn csak árnyak mozdulnak. A sziklák közötti réseket feketeség tölti ki. Fent a csúcsok sziluettje sötéten rajzolódik ki az égre. A kőpor illata éles, szinte fémes. Egy-egy kő lecsúszik a lejtőn, koppanása messzire hallatszik.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Zörgő kövek, néma magaslat">
+				<descr>Időnként apró kövek gurulnak le a lejtőn. Máskor teljes csend uralja a tájat.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Poros hegyi levegő">
+				<descr>Száraz, poros levegő, mintha ősi sziklák morzsolódnának szét minden lélegzettel.</descr>
+			</stimulus>
+			<item>
+				<name targy="a törmeléket">törmelék</name>
+				<descr>Apró és nagyobb kövek alkotják, instabil, morzsalékos rétegként borítva a lejtőt.</descr>
+			</item>
+			<item>
+				<name targy="a fűcsomókat">fűcsomók</name>
+				<name targy="a fűcsomót">fűcsomó</name>
+				<descr>Makacs növények, amik valahogy mégis gyökeret vertek a kövek között.</descr>
+			</item>
+			<item>
+				<name targy="az omlásnyomokat">omlásnyomok</name>
+				<name targy="az omlásnyomot">omlásnyom</name>
+				<descr>Feketébb kőréteg, ahol valaha a lejtő egy része leomlott. A kövek lazábban állnak ott.</descr>
+			</item>
+		
+		</mapColor>
+		<!--  torpefenyves -->
+		<mapColor rgb="08ffb1" type="room" mapType="torpefenyves" SPLost="3" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Színes havasi rét">
+				<descr>Magasan a hegyek között egy széles, enyhén lejtős rét terül el. A fű alacsony és ritkás, de tarka virágok pettyezik: sárga, kék és lila szirmok libbennek a szélben. A kövek között zuzmók és apró bokrok bújnak meg. A napfény élénken világítja meg a tiszta, nyílt terepet, a távolban sziklás csúcsok emelkednek.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Elsötétülő havasi rét">
+				<descr>A rét színei tompábbá válnak az alkonyban, a virágok összecsukódnak, és hosszú árnyékok vetülnek a fűre. A levegő hűvös és párás, a kövek sötét foltokként szóródnak szét a tájon. A csillagok hamar megjelennek az égbolton, tisztán és élesen, a fű között néha neszezés hallatszik.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Szelíd szél és rovarciripelés">
+				<descr>Alig hallható szél suhan át a fűszálak között, és halk rovarciripelés szűrődik a virágok alól.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Friss hegyi illat">
+				<descr>Friss, kissé fanyar hegyi levegő keveredik virágillatú párával és a fű földes illatával.</descr>
+			</stimulus>
+			<item>
+				<name targy="a virágokat">virágok</name>
+				<name targy="a virágot">virág</name>
+				<descr>Kicsi, élénk színű virágok: sárgák, lilák, kékek – törékenyek, mégis szívósak.</descr>
+			</item>
+			<item>
+				<name targy="a zuzmókat">zuzmók</name>
+				<name targy="a zuzmót">zuzmó</name>
+				<descr>Szürkészöld foltokként kapaszkodnak a kövekhez, szárazak és szívósak.</descr>
+			</item>
+			<item>
+				<name targy="a bokrokat">bokrok</name>
+				<name targy="a bokrot">bokor</name>
+				<descr>Alacsony, göcsörtös növények, apró levelekkel és bogyókkal – a túlélés mesterei.</descr>
+			</item>
+		</mapColor>
+		<mapColor rgb="09ffb2" type="room" mapType="torpefenyves" SPLost="4" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Virágos havasi rét">
+				<descr>A hegyek ölelésében nyíló tisztáson színpompás vadvirágok nyílnak a fű között. A napsütés arany fénnyel vonja be a zöldellő rétet, melyen apró rovarok zümmögnek és pillangók táncolnak. Távolabb nyájak legelnek a lankás domboldalon. A levegő friss, ritka és hűvös, de nem zord.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Csendes, párás tisztás">
+				<descr>Az alkony árnyai puhán borulnak a virágos rétre. A növények közt köd gomolyog, az ég alján halványan dereng a lenyugvó nap fénye. A virágok behunyják szirmaikat, és csak a tücskök zenélnek a csendben. Minden nyugodt és békés, a hegyek őrzik az álmot.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="35" shortDescr="Zümmögés és susogás">
+				<descr>Napközben rovarok zümmögnek és madarak csicseregnek, esténként tücskök és neszezés hallatszik a fűből.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Friss hegyi illat">
+				<descr>Az illat friss és üde, tele van virágporral, gyógynövényekkel és a harmatos fű zöld aromájával.</descr>
+			</stimulus>
+			<item>
+				<name targy="a virágokat">virágok</name>
+				<name targy="a virágot">virág</name>
+				<descr>Különféle vadvirágok: kék harangvirág, sárga boglárka, fehér margaréta – mind a rét díszei.</descr>
+			</item>
+			<item>
+				<name targy="a füvet">fű</name>
+				<descr>Lágy, élénkzöld fű, amely néhol bokáig, máshol térdig ér.</descr>
+			</item>
+			<item>
+				<name targy="a rovarokat">rovarok</name>
+				<name targy="a rovart">rovar</name>
+				<descr>Zümmögő méhek, szöcskék, sőt időnként színes pillangók repkednek a virágok között.</descr>
+			</item>
+		</mapColor>
+		<mapColor rgb="0affb3" type="room" mapType="torpefenyves" SPLost="4" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Színes havasi rét">
+				<descr>Magasan a hegyek között egy széles, enyhén lejtős rét terül el. A fű alacsony és ritkás, de tarka virágok pettyezik: sárga, kék és lila szirmok libbennek a szélben. A kövek között zuzmók és apró bokrok bújnak meg. A napfény élénken világítja meg a tiszta, nyílt terepet, a távolban sziklás csúcsok emelkednek.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Elsötétülő havasi rét">
+				<descr>A rét színei tompábbá válnak az alkonyban, a virágok összecsukódnak, és hosszú árnyékok vetülnek a fűre. A levegő hűvös és párás, a kövek sötét foltokként szóródnak szét a tájon. A csillagok hamar megjelennek az égbolton, tisztán és élesen, a fű között néha neszezés hallatszik.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="25" shortDescr="Szelíd szél és rovarciripelés">
+				<descr>Alig hallható szél suhan át a fűszálak között, és halk rovarciripelés szűrődik a virágok alól.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="30" shortDescr="Friss hegyi illat">
+				<descr>Friss, kissé fanyar hegyi levegő keveredik virágillatú párával és a fű földes illatával.</descr>
+			</stimulus>
+			<item>
+				<name targy="a virágokat">virágok</name>
+				<name targy="a virágot">virág</name>
+				<descr>Kicsi, élénk színű virágok: sárgák, lilák, kékek – törékenyek, mégis szívósak.</descr>
+			</item>
+			<item>
+				<name targy="a zuzmókat">zuzmók</name>
+				<name targy="a zuzmót">zuzmó</name>
+				<descr>Szürkészöld foltokként kapaszkodnak a kövekhez, szárazak és szívósak.</descr>
+			</item>
+			<item>
+				<name targy="a bokrokat">bokrok</name>
+				<name targy="a bokrot">bokor</name>
+				<descr>Alacsony, göcsörtös növények, apró levelekkel és bogyókkal – a túlélés mesterei.</descr>
+			</item>
+		</mapColor>
+		<mapColor rgb="0bffb4" type="room" mapType="torpefenyves" SPLost="4" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Sűrű törpefenyves">
+				<descr>Az alacsony törpefenyők sűrűn nőnek, vastag zöld tűleveleik szinte áthatolhatatlan bozótot alkotnak. A talaj köves, de mohapárnák is előfordulnak a fák tövében. Néhány kidőlt törzs keresztezi az ösvényt. A fák ágain pára gyűlik össze, és a fény csak szűrten hatol át az ágak résein.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Homályos törpefenyves">
+				<descr>A törpefenyők árnyéka hosszúra nyúlik, a bozót sötét tömegként zárja el a kilátást. A párás levegőben nehéz tájékozódni, és a fák tövében csak árnyékokat látsz. A moha tompán fénylik a sötétben, és valami neszez az ágak között – talán egy madár, vagy valami más.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="30" shortDescr="Ágak surrogása, halk reccsenés">
+				<descr>A szél a tűlevelek között surrog, néha egy-egy ág reccsen, mintha valami megmozdult volna.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="45" shortDescr="Gyanta és nedves moha illata">
+				<descr>Erős fenyőgyanta-illat és nedves moha szaga tölti meg a levegőt, a talaj illata földes és nyirkos.</descr>
+			</stimulus>
+			<item>
+				<name targy="a törpefenyőket">törpefenyők</name>
+				<name targy="a törpefenyőt">törpefenyő</name>
+				<descr>Alacsony, zömök fák, sűrű ágakkal és sötétzöld tűlevelekkel, amelyek összefonódnak egymással.</descr>
+			</item>
+			<item>
+				<name targy="a mohapárnákat">mohapárnák</name>
+				<name targy="a mohapárnát">mohapárna</name>
+				<descr>Puha, sötétzöld moha, amely a köveken és fatörzseken nő, hűvös és nedves tapintású.</descr>
+			</item>
+			<item>
+				<name targy="a kidőlt fákat">kidőlt fák</name>
+				<name targy="a kidőlt fát">kidőlt fa</name>
+				<descr>Szürkülő, korhadt fatörzsek, amelyek a bozótban fekszenek – némelyik még élő ágat hajt.</descr>
+			</item>
+		</mapColor>
+		<!--  ho -->
+		<mapColor rgb="fafafa" type="room" mapType="ho" SPLost="3" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Hóborította gerinc">
+				<descr>A keskeny hegygerincet mély, szűz hó borítja. A szél a gerinc egyik oldalán meredek lejtőt, a másikon szakadékot alakított ki. A vakító fény minden részletet kiemel: a hó fodrozódásait, a jégcsapokat a kőszirtek alatt, és az apró lábnyomokat, amelyek sejtetik, nem vagy egyedül.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Szürkületi hógerinc">
+				<descr>Az esti félhomályban a hó szürkéskék árnyalatot ölt, és minden hang felerősödik. A gerinc szélén a sötét szakadék tátong. A hó felszínén helyenként enyhe derengés vibrálhat – talán csak a szem csal, vagy valami rejtett mozgás lapul a hó alatt.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="30" shortDescr="Szelet hasító csend">
+				<descr>A szél időnként felzúg, de máskor dermedt, feszült csend ül a gerincen. Csak a saját lélegzeted és a hó roppanása hallatszik.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="10" shortDescr="Tiszta, fagyos levegő">
+				<descr>A levegő kristálytiszta, jeges – mélyen belélegezve égeti az orrodat, de frissességgel tölt el.</descr>
+			</stimulus>
+			<item>
+				<name targy="a hógerincet">hógerinc</name>
+				<descr>Szűk, havas ösvény, két oldalt mélységgel – csak biztos léptekkel lehet átkelni rajta.</descr>
+			</item>
+			<item>
+				<name targy="a jégcsapokat">jégcsapok</name>
+				<name targy="a jégcsapot">jégcsap</name>
+				<descr>Hosszú, áttetsző jégcsapok lógnak ki a sziklák alól, némelyik már majdnem leszakadt.</descr>
+			</item>
+		</mapColor>
+		<mapColor rgb="fbfbfb" type="room" mapType="ho" SPLost="3" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Szélfútta hágó">
+				<descr>A keskeny hágón keresztül örök szél fúj, a hófelhőket sodorva. A jég a köveken rétegzett, sima és veszélyes. A távolban sziklaormok merednek a fehérségből, elmosódva a hószállingózásban.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Jéggé dermedő átjáró">
+				<descr>Az alkonyatban a szél élesebbé válik, az út már alig kivehető. A havat befújta a mélyedésekbe, így csak a jégcsillanások segítenek eligazodni. A holdfény kékes ragyogást vet a hágóra, de minden más elmosódik a mozgó fehérségben.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Süvítő szél">
+				<descr>A szél folytonos süvítése uralja a tájat, néha recsegés vagy távoli dördülés hallatszik – talán gleccsermozgás, talán valami más.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="15" shortDescr="Jeges, szúró levegő">
+				<descr>A levegő rideg, metsző, szinte steril – nem érzel benne mást, csak a fagyot.</descr>
+			</stimulus>
+			<item>
+				<name targy="a jégréteget">jégréteg</name>
+				<name targy="a jeget">jég</name>
+				<descr>Simára csiszolt, szélcsiszolta jég, amely alatt a kő alig látszik.</descr>
+			</item>
+			<item>
+				<name targy="a hágót">hágó</name>
+				<descr>Két hegy között vezető átjáró, amelyet a hó és a szél formált ki szinte felismerhetetlenné.</descr>
+			</item>
+		</mapColor>
+		<mapColor rgb="fcfcfc" type="room" mapType="ho" SPLost="3" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Mágikus jégmező">
+				<descr>Az előtted elterülő jégmező természetellenesen szabályos. A jég áttetsző, mintha csillagok fénye szunnyadna benne. A felszín néhol világoskéken pulzál, és a fénytörés miatt furcsa alakok sejlenek fel benne – vagy alattad.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Lüktető jégfények">
+				<descr>Az éjszakában a jég világít – sejtelmes, halvány kékes és ibolya színek játszanak a felszínen. A mozdulataidra lassú fényválasz érkezik, mintha figyelne a jég. A jégtáblák között halk remegés érződik, amit nem lehet látni, csak érezni.</descr>
+			</stimulus>
+			<stimulus intensity="50" type="magia" shortDescr="Lassú mágikus rezgés">
+				<descr>Az érzékenyebbek különös lüktetést éreznek a talpuk alatt – mintha a jég valami mély, elfeledett erő emlékeit hordozná.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Kristályos neszek">
+				<descr>A jég halk pattogása, mintha valami beszélne benne – vagy a mozdulatod okozta mikrotörések szólnak hozzád?</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="10" shortDescr="Jeges, tiszta levegő">
+				<descr>A levegő kristálytiszta, szinte szagtalan, mégis van benne valami megfoghatatlan, fagyos tisztaság, amit sehol máshol nem érzel.</descr>
+			</stimulus>
+			<item>
+				<name targy="a jégmezőt">jégmező</name>
+				<name targy="a jeget">jég</name>
+				<descr>Áttetsző, sima felület, amely egyes helyeken fénylik vagy lüktet. Lépkedni rajta ijesztő és gyönyörű egyszerre.</descr>
+			</item>
+			<item>
+				<name targy="a fényalakokat">fényalakok</name>
+				<descr>Furcsa alakzatok, amelyek csak a jég alatt tűnnek fel, és mindig mozgásban vannak – vagy legalábbis annak tűnnek.</descr>
+			</item>
+		</mapColor>
+		<mapColor rgb="fdfdfd" type="room" mapType="ho" SPLost="3" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Gleccser jéghasadékokkal">
+				<descr>A hatalmas gleccser roppant tömege alatt szakadékok húzódnak. A jég felszíne kékes-fehér, de ahol megtörik, mélykék árnyalat villan fel. A hasadékok peremei élesek, néhol a mélybe vezetnek, és onnan hideg pára gomolyog felfelé.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Sötét gleccsermélység">
+				<descr>Az esti fényben a gleccser mozdulatlannak tűnik, de időnként recseg vagy megreszket. A hasadékok mélye feketeséget nyel el, a pára világít a holdfényben, és furcsa fényvillanások tűnnek fel a jég mélyén.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="35" shortDescr="Recsegő jég">
+				<descr>Időnként tompa morajlás hallatszik, mintha a gleccser mozogna. A jég sercegése, távoli roppanásai a mélyből érkeznek.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="15" shortDescr="Jeges pára">
+				<descr>A hideg, párás levegőben érezni lehet a jég tiszta szagát, de valami földalatti nyirkosság is megbújik benne.</descr>
+			</stimulus>
+			<item>
+				<name targy="a jéghasadékokat">jéghasadékok</name>
+				<name targy="a jéghasadékot">jéghasadék</name>
+				<descr>Mély, sötét szakadékok a jégtestben – némelyik szinte feneketlennek tűnik.</descr>
+			</item>
+			<item>
+				<name targy="a párát">pára</name>
+				<descr>Fehéresen gomolygó, hideg páratömeg, amely a hasadékokból tör elő időről időre.</descr>
+			</item>
+		
+		</mapColor>
+		<!--  meredek sziklak -->
+		<mapColor rgb="646464" type="room" mapType="sziklafal" SPLost="4" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Törmelékes sziklalejtő">
+				<descr>A meredek hegyoldalt laza kőtörmelék borítja, amely minden lépésre megcsúszik. A napfény erősen visszaverődik a világos kövekről, és vakító csillanásokkal játszik. Növényzet alig van, csak néhány száraz fűcsomó kapaszkodik az árnyékosabb repedésekben.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Sötétlő kőomlásos lejtő">
+				<descr>Ahogy a nap lemegy, a sziklalejtő árnyékba borul. A kövek szinte feketének tűnnek, és minden lépés visszhangzik a csendben. A mélyedések sötéten ásítanak, és a lejtő veszélyesnek hat a gyér fényben.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Kövek gördülése">
+				<descr>Minden mozdulatra apró kavicsok és sziklák csúsznak lefelé, kattanva egymáshoz ütődve. Néha távolról egy-egy nagyobb kő is megindul.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Száraz, poros levegő">
+				<descr>A levegő száraz, a kövek porától kissé fojtó, és enyhe fémes illatot hordoz.</descr>
+			</stimulus>
+			<item>
+				<name targy="a köveket">kő</name>
+				<name targy="a követ">kő</name>
+				<descr>Különféle méretű sziklák borítják a lejtőt, némelyik lapos, másik éles és szilánkos.</descr>
+			</item>
+			<item>
+				<name targy="a repedéseket">repedés</name>
+				<name targy="a repedést">repedés</name>
+				<descr>Mély hasadékok futnak a sziklák között, néhol csak egy tenyérnyi, máshol elnyelhet egy lábat is.</descr>
+			</item>
+			<item>
+				<name targy="a fűcsomókat">fűcsomó</name>
+				<name targy="a fűcsomót">fűcsomó</name>
+				<descr>Száraz, sárgás fűcsomók próbálnak megkapaszkodni a kövek között, a túlélés határán.</descr>
+			</item>
+		
+		</mapColor>
+		<mapColor rgb="656565" type="room" mapType="sziklafal" SPLost="4" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Kietlen sziklafal">
+				<descr>A hegyoldal kőből épül fel, a sziklafal szabálytalan alakjaival fenyegetően magasodik. A nap árnyékokat vet a mélyedésekbe, még nappal is baljós hangulatot kölcsönözve a tájnak.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Komor sziklaperem">
+				<descr>Az este leple alatt a hegyoldal sötéten tornyosul. A kőfelületek alig kivehetők, a repedések mélynek és feneketlennek tűnnek. A környék kihaltnak és fenyegetőnek hat.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Mély csend, köztük koppanások">
+				<descr>Időnként egy-egy apró kavics koppanása hallatszik, ahogy legurul a lejtőn. Egyébként csend honol, csak saját lépteid zaja kísér.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Hűvös kőszag">
+				<descr>A levegő hűvös és tiszta, és érezni lehet benne a nyers kő és a föld illatát.</descr>
+			</stimulus>
+			<item>
+				<name targy="a sziklafalat">sziklafal</name>
+				<name targy="a sziklafalat">szikla</name>
+				<descr>A hegyoldal egyik oldala meredek, egybefüggő sziklafalban folytatódik, amit csak kevés hasadék szabdal.</descr>
+			</item>
+			<item>
+				<name targy="az árnyékokat">árnyékok</name>
+				<name targy="az árnyékot">árnyék</name>
+				<descr>Az árnyékok mélyek és mozdulatlanok, sokkal sötétebbnek tűnnek, mint amit a fény igazolna.</descr>
+			</item>
+			<item>
+				<name targy="a repedéseket">repedés</name>
+				<descr>Szabálytalan repedések futnak végig a kőzeten, egyesek csak pár centisek, mások szélesek és mélyek.</descr>
+			</item>
+		
+		</mapColor>
+		<mapColor rgb="666666" type="room" mapType="sziklafal" SPLost="4" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Törmelékes sziklalejtő">
+				<descr>A meredek hegyoldalt laza kőtörmelék borítja, amely minden lépésre megcsúszik. A napfény erősen visszaverődik a világos kövekről, és vakító csillanásokkal játszik. Növényzet alig van, csak néhány száraz fűcsomó kapaszkodik az árnyékosabb repedésekben.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Sötétlő kőomlásos lejtő">
+				<descr>Ahogy a nap lemegy, a sziklalejtő árnyékba borul. A kövek szinte feketének tűnnek, és minden lépés visszhangzik a csendben. A mélyedések sötéten ásítanak, és a lejtő veszélyesnek hat a gyér fényben.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Kövek gördülése">
+				<descr>Minden mozdulatra apró kavicsok és sziklák csúsznak lefelé, kattanva egymáshoz ütődve. Néha távolról egy-egy nagyobb kő is megindul.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Száraz, poros levegő">
+				<descr>A levegő száraz, a kövek porától kissé fojtó, és enyhe fémes illatot hordoz.</descr>
+			</stimulus>
+			<item>
+				<name targy="a köveket">kő</name>
+				<name targy="a követ">kő</name>
+				<descr>Különféle méretű sziklák borítják a lejtőt, némelyik lapos, másik éles és szilánkos.</descr>
+			</item>
+			<item>
+				<name targy="a repedéseket">repedés</name>
+				<name targy="a repedést">repedés</name>
+				<descr>Mély hasadékok futnak a sziklák között, néhol csak egy tenyérnyi, máshol elnyelhet egy lábat is.</descr>
+			</item>
+			<item>
+				<name targy="a fűcsomókat">fűcsomók</name>
+				<name targy="a fűcsomót">fűcsomó</name>
+				<descr>Száraz, sárgás fűcsomók próbálnak megkapaszkodni a kövek között, a túlélés határán.</descr>
+			</item>
+		
+		</mapColor>
+		<mapColor rgb="676767" type="room" mapType="sziklafal" SPLost="4" isWater="false">
+			<stimulus type="latas" condition="nappal" shortDescr="Sziklás lejtő gyér növényzettel">
+				<descr>A meredek hegyoldalt kisebb-nagyobb sziklák és ritkás növényzet borítja. A fű foltokban nő, itt-ott egy-egy bokor próbál megkapaszkodni. A kövek kopottak, mintha az idő koptatta volna őket évszázadok alatt simára.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Félhomályos hegyoldal">
+				<descr>Az esti félhomályban a sziklák sziluettjei komoran rajzolódnak ki. A növényzet árnyékká válik, és a meredek lejtő baljósnak tűnik. A sötétségben minden részlet elveszik.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Szél a kövek között">
+				<descr>A szél suhan a sziklák között, néha megzörgetve a bokrokat vagy megmozgatva a kövek porát.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Földes, köves illat">
+				<descr>A levegő enyhén földes, poros, és a kőfelszínekről visszaverődő nap melege is különös illatot hoz magával.</descr>
+			</stimulus>
+			<item>
+				<name targy="a köveket">kő</name>
+				<descr>Kopott, szürkés sziklák borítják a lejtőt, néhányon zöldes moha is megtelepedett.</descr>
+			</item>
+			<item>
+				<name targy="a bokrokat">bokor</name>
+				<descr>Kicsi, göcsörtös bokrok próbálnak gyökeret verni a sziklák között. Ágai szárazak, levelei szúrósak.</descr>
+			</item>
+			<item>
+				<name targy="a fűcsomókat">fűcsomó</name>
+				<descr>A fűcsomók sárgásak, ritkásan nőnek, és erősen kapaszkodnak a sziklás talajba.</descr>
+			</item>
+		</mapColor>
 	</map>
 	<map mapType="rivers" file="river.png">
 		<!--  er -->
-		<mapColor rgb="14c8b9" type="overlay" mapType="folyo" mapSubType="er"/>
-		<mapColor rgb="1b81c8" type="overlay" mapType="folyo" mapSubType="patak"/>
-		<mapColor rgb="001cf2" type="overlay" mapType="folyo" mapSubType="folyo"/>
-		<mapColor rgb="000063" type="overlay" mapType="folyo" mapSubType="folyam"/>
+		<mapColor rgb="14c8b9" type="overlay" mapType="folyo" mapSubType="er">
+			<stimulus type="latas" condition="nappal" shortDescr="Keskeny ér">
+				<descr>A vékony ér alig szélesebb egy tenyérnél, de élénken kanyarog a talajban. A napfény apró tükröződéseket vet a felszínére.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Sötét ér">
+				<descr>Az éj sötétjében csak halk nedvességsejtés utal az ér jelenlétére, fény hiányában alig látszik, csak a neszek árulják el.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Szinte nesztelen csordogálás">
+				<descr>Az ér finoman csörgedez, olykor megakad egy fűcsomóban, majd továbbcsorog a földön.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Földnedves illat">
+				<descr>Az ér mentén a föld nedves, illata nyirkosan, életillatúan árad a levegőbe.</descr>
+			</stimulus>
+			<item>
+				<name targy="az ércsíkot">ér</name>
+				<descr>Az ér vékony vízszalagként szeli át a tájat, egyes helyeken el is tűnik a fű között.</descr>
+			</item>
+			<item>
+				<name targy="a vízpartot">vízpart</name>
+				<descr>Az ér szélei mentén sötétebb a föld, apró növények kapaszkodnak a nedves talajba.</descr>
+			</item>
+			<item>
+				<name targy="a fűcsomókat">fűcsomó</name>
+				<descr>A fű magasabbra nő az ér közelében, némelyik bele is lóg a vízbe.</descr>
+			</item>
+		</mapColor>
+		<mapColor rgb="1b81c8" type="overlay" mapType="folyo" mapSubType="patak">
+			<stimulus type="latas" condition="nappal" shortDescr="Csobogó patak">
+				<descr>A sekély patak tiszta vizében kavicsok csillognak, és a napfény játékosan csillan a vízfelszínen. A víz lassan, de állandóan áramlik lefelé a kövek között.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Sötétlő patakmeder">
+				<descr>Az esti félhomályban a patak csillogása elhalványul, de a víz mozgása továbbra is észlelhető. A sötét vízfelszínen tükröződnek a csillagok és a hold fénye.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Finom csobogás">
+				<descr>A víz halk csobogása nyugtató hangként tölti be a környéket, ritmikusan kopog a kavicsokon és köveken.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Friss, vízpárás levegő">
+				<descr>A levegőt frissesség lengi be: a patak vizéből felszálló enyhe vízpára és az átázott föld illata keveredik.</descr>
+			</stimulus>
+			<item>
+				<name targy="a patakot">patak</name>
+				<descr>A patak sekély és tiszta, hűvös vize megállás nélkül folyik a kövek között. Vizét akár inni is lehetne.</descr>
+			</item>
+			<item>
+				<name targy="a kavicsokat">kavics</name>
+				<descr>A vízfenéken sima, különböző színű kavicsok hevernek, a víz folyamatosan simogatja őket.</descr>
+			</item>
+			<item>
+				<name targy="a vízfelszínt">vízfelszín</name>
+				<descr>A felszínen apró hullámok játszanak, ahogy a víz a köveken átcsordul. A nap vagy a hold fénye táncol rajta.</descr>
+			</item>
+		</mapColor>
+		<mapColor rgb="001cf2" type="overlay" mapType="folyo" mapSubType="folyo">
+			<stimulus type="latas" condition="nappal" shortDescr="Széles folyó">
+				<descr>A folyó lassan, de erőteljesen hömpölyög, vizének felszíne szélesen csillog a napfényben. A túlpart gyakran csak homályosan látszik.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Komor víztömeg">
+				<descr>Sötét hullámok ringanak a folyón, melynek morajlása az éj csendjében még fenyegetőbb. A hold fénye ezüst csíkot húz a vízen.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Mély áramlás moraja">
+				<descr>A folyó hangja mély és folyamatos, zúgása betölti a környező vidéket, időnként nagyobb kövek csobbanását is hallani.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Vizes, algás illat">
+				<descr>A vízből algás, kissé nyálkás illat árad, amit a part menti növényzet zöld, élő illata kísér.</descr>
+			</stimulus>
+			<item>
+				<name targy="a folyót">folyó</name>
+				<descr>A folyó mély és sodrása erős. A part mentén örvények és hullámok mutatják, mennyire élő és veszélyes lehet.</descr>
+			</item>
+			<item>
+				<name targy="a hullámokat">hullám</name>
+				<descr>A hullámok lágyan, de erőteljesen sodródnak, néha megcsapják a partot vagy nekicsapódnak egy sziklának.</descr>
+			</item>
+			<item>
+				<name targy="a sodrást">sodrás</name>
+				<descr>A sodrás kiszámíthatatlan, néhol erősebb, máshol örvényeket kavar. A víz ereje érződik a felszín mozgásán.</descr>
+			</item>
+		</mapColor>
+		<mapColor rgb="000063" type="overlay" mapType="folyo" mapSubType="folyam">
+			<stimulus type="latas" condition="nappal" shortDescr="Széles, méltóságteljes folyam">
+				<descr>A folyam méltóságteljesen hömpölyög, szélessége lenyűgöző. A víztükör szinte sima, csak ritkán fodrozódik, mint egy tükör.</descr>
+			</stimulus>
+			<stimulus type="latas" condition="este" shortDescr="Fényes víztükör">
+				<descr>Éjszaka a folyam mozdulatlan sötét tükörként terül el. A csillagok és a hold fénye megcsillan a felületén, szinte megidézve az eget.</descr>
+			</stimulus>
+			<stimulus type="hallas" intensity="50" shortDescr="Lassú, mély zúgás">
+				<descr>A folyam mély, tompa hangot ad, lassan hömpölyög, mintha nem sietne sehová. A víz súlya hallható benne.</descr>
+			</stimulus>
+			<stimulus type="szaglas" intensity="50" shortDescr="Nehéz vízillat">
+				<descr>A levegőben sűrű, párás vízillat terjeng, mélyebb és nehezebb, mint a patakoké vagy ereké. Érezni benne a víztömeg erejét.</descr>
+			</stimulus>
+			<item>
+				<name targy="a folyamot">folyam</name>
+				<descr>Hatalmas víztömeg hömpölyög állandóan, szélessége szinte átláthatatlan. A partjáról csak tisztelettel lehet nézni.</descr>
+			</item>
+			<item>
+				<name targy="a partot">part</name>
+				<descr>A folyam partja lankás, de sűrűn benőtt. A nedves földet időnként eléri egy-egy hullám.</descr>
+			</item>
+			<item>
+				<name targy="a tükröződést">tükröződés</name>
+				<descr>A vízfelszín csillogása visszaveri az eget és a fényeket, nappal és éjjel is más-más arcát mutatja.</descr>
+			</item>
+		</mapColor>
 	</map>
-	 
+	
 	<mapAddon x="300" y="250" displayType="osveny">
 		<exit direction="ösvény" destination="@Tunderfalu1/falu1_0_2" notice="50"/>
-		<stimulus type="latas" intensity="0" shortDescr="Egy ösvényen állsz." condition="nappal">
+		<stimulus type="latas" shortDescr="Egy ösvényen állsz." condition="nappal">
 			<descr>Egy ösvény tünik el a fák között</descr>
 		</stimulus>
 		<stimulus type="latas" source="20" intensity="0" shortDescr="Egy ösvényen állsz." condition="este">
@@ -188,6 +1444,6 @@
 	<!-- 
 	fovaros, 252|118
 	-->
-	<city x="252" y="118" eszak="@Fovaros/fovaros_3_1" eszakkelet="@Fovaros/fovaros_2_116" kelet="@Fovaros/fovaros_4_59" delkelet="@Fovaros/fovaros_4_47" del="@Fovaros/fovaros_4_16" delnyugat="@Fovaros/fovaros_1_72" nyugat="@Fovaros/fovaros_3_146" eszaknyugat="@Fovaros/fovaros_3_151"/> 
+	<city x="252" y="118" eszak="@Fovaros/fovaros_3_1" eszakkelet="@Fovaros/fovaros_2_116" kelet="@Fovaros/fovaros_4_59" delkelet="@Fovaros/fovaros_4_47" del="@Fovaros/fovaros_4_16" delnyugat="@Fovaros/fovaros_1_72" nyugat="@Fovaros/fovaros_3_146" eszaknyugat="@Fovaros/fovaros_3_151"/>
 
 </Plane>

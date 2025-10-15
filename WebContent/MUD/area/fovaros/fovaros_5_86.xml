@@ -1,12 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_86" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_71"/>
-<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_1_94"/>
-<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_6"/>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_87"/>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_7"/>
-<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_8"/>
+	<stimulus condition="nappal" shortDescr="Piac keleti széle – fegyverkovácsok" intensity="0" type="latas">
+		<descr>A piactér keleti szélén masszív, fémkeretes standok sorakoznak. Fegyver- és páncélkovácsok állítják ki portékáikat: csillogó pengék, láncingek és sisakok csillannak meg a napfényben. A közeli sikátor északkelet felé vezet, árnyas nyílásként hívogat. A standok mögül időnként szikra pattan, ahogy az egyik kovács még nap közben is dolgozik.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Piac keleti széle – fegyverkovácsok" source="30" type="latas">
+		<descr>Sötétedés után a kandelláberek fénye megcsillan a kiállított fegyverek élén, és hideg fényt vet a páncélokra. A legtöbb kovács már elpakolt, de néhány mágikus portékát őrző árus még kitart. A sikátor sötét nyílása titokzatosan ásít a keleti falnál, mintha figyelne.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Kovácsolás és fémzajok">
+		<descr>Ütlegelés, kalapácsok csattanása és csikorgó fémsúrlódás tölti be a levegőt. Néha egy-egy árus harsányan dicséri kardjait vagy sisakjait a bámészkodóknak.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Csendes fémcsengés, halk beszéd">
+		<descr>A kovácsolás zaja este elcsendesül, de néha még hallani egy éles penge hangját, ahogy valaki próbálja annak egyensúlyát. Egyes árusok halkan beszélgetnek vagy alkudoznak az utolsó vevőkkel.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Fém és olajszag">
+		<descr>A levegőben a kovácsolás szaga terjeng – forróság, fém és gépolaj keveréke, amit néhol az égett bőr és szenesedett fa enyhe illata egészít ki.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="szaglas" intensity="30" shortDescr="Fémmaradvány és hideg olaj">
+		<descr>Estére a szagok visszafogottabbá válnak, de még mindig érezhető a fém és olaj maradványillata, mintha a kövezetbe ivódott volna a munka nyoma.</descr>
+	</stimulus>
+
+	<stimulus type="magia" intensity="20" shortDescr="Gyenge mágikus rezgések a fegyverekből">
+		<descr>Az egyik kiállított kardból finom, vibráló energia árad, mintha halkan zümmögne a levegő. Csak az érzékenyebbek veszik észre, de jelen van – figyel és vár.</descr>
+	</stimulus>
+
+	<stimulus type="magia" intensity="40" shortDescr="Közepes mágikus aura páncélon">
+		<descr>Az egyik láncing sűrűn szőtt szemei között pulzáló mágikus aura lappang. Védelmező varázs lengi körül, amely határozott jelenlétet sugall, még akkor is, ha nem szólítják meg.</descr>
+	</stimulus>
+
+	<stimulus type="magia" intensity="70" shortDescr="Erős mágikus jelenlét egy rejtett fegyverben">
+		<descr>Egy takaró alá rejtett, eladóként nem is hirdetett penge különösen erős mágikus rezgést bocsát ki – nyugtalanító, izzó aura öleli körül. Még távolról is érezni a hatását, mintha valami veszélyes dolog lenne benne elzárva.</descr>
+	</stimulus>
+
+
+	<item>
+		<name targy="a fegyvereket">fegyverek</name>
+		<name targy="a fegyvert">fegyver</name>
+		<description>Rendezett sorban fekszenek a különböző kardok, tőrök, buzogányok és harci bárdok. Egyesek egyszerű, mások díszes markolattal és idegen rúnákkal ellátott pengék.</description>
+	</item>
+	<item>
+		<name targy="a páncélokat">páncélok</name>
+		<name targy="a páncélokat">páncél</name>
+		<description>Láncingek, mellvértek és sisakok állnak kitéve fapadjakon vagy állványokon. Némelyiken díszítés vagy különleges zománc utal mágikus eredetre.</description>
+	</item>
+	<item>
+		<name targy="a sikátort">sikátor</name>
+		<description>A keleti piactér végéből indul egy keskeny, északkelet felé vezető sikátor. Árnyékos, kanyargós, falai mentén hordók és ládák állnak, mintha régóta nem mozdították volna őket.</description>
+	</item>
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>Magas, kovácsoltvas oszlop, amely esténként tompa, sárga fénnyel világítja meg a fegyverek élét. Árnyéka groteszk formákat vet a standokra és a sikátor bejáratára.</description>
+	</item>
+	<item>
+		<name targy="a mágikus láncinget">láncing</name>
+		<description>Ez a páncél nem különbözik sokban a többitől, de közelebb hajolva finom derengés látszik a szemei között. Mintha halk, belső ritmusban pulzálna valami élet az anyag mélyén.</description>
+	</item>
+
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_71"/>
+	<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_1_94"/>
+	<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_6"/>
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_87"/>
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_7"/>
+	<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_8"/>
 </Room>

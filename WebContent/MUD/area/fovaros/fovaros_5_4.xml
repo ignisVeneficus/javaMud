@@ -1,12 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_4" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_3_3"/>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_89"/>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_5"/>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_90"/>
-<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_91"/>
-<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_88"/>
+	
+	<stimulus condition="este" shortDescr="Piac északi része" source="30" type="latas">
+		<descr>A naplemente után a tér csendesebb, de néhány árus még mindig ott marad, petróleumlámpáik sápadt fényénél kínálva portékáikat. A városfal sötét tömbként tornyosul északon, árnyéka elnyeli az utca zaját. A körút kelet-nyugati vonala még ekkor is forgalmas, kocsik zörögnek és gyalogosok suhannak el. A sugárút mentén ritkásan elhelyezett kandelláberek derengő fénye világítja meg az egyre ritkuló forgatagot, míg a távolban sejtelmesen dereng a városkapu boltíve.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" shortDescr="Piac északi vége" intensity="0" type="latas">
+		<descr>A piac északi végében találkozik a kelet–nyugati körút és az észak–déli sugárút, így ez a rész különösen mozgalmas. Földművesek és parasztok standjai között sietve haladnak az utazók, akik a városkapu felé tartanak. Az árusok itt is zsúfoltan sorakoznak, kosarakból és kordékról kínálják terményeiket. A városfal impozáns látványt nyújt északon, mögötte a kapu íve magasodik a belépőkre várva.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Forgalmas csomópont zaja">
+		<descr>A két főút kereszteződése miatt állandó zsivaj tölti be a teret – kerekek csattognak a köveken, emberek kiabálnak, kereskedők alkudoznak, vándorok kiáltanak egymásnak.</descr>
+	</stimulus>
+	<stimulus condition="nappal" type="hallas" intensity="40" shortDescr="Árusok kínálgatása">
+		<descr>„Friss tojás! Érett alma! Csak ma ennyiért!” – hallatszik több stand felől, egyszerre több hangon.</descr>
+	</stimulus>
+	<stimulus condition="este" type="hallas" intensity="40" shortDescr="Nyugvó piac zaja">
+		<descr>Bár sok árus már elpakolt, a városkapunál még érkeznek emberek – halk beszélgetések, paták kopogása, és egy távoli dalfoszlány hallatszik.</descr>
+	</stimulus>
+	<stimulus condition="este" type="hallas" intensity="20" shortDescr="Léptek a köveken">
+		<descr>Lassú léptek visszhangzanak a nedves macskaköveken, ahogy az utolsó vásárlók távoznak a kapu felé.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="szaglas" intensity="60" shortDescr="Friss termények és por">
+		<descr>A levegőt a frissen kihúzott zöldségek nyers illata, istállószag, és a nap által felkavart városi por keveréke tölti be.</descr>
+	</stimulus>
+	<stimulus condition="nappal" type="szaglas" intensity="40" shortDescr="Büdős hagymaszag">
+		<descr>Valaki rendesen bereggelizett hagymával.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="szaglas" intensity="40" shortDescr="Hűvös, földes illat">
+		<descr>Az esti párával együtt átható földszag és gyümölcsös illat ül meg a piacon, amelyet a köveken lerakódott por tompít kissé.</descr>
+	</stimulus>
+	
+	<stimulus type="magia" intensity="30" shortDescr="Ősi védelem rezgései">
+		<descr>A városkapu közelében halvány, szinte észrevehetetlen mágikus rezgés érzékelhető – a védelem és a belépés szabályait őrző varázslat ősi maradványai.</descr>
+	</stimulus>
+	
+	
+	<item>
+		<name targy="a standot">stand</name>
+		<description>A rozoga faasztalon kis zsákokban hagyma, retek és zöldborsó sorakozik, néhány kosárban tyúktojásokkal és szalmakalappal megspékelve.</description>
+	</item>
+	<item>
+		<name targy="a kordét">kordé</name>
+		<description>Fából ácsolt kézikordé, oldalára krétával írt árak kerültek, a platón egy zsák burgonya és egy csokor sárgarépa hever.</description>
+	</item>
+	<item>
+		<name targy="a kaput">kapu</name>
+		<description>A városkapu boltíve alatt emberek jönnek-mennek. Vastag faajtói nyitva állnak, de a sarkukban látható a régi vasalás és védelmi rúnák nyoma.</description>
+	</item>
+	<item>
+		<name targy="a falat">fal</name>
+		<description>A városfal északi része itt különösen magas és zömök, felszínén karcolások és őrségi jelek figyelhetők meg.</description>
+	</item>
+	<item>
+		<name targy="az útkereszteződést">útkereszteződés</name>
+		<description>Itt találkozik a kelet–nyugati körút és az észak–déli sugárút, a kövek meg vannak koptatva a sok évtizedes forgalomtól.</description>
+	</item>
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<name targy="a lámpát">lámpa</name>
+		<description>Az öntöttvas kandelláber vékony oszlopa tetején sárgás fényű lámpás pislákol. A lángot üveg búra óvja a széltől, és halk ropogása valami otthonos melegséget áraszt az éjszakai forgatagban.</description>
+	</item>
+	
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_3_3"/>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_89"/>
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_5"/>
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_90"/>
+	<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_91"/>
+	<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_88"/>
 </Room>

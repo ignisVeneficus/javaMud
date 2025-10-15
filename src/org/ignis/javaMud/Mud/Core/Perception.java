@@ -40,6 +40,7 @@ public class Perception {
 	 * @return
 	 */
 	public static int test(Sense sense, int environment, int stimulus) {
+		LOG.trace("sense: " + sense + " env: "+ environment+ " stimulus: " + stimulus);
 		int type = sense.getPerceptionType();
 		int m = sense.getMean();
 		int v = sense.getValue();

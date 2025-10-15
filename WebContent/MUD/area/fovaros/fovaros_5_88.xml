@@ -1,12 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_88" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_87"/>
-<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_4"/>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_99"/>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_89"/>
-<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_6"/>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_5"/>
+	<stimulus condition="nappal" shortDescr="Piac keleti része" intensity="0" type="latas">
+		<descr>A piactér keleti felén bolhapiac-szerű nyüzsgés fogad: kopottas standok sorakoznak kuszán, egymás hegyén-hátán. Egyes asztalokon régi edények, kopott könyvek vagy megfakult ruhák sorakoznak, míg máshol gondosan rendezett hangszerek csillannak meg a napfényben. Kelet felé egy díszes épület zárja le a teret: a bárdok céhének otthona, faragott oszlopaival és üvegablakaival kitűnik a háttérből. A kandelláberek még sötéten állnak, de a rendet és utcai hangulatot nappal is meghatározzák.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Piac keleti része" source="30" type="latas">
+		<descr>Az est leszálltával a bolhapiac kiürül, de néhány elárvult stand még ott marad. A kandelláberek meleg fényudvarai között árnyak húzódnak meg. Kelet felől halvány fények derengenek a bárdok céhépületének színes üvegablakain át. Az egyik sötét sarokból halk zene szűrődik elő: valaki lantot penget, a hangok megülnek a tér levegőjében. A kopott asztalokon megcsillan a fém és lakkozott fa, a napfény helyét most a mesterséges világítás veszi át.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="60" shortDescr="Alkudozás és zsongás">
+		<descr>Hangos szóváltások, nevetés, gyerekzsivaj és a bolhapiac szokásos lármája tölti meg a teret. Egy-egy hangszer is megszólal próbaképp.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="hallas" intensity="40" shortDescr="Lágy zeneszó és halk beszélgetés">
+		<descr>Valaki lágyan penget egy lantot, a hangok időnként énekszóval keverednek. A standok között halk suttogás hallatszik, mintha történeteket mesélnének egymásnak az árnyékban.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="szaglas" intensity="40" shortDescr="Régi tárgyak poros szaga">
+		<descr>Megfakult könyvek, kopott ruhák és régi fa hangszerek poros illata keveredik a föld és szalma szagával.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="szaglas" intensity="40" shortDescr="Nyirkos fa és gyenge füstillat">
+		<descr>Az est hűvös levegője nyirkosan üli meg a tárgyakat, a fa hangszerek lakkozott illata halvány füstszaggal keveredik a környező házakból.</descr>
+	</stimulus>
+
+	<stimulus type="magia" intensity="30" shortDescr="Lágy mágikus rezgés">
+		<descr>A bárdok céhéből áradó finom mágikus rezgés érződik: nem erőteljes, inkább megnyugtató és inspiráló, mintha a levegőbe zene lenne szőve.</descr>
+	</stimulus>
+
+	<item>
+		<name targy="a hangszerstandot">hangszerstand</name>
+		<name targy="a standot">stand</name>
+		<description>Kopott, de gondosan rendben tartott asztal, rajta különféle hangszerek: lant, síp, dob és furcsa húros tárgyak. Egyesek lakkozottak, mások kopottak.</description>
+	</item>
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>Öntöttvas utcai lámpa, amely este meleg fénykörrel világítja meg a bolhapiac szélét és a díszes céhépület előtti kövezetet.</description>
+	</item>
+	<item>
+		<name targy="a épületet">épület</name>
+		<name targy="a céhépületet">céhépület</name>
+		<description>A bárdok céhének épülete. Díszes, többszintes épület színes üvegablakokkal, faragott homlokzattal és kőből rakott oszlopokkal. Mágia és művészet szimbólumai díszítik.</description>
+	</item>
+	<item>
+		<name targy="a lantot">lant</name>
+		<description>Finoman megmunkált hangszer, sima fa testtel és feszített húrokkal. Esténként valaki játékba hozza, lágy dallamokat csalva elő belőle.</description>
+	</item>
+
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_87"/>
+	<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_4"/>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_99"/>
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_89"/>
+	<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_6"/>
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_5"/>
 </Room>

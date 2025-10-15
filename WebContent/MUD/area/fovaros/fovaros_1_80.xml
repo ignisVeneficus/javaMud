@@ -1,8 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="1_80" intensity="0" type="latas">
-<descr>DUMMY szoveg - Óváros - Folyó</descr>
-</stimulus>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_78"/>
-<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_1_9"/>
+	<stimulus condition="nappal" shortDescr="Folyó kanyarulata – nappal" intensity="0" type="latas">
+		<descr>A folyó itt éles ívben kanyarodik kelet felől dél felé, széles medre kővel kirakott, szabályos partfallal szegélyezett. A keskeny gyalogút a kanyar ívét követve fut a víz mellett, az egyik oldalon magas, árnyékot vető házfalak kísérik. A keleti irányban egy masszív kőhíd ível át a víz felett, míg dél felé egy kisebb, faszerkezetű gyaloghíd látható. A part mentén pár csónak billeg a kikötőbakokhoz kötve.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Folyó kanyarulata – este" intensity="0" type="latas">
+		<descr>A naplemente után a kanyarulatot mély árnyékba borítják a környező házak. A gyalogút mentén csak néhány mécses pislákol az ablakokból. A folyó vizén tompa tükröződések csillognak, a csónakok sötét sziluettje a vízen lebeg. A kőhíd és a fa gyaloghíd sziluettje szinte egybeolvad az éjszakával.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Vízcsobogás és városi háttérzaj">
+		<descr>A víz halk csobogása folyamatosan hallható, ahogy a folyó átfolyik a kőmedren. A közeli kőhíd felől néha paták dobogása vagy kerekek zörgése hallatszik. A házak mögül a város morajlása szűrődik át tompán.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Csónakok nyikorgása és vízcsobbanás">
+		<descr>Éjszaka a zajok lecsendesülnek. A csónakok halkan ringatóznak, néha nyikordul a kötél, egy-egy csobbanás szeli át a vizet. Távolról néha kutyaugatás vagy emberi hang hallatszik vissza a kőfalakról.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Vízi és városi illatok keveréke">
+		<descr>A folyó enyhén algás, vizes illata keveredik a városi levegő szagával: por, égetett fa és főzés aromái szállnak az ablakokból a víz fölé.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Hűvös nedvesség és dohos kőszag">
+		<descr>Az est hűvös levegője felerősíti a folyóparti nedvesség és a mohás kőszag illatát. A kikötött csónakok körül olajos, enyhén halszagú levegő terjeng.</descr>
+	</stimulus>
+
+
+	<item>
+		<name targy="a folyót">folyó</name>
+		<description>A folyó íve elegáns, mozgása nyugodt és méltóságteljes. A kőmeder szabályosan megépített, de a természet még mindig uralja a vizet.</description>
+	</item>
+	<item>
+		<name targy="a gyalogutat">gyalogút</name>
+		<name targy="a gyalogutat">út</name>
+		<description>A keskeny kőlapos gyalogút a part mentén kanyarog, néhol mohás, máshol tiszta, de mindig gondosan megépített.</description>
+	</item>
+	<item>
+		<name targy="a csónakot">csónak</name>
+		<name targy="a csónakokat">csónakok</name>
+		<description>A kikötött csónakok különféle állapotban vannak: egyesek festettek, mások kopottak, de mindet sűrű kötelek tartják a kőbakokhoz rögzítve.</description>
+	</item>
+	<item>
+		<name targy="a kőhidat">kőhíd</name>
+		<description>A kelet felől átívelő híd a város egyik legforgalmasabb átjárója. Kőívei szilárdak, és a híd alá húzódik a folyó lassú sodrása.</description>
+	</item>
+	<item>
+		<name targy="a fahidat">fahíd</name>
+		<description>Dél felé egy kisebb fahíd ível át a folyón. Korlátjai kopottak, de stabilak, a városlakók gyakran használják rövidebb átkelésre.</description>
+	</item>
+	<item>
+		<name targy="a házakat">házak</name>
+		<description>A folyó mindkét oldalán magas, többemeletes városi házak tornyosulnak. Ablakaikból időnként füst vagy zene szűrődik ki.</description>
+	</item>
+
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_78"/>
+	<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_1_9"/>
 </Room>

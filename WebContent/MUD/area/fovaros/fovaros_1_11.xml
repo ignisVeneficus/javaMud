@@ -1,9 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="1_11" intensity="0" type="latas">
-<descr>DUMMY szoveg - Óváros - </descr>
-</stimulus>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_1_10"/>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_12"/>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_1_78"/>
+	<stimulus condition="nappal" shortDescr="Keskeny utcaszakasz házakkal és hordóval" intensity="0" type="latas">
+		<descr>A sugárút egyre keskenyebb, ahogy déli irányban halad. A nyugatról csatlakozó mellékutcából gyereknevetés hallatszik. Az egyik régi házfalon halvány falfirka tűnik fel, alatta egy félig vízzel teli hordó áll, falevelekkel a tetején. A falak repedezett vakolata alatt kődarabok kandikálnak ki.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Sötét utca kandelláberekkel" source="30" type="latas">
+		<descr>A kandelláberek sárgás fénykúpjai alatt a házak sötét kontúrjai merednek az égre. A kovácsoltvas oszlopok csendesen derengő fénye megvilágítja a házfalat és a hordót, amelyben a víz tükröződése megcsillan. Az utca szélén falevelek gyűlnek össze.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" shortDescr="Gyereknevetés és madárcsicsergés" intensity="50" type="hallas">
+		<descr>A mellékutcából gyereknevetés hallatszik, a háztetőkön verebek csiripelnek, néha egy macska nyávogása is felhangzik.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Csepegő víz és távoli suttogás" intensity="50" type="hallas">
+		<descr>Éjjel a hordóból időnként csepp hangja pattan ki, távolabb neszezés és suttogás hallatszik – ki tudja, csak a szél, vagy valaki tényleg ott van?</descr>
+	</stimulus>
+
+	<stimulus shortDescr="Por és dohszag a kövek között" intensity="50" type="szaglas">
+		<descr>A levegőben enyhe por és nedves kőszag érződik, ahogy a napsütés melegíti a régi házfalakat és a járdát. A hordó közelében áporodott vízszag terjeng.</descr>
+	</stimulus>
+
+	<item>
+		<name targy="a házfalat">házfal</name>
+		<name targy="a házfalat">fal</name>
+		<description>A házfal régi, repedezett vakolata alatt néhol előtűnnek a durva kövek. Az egyik falon halvány falfirka maradványai láthatók – nehezen olvasható, valami régi, talán vicces vagy gúnyos sorral.</description>
+	</item>
+
+	<item>
+		<name targy="a hordót">hordó</name>
+		<description>Az egyik házfal mellett egy elhagyott hordó áll, félig vízzel teli, tetején falevelek lebegnek. Némi rozsdás szeg és egy törött kanál hever a közelében.</description>
+	</item>
+
+	<item>
+		<name targy="a falfirkát">falfirka</name>
+		<description>Makacsul megmaradt, régi felirat a házfalon – valószínűleg egy gúnyos, trágár szöveg, ami a bardokat célozza, és mágikus próbálkozás ellenére sem sikerült teljesen eltávolítani.</description>
+	</item>
+
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>Kovácsoltvasból készült világítóoszlop, amely este sárgás fénykúppal deríti be az utcát. A fénye enyhe mágikus rezgést áraszt, amely megnyugtatóan hat a járókelőkre.</description>
+	</item>
+
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_1_10"/>
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_12"/>
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_1_78"/>
 </Room>

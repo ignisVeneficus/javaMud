@@ -1,11 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_87" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_86"/>
-<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_5"/>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_88"/>
-<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_7"/>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_6"/>
+	<stimulus condition="nappal" shortDescr="Piac keleti széle" intensity="0" type="latas">
+		<descr>A keleti szélén a piacnak színes kelmék lengenek a standok fölött, árnyékot adva a portékákat böngészőknek. A vásznak, selymek és gyapjúk tekercsekbe rendezve sorakoznak a pultokon, sok helyütt kifeszítve csillognak a napfényben. A háttérben, a keleti épületek között mintha néhány műhely is rejtőzne. Az emberek közel hajolnak, simogatják az anyagokat, alkudoznak, méregetnek.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Piac keleti széle" source="30" type="latas">
+		<descr>Estére a kelméket lefedik vagy feltekerik, de néhány stand még mindig nyitva tart. A kandelláberek sárga fényében a szövetek halványan fénylenek, az árusok halkan beszélgetnek vagy rendezkednek. A keleti házak sötét homlokzatai árnyékot vetnek a tér szélére, de a piaci hangulat itt is érzékelhető marad.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Alkudozás és vásári zsivaj">
+		<descr>Az árusok és vevők élénk hangon alkudoznak, serceg a mérleg, suhog a szövet, néha gyereknevetés vagy egy csomagoló pergamen zizegése hallatszik.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="hallas" intensity="45" shortDescr="Halk beszélgetés és lépések">
+		<descr>Este a hangok elhalkulnak – pár szófoszlány, halk sóhaj, csomagoló anyag susogása, ahogy a megmaradt portékát elrakják.</descr>
+	</stimulus>
+	<stimulus condition="este" type="hallas" intensity="55" shortDescr="Fémcsörömpölés">
+		<descr>	Fémcsörömpölés – talán egy kés vagy serpenyő hullott le.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Frissen festett kelmék és por">
+		<descr>A levegőben enyhe festékszag keveredik az anyagokkal és a poros faasztalok illatával. Némelyik selyem egzotikus fűszereket idéző illatot is áraszt.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Kelme és por nyomai">
+		<descr>Az illatok már tompábbak, de még érezhető a szövetek anyagának jellegzetes szaga és a poros piactér leülepedett aromája.</descr>
+	</stimulus>
+
+	<stimulus type="magia" intensity="10" shortDescr="Védővarázs a kelmék fölött">
+		<descr>Egyes szöveteken halvány mágikus sugárzás érzékelhető – mintha védelmet nyújtanának a fakulás vagy molyok ellen.</descr>
+	</stimulus>
+
+
+	<item>
+		<name targy="a kelméket">kelmék</name>
+		<name targy="a kelmét">kelme</name>
+		<description>Színes, mintás anyagok – selyem, gyapjú, vászon és bársony –, amelyek tekercsekbe hajtva vagy kifeszítve sorakoznak a pultokon. Egyesek kézzel hímzettek vagy egzotikus motívumokat viselnek.</description>
+	</item>
+	<item>
+		<name targy="a standokat">standok</name>
+		<name targy="a standot">stand</name>
+		<description>Fából készült, ponyvával fedett árusítóhelyek, amelyeken gondosan rendezett sorokban fekszenek a kelmék. Némelyik fölött színes napvitorla leng.</description>
+	</item>
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>Karcsú, öntöttvas oszlop, amely esténként meleg fényt bocsát a standokra. Fénye alatt a szövetek tompán csillognak.</description>
+	</item>
+	<item>
+		<name targy="a mágikus védelmet">védelem</name>
+		<name targy="a mágikus védelmet">mágia</name>
+		<description>A kelmék némelyikén alig látható, mégis tapintható mágikus hatás ül – védelem a nedvesség, molyok vagy akár a tolvajok ellen.</description>
+	</item>
+
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_86"/>
+	<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_5"/>
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_88"/>
+	<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_7"/>
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_6"/>
 </Room>

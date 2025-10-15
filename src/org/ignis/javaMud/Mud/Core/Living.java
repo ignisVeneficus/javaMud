@@ -399,7 +399,7 @@ public abstract class Living extends Entity implements Holder, HeartBeatListener
 	public void die(String why) {
 
 		List<SenseTest> tests = getAllPerceptibility();
-		Event e = Event.createSimpleSourceEvent(tests, this, "%S " + why + " miatt meghallt", "", StringUtils.capitalize(why + " miatt meghalltál!"));
+		Event e = Event.createSimpleSourceEvent(tests, this, "%S " + why + " miatt meghalt", "", StringUtils.capitalize(why + " miatt meghalltál!"));
 		if(e!=null) {
 			e.fire();
 		}

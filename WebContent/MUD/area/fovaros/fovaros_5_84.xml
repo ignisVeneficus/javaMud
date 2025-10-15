@@ -1,11 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_84" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_8"/>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_83"/>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_93"/>
-<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_7"/>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_1_85"/>
+	<stimulus condition="nappal" shortDescr="Piac délnyugati sarka – templom előtti tér" intensity="0" type="latas">
+		<descr>A piactér ezen sarkában ritkulnak a standok, hogy teret hagyjanak a templom előtti térnek. A hatalmas, faragott kőépület délre magasodik, árnyékot vetve a térre. A tér burkolata tisztább és kevésbé zsúfolt, mint a piactér többi részén. Keletről és nyugatról egyenes sugárút halad át, kétoldalt pár utazó árus mégis kipakolta portékáit.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" shortDescr="Piac délnyugati sarka – templom előtti tér" source="35" type="latas">
+		<descr>Az este leszálltával a templom előtti tér csendes és ünnepélyes. A kandelláberek sárgás fénye kúpokban világítja meg a kőlapokat. A templom sötét sziluettje méltóságteljesen emelkedik ki a háttérből, bejárata előtt mécsesek pislákolnak. A legtöbb árus már eltűnt, csupán néhány csomagolt stand és néma láda jelzi nappali jelenlétüket.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Zajok elhalása, templomi harang">
+		<descr>Itt kevésbé hallatszanak a piac zsivajai. Néha harangszó zengi be a teret, a sugárúton kerekek és léptek visszhangoznak. Egy pap halk szavakkal imádkozik egy hívő fölött a templom lépcsőjén.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Csend és mécsesek pattogása">
+		<descr>Éjjel a környék szinte hangtalan. A kandelláberek halk zümmögése és egy-egy mécses sercegése hallatszik. A templom belsejéből fojtott énekfoszlány szűrődik ki.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="szaglas" intensity="10" shortDescr="Tisztaság és viaszillatok">
+		<descr>A levegő friss és kevésbé terhelt, mint a piac többi részén. A templom közelében enyhe viasz- és tömjénillat érződik, amelyet a kövezetről visszaverődő nap melege csak fokoz.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="szaglas" intensity="15" shortDescr="Tömjén és viasz, füstös mécsesillat">
+		<descr>Az est leszálltával a templom körül a mécsesek és tömjénfüst töltik be a teret. A szél néha a piactér felől hoz egy kis sült hús- vagy szalmaillatot is, de itt a szent illatok dominálnak.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" shortDescr="Templom körüli aura" intensity="20" type="magia">
+		<descr>A templomot körülölelő aura tiszta és nyugodt. A szent varázslatok nyoma enyhe vibrálást hagy a levegőben, amely békét áraszt a mágikus érzékkel bírók számára. A kőbe vésett rúnák halvány energiát sugároznak.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" shortDescr="Templom szent mágiája és mécsesek ereje" intensity="35" type="magia">
+		<descr>Éjszaka a templom szent mágiája felerősödik: a mécsesek fénye mágikus védelmet biztosít a térnek, és enyhe, simogató erőt árasztanak. A környék aura-szintje emelkedik, s a fények között időnként megvillan egy-egy szellem- vagy imaenergia lenyomata.</descr>
+	</stimulus>
+	
+	<item>
+		<name targy="a templomot">templom</name>
+		<description>A faragott kőtemplom tömör falai a déli oldalon emelkednek. Két szárnyas ajtaja zárva, de mécsesek pislákolnak előtte. A falakon domborművek mesélnek régi hősökről és isteni csodákról.</description>
+	</item>
+	<item>
+		<name targy="a teret">tér</name>
+		<description>A piactól eltérően itt tágas, kövezett tér nyílik, amit csak kevés árus szegélyez. A tér rendezettebb, kövei szinte csillognak a tisztaságtól, és gyakran szolgál ünnepségek színhelyéül.</description>
+	</item>
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>A kovácsoltvas oszlop halk zümmögéssel égő lámpát hordoz, amely sárga fényt vet a templom lépcsőjére és a környező térre. Esténként az árnyékok szinte élnek körülötte.</description>
+	</item>
+	<item>
+		<name targy="az utat">sugárút</name>
+		<description>A tér kelet–nyugati tengelyében húzódó sugárút széles és rendezett. Napközben szekerek haladnak rajta, éjjel csak néhány járókelő suhant el nesztelenül.</description>
+	</item>
+	<item>
+		<name targy="a mécseseket">mécsesek</name>
+		<name targy="a mécsest">mécses</name>
+		<description>A templom lépcsője mellett mécsesek sorakoznak, egyesek üvegkupolában, mások szabadon. Némelyik új, más megfeketedett a sokadik este nyomán.</description>
+	</item>
+	
+	
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_8"/>
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_83"/>
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_93"/>
+	<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_7"/>
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_1_85"/>
 </Room>

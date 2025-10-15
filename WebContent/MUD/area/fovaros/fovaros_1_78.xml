@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="1_78" intensity="0" type="latas">
-<descr>DUMMY szoveg - Óváros - Híd</descr>
-</stimulus>
-<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_1_79"/>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_11"/>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_1_80"/>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_1_75"/>
+	<stimulus condition="nappal" shortDescr="Folyókanyar – fahíd nappal" intensity="0" type="latas">
+		<descr>A folyó ezen a szakaszon észak felől dél-délnyugat felé kanyarodik, partjai kővel kirakottak és szabályosan ívelnek a városi házak között. Egy keskeny, kelet–nyugati irányú fahíd ível át a folyón, amely két part gyalogosforgalmát köti össze. A keleti hídfőnél az észak–déli sugárút található, amely a város egyik fő közlekedési ütőere. A víz lassan sodródik, tükrözve a felette elhaladó járókelőket és házakat.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Folyókanyar – fahíd éjjel" intensity="0" type="latas">
+		<descr>Éjszaka a fahíd csendes és kissé nyirkos, a közepén egy magányos, kovácsoltvas lámpás világít tompán, sárga fénykört vetve a deszkákra és a folyó tükrére. A környező házak ablakai sötétek, csak néhány mécses dereng bennük. A keleti sugárút távolabbi fényei halványan pislákolnak a ködben.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Zajok a hídról és a sugárútról">
+		<descr>A hídon halk léptek kopogása és beszélgetések visszhangja hallatszik, míg a keleti sugárútról folyamatos kocsizaj és paták kopogása szűrődik át a levegőn.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Csend és vízcsobbanás">
+		<descr>Az este csendje szinte teljes. A lámpás enyhe zümmögése és a víz csobbanása az egyetlen hang, amit néha megszakít egy halk surranás a híd deszkáin.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Vizes és fás illatok">
+		<descr>A fahíd nyers fája és a kőpart nedves illata keveredik a közeli városi szagokkal. A folyó vize friss, bár némi hínár- és iszapszag is érezhető.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Hűvös vízpára és lámpaolaj">
+		<descr>Éjszaka a folyó párája és a hídon égő lámpás olajos illata uralja a levegőt. A levegő hűvös, de tiszta, enyhén csípős.</descr>
+	</stimulus>
+
+
+	<item>
+		<name targy="a fahidat">fahíd</name>
+		<description>A híd egyszerű, de masszív szerkezet, melyet évek óta használnak. A deszkák simára koptak a lábak alatt, néhol vizesek vagy mohásak.</description>
+	</item>
+	<item>
+		<name targy="a lámpást">lámpás</name>
+		<description>A híd közepén álló kovácsoltvas lámpás enyhe mágikus fényt sugároz, amely kört formál a sötétben. Belsejében állandó láng pislákol, olajszaga enyhén érezhető.</description>
+	</item>
+	<item>
+		<name targy="a folyót">folyó</name>
+		<description>A folyó itt lassan kanyarodik, vize sötéten csillog. A mélyebb részeken áramlása halk örvényeket kelt, partját sűrű kőburkolat szegélyezi.</description>
+	</item>
+	<item>
+		<name targy="a sugárutat">sugárút</name>
+		<description>A keleti hídfőnél az észak–déli sugárút széles és forgalmas, lovas kocsik, kereskedők és gyalogosok töltik meg, különösen nappal.</description>
+	</item>
+
+	<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_1_79"/>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_11"/>
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_1_80"/>
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_1_75"/>
 </Room>

@@ -1,12 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_8" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_7"/>
-<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_86"/>
-<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_93"/>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_9"/>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_71"/>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_84"/>
+	<stimulus condition="nappal" shortDescr="Piac déli vége – ruhák és vásznak" intensity="0" type="latas">
+		<descr>A piactér déli végénél két sugárút találkozik: az észak–déli és a kelet–nyugati. A tágas csomópontban árusok színes ponyvák alatt kínálnak vászonnal borított ruhákat, kabátokat, köpenyeket, zsákokat. Déli irányban egy kőhíd ível át a szélesen folyó víz felett, a távolban a város külső negyedei sejlenek fel.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" shortDescr="Piac déli vége – csomópont a híd előtt" source="30" type="latas">
+		<descr>Sötétedés után a tér ritkásan megvilágított, de a kandelláberek sárga fénye kiemeli a színes kelméket. A híd felől pár fáklya világítja meg az utat, a ruhák között néhány árus mécsesei pislákolnak. A legtöbb stand már elcsomagolt, csak a masszív ponyvaszerkezetek maradtak a köveken.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Ruhák surrogása, hídon átkelő zajok">
+		<descr>A szél zizegteti a vásznakat, míg a sugárúton kerekek csattognak és vásárlók alkudoznak. A híd irányából paták és kocsik zaja hallatszik át a folyón.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Távoli vízcsobogás és halk beszéd">
+		<descr>A zajok lecsendesedtek, a híd felől csupán vízcsobogás és néha egy-egy halk beszélgetés hallatszik. A selymek surrogása szinte szellemszerűen lebeg a levegőben.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Friss vászon, por és vízpára">
+		<descr>A frissen szőtt vászon enyhén illatosított, mellé poros utcai szag keveredik. Déli irányból a híd felől vízpára érkezik, enyhén hűvös érzetet keltve a melegben.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="szaglas" intensity="20" shortDescr="Hűvös levegő, olajszag a mécsesektől">
+		<descr>A levegő friss, a híd felől áramló vízpára hűvössé teszi. A mécsesek és kandelláberek enyhén olajos illatot árasztanak.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" shortDescr="Magikus ruhavédelem" intensity="50" type="magia">
+		<descr>Néhány ruha és köpeny mágikus jeleket hordoz: védelmet nyújtanak az időjárás, kisebb ártó mágiák és kések ellen. Aki érzékeny rá, tisztán érezheti az aktív energiákat.</descr>
+	</stimulus>
+	
+	<stimulus shortDescr="Halvány mágikus nyomok a kelmékben" intensity="15" type="magia">
+		<descr>Sötétedés után a mágikus ruhadarabok némelyike gyenge foszforeszkálással válaszol a figyelemre. Az energia gyenge, de határozott – még éjjel is érezhető.</descr>
+	</stimulus>
+
+	<item>
+		<name targy="a hídat">híd</name>
+		<description>A déli híd kőből épült, boltívei masszívak és szélesek. A folyó fölött ível át, a városfal túloldalára vezetve az utat.</description>
+	</item>
+	<item>
+		<name targy="a vásznakat">vászon</name>
+		<name targy="a vásznakat">vászonak</name>
+		<description>Különböző minőségű és színű vásznak lógnak a standokon: egyszerű zsákvászon, puha posztó, selyemfényű szövetek keverednek, néhányukon mágiával szőtt minták láthatók.</description>
+	</item>
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>A tér sarkán álló kovácsoltvas kandelláber sárgás fényt bocsát ki, amely éjjel meglepően messzire világít, árnyékot vetve a szövettárolókra és a tér köveire.</description>
+	</item>
+	<item>
+		<name targy="a köpenyeket">köpeny</name>
+		<name targy="a köpenyeket">köpenyek</name>
+		<description>A színes köpenyek közül néhány mágikusan erősített: az egyik a hideget hárítja, a másik védelmet nyújt nyilak ellen. Az árus gyakran emlegeti ezek hatékonyságát.</description>
+	</item>
+	<item>
+		<name targy="az útkereszteződést">útkereszteződés</name>
+		<name targy="az útkereszteződést">kereszteződés</name>
+		<description>A két sugárút találkozása széles, kövekkel burkolt csomópontot képez. Napközben zsúfolt, estére kiürül, csak a fények és az utózajok maradnak.</description>
+	</item>
+
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_7"/>
+	<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_86"/>
+	<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_93"/>
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_9"/>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_71"/>
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_84"/>
 </Room>

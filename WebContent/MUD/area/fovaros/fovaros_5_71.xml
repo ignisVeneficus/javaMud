@@ -1,10 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_71" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_8"/>
-<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_7"/>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_70"/>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_86"/>
+	<stimulus condition="nappal" shortDescr="Piac délkeleti sarka – mágikus árusok és tekercsek" intensity="0" type="latas">
+		<descr>A piac délkeleti sarka különös fényekkel és színekkel vonzza a tekintetet. Standok között mágikus tárgyak, pecsétes tekercsek, izzó kristályok és különféle ereklyék sorakoznak. A kelet–nyugati sugárút forgalmasan szeli át a teret, délen a városon áthaladó folyó kék csillogása látszik a házak között.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Délkeleti sarok – vibráló fények és titkos árusok" source="40" type="latas">
+		<descr>Az est beálltával a mágikus tárgyak halvány fényeket bocsátanak ki, némelyik rejtélyesen pulzál. A kandelláberek sárgás fényei kúpokban világítják meg a standokat és a sugárút kövét. A fény és az árnyék váltakozása titokzatos hangulatot áraszt, miközben egy-egy árus halk szóval kínál elrejtett portékákat. Délen a városon áthaladó folyó sötét szalagként dereng a házak között.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Tekercsek zizegése és mágikus csilingelés">
+		<descr>Az enyhe szellő megzörrenti a pecsétes papírokat. Egy kristályból halk, csilingelő hang hallatszik, mintha beszélne. Az árusok suttogva magyarázzák a tárgyak hatásait.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Halk igemormolás, mágia kattanása">
+		<descr>Az este csendjében egy tekercs halkan morajlik, egy másikból kirobban egy halk "klikkszerű" hang, amikor aktiválódik egy bűbáj. Néha egy mágus halk, szinte énekelt igét suttog a vásárlónak.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="szaglas" intensity="25" shortDescr="Ódon pergamen és izzó fém szaga">
+		<descr>A levegőben érezni lehet a régi pergamenek édeskés-poros szagát, vegyítve mágikus olajokkal és füstös esszenciákkal.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="szaglas" intensity="30" shortDescr="Füstölő, viasz és ismeretlen aromák">
+		<descr>Az est illata keveredik füstölőkkel, viaszos lenyomatokkal, és olyan szagokkal, amik nem e világból származnak. Egyes tárgyak külön illatot árasztanak, amikor valaki közelükbe lép.</descr>
+	</stimulus>
+
+
+	<stimulus condition="nappal" shortDescr="Fénylő gyógyító kristály" intensity="40" type="magia">
+		<descr>Egy kis kristály folyamatosan enyhe regeneráló mágiát bocsát ki. Az érzékenyek kellemes melegséget érezhetnek a közelében.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" shortDescr="Rúnák mágikus védelme" intensity="10" type="magia">
+		<descr>A stand egy részét védelmező rúnák veszik körbe, amelyek eltaszítják a kíváncsi tekinteteket. A mágia diszkrét, de határozott.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" shortDescr="Tekercs aurafigyelmeztetése" intensity="15" type="magia">
+		<descr>Az egyik tekercs aurája idegesen rezeg, ha túl közel érnek hozzá. Az energia mágikus érzékenység esetén figyelmeztetően vibrál.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Árnyléptű amulett rezgése" intensity="30" type="magia">
+		<descr>Egy amulett sötét fényben pulzál – a lopakodás és rejtőzés mágiája hat benne. Éjszaka az energiái aktívabbak.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Tűzburok gyűrű energiája" intensity="40" type="magia">
+		<descr>A gyűrű belseje melegséget áraszt, belső mágiája tűzburkot idézne elő, ha viselője veszélybe kerülne. A mágikus érzékűek bizsergető hullámokat érezhetnek a közelében.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" shortDescr="Időlassító gömb lüktetése" intensity="25" type="magia">
+		<descr>Az egyik gömb lassan pulzál, mintha megállítaná a körülötte lévő levegő mozgását. Az érzékenyebbek azt is érezhetik, hogy pillanatokra elhomályosul a külvilág körülötte.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" shortDescr="Illúziómágia szóródása" intensity="10" type="magia">
+		<descr>Az illúziók által védett tárgyak körül a mágia enyhe villanásokkal törik meg a fényt, mintha nem egészen lenne ott, amit látunk.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" shortDescr="Mágikus lánc záróvarázsa" intensity="20" type="magia">
+		<descr>Az egyik doboz mágikus lánccal van lezárva – az érzékenyek érezhetik a pecsét állandó nyomását és az elfojtott erőt.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Átoktól vibráló tekercs" intensity="35" type="magia">
+		<descr>Az egyik tekercsből kellemetlen mágikus rezgés árad. Nem támadó, de mintha szüntelenül feszülne valami negatív hatalom ellenében.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" shortDescr="Lélek-lámpás fénye" intensity="30" type="magia">
+		<descr>Egy mécses alakú tárgy nem valódi fényt, hanem lelki jelenlétet áraszt. Akinek van érzéke hozzá, más élőlények jelenlétét érzékeli vele.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" shortDescr="Elrejtett tudás glóriája" intensity="15" type="magia">
+		<descr>Egy látszólag jelentéktelen tekercs halvány glóriát áraszt – mintha elrejtett tudást zárna magába. A figyelmet vonzza, de nem mutatkozik meg teljesen.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Sötét portáljelek maradványa" intensity="40" type="magia">
+		<descr>Az egyik vászon mögött halvány, fekete fényű portálrúnák vibrálnak – már használaton kívüliek, de nyomukban idegen mágia lüktet.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" shortDescr="Lidérc-árny gyűrű hatása" intensity="35" type="magia">
+		<descr>A gyűrű viselésekor halvány, álomszerű képek derengenek a szem sarkában. A mágia nem ártó, de mélyen személyes érzéseket hívhat elő.</descr>
+	</stimulus>
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>A kovácsoltvasból készült kandelláber masszív oszlopa végén egy bűbájjal védett üvegbura alatt égő fényforrást hordoz. Fénye sárgás, és varázslat biztosítja, hogy sose aludjon ki – ködben és sötétségben is megbízhatóan világítja meg a környéket.</description>
+	</item>
+
+	<item>
+		<name targy="a kristályt">kristály</name>
+		<description>Az asztal közepén elhelyezett kristály lilás fényt bocsát ki, amely pulzál a közelítők érzékelésére. Állítólag gyógyító mágiát is tartalmaz.</description>
+	</item>
+	<item>
+		<name targy="a tekercseket">tekercs</name>
+		<name targy="a tekercseket">tekercsek</name>
+		<description>Viaszpecséttel lezárt tekercsek, némelyikből enyhe füst szivárog. Egyik másik mágikus fényt bocsát ki, mások teljesen csendesek – mintha aludnának.</description>
+	</item>
+	<item>
+		<name targy="a mágikus pecséteket">pecsét</name>
+		<description>Színes viaszba karcolt rúnák, amelyek védelmet, erőt, vagy tiltást biztosítanak a rájuk bízott tárgynak. Egyesek vibrálnak, mások tompán lüktetnek.</description>
+	</item>
+	<item>
+		<name targy="a folyót">folyó</name>
+		<description>Dél felé, a házak között tágas folyam csillan. Nappal csillogó, este sötét tükörként áramlik.</description>
+	</item>
+	<item>
+		<name targy="a lánccal lezárt dobozt">doboz</name>
+		<description>Masszív fa- és fémdoboz, mágikus láncokkal védve. A levegő körülötte sűrűbb, mintha elfojtott erőt tartana zárva.</description>
+	</item>
+
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_8"/>
+	<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_7"/>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_70"/>
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_86"/>
 </Room>

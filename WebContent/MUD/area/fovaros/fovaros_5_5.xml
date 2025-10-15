@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_5" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_4"/>
-<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_90"/>
-<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_89"/>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_88"/>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_6"/>
-<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_87"/>
-<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_92"/>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_91"/>
+	<stimulus condition="nappal" shortDescr="Piac északi része" intensity="0" type="latas">
+		<descr>A piactér északi részén az út két oldalán hosszában húzódnak az egyszerű árusítóhelyek. Parasztok szorosan egymás mellett kínálják lábasjószágaikat: tyúkok, libák, kacsák kotkodácsolnak és totyognak a ketrecek mögött. A poros talajon szalmacsomók hevernek, az árnyékot ponyvák vetik a standokra. A sugárút észak-déli irányban vág át a tömegen, mindenfelé gyalogosok és kordék próbálnak áthaladni. A kandelláberek nappal még sötéten állnak, de jelenlétük így is rendezettséget ad a térnek.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Piac északi része" source="30" type="latas">
+		<descr>Az est leszálltával az állatok zöme eltűnik, de néhány árus még ott marad, csendesen rendezgetve portékáit. A kandelláberek meleg fénye pettyekben világítja meg a sáros utat és az üres ketrecek sötét rácsait. A ponyvák árnyai furcsa formákat vetnek a földre. A sugárúton néha még áthalad egy-egy kocsi, a kerekek csattognak a köveken. A tér ezen része ilyenkor sokkal nyugodtabb, de néhány kíváncsiskodó még körbejár a maradékért.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Állathangok és parasztzaj">
+		<descr>Tyúkok kotkodálnak, libák gágognak, a parasztok kiabálnak, alkudoznak és hajtják a jószágokat. A tömeg zaja betölti a sugárutat.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="20" shortDescr="Felharsanó nevetés">
+		<descr>Egy nő nevetése harsan fel, majd elhalkul.</descr>
+	</stimulus>
+
+	
+	<stimulus condition="este" type="hallas" intensity="30" shortDescr="Lecsillapodott zajok és madárcsipogás">
+		<descr>A jószágok már elcsendesedtek, csak ritkán hallatszik halk csipogás vagy egy-egy surranó lépés a köveken.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Állati szagok és szalmaillat">
+		<descr>Az élő jószágok szaga erősen keveredik a szalma és föld illatával. Időnként bűzösebb szagcsóvák is feltámadnak.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Áporodott, nedves szagok">
+		<descr>A föld és az elmosott ketrecek áporodott szaga üli meg a levegőt, néhol még érződik a szalma nedves illata.</descr>
+	</stimulus>
+
+	<stimulus type="magia" intensity="20" shortDescr="Gyenge nyugtató aura">
+		<descr>Valami tompán nyugtató mágikus jelenlét lengi be a teret, mintha az állatok nyugalmát valaki mesterségesen segítené.</descr>
+	</stimulus>
+
+
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>Masszív öntöttvas oszlop, mely estére meleg sárga fénnyel pettyezi meg a piac poros burkolatát.</description>
+	</item>
+	<item>
+		<name targy="a ketrecet">ketrec</name>
+		<description>Durva, fából és dróthálóból eszkábált ketrec, amelyen tollak és sármaradványok tapadnak. Néhány még állatot rejt.</description>
+	</item>
+	<item>
+		<name targy="a szalmacsomót">szalmacsomó</name>
+		<name targy="a szalmát">szalma</name>
+		<description>Széttaposott, sárba ragadt szalmacsomó, amely nappal pihenőhely a jószágnak, estére csak nedves kupac marad belőle.</description>
+	</item>
+	<item>
+		<name targy="a ponyvát">ponyva</name>
+		<description>Feszesre húzott vászonponyva, amely árnyékot ad napközben, éjjel viszont ingatag árnyékokat vet a földre.</description>
+	</item>
+
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_4"/>
+	<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_90"/>
+	<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_89"/>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_88"/>
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_6"/>
+	<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_87"/>
+	<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_92"/>
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_91"/>
 </Room>

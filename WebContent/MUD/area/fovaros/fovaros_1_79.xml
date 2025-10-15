@@ -1,8 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="1_79" intensity="0" type="latas">
-<descr>DUMMY szoveg - Óváros - Folyó</descr>
-</stimulus>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_40"/>
-<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_1_78"/>
+	<stimulus condition="nappal" shortDescr="Folyó kiszélesedő szakasza" intensity="0" type="latas">
+		<descr>A folyó ezen szakasza északkelet felől dél felé kanyarodik, vizének sodrása lassul, és kiszélesedik, partjai laposabbá válnak. A víz tükrén lassan ringatóznak a part menti kis csónakok. Egy apró, fából ácsolt csonakikötő húzódik a kőpart mentén, amely néhány lépcsőn keresztül érhető el. Dél felé a városfal komor sziluettje emelkedik, mellette a körút kőhídja ível át a vízen. Északkeletre halványan látszik a fahíd körvonala is.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Folyó és kikötő éjjel" intensity="10" type="latas">
+		<descr>Éjszaka a folyó sima tükrén apró hullámok fodrozódnak. A csónakikötő sötétbe burkolózik, csak néhány mécses dereng a közeli ablakokból. A városfal mögött halvány csillagfény csillan a vízen, míg a délre lévő kőhíd alatt árnyak suhannak át. A parton néha egy-egy árnyalak mozgolódik a csónakok között.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Halk vízcsobogás, közeledő zajok">
+		<descr>A víz lassú csobogása keveredik a csónakok halk nyikorgásával. A fahíd és a körúti kőhíd felől visszhangzó léptek és beszédfoszlányok szűrődnek át a széllel.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Csónakok nyikorgása, halk zörejek">
+		<descr>Az éjszaka halk neszei között a csónakikötőből fából eredő nyikorgás, vízloccsanás és néha egy-egy lépés hallatszik. A város elcsendesedett, csak a folyó beszél.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Folyó, iszap és fa illatok">
+		<descr>A kiszélesedett szakaszon erősebb az iszap és hínárszag, de a nap melegíti a nedves fákat is, a csónakokból gyanta és olajos szag árad.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Hideg víz, korhadó fa, füst">
+		<descr>Éjjel a folyó illata hűvösebb, az iszap párát bocsát ki, és a korhadó fa édes-savanykás szaga uralkodik. Néha a közeli házakból füstöt sodor a szél.</descr>
+	</stimulus>
+
+	<item>
+		<name targy="a csónakokat">csónak</name>
+		<description>A part mentén néhány fából ácsolt csónak ring a vízen. Egyeseket hálóval borítottak, másokon pecabot hever. A fa sötétre ázott, de karbantartott.</description>
+	</item>
+	<item>
+		<name targy="a kikötőt">kikötő</name>
+		<description>A kicsi kikötő egyszerű falépcsők és cölöpök rendszere, kötéllel és kampókkal felszerelve. Néhol repedt vagy mohás a fa, de még tartja a súlyt.</description>
+	</item>
+	<item>
+		<name targy="a kőhidat">kőhíd</name>
+		<description>Délre a körút masszív kőhídja magasodik, három boltívvel szeli át a folyót. Nappal zsúfolt, éjjel sötét tömbként áll az égen.</description>
+	</item>
+	<item>
+		<name targy="a városfalat">városfal</name>
+		<description>A városfal sötét tömbje a folyó mentén húzódik, szürkés kövei vizesen csillognak. Néhány régi lőrés és repedés emlékeztet a múlt ostromaira.</description>
+	</item>
+
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_40"/>
+	<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_1_78"/>
 </Room>

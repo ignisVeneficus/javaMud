@@ -1,10 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="1_9" intensity="0" type="latas">
-<descr>DUMMY szoveg - Óváros - Híd</descr>
-</stimulus>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_8"/>
-<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_1_80"/>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_10"/>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_65"/>
+
+	<stimulus condition="nappal" shortDescr="Sugárút a kőhídon – nappal" intensity="0" type="latas">
+		<descr>A piactól délre a sugárút masszív, boltíves kőhídon ível át a dél–nyugat felé kanyargó városi folyó felett. A meder kővel kirakott, mindkét parton keskeny, de rendezett gyalogút fut. A hídon élénk a forgalom: szekerek zörögnek, gyalogosok sietnek át, néhány horgász a mellvédnél áll. A túloldalon a sugárút dél felé folytatódik, szintén kövezett úttesten.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Sugárút a kőhídon – este" source="30" type="latas">
+		<descr>Este a híd környéke elcsendesedik, de a forgalom nem áll meg teljesen. A kandelláberek sárgás fénye a híd kőlapjaira vet árnyékot, és csillogva tükröződik a lassan hömpölygő folyó felszínén. A part menti gyalogutakat néhány alak járja, és a híd ívei alatt időnként halak fröccsenése csillan fel.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Forgalom és vízcsobogás">
+		<descr>Patadobogás, kordék kerekeinek zörgése és gyalogosok zsivaja tölti meg a levegőt. A folyó halk csobogása és a horgászok mormogása színesíti a városi háttérzajt.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Léptek, víz és lámpazümmögés">
+		<descr>Az éjszakai csendben tisztábban hallani a víz folyamatos áramlását. Egy-egy járókelő nesztelen lépte, valamint a kandelláberek halk zümmögése tölti be a levegőt.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Városi víz és állati szagok">
+		<descr>A folyópart városi levegője friss, de enyhén állott. A vízben algás illat keveredik a hídon áthaladó állatok és szekerek nyomán hagyott szagokkal.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Hűvös víz és kőillat">
+		<descr>Éjjel a kőhíd hideg tömbjeiből és a folyó vizéből nedves, kissé penészes illat árad. A gyalogutak mentén szinte érezni a vízzel átnedvesedett kövek leheletét.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="magia" intensity="10" shortDescr="Ősi védőmágia a hídon">
+		<descr>A kőhíd alapjába vésett rúnák halvány mágikus védelmet nyújtanak. Az utazók védelmére szánt varázslat gyenge, de még mindig aktív a mágikus érzékelők számára.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="magia" intensity="15" shortDescr="Áramló vízmágia és védelmi rezgés">
+		<descr>Az éjszaka mágikus mintázatokat hoz elő a hídon: a folyó vízének mozgása mágikus rezgéseket generál. A híd kőívei és a kandelláberek együtt halk, védelmi aurát teremtenek a híd fölött.</descr>
+	</stimulus>
+
+	<item>
+		<name targy="a hidat">kőhíd</name>
+		<name targy="a hidat">híd</name>
+		<description>A széles, boltíves híd időtálló, mohás kövekből áll. A gyalogosoknak és szekereknek egyaránt kényelmesen járható. Évszázadok óta köti össze a város két oldalát.</description>
+	</item>
+
+	<item>
+		<name targy="a mellvédet">mellvéd</name>
+		<description>A híd mellvédje simára csiszolódott kőből készült, tetején apró karcolások, vésések és egy-két horgászbot is megpihen időnként.</description>
+	</item>
+
+	<item>
+		<name targy="a horgászt">horgász</name>
+		<description>Egy öreg, egyszerű köpenyes férfi áll a mellvéd mellett. Horgászbotját a víz fölé lógatja, és mozdulatlanul figyeli a sodrást, mintha csak a gondolatai közé merült volna.</description>
+	</item>
+
+	<item>
+		<name targy="a folyót">folyó</name>
+		<description>A dél–nyugat felé tartó városi folyó kövezett mederben kanyarog. Felszínét néha fodrok törik meg, partjai mentén gyalogutak futnak, amelyeket időnként madarak, kutyák vagy árnyak használnak.</description>
+	</item>
+
+	<item>
+		<name targy="a gyalogutat">parti gyalogút</name>
+		<name targy="a gyalogutat">gyalogút</name>
+		<description>A folyó két oldalán keskeny, de gondosan rakott kőlapos gyalogút halad. Dél–nyugat felé vezet, és összeköti a hidat egy távolabbi átkelővel és a város peremével.</description>
+	</item>
+
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>A híd négy sarkán álló kovácsoltvas kandelláberek sárga fénnyel világítanak. Éjjel biztonságot sugároznak, fényeik a folyóra vetülnek, mintha őrt állnának.</description>
+	</item>
+
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_8"/>
+	<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_1_80"/>
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_10"/>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_65"/>
 </Room>

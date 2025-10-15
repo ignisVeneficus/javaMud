@@ -1,10 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_90" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_4"/>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_91"/>
-<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_5"/>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_1_130"/>
+	<stimulus condition="nappal" shortDescr="Piac északnyugati sarka" intensity="0" type="latas">
+		<descr>Az északnyugati sarok zsúfolt, ám mégis otthonos része a főtéri piacnak. Földművesek és parasztok egyszerű standok mögött kínálják friss terményeiket, zöldségektől gyümölcsökön át tojásig. A városfal hatalmas tömbje északon emelkedik, hűs árnyékot vetve a bódékra. Keletre és nyugatra a körút forgalmas szalagként kanyarog a tömegben, míg déli irányban a templom sziluettje emelkedik a város háztetői fölé.</descr>
+	</stimulus>
+	<stimulus condition="este"  source="30" shortDescr="Piac északnyugati sarka" intensity="0" type="latas">
+		<descr>A naplemente után a tér csendesebb, de néhány árus még mindig ott marad, portékáikat a körút mentén álló kandelláberek pislákoló fényénél kínálva. Az öntöttvas lámpások meleg, sárgás derengése foltokban világítja meg a kavicsos utat és a standok vászonponyváit. A városfal sötét tömbként tornyosul északon, árnyéka elnyeli az utca zaját. A körút kelet-nyugati vonala még ekkor is forgalmas, kocsik zörögnek és gyalogosok suhannak el. A déli távolban sejtelmesen dereng a templom tornya. A föld illata erősebben érződik a friss gyümölcsök és szalmahalmok közelében.</descr>
+	</stimulus>
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Vásári morajlás">
+		<descr>Az árusok hangos szóval kínálják portékáikat, háttérben a körút zajával és a templomharang távoli kondulásával.</descr>
+	</stimulus>
+	<stimulus condition="nappal" type="hallas" intensity="30" shortDescr="Halk hárfazene">
+		<descr>Egy közeli zenész hárfájának hangja alig bírja áttörni a hangzavart.</descr>
+	</stimulus>
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Vásári morajlás">
+		<descr>A körút még él, de a sarkon már csak suttogás, léptek és néhány nyikorgó kordé hallatszik.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr=">Föld, friss termények">
+		<descr>Föld, friss termények és némi trágyaszag keveredik a levegőben.</descr>
+	</stimulus>
+	<stimulus type="magia" intensity="20" shortDescr="Templom szent aurája">
+		<descr>	A templom felől halványan érződik egy szent aura, mintha a kegyelem hullámai átcsapnának a piacon.</descr>
+	</stimulus>
+	<stimulus condition="nappal" type="szaglas" intensity="30" shortDescr=">Por, gyümölcsök illata">
+		<descr>A meleg nappal után a levegőben megül a por és széna illata, a gyümölcsök édeskés aromájával.</descr>
+	</stimulus>
+	<stimulus condition="este" type="hallas" intensity="30" shortDescr="Vásári morajlás">
+		<descr>Lánccsörgés visszhangzik az egyik mellékutcából.</descr>
+	</stimulus>
+	
+	<item>
+		<name targy="a kosarat">kosár</name>
+		<description>Egy fonott kosárban különböző idényzöldségek sorakoznak: fényes paradicsom, vaskos répa és néhány foltos alma.</description>
+	</item>
+	<item>
+		<name targy="a kordészekeret">kordészekér</name>
+		<name targy="a szekeret">szekér</name>
+		<description>Rozoga kordé, melyről frissen kihúzott karfiolok lógnak le; a kerék még porosan forog, mintha most érkezett volna a földekről.</description>
+	</item>
+	<item>
+		<name targy="a templomot">templom</name>
+		<name targy="a ssziluettet">sziluett</name>
+		<description>A távolban magasodik a templom sötétlő tornya, még nappal is tiszteletet parancsol, éjjel pedig szinte misztikusan lebeg a tetők felett.</description>
+	</item>
+	<item id="falreszlet">
+		<name>Városfal részlet</name>
+		<description>A városfal ezen szakaszán régi, repedezett kőbe karcolt jelek sorakoznak, némelyik még halványan lüktet mágikus fényben.</description>
+	</item>
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<name targy="a lámpát">lámpa</name>
+		<description>Az öntöttvas kandelláber vékony oszlopa tetején sárgás fényű lámpás pislákol. A lángot üveg búra óvja a széltől, és halk ropogása valami otthonos melegséget áraszt az éjszakai forgatagban.</description>
+	</item>
+	
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_4"/>
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_91"/>
+	<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_5"/>
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_1_130"/>
 </Room>

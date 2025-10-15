@@ -1,8 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_7" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
+<stimulus condition="nappal" shortDescr="Piac déli része" intensity="0" type="latas">
+    <descr>A piac déli szegletében színes standok sorakoznak, mindegyik tele fűszerekkel, egzotikus gyümölcsökkel, különleges textilekkel és távoli tájakról származó csecsebecsékkel. A levegőben vibrál a meleg, a sátorlapok lobognak a szélben, a standok fölött színes baldachinok árnyékot vetnek. A sugárút itt is átvág a piacon, folyamatos mozgást biztosítva a kíváncsi tömegnek.</descr>
 </stimulus>
+
+<stimulus condition="este" shortDescr="Piac déli része" source="30" type="latas">
+    <descr>Estére a fűszer- és egzotikumárusok többsége becsomagolja portékáit, de néhány stand még nyitva tart a kandelláberek meleg fényében. Az árnyékok megnyúlnak a sugárút kövezetén, a színes textilek sötétebb árnyalatban lengenek. A környéken kevesebben járnak, de még akad pár kíváncsi vásárló, aki utolsó különlegességet keres.</descr>
+</stimulus>
+
+<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Forgalom és árusok hangjai">
+    <descr>Az árusok harsányan kínálják portékáikat, többféle nyelven kiabálva. A vásárlók élénken alkudoznak, miközben a sugárúton lovaskocsik és gyalogosok zajától zeng a tér.</descr>
+</stimulus>
+
+<stimulus condition="este" type="hallas" intensity="50" shortDescr="Elhalkuló beszélgetések, távoli lépések">
+    <descr>Az esti csöndben ritkás beszédfoszlányok és a sugárúton áthaladó kocsik zaja hallatszik. A standok között el-elsuhanó árnyak halk lépései visszhangzanak a kövön.</descr>
+</stimulus>
+
+<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Fűszer- és gyümölcsillat">
+    <descr>Erős fahéj, szerecsendió és egzotikus gyökerek illata keveredik az édes gyümölcsökével. Az illatfelhő szinte szédítő, minden sarkon újabb aromák támadják meg az orrot.</descr>
+</stimulus>
+
+<stimulus condition="este" type="szaglas" intensity="20" shortDescr="Maradványillat a levegőben">
+    <descr>Az illatok este már enyhébbek, de még mindig érezhető a fűszerek nyoma a levegőben – főként ott, ahol a standok nem lettek teljesen lebontva.</descr>
+</stimulus>
+
+<stimulus type="magia" intensity="15" shortDescr="Bűvölt áruk mágikus nyomai">
+    <descr>Néhány portékán gyenge, egzotikus bűbájok lappanganak – ismeretlen rendeltetésű amulettek, furcsa színű porok és illatos olajok, melyek talán gyógyítanak, talán elvarázsolnak.</descr>
+</stimulus>
+
+    <item>
+        <name targy="a fűszereket">fűszerek</name>
+        <name targy="a fűszereket">fűszer</name>
+        <description>Színes halmokban sorakozik a kurkuma, paprika, fahéj és még számos ismeretlen por, mind apró fatégelyekben vagy vászonzsákokban. Az illatuk messziről érződik, és csiklandozza az orrot.</description>
+    </item>
+    <item>
+        <name targy="az egzotikus tárgyakat">egzotikus tárgyak</name>
+        <name targy="az egzotikus tárgyakat">tárgyak</name>
+        <name targy="az egzotikus tárgyakat">egzotikus tárgy</name>
+        <name targy="az egzotikus tárgyakat">tárgy</name>
+        <description>Selyemkendők, jade figurák, díszes pipák és különös alakú palackok hívják fel magukra a figyelmet. Mindegyik valami távoli vidék hangulatát idézi.</description>
+    </item>
+    <item>
+        <name targy="a kandellábert">kandelláber</name>
+        <description>A sugárút mentén álló kovácsoltvas kandelláberek sárgás fénye szinte melegíti az este lehűlő kövét, és táncoló árnyékot vet az üresedő standokra.</description>
+    </item>
+    <item>
+        <name targy="a mágikus amuletteket">mágikus amulettek</name>
+        <description>Apró, ismeretlen szimbólumokkal díszített medálok és kövek, melyeket egyes árusok külön dobozban őriznek. Aki ért hozzá, érezheti bennük a gyenge, idegen mágia rezgését.</description>
+    </item>
+
+
 <exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_6"/>
 <exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_87"/>
 <exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_92"/>

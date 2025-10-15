@@ -1,11 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_92" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_91"/>
-<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_5"/>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_6"/>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_93"/>
-<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_7"/>
+	<stimulus condition="nappal" shortDescr="Piac nyugati széle" intensity="0" type="latas">
+		<descr>A piactér nyugati szélén gondosan elrendezett standok kínálnak különféle feldolgozott élelmiszereket. Füstölt húsok lógnak rudakon, a sajtok különféle színekben és formákban tornyosulnak fatálakon. A parasztok itt is jelen vannak, saját készítésű portékáikat kínálva. A körút túloldalán már nem piaci, hanem lakóépületek sorakoznak. A kandelláberek nappal is kiemelik a tér ritmusát, estére készülve némán őrködnek.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" shortDescr="Piac nyugati széle" source type="latas">
+		<descr>Estére a legtöbb árus már elcsomagolt, de néhány stand még nyitva tart. A kandelláberek meleg fénye megvilágítja a húsok rudjait és a sajtok fakó tömbjeit. Az elhagyott asztalok között árnyak suhannak, de az ételek illata még mindig megül a levegőben. A nyugati határ peremvidék jellege ekkor még nyilvánvalóbb – kevesebb a mozgás, de annál markánsabbak az illatok és hangulatok.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Alkudozás és kiabálás">
+		<descr>Az árusok hangosan kínálják füstölt áruikat, a vevők kóstolnak, kérdeznek, nevetnek. Egy-egy kés koppanása, füstölt kolbász darabolása is hallatszik.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="hallas" intensity="20" shortDescr="Zörgés és halk beszéd">
+		<descr>Csak néhány hang marad: halk beszélgetés a még nyitva tartó árusok között, néha egy-egy szekér nyikorgása a háttérből. A tér elcsendesedik.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="szaglas" intensity="70" shortDescr="Erős élelmiszerillat">
+		<descr>Füstölt húsok, érlelt sajtok és pácok tömény illata tölti meg a levegőt – sós, zsíros, fűszeres aromák keverednek.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Füst és sajtillat">
+		<descr>Bár az árusok nagy része már elment, az illatok nem oszlanak el: a füstölt húsok és sajtok mély, laktató szaga még sokáig megül a térben.</descr>
+	</stimulus>
+	
+	<stimulus type="magia" intensity="10" shortDescr="Halvány mágikus védelem">
+		<descr>Az egyik sajtpult fölött halvány mágikus aura dereng, valószínűleg frissesség- vagy romlásgátló bűbáj – semmi erős, de érezhetően jelen van.</descr>
+	</stimulus>
+
+	
+	<item>
+		<name targy="a sajtpultot">sajtpult</name>
+		<name targy="a pultot">pult</name>
+		<description>Masszív, fából ácsolt pult, melyen különféle sajtok sorakoznak – kereken, tömbökben, csíkokra vágva. Néhány darabon penészes kéreg vagy viaszos bevonat látható.</description>
+	</item>
+	<item>
+		<name targy="a húsrudakat">húsrudak</name>
+		<name targy="a húsrudat">húsrud</name>
+		<name targy="a húst">hús</name>
+		<description>Lógó kolbászok, füstölt sonkák és szalámik sorakoznak keresztgerendákon, egyenletesen füstösre színezve és zsineggel megkötözve.</description>
+	</item>
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>Súlyos öntöttvas lámpaoszlop, mely este meleg fénnyel világítja meg az élelmiszerstandokat. Fényköre árnyékokat rajzol a falakra és standokra.</description>
+	</item>
+	<item>
+		<name targy="a mágikus védelmet">mágikus védelem</name>
+		<description>A sajtpult felett lebegő halvány kékes derengés, mely frissességet biztosító varázslatként szolgál. Észrevétlen, hacsak nem érzékeny valaki a mágiára.</description>
+	</item>
+
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_91"/>
+	<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_5"/>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_6"/>
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_93"/>
+	<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_7"/>
 </Room>

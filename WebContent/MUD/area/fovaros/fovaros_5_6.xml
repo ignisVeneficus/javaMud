@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_6" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_5"/>
-<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_88"/>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_87"/>
-<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_91"/>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_7"/>
-<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_93"/>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_92"/>
-<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_86"/>
+	<stimulus condition="nappal" shortDescr="Piac középső része" intensity="0" type="latas">
+		<descr>A piactér közepe tágas és nyitott, árusok nélkül. A simára koptatott, világos szürke kőlapok tiszta vonalakban futnak végig a téren, melyen Észak-Déli irányban húzódik a sugárút. Középen egy emelvény áll – a városi kikiáltó dobogója –, jelenleg üresen, de figyelemfelkeltő helyen. A környező piacrészek nyüzsgése ide is átszűrődik, de ez a terület lélegzetvételnyi szünetet ad a forgatagban.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Piac középső része" source="10" type="latas">
+		<descr>Az este leszálltával a tér kövei hűvösen fénylenek a kandelláberek lámpafényében. A dobogó sötét árnyként magasodik a központban, árnyéka szögletesen nyúlik el a kövezeten. Bár az árusok eltűntek, néhány gyalogos még átvág a téren a sugárúton haladva, s lépteik visszhangzanak a sima kőlapokon.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Zajok a tér széléről">
+		<descr>A középső tér viszonylag csendes, de minden irányból behallatszanak az árusok és vevők hangjai, a körút zajos kocsizaja, s időnként egy távoli kiáltás vagy csengetés.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Lépések és lámpazümmögés">
+		<descr>Alig néhány gyalogos suhan át a téren, lépteik visszhangoznak a kövezeten. A kandelláberek halvány zümmögése betölti a csendet, néha távoli hangfoszlány érkezik a piac más részeiből.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Keveredő illatok">
+		<descr>Az árusok távolabbi standjairól érkező étel- és fűszerillat gyengén keveredik itt a kövek poros, napmeleg szagával.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Hűvös kőillat">
+		<descr>Éjszaka a tér kövei lehűlnek, a levegőben hűvös, enyhén nedves kőszag érződik, az illatok elhalványodnak.</descr>
+	</stimulus>
+
+	<stimulus type="magia" intensity="5" shortDescr="Régi beavatás nyoma">
+		<descr>A dobogó kőlapjaiban valami halványan rezonál – régi városi szertartások mágikus nyoma, melyet csak érzékenyek észlelnek.</descr>
+	</stimulus>
+
+
+	<item>
+		<name targy="a dobogót">dobogó</name>
+		<description>Egy emelt, négyzet alakú fapódium, amelyen a városi kikiáltó szokott állni. A szélein vasalások, lépcső vezet fel rá. Most üres, de tekintélyt parancsoló.</description>
+	</item>
+	<item>
+		<name targy="a köveket">kövek</name>
+		<name targy="a követ">kő</name>
+		<description>Világos szürke kőlapok borítják a teret, melyek hosszú évek alatt simára koptak. A fugák között néhol moha vagy por tapadt meg.</description>
+	</item>
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>Elegáns, öntöttvas lámpaoszlop, mely este aranysárga fényt vet a tér közepére. Fénye alatt a dobogó árnyéka hosszúra nyúlik.</description>
+	</item>
+	<item>
+		<name targy="a mágikus rezgést">mágikus rezgés</name>
+		<description>Alig észrevehető mágikus maradvány, amely a dobogó köveiből árad. Talán egy régi kihirdetés vagy ceremónia lenyomata.</description>
+	</item>
+
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_5"/>
+	<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_88"/>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_87"/>
+	<exit notice="50" direction="északnyugat" destination="@Fovaros/fovaros_5_91"/>
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_7"/>
+	<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_93"/>
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_5_92"/>
+	<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_86"/>
 </Room>

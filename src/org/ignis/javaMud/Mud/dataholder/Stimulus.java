@@ -9,6 +9,8 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlTransient;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.ignis.javaMud.Mud.Core.Object;
 import org.ignis.javaMud.Mud.utils.StringFunctions;
 /**
@@ -18,6 +20,7 @@ import org.ignis.javaMud.Mud.utils.StringFunctions;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stimulus {
+	static private Logger LOG = LogManager.getLogger(Stimulus.class);
 	/**
 	 * tipusa: latas/hallas/szaglas stb
 	 */
@@ -28,7 +31,7 @@ public class Stimulus {
 	 * Intenzitas - szaglas/hallas/magia eseten a forras erossege is, latas eseten mennyire lehet eszrevenni
 	 */
 	@XmlAttribute
-	private Integer intensity;
+	private Integer intensity = 100;
 	/**
 	 * Forras erossege latasnal, mennyi fenyt ad ki a targy
 	 */
@@ -83,7 +86,7 @@ public class Stimulus {
 		this.type=type;
 	}
 	public int getIntensity() {
-		if(intensity==null) return 100;
+		//if(intensity==null) return 100;
 		return intensity;
 	}
 	public void setIntensity(int intensity) {
@@ -112,6 +115,7 @@ public class Stimulus {
 		this.condition = condition;
 	}
 	public Stimulus clone() {
+		//LOG.trace(this);
 		return new Stimulus(type, intensity, descr, shortDescr, condition,source,hasCallback);
 	}
 	@Override
@@ -130,6 +134,9 @@ public class Stimulus {
 		if(StringUtils.isNotBlank(descr)) {
 			descr = StringFunctions.process(obj,descr);
 			hasCallback = StringFunctions.checkCallback(descr);
+		}
+		if(intensity == null) {
+			intensity = 100;
 		}
 	}
 	/**

@@ -1,8 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="1_95" intensity="0" type="latas">
-<descr>DUMMY szoveg - Óváros - </descr>
-</stimulus>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_1_96"/>
-<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_1_94"/>
+	<stimulus condition="nappal" shortDescr="Sikátor kanyar – északi irány" intensity="0" type="latas">
+		<descr>A sikátor itt élesen kanyarodik nyugat felé, miközben északról halvány napfény szűrődik be a torkolat felől. A falak közel állnak egymáshoz, dohos kőlapjaik mohosak, a levegő állott. Egy régi esőcsatorna rozsdás csöve lóg ki a falból, amely alatt foltos vízfolyás húzódik.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" shortDescr="Sikátor kanyar – sötét északi nyílás" intensity="0" type="latas">
+		<descr>Az éjszakai sikátor itt elfordul nyugatnak, és az északi nyílás csak egy sötétlő lyukként tátong. Nincs világítás, csak a távoli körút fénye vet halvány derengést a kövekre. Árnyak mocorognak a sarkokban, és a falak közti levegő sűrűbbnek tűnik.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Körút moraja a távolból">
+		<descr>Tompa, állandó moraj hallatszik északról, a körút zaja. Időnként egy-egy árnyékos lépés koppan a szűk járaton belül.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Távoli kocsizörej és lépések">
+		<descr>A távolban zörgő kocsik és gyors léptek visszhangoznak a sikátor fala közt. Néha egy kósza nyávogás vagy torokhangú suttogás üti meg a fület.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="hallas" intensity="30" shortDescr="Halk éneklés">
+		<descr>Valaki halk éneket dúdol egy ablak mögött.</descr>
+	</stimulus>
+	
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Párás, penészes levegő">
+		<descr>Az északi bejárat felől hűvös levegő áramlik be, de a kanyar mögötti rész párás, enyhén penészes szagú. A falakról csorgó nedvesség dohos illatot áraszt.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Állott víz és rejtett szenny szaga">
+		<descr>A kanyar mögötti szakaszban érezhetően nehezebb a levegő. Állott víz és valami meg nem határozható, szennyes illat tölti be a sikátort.</descr>
+	</stimulus>
+	
+	<stimulus condition="este" type="magia" intensity="10" shortDescr="Rejtett aura nyomok">
+		<descr>Halvány mágikus nyomok tapinthatók a kanyar ívén, mintha valaki rendszeresen használná a helyet láthatatlanság vagy rejtőzés céljából. A nyomok lassan oszlanak, de jelen vannak.</descr>
+	</stimulus>
+	
+	<item>
+		<name targy="az esőcsatornát">esőcsatorna</name>
+		<name targy="az esőcsatornát">csatorna</name>
+		<description>Rozsdás vasból készült, egyik vége lehajolva lóg a sikátor fölé. Alatta zöldes foltok és nedves kövek sorakoznak. Néha vízcseppek koppannak róla alá, bár eső nem esik.</description>
+	</item>
+	
+	<item>
+		<name targy="a vízfoltot">vízfolt</name>
+		<description>A fal tövénél sötét vízfolt húzódik. A kövek nyálkásak és csúszósak, az illatuk pedig penészes. Néhol apró lábnyomok vezetnek el a sarkon túlra.</description>
+	</item>
+	
+	<item>
+		<name targy="a sarokfalat">sarokfal</name>
+		<name targy="a sarokfalat">sarok</name>
+		<name targy="a sarokfalat">fal</name>
+		<description>A kanyarban levő falat karcolások és nyomok borítják, némelyik mintha szimbólum lenne, mások csak kósza karmolások vagy rovások.</description>
+	</item>
+	
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_1_96"/>
+	<exit notice="50" direction="nyugat" destination="@Fovaros/fovaros_1_94"/>
 </Room>

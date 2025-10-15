@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="1_10" intensity="0" type="latas">
-<descr>DUMMY szoveg - Óváros - </descr>
-</stimulus>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_1_9"/>
-<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_1_65"/>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_11"/>
+	<stimulus condition="nappal" shortDescr="Sugárút déli szakasza" intensity="0" type="latas">
+		<descr>Az észak–déli sugárút ezen szakasza már túl van a hídon és a piactér nyüzsgésén. A kőburkolat itt kopottabb, a házak régebbiek és kissé megdőltek, falukon vakolatpikkelyek peregnek. A keleti oldalon egy mellékutca vezet északkelet felé, amelynek végén egy kisebb híd ível át a folyón. Nyugatra a templom hátsó homlokzata látszik, a dísztelen kőfalak fölött a tetőcsúcs csendesen magasodik.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Sugárút – éjszaka a híd alatt" source="30" type="latas">
+		<descr>Éjszaka a sugárút ezen szakasza nyugodtabb, a régi házak ablakaiból néhol gyér fény szűrődik ki. A keleti mellékutca sötétségbe vész, de a távolban sejtelmesen derenget a kis híd sziluettje. A templom háta sötét tömbként magasodik a város fölé. A kandelláberek sárgás fénye foltokban világítja meg a köveket, árnyékot vetve a házak falára és a néha elsuhanó alakokra.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Utcai hangok, kocsizörgés">
+		<descr>A sugárút forgalma folytatódik: a szekerek kerekei csattognak a köveken, cipők kopognak, gyerekek futnak. Az öregebb házak falai visszaverik a zajokat, mintha szűkebb lenne az utca, mint valójában.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Káromkodás és cipekedés zaja">
+		<descr>Egy férfi hangosan káromkodik, miközben egy súlyos zsákot próbál átcipelni az úttesten. A zsák zörrenése és a férfi zihálása belesimul az utca zajába.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Halk lépések és ajtócsukódások">
+		<descr>Az esti órákban az utca csendesebb. Csak néhány járókelő léptei hallatszanak, időnként nyikorgó ajtó, vagy távoli kutyaugatás töri meg a nyugalmat.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Pára, kövek, füst">
+		<descr>A levegőben keveredik a meleg kövek kipárolgása, a folyó közelségéből származó nedves szag, és a házakból szűrődő étel- és füstillatok.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Füst és penészszag">
+		<descr>Az esti hűvös levegő magával hozza a régi házakból áradó füstszagot, az ereszekből csöpögő nedvesség penészillata is érződik.</descr>
+	</stimulus>
+
+
+	<item>
+		<name targy="a sugárutat">sugárút</name>
+		<description>A sugárút déli szakasza itt kissé szűkebb és elhasználtabb. A kövek hézagosak, a burkolat régi, de még mindig jól tartja magát a napi forgalomban.</description>
+	</item>
+	<item>
+		<name targy="a mellékutcát">mellékutca</name>
+		<description>A keletre nyíló mellékutca kissé meredek, kövezete egyenetlen. A végén egy kisebb híd ível a folyó fölé, mely a háttérben dereng.</description>
+	</item>
+	<item>
+		<name targy="a templomot">templom</name>
+		<description>Innen a templom hátoldala látható. A falai egyszerűbbek, díszítetlenek, csupán néhány régi szobor maradványa látható a kőbe vésve.</description>
+	</item>
+	<item>
+		<name targy="az öreg házakat">házak</name>
+		<name targy="az öreg házakat">ház</name>
+		<description>A környék épületei idősebbek: vakolatuk hullik, gerendáik megfeketedtek az időtől. Az ereszekben fészkelnek a galambok, s néhol mágiaellenes rúnák tűnnek fel.</description>
+	</item>
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>Karcsú, kovácsoltvas oszlop, amely sárgás fénnyel világítja meg a környéket. Lámpása üveg mögött vibrál, esténként halk zümmögést hallat. Árnyéka hosszúra nyúlik a macskaköveken.</description>
+	</item>
+	<item>
+		<name targy="a zsákot">zsák</name>
+		<description>A zsák durva szövésű anyagból készült, telepakolva ismeretlen tartalommal. Oldala nedves, mintha valami szivárogna belőle. A férfi káromkodva vonszolja maga után a poros köveken.</description>
+	</item>
+
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_1_9"/>
+	<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_1_65"/>
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_1_11"/>
 </Room>

@@ -1,8 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="1_94" intensity="0" type="latas">
-<descr>DUMMY szoveg - Óváros - </descr>
-</stimulus>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_95"/>
-<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_86"/>
+	<stimulus type="latas" condition="nappal" shortDescr="Keskeny, árnyékos sikátor">
+		<descr>A sikátor szűk és enyhén kanyargós, kétoldalt vakolatfoszlásos kőházak szegélyezik. A bárdok céhének díszes épülete északabbra magasodik, falán egy vöröses, obszcén felirat díszeleg, amely a csepűrágók becsületét sérti. A kövezeten szalmacsomók sodródnak, és néhány kóbor macska húzódik meg az árnyékban.</descr>
+	</stimulus>
+	<stimulus condition="este" shortDescr="Sötét sikátor a piactér mellett" intensity="0" type="latas">
+		<descr>Az est leszálltával a sikátor szinte teljes sötétségbe borul. A bardok céhének díszes falai alig kivehetők az árnyékban, csupán a falra mázolt felirat foszforeszkál halványan, mintha önelégülten világítana a sötétben. A levegő nyirkos, és csak ritkán zavarja meg kósza léptek zaja a némaságot.</descr>
+	</stimulus>
+	<stimulus type="hallas" condition="nappal" intensity="50" shortDescr="Lábdobbanások és távoli dallamok">
+		<descr>Alig hallható lábdobbanások visszhangzanak a kövek között, a piactér felől pedig néha eljut egy-egy hangszer próbamenete – lant, furulya vagy hárfa hangjai kúsznak végig a falakon.</descr>
+	</stimulus>
+	<stimulus type="hallas" condition="este" intensity="40" shortDescr="Titokzatos dallamfoszlányok">
+		<descr>Éjjel, ha figyelmes vagy, a bárdok céhéből ki-kiszűrődik egy dallam – halk furulyaszó, énekpróba vagy akár egy mágikus hangszer hangja, mintha maga a sikátor is fülelne.</descr>
+	</stimulus>
+	
+	<stimulus type="szaglas" condition="nappal" intensity="25" shortDescr="Friss kő és por illata">
+		<descr>A levegőben friss kőpor illata érződik, keveredve a piactér felől beszivárgó sültáruk és gyümölcsök aromáival.</descr>
+	</stimulus>
+	<stimulus type="szaglas" condition="este" intensity="35" shortDescr="Dohos falak és gyenge parfümillat">
+		<descr>A sikátor sarkában dohos nedvesség szaga ül meg, de a céh ablakából néha édeskés parfümillat is kiszivárog – talán egy előadásra készülnek épp.</descr>
+	</stimulus>
+	
+	<stimulus type="magia" condition="nappal" intensity="20" shortDescr="Védelem és hangtompítás varázsai">
+		<descr>A bárdok céhét különféle hangtompító és megfigyelés elleni varázslatok övezik. Ezek nappal szinte láthatatlanok, de mágikus érzékkel érzékelhető a tér enyhe hullámzása.</descr>
+	</stimulus>
+	<stimulus type="magia" condition="este" intensity="35" shortDescr="Hangrezgés-erősítő bűbáj">
+		<descr>Éjszaka az utcai varázsok felerősödnek – egyes kövek mintha vezethetnék a hangot, és a mágikus dallamok suttogó visszhangja érződik a falak mentén.</descr>
+	</stimulus>
+	<stimulus shortDescr="Mágikus védelem egy obszcén feliraton" intensity="10" type="magia">
+		<descr>A bardok céhének falán lévő sértő feliratot vékony mágikus burok védi. A bűbáj egyszerű, mégis makacs – ellenáll a lemosásnak, kaparásnak, sőt, még az eltakarásnak is. A varázs mintha nevetne minden tisztító próbálkozáson.</descr>
+	</stimulus>
+
+		
+	<item>
+		<name targy="a falat">fal</name>
+		<description>A céh kőfala sima és faragott, régi címerekkel és repkénnyel díszített. Egyes kövekben finom rúnák vibrálnak a fényben.</description>
+	</item>
+	<item>
+		<name targy="a rúnákat">rúnák</name>
+		<name targy="a rúnákat">rúna</name>
+		<description>A vésett rúnák mágikus védelmet biztosítanak. Némelyik halkan pulzál, másik láthatatlan marad az avatatlan szemek előtt.</description>
+	</item>
+	<item>
+		<name targy="a repkényt">repkény</name>
+		<name targy="a repkényt">növény</name>
+		<description>A falat sűrűn benövi a zöld repkény, amely mintha tudatosan kapaszkodna csak a nem mágiával védett részekre.</description>
+	</item>
+	<item>
+		<name targy="a köveket">kövek</name>
+		<description>A járdakövek némelyike különösen sima vagy kopott, talán sok zenész és látogató lépése koptatta ki őket.</description>
+	</item>
+	<item>
+		<name targy="a feliratot">felirat</name>
+		<description>A falon egy vörös festékkel írt, obszcén üzenet olvasható: „A bárdok nem hősök, csak túlfizetett csepűrágók!” Bár gyermetegnek tűnik, valaki erős bűbájt vont rá – sem fizikai, sem mágikus módszerrel nem sikerült eltüntetni.</description>
+	</item>
+	<item>
+		<name targy="a macskát">macska</name>
+		<description>Egy sovány, csapzott szőrű macska ül az egyik fal tövében. Sárgás szemeivel éberen figyel, mintha jobban tudná, mi zajlik a sikátor árnyaiban, mint bármely ember. Néha nyávog egyet, majd hangtalanul eloson a sötétben.</description>
+	</item>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_1_95"/>
+	<exit notice="50" direction="délnyugat" destination="@Fovaros/fovaros_5_86"/>
 </Room>

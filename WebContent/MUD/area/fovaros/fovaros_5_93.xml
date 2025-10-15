@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Room mapfile="@Fovaros/map">
-<stimulus shortDescr="5_93" intensity="0" type="latas">
-<descr>DUMMY szoveg - Főtér - </descr>
-</stimulus>
-<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_92"/>
-<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_6"/>
-<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_7"/>
-<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_84"/>
-<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_8"/>
+	<stimulus condition="nappal" shortDescr="Piac nyugati része" intensity="0" type="latas">
+		<descr>A piactér nyugati részén, nem messze a templomtól, a fémművesek standjai sorakoznak. Az asztalokon rozsdamentes pengék, míves fémtálak, szegecsezett láncingek és ezüsttel díszített csatok csillognak a napfényben. Az ötvösök finoman megmunkált ékszereket kínálnak, míg a kovácsok durvább, de tartós szerszámaikat mutogatják büszkén. A környéket áthatja a fém rideg csillogása és a kézműves munka szigorú rendje.</descr>
+	</stimulus>
+
+	<stimulus condition="este" shortDescr="Piac nyugati része" source="30" type="latas">
+		<descr>Az este leszálltával a kovácsok és ötvösök standjait is elcsendesülés jellemzi. A kandelláberek fényében még visszacsillan egy-egy penge éle, vagy egy ezüstgyűrű hajlata. A fémes csillogás hűvös tónusokat kap, árnyékok közé bújnak a precíz minták és apró szerszámok. Néhány árus még pakol, mások komoran őrzik portékáikat.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="hallas" intensity="50" shortDescr="Kovácsolás és fémes zajok">
+		<descr>Kalapács csattan vasra, fém zörög fémen, miközben a kovácsok bemutatják áruikat, vagy utolsó simításokat végeznek. Az ötvösöknél apró eszközök zizegnek, reszelők karistolnak, pörölyök koppannak. A hangok erőteljesek, de szabályosak – a mesterség ritmusa szólal meg.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="hallas" intensity="50" shortDescr="Fémek halk koccanása">
+		<descr>Az esti csendben csak ritkán hallani tompa csörrenéseket, ahogy egy-egy lánc vagy szerszám kerül a ládába. Halk beszélgetés szűrődik át a standok mögül, ahol a mesterek számolgatják a napi bevételt.</descr>
+	</stimulus>
+
+	<stimulus condition="nappal" type="szaglas" intensity="50" shortDescr="Forró fém és olaj illata">
+		<descr>Fémreszelék, égett olaj, hideg vas és a polírozószerek vegyes illata lengi be a teret. A kovácsstandok közelében enyhe füstszag is érezhető, mintha a munka még nem zárult volna le teljesen.</descr>
+	</stimulus>
+
+	<stimulus condition="este" type="szaglas" intensity="50" shortDescr="Fémes levegő">
+		<descr>Az este hűvösében elülnek az intenzívebb szagok, de a levegő még mindig enyhén fémes, mintha az acél és ezüst emléke ott maradt volna a kövek között.</descr>
+	</stimulus>
+
+	<stimulus type="magia" intensity="30" shortDescr="Tartó- és élezőbűbájok nyomai">
+		<descr>Gyenge mágikus hatásokat lehet érezni egyes pengéken és eszközökön – egy-egy bűbáj segíti a penge élének tartását vagy az anyag időállóságát. Ezek a mágiák nem hivalkodóak, de tapasztalt szem elől nem rejtve maradnak.</descr>
+	</stimulus>
+
+	<item>
+		<name targy="a kovácstermékeket">kovácstermékek</name>
+		<name targy="a kovácsterméket">kovácstermék</name>
+		<name targy="a kovácsterméket">termék</name>
+		<description>Balták, vasvillák, vasalt ládazárak és munkára fogható szerszámok sorakoznak rendezetten. Mindegyik robusztus, a kézbe simuló fogással és masszív kialakítással.</description>
+	</item>
+	<item>
+		<name targy="az ötvöstárgyakat">ötvöstárgyak</name>
+		<name targy="az ötvöstárgyakat">tárgyak</name>
+		<name targy="az ötvöstárgyat">ötvöstárgy</name>
+		<name targy="az ötvöstárgyat">tárgy</name>
+		<description>Finoman gravírozott gyűrűk, láncok, hajtűk és övcsatok ezüstből és rézből. Aprólékos kidolgozásuk tanúskodik a mesterek türelméről és ügyességéről.</description>
+	</item>
+	<item>
+		<name targy="a kandellábert">kandelláber</name>
+		<description>Az öntöttvas lámpaoszlop fényköre éppen elég, hogy az ezüst és acél ragyogjon benne – különösen éjszaka, amikor a standok sötétebb hátteret adnak a csillogásnak.</description>
+	</item>
+	<item>
+		<name targy="a mágikus bűbájokat">mágikus bűbájok</name>
+		<description>Egyes pengékbe alig észrevehető mágikus rúnák vannak karcolva. Ezek fenntartják az élüket vagy megelőzik a korróziót – néhány ötvös még apró védelmi varázslatot is belefon az ékszerekbe.</description>
+	</item>
+
+
+	<exit notice="50" direction="észak" destination="@Fovaros/fovaros_5_92"/>
+	<exit notice="50" direction="északkelet" destination="@Fovaros/fovaros_5_6"/>
+	<exit notice="50" direction="kelet" destination="@Fovaros/fovaros_5_7"/>
+	<exit notice="50" direction="dél" destination="@Fovaros/fovaros_5_84"/>
+	<exit notice="50" direction="délkelet" destination="@Fovaros/fovaros_5_8"/>
 </Room>
